@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <div id="container-home" >
-	<div class='dek'><span>Pierrel Tardif is a New York-based art director and graphic designer.</span></div>
+	<div class='dek'><span>Pierre Tardif is a New York-based art director and graphic designer.</span></div>
 	<div class="main-img-cont">
 	<?php
 		$mainImg = get_field('home_image');
