@@ -11,14 +11,14 @@
 	<link rel="stylesheet" href="http://openlayers.org/en/v3.14.0/css/ol.css" type="text/css">
 	<script src="http://openlayers.org/en/v3.14.0/build/ol.js" type="text/javascript"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/compressed/modernizr.js"></script>
-	<?php wp_head(); ?> 
+	<?php wp_head(); ?>
 </head>
 
 <body  <?php body_class(); ?>>
 <!-- <div id="wptime-plugin-preloader">
-	
+
 </div> -->
-<div id="container" class='<?php echo the_title().'page'; ?>'>
+<div id="container" class=' <?php echo the_title().'page'; ?>'>
     <header id="header">
 	    <div class='top-bar'>
 		    <a class='link nav' href='/magazines'>EDITORIAL</a>,
@@ -28,3 +28,6 @@
 		 <!--<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a> <?php //the_title(); ?> -->
     </header>
     <div id="main" role="main">
+			<div class='bbq'>
+				<div class="bbq-content">
+				<div class='bbq-default bbq-item'>

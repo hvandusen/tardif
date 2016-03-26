@@ -1,15 +1,18 @@
 
 	</div>
-
+</div>
+</div>
+</div>
 
 
 	<footer>
-		<div class='bottom-bar'><a href='/' class='nav home'>PIERRE TARDIF</a></div>
+		<div class='bottom-bar'><a href='#' class='nav home'>PIERRE TARDIF</a></div>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-<script>console.log($.getJSON('http://pierretardif.net/wp-json/wp/v2/brand'))</script>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery.ba-bbq.js"></script>
+<?php include('includes/ajax.php'); ?>
 <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/compressed/jquery.min.js"><\/script>')</script>
 <?php wp_footer(); ?>
 <script>

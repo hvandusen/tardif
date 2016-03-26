@@ -1,5 +1,4 @@
-<?php get_header(); 
-?>
+
 <style>
       </style>
     <?php
@@ -12,8 +11,8 @@
 		);
 		query_posts( $args );
 		//echo '<span class="title">' . the_title() . '</span>';
-		
-		
+
+
 		echo '<div class="books">';
 		while ( have_posts() ) : the_post();
 			//while ( have_rows('book_list') ) : the_row();
@@ -28,11 +27,7 @@
 		endwhile;
 		wp_reset_query();
 		echo '</div>';
-
 	?>
-
-    
-    
-<?php 
-	get_footer(); 
-	?>
+  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/books.js"></script>
+  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/gyro.min.js"></script>
+  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/gyroScript.js"></script>

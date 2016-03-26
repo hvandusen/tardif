@@ -30,6 +30,11 @@
 			});
 			point.x += (dx*8);
 			point.y += (dy*8);
+			if(point.x+330>window.innerWidth || point.y+330>window.innerHeight-67 || point.x<0 || point.y<150){
+				dumps++
+				dx = directions[(dumps%4)][0];
+				dy = directions[(dumps%4)][1];
+			}
 			z--;
 			if(i===totalPics-1){
 				currentAttr = $(e).parent().prev();
@@ -40,12 +45,11 @@
 		accel = -1*accel;
 		dumps++;
 		range = window.innerWidth-325;
-		rangeHeight = window.innerHeight-325-64;
+		//three 64 bars worth
+		rangeHeight = window.innerHeight-687;
 		rangeX = Math.random()*range;
-		if(rangeX<230)
-			rangeY = 64+(.3+Math.random()*.2)*rangeHeight
-		else
-			rangeY = 64+Math.random()*rangeHeight;
+
+		rangeY = 120+Math.random()*rangeHeight;
 		randX = (1.5+Math.random()*3)
 		randY = (4+Math.random()*3)
 		point = {
@@ -53,11 +57,22 @@
 			y:rangeY//window.innerHeight/randY
 		};
 	}
+
+	$(window).resize(function(){
+		console.log(window.innerWidth)
+	});
+
+	$('.brandID').map(function(i,e){
+			//if(thisText===$(e).text()){
+				dumpImages($(e).next())
+			//}
+		});
+
 	$('.see_all_ads').click(function(){
 		$('.brandID').map(function(i,e){
 				//if(thisText===$(e).text()){
 					dumpImages($(e).next())
-				//}	
+				//}
 			});
 	});
 	$('.season_image').click(function(){
@@ -71,13 +86,13 @@
 			currentAttr.removeClass('current');
 		}
 	});
-	
+
 	$('.season_image').mouseenter(function(){
 		//$(this).css('transform','rotate(8deg)');
 		setTimeout(function(){
-			$(this).delay(200).css({'transform':'rotate(0deg)'});	
+			$(this).delay(200).css({'transform':'rotate(0deg)'});
 		},200)
-		
+
 		if($(this).parent().prev()!== currentAttr){
 			currentAttr.removeClass('current');
 			currentAttr=$(this).parent().prev()
@@ -85,24 +100,24 @@
 		}
 		console.log(currentAttr.index())
 	});
-	
+
 	$('.season_image').mouseleave(function(){
 		//$(this).css('transform','rotate(0deg)');
 	});
-	
+
 	$(document).ready(function(){
 		$('.brand_title').click(function(){
 			var thisText = $(this).text()
 			brandL = $('.brandID').length;
-			
+
 			console.dir($('.brandID'))
 			$('.brandID').map(function(i,e){
 				if(thisText===$(e).text()){
 					window.eee = $(e);
 					dumpImages($(e).next())
-				}	
+				}
 			});
 		});
-		
+
 	});
 })(jQuery);

@@ -1,14 +1,14 @@
 (function ($) {
 
 	$('.pdf-img').mouseenter(function(){
-		console.log('in');	
+		console.log('in');
 		$(this).toggleClass('display');
 	})
 	$('.pdf-img').mouseleave(function(){
-		console.log('in');	
+		console.log('in');
 		$(this).toggleClass('display');
 	})
-	
+
 	var map, layer;
 	var mapBounds = new OpenLayers.Bounds(0.000000, -1875.000000, 3000.000000, 0.000000);
 	var mapMinZoom = 2;
@@ -23,7 +23,7 @@
 	    numZoomLevels: mapMaxZoom+1
 	  };
 	  map = new OpenLayers.Map('map', options);
-	  template_directory = "/wp-content/themes/chipsstarter/images";
+	  template_directory = "/wp-content/themes/tardif/images";
 	  imageID =$('.magazine')[0].className.split(' ')[1]
 	  console.dir(imageID)
 	  layer = new OpenLayers.Layer.XYZ( "MapTiler layer", template_directory+'/'+imageID+"/${z}/${x}/${y}.png", {
@@ -31,12 +31,12 @@
 	    isBaseLayer: true,
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
-	
+
 	    gutter: 0
 	  });
 	  map.addLayer(layer);
 	  map.zoomToExtent(mapBounds);
-	
+
 	  var mousePercent = function(evt){
 	    lonlat = map.getLonLatFromViewPortPx({x:evt.pageX,y:evt.pageY});
 	    lon = lonlat.lon/30
@@ -58,7 +58,7 @@
 	}
 	init();
 	//OpenLayers.Control.Click = clickControl;
-	
-	
-	
+
+
+
 })(jQuery);

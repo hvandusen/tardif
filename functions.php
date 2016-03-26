@@ -4,7 +4,7 @@ function chipsScripts() {
 		wp_register_script('libsJS',get_bloginfo('template_directory') . '/js/compressed/libs.js');
 		wp_enqueue_script('libsJS');
 		wp_register_script('scriptsJS',get_bloginfo('template_directory') . '/js/project.js');
-		wp_enqueue_script('scriptsJS');		
+		wp_enqueue_script('scriptsJS');
 	}
 }
 add_action('init', 'chipsScripts');
@@ -15,25 +15,25 @@ function only_pages(){
         wp_reset_query();
         if(is_page('Books')){
 	        wp_register_script('books',get_bloginfo('template_directory') . '/js/books.js');
-			wp_enqueue_script('books');	
-			wp_register_script('gyro',get_bloginfo('template_directory') . '/js/gyro.min.js');
-			wp_enqueue_script('gyro');	
+					wp_enqueue_script('books');
+					wp_register_script('gyro',get_bloginfo('template_directory') . '/js/gyro.min.js');
+					wp_enqueue_script('gyro');
 
-			wp_register_script('gyroScript',get_bloginfo('template_directory') . '/js/gyroScript.js');
-			wp_enqueue_script('gyroScript');	
+					wp_register_script('gyroScript',get_bloginfo('template_directory') . '/js/gyroScript.js');
+					wp_enqueue_script('gyroScript');	
 
         }
         if(get_post_type() === 'magazine'){
 	    	wp_register_script('magazines',get_bloginfo('template_directory') . '/js/magazines.js');
-			wp_enqueue_script('magazines');	
+			wp_enqueue_script('magazines');
 	    }
 	    if(is_page('advertisements')){
 	    	wp_register_script('editorial',get_bloginfo('template_directory') . '/js/editorial.js');
-			wp_enqueue_script('editorial');	
+			wp_enqueue_script('editorial');
 	    }
 	    if(is_page('Home')){
 	    	wp_register_script('home',get_bloginfo('template_directory') . '/js/home.js');
-			wp_enqueue_script('home');	
+			wp_enqueue_script('home');
 	    }
 
     }
@@ -72,7 +72,7 @@ add_action( 'widgets_init', 'chips_widgets_init' );
 
 
 // ACF OPTIONS PAGES
-// if(function_exists('acf_add_options_page')) { 
+// if(function_exists('acf_add_options_page')) {
 // 	acf_add_options_page();
 // 	acf_add_options_sub_page('Header');
 // 	acf_add_options_sub_page('Footer');
@@ -87,7 +87,7 @@ function add_fb_open_graph_tags() {
 			$thumbnail_id = get_post_thumbnail_id($post->ID);
 			$thumbnail_object = get_post($thumbnail_id);
 			$image = $thumbnail_object->guid;
-		} else {	
+		} else {
 			$image = ''; // Change this to the URL of the logo you want beside your links shown on Facebook
 		}
 		//$description = get_bloginfo('description');
@@ -178,9 +178,9 @@ add_action('admin_menu', 'remove_admin_menu_items');
 
 function remove_recent_comment_style() {
 	global $wp_widget_factory;
-	remove_action( 
-		'wp_head', 
-		array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) 
+	remove_action(
+		'wp_head',
+		array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' )
 	);
 }
 add_action( 'widgets_init', 'remove_recent_comment_style' );
@@ -198,4 +198,3 @@ function my_custom_dashboard_widgets() {
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
 }
-
