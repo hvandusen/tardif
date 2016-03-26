@@ -473,7 +473,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
 /* Fade In Page Contents */
-#main { -webkit-animation: fadein 1s; /* Safari and Chrome */ -moz-animation: fadein 1s; /* Firefox */ -ms-animation: fadein 1s; /* Internet Explorer */ -o-animation: fadein 1s; /* Opera */ animation: fadein 1s; }
+#main { z-index: -4; }
 
 @keyframes fadein { from { opacity: 0; }
   to { opacity: 1; } }
@@ -488,8 +488,25 @@ td, th { padding: 0; }
 /* henry's stuff */
 .top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 64px; border-bottom: 3px solid black; font-size: 40px; line-height: 64px; left: 0; }
 
-.top-bar.magazines { top: 70px; }
-.top-bar.ads { top: 100px; position: absolute; font-size: 31px; }
+@-webkit-keyframes mymove { from { top: -64px; z-index: -2; }
+  to { top: -32px; z-index: -2; } }
+/* Standard syntax */
+@keyframes mymove { from { top: -64px; z-index: -2; }
+  to { top: -32px; z-index: -2; } }
+@-webkit-keyframes hidetop { from { transform: translateY(0px); }
+  to { transform: translateY(-32px); } }
+/* Standard syntax */
+@keyframes hidetop { from { transform: translateY(0px); }
+  to { transform: translateY(-32px); } }
+@-webkit-keyframes showtop { from { transform: translateY(-32px); }
+  to { transform: translateY(0px); } }
+/* Standard syntax */
+@keyframes showtop { from { transform: translateY(-32px); }
+  to { transform: translateY(0px); } }
+.top-bar.moveUp { animation: hidetop .5s ease-out; transform: translateY(-32px); }
+.top-bar.moveDown { position: relative; animation: showtop .5s ease-out; transform: translateY(0px); }
+.top-bar.magazines { top: -32px; z-index: 5; position: relative; animation: mymove .5s ease-out; }
+.top-bar.ads { top: -32px; position: relative; animation: mymove .5s ease-out; font-size: 31px; }
 @media (max-width: 1400px) { .top-bar.ads { font-size: 30px; } }
 @media (max-width: 1354px) { .top-bar.ads { font-size: 28px; } }
 @media (max-width: 1298px) { .top-bar.ads { font-size: 27px; } }
@@ -569,13 +586,13 @@ li { list-style: none; }
 
 .season_attribution .active { display: block; }
 
-.current.season > .season_attribution { display: block; z-index: 9000; margin-top: 106px; }
+.showing.season > .season_attribution { display: block; z-index: 9000; margin-top: 106px; }
 
 .season_attribution { display: none; }
 
-.current.season_attribution { display: block; margin-top: 100px; }
+.showing.season_attribution { display: block; margin-top: 100px; }
 
-.current.season_attribution a { background-color: white; }
+.showing.season_attribution a { background-color: white; }
 
 .season_attr, .company_attr { padding-bottom: 0px; }
 
@@ -658,8 +675,6 @@ li { list-style: none; }
 #main { position: static; top: 64px; bottom: 0px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
 
 .home { text-decoration: none; color: black; }
-
-.home:hover { border-bottom: solid black 3px; }
 
 .pdfs { display: flex; flex-wrap: wrap; margin-bottom: 64px; }
 

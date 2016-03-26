@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+
 <body >
 <style>
 #map { position: absolute; height: 60%; width: 100%; background-color: #FFFFFF; }
@@ -19,4 +19,3 @@
 	    </div>
 
 </body
-    <?php get_footer(); ?>

@@ -20,10 +20,10 @@
 </div> -->
 <div id="container" class=' <?php echo the_title().'page'; ?>'>
     <header id="header">
-	    <div class='top-bar'>
-		    <a class='link nav' href='/magazines'>EDITORIAL</a>,
-		    <a class='link nav' href='/books'>BOOKS</a>, and
-		    <a class='link nav' href='/advertisements'>ADVERTISING</a>
+	    <div class='top-bar moveDown'>
+		    <a class='link nav' href='/#magazines'>EDITORIAL</a>,
+		    <a class='link nav' href='/#books'>BOOKS</a>, and
+		    <a class='link nav' href='/#advertisements'>ADVERTISING</a>
 	    </div>
 		 <!--<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a> <?php //the_title(); ?> -->
     </header>

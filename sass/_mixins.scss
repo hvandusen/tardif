@@ -28,6 +28,18 @@
 	}
 }
 
+@mixin animation ($duration, $animation) {
+    -webkit-animation: $animation $duration easeIn;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+    -moz-animation: $animation $duration easeIn;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+
+      animation: $animation $duration easeIn;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
 @mixin clearfix {
 	&:after {
 		content: "";
@@ -38,8 +50,8 @@
 
 @mixin calc($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression});
-	#{$property}: calc(#{$expression}); 
-} 
+	#{$property}: calc(#{$expression});
+}
 
 @function trans($color, $percentage) {
 	@return lighten($color, (1-$percentage)*5%);

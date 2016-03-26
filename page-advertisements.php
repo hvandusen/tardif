@@ -1,6 +1,41 @@
-<?php get_header(); ?>
+
 <?php
-		$trackCategory = "";
+
+
+
+
+				$trackCategory = "";
+				$args = array(
+					'post_type'=> 'brand',
+					'orderby'	=> 'menu_order',
+					'order'    => 'ASC'
+					//#drag and drop
+				);
+				query_posts( $args );
+
+				echo "<div class='top-bar ads'>";
+
+					while ( have_posts() ) : the_post();
+					?>
+					<a class='top-brand brand_title'><?php
+					if ($wp_query->current_post == $wp_query->post_count-1) :
+					echo 'and ';
+					endif;
+					?><?php echo get_the_title(); ?><?php
+					if ($wp_query->current_post !== $wp_query->post_count-1) :
+					echo ',';
+					endif;
+					echo '</a>';
+					endwhile;
+
+				echo "</div>";
+				// Reset Query
+				wp_reset_query();
+			?>
+
+
+
+		<?php $trackCategory = "";
 		$args = array(
 			'post_type'=> 'brand',
 			'orderby'	=> 'menu_order',
@@ -70,36 +105,7 @@
 	<?php
 		endwhile;
 		echo '</ul>';
-
-		// Reset Query
-		wp_reset_query();
+		?>
 
 
-		$trackCategory = "";
-		$args = array(
-			'post_type'=> 'brand',
-			'orderby'	=> 'menu_order',
-			'order'    => 'ASC'
-			//#drag and drop
-		);
-		query_posts( $args );
-
-		echo "<div class='top-bar ads'>";
-
-			while ( have_posts() ) : the_post();
-			?>
-			<a class='top-brand brand_title'><?php
-			if ($wp_query->current_post == $wp_query->post_count-1) :
-			echo 'and ';
-			endif;
-			?><?php echo get_the_title(); ?><?php
-			if ($wp_query->current_post !== $wp_query->post_count-1) :
-			echo ',';
-			endif;
-			echo '</a>';
-			endwhile;
-
-		echo "</div>";
-	?>
-
-<?php get_footer(); ?>
+	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/editorial.js"></script>

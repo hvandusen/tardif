@@ -11,14 +11,13 @@
 		moveCount+=4;*/
 	});
 
-	
+$('.link.nav').click(function(){
+	$('header .top-bar').toggleClass('moveUp');
+	$('header .top-bar').toggleClass('moveDown');
+})
 	var moveCount = 0;
 //	$("#bio").css('color',);
 	var text_string = "Hello and welcome to Pierre Tardif's website site...";
-	$(document).ready(function(){
-		
-						
-	});
 	currentString = text_string.slice(0,18);
 	charIndex = 18;
 	setInterval(function(){
@@ -43,9 +42,9 @@
             else if(entry>1023 && entry<1280)
             	text= text+ "255,"+num+",0)";
             else if(entry>1279 && entry<1535)
-            	text= text+ (255-num)+",255,0)";       
+            	text= text+ (255-num)+",255,0)";
             return text;
         }
-        
+
 
 })(jQuery);
