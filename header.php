@@ -20,8 +20,8 @@
 </div> -->
 <div id="container" class=' <?php echo the_title().'page'; ?>'>
     <header id="header">
-	    <div class='top-bar moveDown'>
-		    <a class='link nav' href='/#magazines'>EDITORIAL</a>,
+	    <div class='top-bar '>
+		    <a class='link nav<?php if(is_page('Magazines')){ echo ' current-page'; }?>' href='/#magazines'>EDITORIAL</a>,
 		    <a class='link nav' href='/#books'>BOOKS</a>, and
 		    <a class='link nav' href='/#advertisements'>ADVERTISING</a>
 	    </div>

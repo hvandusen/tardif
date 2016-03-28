@@ -1,5 +1,6 @@
 (function ($) {
 	var count=0;
+	$('footer .nav').addClass('current-page')
 	$('body').mousemove(function(){
 			/*count++;
 
@@ -11,10 +12,7 @@
 		moveCount+=4;*/
 	});
 
-$('.link.nav').click(function(){
-	$('header .top-bar').toggleClass('moveUp');
-	$('header .top-bar').toggleClass('moveDown');
-})
+
 	var moveCount = 0;
 //	$("#bio").css('color',);
 	var text_string = "Hello and welcome to Pierre Tardif's website site...";

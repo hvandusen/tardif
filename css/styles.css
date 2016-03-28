@@ -486,13 +486,21 @@ td, th { padding: 0; }
 @-o-keyframes fadein { from { opacity: 0; }
   to { opacity: 1; } }
 /* henry's stuff */
-.top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 64px; border-bottom: 3px solid black; font-size: 40px; line-height: 64px; left: 0; }
+.big-font, .clipboard { font-family: Grotesk; font-size: 40px; line-height: 64px; }
+.big-font.HOVER, .HOVER.clipboard { border-bottom: 3px solid black; }
+
+.top-bar { z-index: 5; background: white; position: static; top: 0; color: rgba(149, 149, 155, 0.74); width: 100%; text-align: center; height: 64px; border-bottom: solid 3px black; font-size: 40px; line-height: 64px; left: 0; }
 
 @-webkit-keyframes mymove { from { top: -64px; z-index: -2; }
   to { top: -32px; z-index: -2; } }
 /* Standard syntax */
 @keyframes mymove { from { top: -64px; z-index: -2; }
   to { top: -32px; z-index: -2; } }
+@-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
+  to { top: -64px; z-index: -2; } }
+/* Standard syntax */
+@keyframes mymoveup { from { top: -32px; z-index: -2; }
+  to { top: -64px; z-index: -2; } }
 @-webkit-keyframes hidetop { from { transform: translateY(0px); }
   to { transform: translateY(-32px); } }
 /* Standard syntax */
@@ -522,39 +530,49 @@ td, th { padding: 0; }
 @media (max-width: 713px) { .top-bar.ads { font-size: 15px; } }
 @media (max-width: 676px) { .top-bar.ads { font-size: 14px; } }
 @media (max-width: 626px) { .top-bar.ads { font-size: 13px; } }
+.top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
 
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; font-size: 40px; padding-left: 32px; line-height: 64px; }
 .bottom-bar a:HOVER { border-top: solid black 3px; }
 
-.bottom-bar a { z-index: 9000; }
+.bottom-bar a { z-index: 1000; }
 
 .main-image-container { height: 100%; }
+.main-image-container .main-img-cont { float: left; background: url(http://pierre.dev/wp-content/uploads/2016/03/PT_WSJ_stipple-1.jpg); background-size: contain; background-repeat: no-repeat; height: 30%; width: 30%; height: 100px; }
 
-.home_image { max-width: 24%; padding-top: 20px; float: left; margin-left: 30px; }
+.home_image { max-width: 26%; max-height: 16em; float: left; }
 
 #mag-table caption { font-size: 32px; margin-bottom: 30px; }
 
-.link { text-decoration: none; color: black; }
+.link { text-decoration: none; color: rgba(149, 149, 155, 0.74); }
 
-.top-bar.magazines .link { color: black; }
+.clipboard { position: fixed; bottom: 0; right: 32px; z-index: 1002; }
 
-.link.nav.current { color: grey; }
+.link.nav.current-page { color: black; border-bottom: solid black 3px; }
 
-.link:hover { border-bottom: solid black 3px; }
+.link:hover { border-bottom: solid black 3px; color: black; }
 
 .nav:hover { /*	border-top: solid 1px black;*/ }
 
 #container { margin: 0 auto; }
 
-#bio p { margin: 0; }
+#bio p { text-indent: 0.5em; margin: 0; }
 
-#bio { font-size: 20px; /*max-width: 400px;*/ margin: 0 auto; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 50px; -moz-column-gap: 50px; column-gap: 50px; /* -webkit-column-rule: 1px solid lightgrey; */ -moz-column-rule: 1px solid lightgrey; column-rule: 1px solid lightgrey; padding: 20px 20px 20px 50px; }
+#bio { font-size: 20px; /*max-width: 400px;*/ margin: 0 auto;  /* -webkit-column-count: 2;
+	 -moz-column-count: 2;
+	 column-count: 2;
+	 -webkit-column-gap: 50px;
+	 -moz-column-gap: 50px;
+	 column-gap: 50px;*/ /* -webkit-column-rule: 1px solid light$grey;
+-moz-column-rule: 1px solid light$grey;
+column-rule: 1px solid light$grey;
+padding: 20px 20px 20px 50px;*/ }
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 45%; max-width: 40%; border: solid grey 1px; top: 0; left: 0; position: absolute; }
+.season_image { max-height: 45%; max-width: 40%; border: solid rgba(149, 149, 155, 0.74) 1px; top: 0; left: 0; position: absolute; }
 
-#bio { color: grey; /*
+#bio { color: grey; margin: 0 25px; font-family: Grotesk; /*
 color: #aebc16;
 background: -moz-linear-gradient(top,  #aebc16 0%, #e93cec 47%);
 background: -webkit-linear-gradient(top,  #aebc16 0%,#e93cec 47%);
@@ -598,7 +616,7 @@ li { list-style: none; }
 
 .brand_dividers { display: none; }
 
-@media (max-width: 900px) { #bio { font-size: 18px; /*max-width: 400px;*/ margin: 0 auto; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; /* -webkit-column-rule: 1px solid lightgrey; */ -moz-column-rule: 1px solid lightgrey; column-rule: 1px solid lightgrey; padding: 15px; padding-left: 40px; } }
+@media (max-width: 900px) { #bio { font-size: 18px; /*max-width: 400px;*/ padding: 15px; padding-left: 40px; } }
 .dek { font-size: 45px; padding: 30px; line-height: 45px; }
 
 .magazine-issues-header { font-size: 28px; padding: 16px; }
@@ -607,9 +625,9 @@ li { list-style: none; }
 
 @media (max-width: 768px) { .top-bar { font-size: 25px; }
   .dek { font-size: 24px; }
-  #bio { float: left; font-size: 18px; /*max-width: 400px;*/ margin: 0 auto; -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; /* -webkit-column-rule: 1px solid lightgrey; */ -moz-column-rule: 1px solid lightgrey; column-rule: 1px solid lightgrey; padding: 15px; padding-left: 40px; } }
+  #bio { float: left; font-size: 18px; /*max-width: 400px;*/ margin: 0 auto; padding: 15px; padding-left: 40px; } }
 @media (max-width: 480px) { .top-bar { font-size: 17px; }
-  #bio { margin-bottom: 64px; }
+  #bio { margin-bottom: 64px; margin: 0px 14px; }
   .season_image { max-width: 200px; }
   .bottom-bar { display: block; position: static; padding: 0; text-align: center; }
   .nav.link { border-bottom: 2px solid black; }
@@ -670,7 +688,7 @@ li { list-style: none; }
 
 .brand-container { position: fixed; width: 100%; height: 100%; left: 0; top: 64px; }
 
-.titles_pinch { max-width: 200px; z-index: 400; margin: 0 auto; background: white; border: solid 1px grey; padding: 5px; margin: auto 0 0 auto; margin-right: 16px; margin-bottom: 16px; }
+.titles_pinch { max-width: 200px; z-index: 400; margin: 0 auto; background: white; border: solid 1px rgba(149, 149, 155, 0.74); padding: 5px; margin: auto 0 0 auto; margin-right: 16px; margin-bottom: 16px; }
 
 #main { position: static; top: 64px; bottom: 0px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
 

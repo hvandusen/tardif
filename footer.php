@@ -6,11 +6,12 @@
 
 
 	<footer>
-		<div class='bottom-bar'><a href='#' class='nav home'>PIERRE TARDIF</a></div>
+		<div class='bottom-bar'><a href='#' class='nav home'>PIERRE TARDIF</a>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
+<script>new Clipboard('.clipboard');</script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.ba-bbq.js"></script>
 <?php include('includes/ajax.php'); ?>
 <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/compressed/jquery.min.js"><\/script>')</script>

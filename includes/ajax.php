@@ -6,23 +6,33 @@ $(function(){
     '': $('.bbq-default')
   };
 
+
+
   // Bind an event to window.onhashchange that, when the history state changes,
   // gets the url from the hash and displays either our cached content or fetches
   // new content to be displayed.
   $(window).bind( 'hashchange', function(e) {
 
-    
+
     // Get the hash (fragment) as a string, with any leading # removed. Note that
     // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
     var url = $.param.fragment();
     console.log(url)
+    if(url === 'magazines' || url === 'advertisements'){
+      $('header .top-bar').removeClass('moveDown');
+    	$('header .top-bar').addClass('moveUp');
+    }
+    else {
+      $('header .top-bar').removeClass('moveUp');
+      $('header .top-bar').addClass('moveDown');
 
+    }
     // Remove .bbq-current class from any previously "current" link(s).
-    $( '.bbq-current' ).removeClass( 'bbq-current' );
 
     // Hide any visible ajax content.
+      $( '.bbq-current' ).removeClass( 'bbq-current' );
+      $( '.bbq-content' ).children( ':visible' ).hide();
 
-    $( '.bbq-content' ).children( ':visible' ).hide();
 
     // Add .bbq-current class to "current" nav link(s), only if url isn't empty.
     url && $( 'a[href="#' + url + '"]' ).addClass( 'bbq-current' );
@@ -51,12 +61,15 @@ $(function(){
           $( '.bbq-loading' ).hide();
         });
     }
-  })
+  });
 
   // Since the event is only triggered when the hash changes, we need to trigger
   // the event now, to handle the hash the page may have loaded with.
   $(window).trigger( 'hashchange' );
-
+  $('.nav').click(function(){
+    $('.current-page').removeClass('current-page');
+    $(this).addClass('current-page');
+  })
 });
 
 
