@@ -1,7 +1,4 @@
 (function ($) {
-
-
-
 	var map, layer;
 	var mapBounds = new OpenLayers.Bounds(0.000000, -1875.000000, 3000.000000, 0.000000);
 	var mapMinZoom = 2;

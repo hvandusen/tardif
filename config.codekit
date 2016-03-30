@@ -65446,6 +65446,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/Tardif_E-Mail_icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2213,
+		"inputAbbreviatedPath": "\/images\/Tardif_E-Mail_icon.png",
+		"outputAbbreviatedPath": "\/images\/Tardif_E-Mail_icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/includes\/ajax.php": {
 		"fileType": 8192,
 		"ignore": 0,

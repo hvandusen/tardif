@@ -13,7 +13,10 @@
 		the_content();
 		?>
 	</div>
-	<a class="clipboard" data-clipboard-text="pierretardif@gmail.com">COPY EMAIL</a></div>
+	<a class="copied">EMAIL COPIED!</a>
+	<a class="envelope clipboard" data-clipboard-text="pierret@gmail.com">
+		<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
+	</a>
 <?php
 	get_footer();
 	?>

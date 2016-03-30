@@ -2,16 +2,17 @@
 	var count=0;
 	$('footer .nav').addClass('current-page')
 	$('body').mousemove(function(){
-			/*count++;
 
-		$('.dek').css({
-		'letter-spacing':Math.floor(Math.sin((50+count)/100)*100)/70+'px',
-		'word-spacing':Math.floor(Math.cos(count/100)*100)/70+'px'
-		});
-
-		moveCount+=4;*/
 	});
 
+	$(".envelope").click(function(){
+		$(this).hide();
+		$('.copied').show();
+		setTimeout(function(){
+			$('.copied').hide();
+			$('.envelope').show();
+		},3000);
+	});
 
 	var moveCount = 0;
 //	$("#bio").css('color',);

@@ -45,9 +45,9 @@
 		z+=40;
 		accel = -1*accel;
 		dumps++;
-		range = window.innerWidth-325;
+		range = window.innerWidth-375;
 		//three 64 bars worth
-		rangeHeight = window.innerHeight-687;
+		rangeHeight = window.innerHeight-750;
 		rangeX = Math.random()*range;
 		rangeY = Math.random()*rangeHeight;
 		randX = (1.5+Math.random()*3)
