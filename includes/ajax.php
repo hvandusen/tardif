@@ -1,12 +1,11 @@
 <script type="text/javascript" language="javascript">
 $(function(){
+  var barLoaded = false;
   // Keep a mapping of url-to-container for caching purposes.
   var cache = {
     // If url is '' (no fragment), display this div's content.
     '': $('.bbq-default')
   };
-
-
 
   // Bind an event to window.onhashchange that, when the history state changes,
   // gets the url from the hash and displays either our cached content or fetches
@@ -17,16 +16,20 @@ $(function(){
     // Get the hash (fragment) as a string, with any leading # removed. Note that
     // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
     var url = $.param.fragment();
-    console.log(url)
-    if(url === 'magazines' || url === 'advertisements'){
+    if(barLoaded && !(url === 'magazines' || url === 'advertisements')){
+        $('.top-bar.magazines').css('animation','none');
+      //$('.top-bar.magazines').remove();
+    }
+
+    if(url.indexOf('magazine-')>-1 || url === 'advertisements'){
       $('header .top-bar').removeClass('moveDown');
     	$('header .top-bar').addClass('moveUp');
     }
     else {
       $('header .top-bar').removeClass('moveUp');
       $('header .top-bar').addClass('moveDown');
-
     }
+
     // Remove .bbq-current class from any previously "current" link(s).
 
     // Hide any visible ajax content.
@@ -48,17 +51,38 @@ $(function(){
 
       // Create container for this url's content and store a reference to it in
       // the cache.
-      cache[ url ] = $( '<div class="bbq-item"/>' )
-
+      console.log($('.bbq-item').length)
+      $('.mag-clean').map(function(i,e){
+        console.log('here is the object')
+        console.dir($(e)[0].attributes[0].nodeValue)
+      //  if($(e)[0].hasOwnProperty('attributes') && $(e)[0].attributes[0].hasOwnProperty('nodeValue')){
+          urlVal = $(e)[0].attributes[0].nodeValue;
+          console.log(cache[urlVal])
+          delete cache[urlVal];
+          console.log(cache);
+        //}
+        //if($(e).hasOwnProperty('attributes') && $(e).attributes.hasOwnProperty('urlid'))
+        $(e).remove();
+    })
+    magClass ='';
+    if(url.indexOf('magazine-')>-1)
+      magClass =' mag-clean';
+      cache[ url ] = $( '<div urlID="'+url+'" class="bbq-item'+ magClass +'"/>' )
         // Append the content container to the parent container.
         .appendTo( '.bbq-content' )
 
         // Load external content via AJAX. Note that in order to keep this
         // example streamlined, only the content in .infobox is shown. You'll
         // want to change this based on your needs.
-        .load( url, function(){
+        .load( url.replace('-','/'), function(){
           // Content loaded, hide "loading" content.
           $( '.bbq-loading' ).hide();
+          /*newBottomBar = $(cache[ url ]).find('.top-bar.magazines');
+          if(newBottomBar.length>0){
+            barVisible = true;
+            //$(newBottomBar).appendTo('.top-bar');
+          }*/
+
         });
     }
   });
@@ -69,6 +93,7 @@ $(function(){
   $('.nav').click(function(){
     $('.current-page').removeClass('current-page');
     $(this).addClass('current-page');
+
   })
 });
 

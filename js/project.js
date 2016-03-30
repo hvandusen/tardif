@@ -10,7 +10,9 @@
 	}
 
 	$(document).ready(function(){
-		
+		$('.top-bar.magazines a.link').click(function(){
+
+		})
 
 	});
 })(jQuery);

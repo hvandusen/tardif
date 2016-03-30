@@ -1,16 +1,14 @@
 
 <?php
 
-
-
-
 				$trackCategory = "";
 				$args = array(
 					'post_type'=> 'brand',
 					'orderby'	=> 'menu_order',
-					'order'    => 'ASC'
+					'order'    => 'DESC'
 					//#drag and drop
 				);
+				query_posts($args . "&order=ASC");
 				query_posts( $args );
 
 				echo "<div class='top-bar ads'>";
@@ -39,7 +37,7 @@
 		$args = array(
 			'post_type'=> 'brand',
 			'orderby'	=> 'menu_order',
-			'order'    => 'ASC'
+			'order'    => 'DESC'
 			//#drag and drop
 		);
 		query_posts( $args );
@@ -67,8 +65,8 @@
 			?>
 				<li class='season'>
 					<div class='season_attribution'>
-						<a class='season_attr'><?php echo $season; ?></a>
 						<a class='company_attr'><?php echo $company; ?></a>
+						<a class='season_attr'><?php echo $season; ?></a>
 						<a class='role_attr'><?php echo $role; ?></a>
 
 						<?php if( have_rows('season_people') ): ?>

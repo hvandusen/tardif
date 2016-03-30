@@ -49,20 +49,28 @@
 		//three 64 bars worth
 		rangeHeight = window.innerHeight-687;
 		rangeX = Math.random()*range;
-
-		rangeY = 120+Math.random()*rangeHeight;
+		rangeY = Math.random()*rangeHeight;
 		randX = (1.5+Math.random()*3)
 		randY = (4+Math.random()*3)
+
 		point = {
 			x:rangeX,//*(.4+Math.random()*.6),///(randY>5?randX+1:randX),
 			y:rangeY//window.innerHeight/randY
 		};
+		console.log(point.y);
+
 	}
 
 	$(window).resize(function(){
 		console.log(window.innerWidth)
 	});
 
+	$('.brandID').map(function(i,e){
+			console.log($('.brandID').length)
+			rev = $('.brandID')[$('.brandID').length-1-i];
+				dumpImages($(rev).next());
+			//}
+		});
 
 
 	$('.see_all_ads').click(function(){

@@ -7,11 +7,11 @@
 $grey : rgba(149, 149, 155, 0.74);
 
 #main {
-	-webkit-animation: fadein 1s; /* Safari and Chrome */
-	-moz-animation: fadein 1s; /* Firefox */
-	-ms-animation: fadein 1s; /* Internet Explorer */
-	-o-animation: fadein 1s; /* Opera */
-	animation: fadein 1s;
+	-webkit-animation: fadein 0.2s; /* Safari and Chrome */
+	-moz-animation: fadein 0.2s; /* Firefox */
+	-ms-animation: fadein 0.2s; /* Internet Explorer */
+	-o-animation: fadein 0.2s; /* Opera */
+	animation: fadein 0.2s;
 }
 
 @keyframes fadein {
@@ -645,7 +645,7 @@ border-bottom: solid 3px black;
 
 @-webkit-keyframes mymove {
 	 from {    //transform: translateY(-67px);
-		 top: -64px;
+		 top: -364px;
 		 z-index: -2;
 	 }
 	 to {   // transform: translateY(0px);
@@ -657,7 +657,7 @@ border-bottom: solid 3px black;
 /* Standard syntax */
 @keyframes mymove {
 	from {
-		top: -64px;
+		top: -364px;
 		z-index: -2;
 	}
 	to {
@@ -667,13 +667,31 @@ border-bottom: solid 3px black;
 	}
  }
 
+ @-webkit-keyframes bottom-up {
+	 from {    //transform: translateY(-67px);
+ 		bottom: 0px;
+ 	 }
+ 	 to {   // transform: translateY(0px);
+ 		  bottom: 64px;
+ 	 }
+ }
+
+ @keyframes bottom-up {
+ 	 from {    //transform: translateY(-67px);
+ 		bottom: 0px;
+ 	 }
+ 	 to {   // transform: translateY(0px);
+ 		  bottom: 64px;
+ 	 }
+ }
+
  @-webkit-keyframes mymoveup {
  	 from {    //transform: translateY(-67px);
  		top:-32px;
  		 z-index: -2;
  	 }
  	 to {   // transform: translateY(0px);
- 		  top: -64px;
+ 		  top: -0px;
  		 z-index: -2;
  	 }
  }
@@ -745,7 +763,7 @@ border-bottom: solid 3px black;
 		top:-32px;
 		z-index: 5;
 		position: relative;
-	 animation: mymove .5s ease-out;
+	  animation: mymove .5s ease-out;
 	 //@include animation(15s, mymove);
  }
 	&.ads {
@@ -814,6 +832,7 @@ border-bottom: solid 3px black;
 	 font-size: 40px;
 	 padding-left: 32px;
 	 line-height: 64px;
+	 z-index: 1000;
 	  a:HOVER {
 		 border-top:solid black 3px;
 	 }
@@ -862,8 +881,9 @@ border-bottom: solid 3px black;
 }
 
 
-.top-bar.magazines .link {
-
+.top-bar.magazines .link .current-mag {
+	color:black;
+	border: solid black 3px;
 }
 
 
@@ -1043,11 +1063,12 @@ li {
 
 .season_attr, .company_attr {
  padding-bottom:0px;
-
 }
-.people{
 
-
+.company_attr{
+		font-family: Grotesk;
+		font-weight: bolder;
+		padding-right: 1em;
 }
 
 .brand_dividers {
@@ -1081,9 +1102,9 @@ li {
 	 justify-content: space-around;
 	 flex-wrap: wrap;
  }
-
-
-
+.magazine{
+	margin-top: -32px;
+}
  @media (max-width: 768px) {
   .top-bar {
  	 font-size:25px;
@@ -1453,10 +1474,38 @@ li {
   	 height: 100%;
   }
 
+
+
+
+
   #main .olMap {
    cursor: url(../images/mouse-icon-3.png) 4 12, auto;
   }
+
+
   #main #map {
    position: static;
    border-bottom: solid black 3px;
+	 position: static;
+	 @include calc(height, '100% - 38px');
+	 width: 100%;
+	 background-color: #FFFFFF;
   }
+
+	.magazine-issuez {
+		position: absolute;
+		bottom: 0;
+		z-index: 3000;
+		height: 64px;
+		font-size: 40px;
+		line-height: 64px;
+		padding: 0 32px;
+		color: white;
+		overflow: scroll;
+		a {
+			color: white;
+			&:hover {
+				color:black;
+			}
+		}
+	}
