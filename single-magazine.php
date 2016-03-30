@@ -8,7 +8,7 @@
 .bottom-bar {
 	border-bottom: solid black 3px;
 	bottom: 64px;
-	animation: bottom-up .2s ease-in;
+	animation: bottom-up .5s ease-in;
 }
 
 </style>
