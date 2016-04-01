@@ -9,7 +9,13 @@
 		x:window.innerWidth/3,
 		y:window.innerHeight/3
 		};
-	var staggerAmount = (window.innerWidth>480 ? 8 : 4);
+		if(window.innerWidth<480){
+			point = {
+				x:0,
+				y:0
+				};
+		}
+	var staggerAmount = (window.innerWidth>480 ? 8 : 2);
 	var z = 100;
 	var directions = [[1,1],[-1,1],[-1,-1],[1,-1]]
 	up =1;
@@ -35,11 +41,18 @@
 				'top':point.y+'px',
 			});
 			point.x += (dx*staggerAmount);
-			point.y += (dy*8);
-			if(point.x+330>window.innerWidth || point.y+330>window.innerHeight-67 || point.x<0 || point.y<250){
+			point.y += (dy*staggerAmount);
+			if(point.x+330>window.innerWidth || point.y+$(e).width()>window.innerHeight-67 || point.x<0 || point.y<250){
 				dumps++
 				dx = directions[(dumps%4)][0];
 				dy = directions[(dumps%4)][1];
+			}
+			if(window.innerWidth<480 && (point.y >30 || point.x>20)){
+				dumps++
+				dx = directions[(dumps%4)][0];
+				dy = directions[(dumps%4)][1];
+				point.x = 18;
+				point.y = 20;
 			}
 			z--;
 			if(i===totalPics-1){
