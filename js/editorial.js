@@ -35,7 +35,7 @@
 			});
 			point.x += (dx*8);
 			point.y += (dy*8);
-			if(point.x+330>window.innerWidth || point.y+330>window.innerHeight-67 || point.x<0 || point.y<150){
+			if(point.x+330>window.innerWidth || point.y+330>window.innerHeight-67 || point.x<0 || point.y<250){
 				dumps++
 				dx = directions[(dumps%4)][0];
 				dy = directions[(dumps%4)][1];
@@ -50,31 +50,46 @@
 		z+=40;
 		accel = -1*accel;
 		dumps++;
-		range = window.innerWidth-375;
-		//three 64 bars worth
-		if(window.innerHeight>750)
-			rangeHeight = window.innerHeight-750;
-		else {
-			rangeHeight = 100;
-		}
-		rangeX = Math.random()*range;
-		rangeY = Math.random()*rangeHeight;
-		randX = (1.5+Math.random()*3);
-		randY = (4+Math.random()*3);
-		if(rangeY<0){
-			rangeY = 0
-		}
-		point = {
-			x:rangeX,//*(.4+Math.random()*.6),///(randY>5?randX+1:randX),
-			y:rangeY//window.innerHeight/randY
-		};
-		console.log(point.y);
+		point = (window.innerWidth>480 ? getPoint(window.innerWidth): getPointMobile(window.innerWidth));
+		//
 
 	}
 
 	$(window).resize(function(){
 		console.log(window.innerWidth)
 	});
+
+function getPoint(w){
+	range = w-375;
+	//three 64 bars worth
+	if(w>750)
+		rangeHeight = w-750;
+	else {
+		rangeHeight = 100;
+	}
+	rangeX = Math.random()*range;
+	rangeY = Math.random()*rangeHeight;
+	randX = (1.5+Math.random()*3);
+	randY = (4+Math.random()*3);
+	if(rangeY<0){
+		rangeY = 0
+	}
+	return {
+		x: rangeX,
+		y: rangeY
+	}
+}
+
+function getPointMobile(w){
+	rangeX = (w-300)/2;
+	rangeY = (window.innerHeight- 164)/2;
+	//three 64 bars worth
+	return {
+		x: Math.random()*rangeX,
+		y: 32+Math.random()*rangeY
+	}
+}
+
 
 	$('.brandID').map(function(i,e){
 			console.log($('.brandID').length)

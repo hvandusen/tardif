@@ -1112,7 +1112,7 @@ li {
  	 font-size:25px;
   }
   .dek {
-
+		padding-bottom: 0px;
  	 font-size:24px;
   }
  #bio {
@@ -1152,6 +1152,20 @@ li {
    .brand:last-of-type .brand_dividers {
   	 display:none;
    }
+
+	 .envelope,.copied {
+	 	position: fixed;
+	 	bottom: 0;
+	 	right: 0;
+	 	padding: 14px 32px;
+	 	z-index: 2002;
+	 	img {
+	 		max-height: 32px;
+	 		&:HOVER {
+	 			opacity:0.6;
+	 		}
+	 	}
+	 }
 
 	 @media (max-height: 750px) {
 	  .season_image {
@@ -1288,18 +1302,35 @@ li {
 			}
 
 	 	}
+		.envelope, .copied {
+			padding: 14px 32px;
+			z-index: 2002;
+			img {
+				max-height: 20px;
+				&:HOVER {
+					opacity:0.6;
+				}
+			}
+		}
 	 	#bio {
 	 		margin-bottom: 64px;
 	 		margin: 0px 14px;
+			padding-left: 16px;
+			font-size: 15px;
 	 	}
 	 	.season_image {
-	 		max-width:250px;
+	 		max-width:300px;
 	 	}
 	 	.bottom-bar {
 	 		display:block;
 	 		position: static;
 	 		padding:0;
-	 		text-align: center;
+	 		text-align: left;
+			font-size: 27px;
+
+			a {
+				padding-left: 32px;
+			}
 	 	}
 
 
@@ -1637,19 +1668,7 @@ li {
 
 
 
-.envelope,.copied {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	padding: 14px 32px;
-	z-index: 2002;
-	img {
-		max-height: 32px;
-		&:HOVER {
-			opacity:0.6;
-		}
-	}
-}
+
 
 .copied {
 	display:none;
