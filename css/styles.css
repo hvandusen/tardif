@@ -688,8 +688,8 @@ li { list-style: none; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
   #bio { margin-bottom: 64px; margin: 0px 14px; padding-left: 16px; font-size: 15px; }
-  .season_image { max-width: 300px; }
-  .bottom-bar { display: block; position: static; padding: 0; text-align: left; font-size: 27px; }
+  .season_image { max-width: 350px; }
+  .bottom-bar { display: block; position: static; padding: 0; text-align: left; font-size: 27px; margin-top: 64px; }
   .bottom-bar a { padding-left: 32px; }
   .nav.link { border-bottom: 2px solid black; }
   .main-img-cont { width: 100%; text-align: center; }
