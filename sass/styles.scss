@@ -1282,13 +1282,17 @@ li {
 			   }
 
 			.showing.season_attribution {
-				position: fixed;
-				left: 0;
-				bottom: auto;
-				top: 103px;
-				border: solid 3px black;
-				border-left: none;
-				background:white;
+				position: absolute;
+		    left: 2px;
+		    width: 80%;
+		    max-width: none;
+				padding-left: 32px;
+		    bottom: -28px;
+		    vertical-align: text-bottom;
+		    top: auto;
+		    /* border: solid 3px black; */
+		    /* border-left: solid 3px black; */
+		    background: white;
 				.people{
 					display:none;
 				}
@@ -1331,6 +1335,9 @@ li {
 	 		max-width:350px;
 			max-height: 95%;
 	 	}
+		.page-id-160 .bottom-bar {
+			bottom: -104px!important;
+		}
 	 	.bottom-bar {
 	 		display:block;
 	 		position: absolute;
@@ -1696,6 +1703,9 @@ li {
    border-bottom: solid black 3px;
 	 position: static;
 	 @include calc(height, '100% - 38px');
+	 @media(max-width:480px){
+		 @include calc(height, '100% + 21px');
+	 }
 	 width: 100%;
 	 background-color: #FFFFFF;
 	 /*.olButton {

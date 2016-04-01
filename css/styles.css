@@ -679,7 +679,7 @@ li { list-style: none; }
   /* Standard syntax */
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: fixed; left: 0; bottom: auto; top: 103px; border: solid 3px black; border-left: none; background: white; }
+  .showing.season_attribution { position: absolute; left: 2px; width: 80%; max-width: none; padding-left: 32px; bottom: -28px; vertical-align: text-bottom; top: auto; /* border: solid 3px black; */ /* border-left: solid 3px black; */ background: white; }
   .showing.season_attribution .people { display: none; }
   .top-bar { font-size: 17px; height: 36px; line-height: 32px; }
   .top-bar.ads { height: 64px; }
@@ -690,6 +690,7 @@ li { list-style: none; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
   #bio { margin-bottom: 64px; margin: 0px 14px; padding-left: 16px; font-size: 15px; }
   .season_image { max-width: 350px; max-height: 95%; }
+  .page-id-160 .bottom-bar { bottom: -104px !important; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
   .bottom-bar a { padding-left: 32px; }
   .nav.link { border-bottom: 2px solid black; }
@@ -801,6 +802,7 @@ li { list-style: none; }
 	 height: 48px!important;
 	 border: 3px solid black!important;
 	 margin-bottom: 1px!important; }*/ }
+@media (max-width: 480px) { #main #map { height: -webkit-calc(100% + 21px); height: calc(100% + 21px); } }
 
 .magazine-issuez { position: absolute; bottom: 0; z-index: 2000; height: 464px; font-size: 40px; line-height: 64px; padding: 0 32px; color: white; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }

@@ -27,7 +27,7 @@
 		var seasons = brand.find('.season');
 		var attr = brand.find('.season_attribution')
 		if(currentAttr)
-		currentAttr.removeClass('showing');
+			currentAttr.removeClass('showing');
 		var totalPics = brand.find('.season_image').length;
 		brand.find('.season').addClass('active');
 		dx = directions[(dumps%4)][0];
@@ -57,7 +57,7 @@
 			z--;
 			if(i===totalPics-1){
 				currentAttr = $(e).parent().prev();
-				console.dir(currentAttr)
+				console.dir($(e))
 				currentAttr.toggleClass('showing');
 			}
 		});

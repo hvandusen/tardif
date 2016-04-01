@@ -20,14 +20,14 @@ $(function(){
         $('.top-bar.magazines').css('animation','none');
       //$('.top-bar.magazines').remove();
     }
-    if(url.indexOf('magazine-')>-1){
+
+    if(url.indexOf('magazine-')>-1 && window.innerWidth>480){
       $('.bottom-bar').css({
         'animation':'bottom-up .5s ease-in',
         'bottom':'64px',
         'z-index': 2000
-      });
-    }
-    else {
+      })
+    }else {
       $('.bottom-bar').css({
         'animation':'none',
         'bottom': '0px'
