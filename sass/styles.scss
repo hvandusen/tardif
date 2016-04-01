@@ -644,11 +644,11 @@ border-bottom: solid 3px black;
 }
 
 @-webkit-keyframes mymove {
-	 from {    //transform: translateY(-67px);
+	 from {    //@include translateY(-67px);
 		 top: -364px;
 		 z-index: -2;
 	 }
-	 to {   // transform: translateY(0px);
+	 to {   // @include translateY(0px);
 		 top:-32px;
 		 z-index: -2;
 	 }
@@ -668,29 +668,29 @@ border-bottom: solid 3px black;
  }
 
  @-webkit-keyframes bottom-up {
-	 from {    //transform: translateY(-67px);
+	 from {    //@include translateY(-67px);
  		bottom: 0px;
  	 }
- 	 to {   // transform: translateY(0px);
+ 	 to {   // @include translateY(0px);
  		  bottom: 64px;
  	 }
  }
 
  @keyframes bottom-up {
- 	 from {    //transform: translateY(-67px);
+ 	 from {    //@include translateY(-67px);
  		bottom: 0px;
  	 }
- 	 to {   // transform: translateY(0px);
+ 	 to {   // @include translateY(0px);
  		  bottom: 64px;
  	 }
  }
 
  @-webkit-keyframes mymoveup {
- 	 from {    //transform: translateY(-67px);
+ 	 from {    //@include translateY(-67px);
  		top:-32px;
  		 z-index: -2;
  	 }
- 	 to {   // transform: translateY(0px);
+ 	 to {   // @include translateY(0px);
  		  top: -0px;
  		 z-index: -2;
  	 }
@@ -711,39 +711,39 @@ border-bottom: solid 3px black;
 
  @-webkit-keyframes hidetop {
  	 from {
-		 transform: translateY(0px);
+		 @include translateY(0px);
  	 }
  	 to {
-		 transform: translateY(-32px);
+		 @include translateY(-32px);
  	 }
  }
 
  /* Standard syntax */
  @keyframes hidetop {
 	 from {
- 		transform: translateY(0px);
+ 		@include translateY(0px);
  	}
  	to {
- 		transform: translateY(-32px);
+ 		@include translateY(-32px);
  	}
   }
 
 	@-webkit-keyframes showtop {
   	 from {
- 		 transform: translateY(-32px);
+ 		 @include translateY(-32px);
   	 }
   	 to {
-		 transform: translateY(0px);
+		 @include translateY(0px);
 		 }
   }
 
   /* Standard syntax */
   @keyframes showtop {
  	 from {
-		 transform: translateY(-32px);
+		 @include translateY(-32px);
   	}
   	to {
-			transform: translateY(0px);
+			@include translateY(0px);
   	}
    }
 
@@ -751,12 +751,12 @@ border-bottom: solid 3px black;
 .top-bar{
 	&.moveUp {
 		animation: hidetop .5s ease-out;
-		transform: translateY(-32px);
+		@include translateY(-32px);
 	}
 	&.moveDown {
 		position: relative;
 		animation: showtop .5s ease-out;
-		transform: translateY(0px);
+		@include translateY(0px);
 	}
 
 	&.magazines{
@@ -888,12 +888,12 @@ border-bottom: solid 3px black;
 
 .link.nav.current {
 		color:black;
-		border-bottom: solid black 3px;
+
 }
 
 .link.nav.current-page {
  color:black;
- border-bottom: solid black 3px;
+
 }
 
 .link:hover{
@@ -1333,6 +1333,25 @@ li {
   	top: 64px;
   	bottom: 0px;
 		@include calc(height, '100% - 67px');
+
+		.olAlphaImg, .olButton{
+			width: 48px!important;
+			height: 48px!important;
+		}
+
+		.olControlPanZoom {
+	  display:block;
+	  top: 300px;
+	  right: 6px!important;
+	  position: relative;
+		.olButton {
+			border: solid black 3px;
+			&:last-of-type {
+				@include translateY(16px);
+			}
+		}
+}
+
   }
 
   .home{
@@ -1351,7 +1370,14 @@ li {
    flex-wrap: wrap;
    margin-bottom: 64px;
   }
-
+.pdf-img{
+	width: 20%;
+	height: 20%;
+	z-index: 9990;
+	position: fixed;
+	z-index: 3000;
+  bottom: 67px;
+}
   .pdf-row {
    position: relative;
    display:flex;
@@ -1485,7 +1511,7 @@ li {
 	bottom: 0;
 	right: 0;
 	padding: 14px 32px;
-	z-index: 2000;
+	z-index: 2002;
 	img {
 		max-height: 32px;
 		&:HOVER {
@@ -1512,18 +1538,36 @@ li {
 	 @include calc(height, '100% - 38px');
 	 width: 100%;
 	 background-color: #FFFFFF;
-  }
+	 /*.olButton {
+		 width: 48px!important;
+		 height: 48px!important;
+		 border: 3px solid black!important;
+		 margin-bottom: 1px!important;
+	 }*/
+
+	}
+
 
 	.magazine-issuez {
+		@media(max-width: 480px){
+			display:none;
+		}
 		position: absolute;
 		bottom: 0;
-		z-index: 3000;
-		height: 64px;
+		z-index: 2000;
+		height: 464px;
 		font-size: 40px;
 		line-height: 64px;
 		padding: 0 32px;
 		color: white;
-		overflow: scroll;
+		overflow: visible;
+		@include calc(width, "100% - 64px");
+		.issues-text {
+			line-height: 64px;
+
+			position: fixed;
+			bottom: 0;
+		}
 		a {
 			color: white;
 			&:hover {

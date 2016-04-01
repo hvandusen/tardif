@@ -225,7 +225,7 @@ div.olControlSaveFeaturesItemInactive {
 
 .olControlZoomPanel {
     top: 71px;
-    left: 14px;
+    right: 14px!important;
 }
 
 .olControlZoomPanel div {

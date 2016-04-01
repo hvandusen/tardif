@@ -45,10 +45,20 @@
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
 	  map.setCenter(new OpenLayers.LonLat(10, 1), 4);
+		$('#OpenLayers_Control_PanZoom_44').css('right','10px');
 	}
 	init();
-	//OpenLayers.Control.Click = clickControl;
-
+$('.pdf-img').hide();
+var replace;
+$('.pdf_overlay').mouseenter(function(e){
+	console.dir($(this).offset().left)
+	replace = $('.'+$(this)[0].className.split(' ')[1].replace('overlay','img'));
+	replace.css('left',$(this).offset().left);
+	replace.show();
+});
+$('.pdf_overlay').mouseleave(function(){
+	replace.hide();
+});
 
 
 })(jQuery);

@@ -11,6 +11,7 @@
 	animation: bottom-up .5s ease-in;
 }
 
+
 </style>
 
 <body >
@@ -24,28 +25,48 @@
 <div id='map' ></div>
 
 <div class='magazine-issuez'>
-	Issue
+	<div class='issues-text'>
+	<a>Issue</a>
 <?php //
-			$pdfCount = 0;
+			$pdfCount = 1;
 		  $pdfs = get_field('pdfs');
 		  if(is_array($pdfs) && !empty($pdfs)){
 			foreach($pdfs as $row){ ?>
 			<?php
-				echo '<a style="display:inline" class="pdf_overlay" target="_blank" href="' . $row['pdf'] . '">';
-				echo "<span class='pdf-rowz'>";
-				echo $pdfCount. ', ';
-				echo '<span class="pdf-img" style="display: none; background-image: url(' . $row['image']['sizes']['medium'] . ')"></span>';
-				echo "</span>";
-				echo '</a>';
-				$pdfCount = $pdfCount+1;
-				}
-			} ?>
-	</div>
-</div>
-<script>
-var title = "<?php	the_title(); ?>";
+				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" href="' . $row['pdf'] . '">';
 
-</script>
+				if($pdfCount===count($pdfs)){
+					$comma = '';
+				}else{
+					$comma = ', ';
+				}
+				echo $row['mag_issue'] . $comma;
+
+				echo '</a>';
+
+				$pdfCount = $pdfCount +1;
+				}
+			}
+			echo '	</div>';
+			$pdfCount = 1;
+		  $pdfs = get_field('pdfs');
+		  if(is_array($pdfs) && !empty($pdfs)){
+			foreach($pdfs as $row){ ?>
+			<?php
+			echo '<div class="pdf-img pdf-img-' . $pdfCount . '" style=" background-image: url(' . $row['image']['sizes']['medium'] . ')"></div>';
+			$pdfCount = $pdfCount +1;
+		}
+	}?>
+
+</div>
+</div>
 
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/OpenLayers.js"></script>
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/magazines.js"></script>
+	<script>
+	//remove arrows
+	for(var i=0;i<4;i++){
+		$($('#main .olButton')[i]).css('display','none');
+	}
+	$($('#main .olButton')[5]).css('display','none');
+	</script>
