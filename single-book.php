@@ -1,4 +1,4 @@
-<?php get_header(); 
+<?php //get_header();
 ?>
 
 <div class='book_page_info'>
@@ -7,16 +7,15 @@
 </div>
 
 <div class='book_page_images'>
-<?php 
+<?php
 	 while ( have_rows('book_page_images') ) : the_row();
 		$season = get_sub_field('book_page_image');
 		echo '<img src="' . $season .'"></img>';
-	endwhile;	
+	endwhile;
 	echo '</div>';
 	echo '<a class="back" href="/books">back to books</a>';
-	echo '<div class="next">';
-	echo next_post_link( '%link','next book');
-	echo '</div>';
-	get_footer(); 
+	//echo '<div class="next">';
+	//echo next_post_link( '%link','next book');
+	//echo '</div>';
+	//get_footer();
 	?>
-	

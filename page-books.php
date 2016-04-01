@@ -19,7 +19,7 @@
 					echo '<div class="book">';
 					//echo '<span class="book_title" ' . the_sub_field('book_title') . '</span>';
 					$image = get_field('book_image');
-					echo '<a class="book_page" href="'. get_permalink() . '">';
+					echo '<a class="book_page" href="'. str_replace('/book/','/#book-',get_permalink()) . '">';
 					echo '<img class="book_image -position-3-of-7" src="' . $image . '"></img>';
 					echo '</a>';
 					echo '</div>';
