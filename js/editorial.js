@@ -6,8 +6,8 @@
 	})
 
 	var point = {
-		x:window.innerWidth/3,
-		y:window.innerHeight/3
+		x:window.innerWidth/4,
+		y:window.innerHeight/5
 		};
 		if(window.innerWidth<480){
 			point = {
@@ -25,7 +25,7 @@
 	var currentAttr;
 	function dumpImages(brand){
 		var seasons = brand.find('.season');
-		var attr = brand.find('.season_attribution')
+		var attr = brand.find('.season_attribution');
 		if(currentAttr)
 			currentAttr.removeClass('showing');
 		var totalPics = brand.find('.season_image').length;
@@ -80,8 +80,8 @@ if(window.innerWidth<480){
 function getPoint(w){
 	range = w-375;
 	//three 64 bars worth
-	if(w>750)
-		rangeHeight = w-750;
+	if(window.innerHeight>750)
+		rangeHeight = 100//window.innerHeight-750;
 	else {
 		rangeHeight = 100;
 	}
@@ -154,7 +154,12 @@ function getPointMobile(w){
 		//$(this).css('transform','rotate(0deg)');
 	});
 	$(document).ready(function(){
+		var clickCount = 0;
 		$('.brand_title').click(function(){
+			if(clickCount===0){
+				$('.season').removeClass('active');
+			}
+			clickCount++;
 			var thisText = $(this).text().replace(',','').replace('and ','');
 			console.log(thisText)
 			$('.brandID').map(function(i,e){

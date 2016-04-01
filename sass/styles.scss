@@ -1050,6 +1050,7 @@ li {
 
 .season_attribution {
  display:none;
+ 	background: white;
 }
 
 .showing.season_attribution {
@@ -1141,9 +1142,10 @@ li {
   	 max-width:350px;
    }
    .people{
-   position:static;
-   bottom:0;
-   right:0;
+	   position:static;
+	   bottom:0;
+	   right:0;
+		 font-size: 0.8em;
    }
    .brand {
   	 display:inline-block;
@@ -1169,7 +1171,7 @@ li {
 
 	 @media (max-height: 750px) {
 	  .season_image {
-	 	max-width:300px;
+	 	max-width:375px;
 	  }
 	 }
 
@@ -1284,6 +1286,7 @@ li {
 			.showing.season_attribution {
 				position: absolute;
 		    left: 2px;
+
 		    width: 80%;
 		    max-width: none;
 				padding-left: 32px;
@@ -1475,15 +1478,16 @@ li {
   	 right: 12px;
    width: 40%;
    z-index: 5000;
-	 .brand_title{
-		 &.revealed {
-			 color:black;
-		 }
-	 }
   }
+	.brand_title{
+		&.revealed {
+			color:black;
+		}
+	}
 
   .brand_title:hover {
-   text-decoration: underline;
+   border-bottom: solid black 3px;
+	 color: black;
   }
 
   .brand-container{

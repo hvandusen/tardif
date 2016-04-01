@@ -12,10 +12,10 @@
 				query_posts( $args );
 
 				echo "<div class='top-bar ads'>";
-
+					$postCount = 0;
 					while ( have_posts() ) : the_post();
 					?>
-					<a class='top-brand brand_title'><?php
+					<a class='top-brand brand_title '><?php
 					if ($wp_query->current_post == $wp_query->post_count-1) :
 					echo 'and ';
 					endif;
@@ -24,6 +24,7 @@
 					echo ',';
 					endif;
 					echo '</a>';
+					$postCount = $postCount+1;
 					endwhile;
 
 				echo "</div>";
