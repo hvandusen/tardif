@@ -638,18 +638,11 @@ li { list-style: none; }
 @media (max-width: 768px) { .top-bar { font-size: 25px; }
   .dek { font-size: 24px; }
   #bio { float: left; font-size: 18px; /*max-width: 400px;*/ margin: 0 auto; padding: 15px; padding-left: 40px; } }
-@media (max-width: 480px) { .top-bar { font-size: 17px; }
-  #bio { margin-bottom: 64px; margin: 0px 14px; }
-  .season_image { max-width: 200px; }
-  .bottom-bar { display: block; position: static; padding: 0; text-align: center; }
-  .nav.link { border-bottom: 2px solid black; }
-  .main-img-cont { width: 100%; text-align: center; }
-  .home_image { max-width: 40%; padding: 0; float: none; } }
 .season-attribution { -webkit-box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); -moz-box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); }
 
 .brand_dividers { display: inline; }
 
-.season_image { max-width: 375px; }
+.season_image { max-width: 350px; }
 
 .people { position: static; bottom: 0; right: 0; }
 
@@ -657,6 +650,15 @@ li { list-style: none; }
 
 .brand:last-of-type .brand_dividers { display: none; }
 
+@media (max-height: 750px) { .season_image { max-width: 150px; } }
+@media (max-width: 480px) { .showing.season_attribution { display: none; }
+  .top-bar { font-size: 17px; line-height: 32px; }
+  #bio { margin-bottom: 64px; margin: 0px 14px; }
+  .season_image { max-width: 200px; }
+  .bottom-bar { display: block; position: static; padding: 0; text-align: center; }
+  .nav.link { border-bottom: 2px solid black; }
+  .main-img-cont { width: 100%; text-align: center; }
+  .home_image { max-width: 40%; padding: 0; float: none; } }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
 
 /*books section*/

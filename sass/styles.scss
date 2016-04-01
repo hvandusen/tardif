@@ -944,7 +944,6 @@ text-indent: 0.5em;
  max-height: 45%;
  max-width:40%;
 
-
  border:solid $grey 1px;
  top:0;
  left:0;
@@ -1050,6 +1049,8 @@ li {
  z-index: 9000;
  margin-top: 106px;
 }
+
+
 .season_attribution {
  display:none;
 }
@@ -1130,43 +1131,6 @@ li {
 
 
 
-
-  @media (max-width: 480px) {
-   .top-bar {
-  	 font-size: 17px;
-   }
-   #bio {
-  	 margin-bottom: 64px;
-		 margin: 0px 14px;
-   }
-   .season_image {
-  	 max-width:200px;
-   }
-   .bottom-bar {
-  	 display:block;
-  	 position: static;
-  	 padding:0;
-  	 text-align: center;
-   }
-
-
-
-   .nav.link {
-  	 border-bottom: 2px solid black;
-   }
-   .main-img-cont {
-  	 width:100%;
-  	 text-align:center;
-   }
-
-   .home_image{
-  	 max-width: 40%;
-  	 padding:0;
-  	 float: none;
-   }
-
-  }
-
    .season-attribution {
    -webkit-box-shadow: 6px 10px 76px 211px rgba(0,0,0,0.75);
    -moz-box-shadow: 6px 10px 76px 211px rgba(0,0,0,0.75);
@@ -1177,7 +1141,7 @@ li {
   	 display:inline;
    }
    .season_image {
-  	 max-width:375px;
+  	 max-width:350px;
    }
    .people{
    position:static;
@@ -1192,7 +1156,53 @@ li {
   	 display:none;
    }
 
+	 @media (max-height: 750px) {
+	  .season_image {
+	 	max-width:150px;
+	  }
+	 }
 
+
+
+	  @media (max-width: 480px) {
+			.showing.season_attribution {
+				display: none;
+			}
+	 	.top-bar {
+	 		font-size: 17px;
+			line-height: 32px;
+	 	}
+	 	#bio {
+	 		margin-bottom: 64px;
+	 		margin: 0px 14px;
+	 	}
+	 	.season_image {
+	 		max-width:200px;
+	 	}
+	 	.bottom-bar {
+	 		display:block;
+	 		position: static;
+	 		padding:0;
+	 		text-align: center;
+	 	}
+
+
+
+	 	.nav.link {
+	 		border-bottom: 2px solid black;
+	 	}
+	 	.main-img-cont {
+	 		width:100%;
+	 		text-align:center;
+	 	}
+
+	 	.home_image{
+	 		max-width: 40%;
+	 		padding:0;
+	 		float: none;
+	 	}
+
+	  }
 
 
   .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 {

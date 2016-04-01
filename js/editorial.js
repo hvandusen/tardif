@@ -47,12 +47,18 @@
 		dumps++;
 		range = window.innerWidth-375;
 		//three 64 bars worth
-		rangeHeight = window.innerHeight-750;
+		if(window.innerHeight>750)
+			rangeHeight = window.innerHeight-750;
+		else {
+			rangeHeight = 100;
+		}
 		rangeX = Math.random()*range;
 		rangeY = Math.random()*rangeHeight;
-		randX = (1.5+Math.random()*3)
-		randY = (4+Math.random()*3)
-
+		randX = (1.5+Math.random()*3);
+		randY = (4+Math.random()*3);
+		if(rangeY<0){
+			rangeY = 0
+		}
 		point = {
 			x:rangeX,//*(.4+Math.random()*.6),///(randY>5?randX+1:randX),
 			y:rangeY//window.innerHeight/randY
