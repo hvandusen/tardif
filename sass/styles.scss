@@ -814,7 +814,7 @@ border-bottom: solid 3px black;
 			font-size: 14px;
 			}
 			@media (max-width: 626px) {
-			font-size: 13px;
+			font-size: 16px;
 			}
 
 			}
@@ -1282,7 +1282,16 @@ li {
 			   }
 
 			.showing.season_attribution {
-				display: none;
+				position: fixed;
+				left: 0;
+				bottom: auto;
+				top: 103px;
+				border: solid 3px black;
+				border-left: none;
+				background:white;
+				.people{
+					display:none;
+				}
 			}
 	 	.top-bar {
 	 		font-size: 17px;
@@ -1320,14 +1329,15 @@ li {
 	 	}
 	 	.season_image {
 	 		max-width:350px;
+			max-height: 95%;
 	 	}
 	 	.bottom-bar {
 	 		display:block;
-	 		position: static;
+	 		position: absolute;
 	 		padding:0;
 	 		text-align: left;
 			font-size: 27px;
-			margin-top:64px;
+
 			a {
 				padding-left: 32px;
 			}

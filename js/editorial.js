@@ -9,6 +9,7 @@
 		x:window.innerWidth/3,
 		y:window.innerHeight/3
 		};
+	var staggerAmount = (window.innerWidth>480 ? 8 : 4);
 	var z = 100;
 	var directions = [[1,1],[-1,1],[-1,-1],[1,-1]]
 	up =1;
@@ -33,7 +34,7 @@
 				'left':point.x+'px',
 				'top':point.y+'px',
 			});
-			point.x += (dx*8);
+			point.x += (dx*staggerAmount);
 			point.y += (dy*8);
 			if(point.x+330>window.innerWidth || point.y+330>window.innerHeight-67 || point.x<0 || point.y<250){
 				dumps++
@@ -54,6 +55,10 @@
 		//
 
 	}
+if(window.innerWidth<480){
+	$('.season_image').css('max-width',window.innerWidth-20);
+}
+
 
 	$(window).resize(function(){
 		console.log(window.innerWidth)
@@ -81,12 +86,12 @@ function getPoint(w){
 }
 
 function getPointMobile(w){
-	rangeX = (w-300)/2;
-	rangeY = (window.innerHeight- 164)/2;
+	rangeX = 20//(w-300)/2;
+	rangeY = (window.innerHeight*.04)//- 164)/2;
 	//three 64 bars worth
 	return {
 		x: Math.random()*rangeX,
-		y: 32+Math.random()*rangeY
+		y: window.innerHeight*.01+32+Math.random()*rangeY
 	}
 }
 
