@@ -612,11 +612,11 @@ li { list-style: none; }
 
 .season_attribution .active { display: block; }
 
-.showing.season > .season_attribution { display: block; z-index: 9000; margin-top: 106px; }
+.showing.season > .season_attribution { display: block; z-index: 9000; }
 
 .season_attribution { display: none; }
 
-.showing.season_attribution { display: block; margin-top: 100px; }
+.showing.season_attribution { display: block; }
 
 .showing.season_attribution a { background-color: white; }
 
@@ -651,8 +651,35 @@ li { list-style: none; }
 .brand:last-of-type .brand_dividers { display: none; }
 
 @media (max-height: 750px) { .season_image { max-width: 300px; } }
-@media (max-width: 480px) { .showing.season_attribution { display: none; }
-  .top-bar { font-size: 17px; line-height: 32px; }
+@media (max-width: 480px) { @-webkit-keyframes mymove { from { top: -50px; z-index: -2; }
+    to { top: 0px; z-index: -2; } }
+  /* Standard syntax */
+  @keyframes mymove { from { top: -50px; z-index: -2; }
+    to { top: 0px; z-index: -2; } }
+  @-webkit-keyframes bottom-up { from { bottom: 0px; }
+    to { bottom: 64px; } }
+  @keyframes bottom-up { from { bottom: 0px; }
+    to { bottom: 64px; } }
+  @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
+    to { top: -0px; z-index: -2; } }
+  /* Standard syntax */
+  @keyframes mymoveup { from { top: -32px; z-index: -2; }
+    to { top: -64px; z-index: -2; } }
+  @-webkit-keyframes hidetop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
+    to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
+  /* Standard syntax */
+  @keyframes hidetop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
+    to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
+  @-webkit-keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
+    to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
+  /* Standard syntax */
+  @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
+    to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
+  .showing.season_attribution { display: none; }
+  .top-bar { font-size: 17px; height: 36px; line-height: 32px; }
+  .top-bar.ads { height: 64px; }
+  .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); }
+  .top-bar.moveUp { transform: translateY(0px); }
   #bio { margin-bottom: 64px; margin: 0px 14px; }
   .season_image { max-width: 250px; }
   .bottom-bar { display: block; position: static; padding: 0; text-align: center; }
@@ -697,6 +724,7 @@ li { list-style: none; }
 .brandID { display: none; }
 
 .brand_titles { position: fixed; bottom: 0; right: 12px; width: 40%; z-index: 5000; }
+.brand_titles .brand_title.revealed { color: black; }
 
 .brand_title:hover { text-decoration: underline; }
 

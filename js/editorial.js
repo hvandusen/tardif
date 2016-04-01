@@ -1,5 +1,10 @@
 (function ($) {
 	var up,left,accel;
+	$('.brand_title').click(function(){
+		$('.brand_title').removeClass('revealed');
+		$(this).addClass('revealed');
+	})
+
 	var point = {
 		x:window.innerWidth/3,
 		y:window.innerHeight/3

@@ -1045,11 +1045,8 @@ li {
 }
 .showing.season > .season_attribution {
  display:block;
-
  z-index: 9000;
- margin-top: 106px;
 }
-
 
 .season_attribution {
  display:none;
@@ -1057,7 +1054,7 @@ li {
 
 .showing.season_attribution {
  display: block;
-	 margin-top: 100px;
+
 }
 
 .showing.season_attribution {
@@ -1165,12 +1162,131 @@ li {
 
 
 	  @media (max-width: 480px) {
+
+			@-webkit-keyframes mymove {
+				 from {    //@include translateY(-67px);
+					 top: -50px;
+					 z-index: -2;
+				 }
+				 to {   // @include translateY(0px);
+					 top:0px;
+					 z-index: -2;
+				 }
+			}
+
+			/* Standard syntax */
+			@keyframes mymove {
+				from {
+					top: -50px;
+					z-index: -2;
+				}
+				to {
+					top:0px;
+					z-index: -2;
+					//height:67;
+				}
+			 }
+
+			 @-webkit-keyframes bottom-up {
+				 from {    //@include translateY(-67px);
+			 		bottom: 0px;
+			 	 }
+			 	 to {   // @include translateY(0px);
+			 		  bottom: 64px;
+			 	 }
+			 }
+
+			 @keyframes bottom-up {
+			 	 from {    //@include translateY(-67px);
+			 		bottom: 0px;
+			 	 }
+			 	 to {   // @include translateY(0px);
+			 		  bottom: 64px;
+			 	 }
+			 }
+
+			 @-webkit-keyframes mymoveup {
+			 	 from {    //@include translateY(-67px);
+			 		top:-32px;
+			 		 z-index: -2;
+			 	 }
+			 	 to {   // @include translateY(0px);
+			 		  top: -0px;
+			 		 z-index: -2;
+			 	 }
+			 }
+
+			 /* Standard syntax */
+			 @keyframes mymoveup {
+			 	from {
+			 		top:-32px;
+			 		z-index: -2;
+			 	}
+			 	to {
+			 		top: -64px;
+			 		z-index: -2;
+			 		//height:67;
+			 	}
+			  }
+
+			 @-webkit-keyframes hidetop {
+			 	 from {
+					 @include translateY(0px);
+			 	 }
+			 	 to {
+					 @include translateY(0px);
+			 	 }
+			 }
+
+			 /* Standard syntax */
+			 @keyframes hidetop {
+				 from {
+			 		@include translateY(0px);
+			 	}
+			 	to {
+			 		@include translateY(0px);
+			 	}
+			  }
+
+				@-webkit-keyframes showtop {
+			  	 from {
+			 		 @include translateY(0px);
+			  	 }
+			  	 to {
+					 @include translateY(0px);
+					 }
+			  }
+
+			  /* Standard syntax */
+			  @keyframes showtop {
+			 	 from {
+					 @include translateY(0px);
+			  	}
+			  	to {
+						@include translateY(0px);
+			  	}
+			   }
+
 			.showing.season_attribution {
 				display: none;
 			}
 	 	.top-bar {
 	 		font-size: 17px;
+			height: 36px;
 			line-height: 32px;
+			&.ads {
+				height: 64px;
+
+			}
+			&.magazines, &.ads {
+				top: 0px;
+				z-index: 5000;
+				transform: translateY(0px);
+			}
+			&.moveUp {
+				transform: translateY(0px);
+			}
+
 	 	}
 	 	#bio {
 	 		margin-bottom: 64px;
@@ -1311,6 +1427,11 @@ li {
   	 right: 12px;
    width: 40%;
    z-index: 5000;
+	 .brand_title{
+		 &.revealed {
+			 color:black;
+		 }
+	 }
   }
 
   .brand_title:hover {
