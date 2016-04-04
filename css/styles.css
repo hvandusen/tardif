@@ -585,7 +585,7 @@ padding: 20px 20px 20px 50px;*/ }
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 45%; max-width: 40%; border: solid rgba(0, 0, 0, 0.35) 1px; top: 0; left: 0; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; border: solid rgba(0, 0, 0, 0.35) 1px; top: 0; left: 0; position: absolute; }
 
 #bio { color: black; margin: 0 25px; margin: 5% 16%; font-family: Grotesk; /*
 color: #aebc16;
@@ -649,7 +649,7 @@ li { list-style: none; }
 
 .brand_dividers { display: inline; }
 
-.season_image { max-width: 350px; }
+.season_image { max-width: 380px; }
 
 .people { position: static; bottom: 0; right: 0; font-size: 0.8em; }
 

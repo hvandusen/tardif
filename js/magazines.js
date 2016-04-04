@@ -45,9 +45,15 @@
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
 	  map.setCenter(new OpenLayers.LonLat(10, 1), 4);
-		$('#OpenLayers_Control_PanZoom_44').css('right','10px');
 	}
 	init();
+	$('.olButton').css({//'#OpenLayers_Control_PanZoom_44_zoomin, #OpenLayers_Control_PanZoom_44_zoomout').css({
+			'right':'20px',
+			'left':'auto',
+	});
+	$('.olControlPanZoom.olControlNoSelect').css({
+		'top':'-36px'
+	});
 $('.pdf-img').hide();
 var replace;
 $('.pdf_overlay').mouseenter(function(e){

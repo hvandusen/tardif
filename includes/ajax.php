@@ -95,7 +95,6 @@ $(function(){
             barVisible = true;
             //$(newBottomBar).appendTo('.top-bar');
           }*/
-
         });
     }
   });

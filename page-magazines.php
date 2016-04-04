@@ -14,8 +14,9 @@
 		<div class='top-bar magazines'>
 			<?php $id = get_the_ID();?>
 		    <a class='link nav <?php if($id===185){echo 'current';} ?>' href='/#magazine-wall-street-journal-magazine/'>WSJ. MAGAZINE,</a>
-		    <a class='link nav' href='/#magazine-top/'>TOP,</a> and
-		    <a class='link nav' href='/#magazine-vman/'>VMAN</a>
+		    <a class='link nav' href='/#magazine-top/'>TOP,</a>
+				<a class='link nav' href='/#magazine-v/'>V,</a> and
+				<a class='link nav' href='/#magazine-vman/'>VMAN</a>
 	    </div>
 
 </body

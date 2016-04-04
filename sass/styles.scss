@@ -976,7 +976,8 @@ line-height: 1.3em;
 }
 
 .season_image {
- max-height: 45%;
+ //max-height: 45%;
+ max-height: 57%;
  max-width:40%;
 
  border:solid $grey 1px;
@@ -1175,7 +1176,7 @@ li {
   	 display:inline;
    }
    .season_image {
-  	 max-width:350px;
+  	 max-width:380px;
    }
    .people{
 	   position:static;

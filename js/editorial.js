@@ -15,7 +15,7 @@
 				y:0
 				};
 		}
-	var staggerAmount = (window.innerWidth>480 ? 8 : 2);
+	var staggerAmount = (window.innerWidth>480 ? 5 : 2);
 	var z = 100;
 	var directions = [[1,1],[-1,1],[-1,-1],[1,-1]]
 	up =1;
@@ -30,8 +30,8 @@
 			currentAttr.removeClass('showing');
 		var totalPics = brand.find('.season_image').length;
 		brand.find('.season').addClass('active');
-		dx = directions[(dumps%4)][0];
-		dy = directions[(dumps%4)][1];
+		dx = -1//directions[(dumps%4)][0];
+		dy = 1//directions[(dumps%4)][1];
 		brand.find('.season_image').map(function(i,e){
 			$(e).removeClass('inactive');
 			$(e).addClass('active');
@@ -44,8 +44,8 @@
 			point.y += (dy*staggerAmount);
 			if(point.x+330>window.innerWidth || point.y+$(e).height()>window.innerHeight-67 || point.x<0 || point.y<0 ){
 				dumps++
-				dx = directions[(dumps%4)][0];
-				dy = directions[(dumps%4)][1];
+				dx = -1//directions[(dumps%4)][0];
+				dy = 1//directions[(dumps%4)][1];
 			}
 			if(window.innerWidth<480 && (point.y >30 || point.x>20)){
 				dumps++
