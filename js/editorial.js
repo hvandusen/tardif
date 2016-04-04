@@ -136,7 +136,7 @@ function getPointMobile(w){
 		}
 	});
 	$('.season_image').map(function(e,i){
-		$(i).css('transform','rotate('+(-10+Math.floor(Math.random()*20))+'deg)');
+		//$(i).css('transform','rotate('+(-10+Math.floor(Math.random()*20))+'deg)');
 	});
 	$('.season_image').mouseenter(function(){
 		//$(this).css('transform','rotate(8deg)');
