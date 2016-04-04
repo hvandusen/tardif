@@ -21,7 +21,7 @@
 		setInterval(function(){
 			text_string = text_string+text_string.substr(0,1);
 			text_string = text_string.substr(1, text_string.length-1);
-			console.log(text_string)
+
 			$('title').text(text_string);
 		},300)
 
