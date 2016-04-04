@@ -81,7 +81,7 @@ function getPoint(w){
 	range = w-375;
 	//three 64 bars worth
 	if(window.innerHeight>750)
-		rangeHeight = 100//window.innerHeight-750;
+		rangeHeight = window.innerHeight-750;
 	else {
 		rangeHeight = 100;
 	}
@@ -135,7 +135,9 @@ function getPointMobile(w){
 			currentAttr.removeClass('showing');
 		}
 	});
-
+	$('.season_image').map(function(e,i){
+		$(i).css('transform','rotate('+(-10+Math.floor(Math.random()*20))+'deg)');
+	});
 	$('.season_image').mouseenter(function(){
 		//$(this).css('transform','rotate(8deg)');
 		setTimeout(function(){

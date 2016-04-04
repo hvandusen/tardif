@@ -629,7 +629,11 @@ th {
 
 
 /* henry's stuff */
-
+@media(min-width: 1200px){
+	.season_image {
+		max-width: none;
+	}
+}
 .big-font {
 	font-family: Grotesk;
 	font-size: 34px;
