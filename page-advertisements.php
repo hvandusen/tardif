@@ -70,13 +70,6 @@
 						<a class='season_attr'><?php echo $season; ?></a>
 						<a class='role_attr'><?php echo $role; ?></a>
 
-						<?php if( have_rows('season_people') ): ?>
-								<div class='people'>
-							<?php while ( have_rows('season_people') ) : the_row();?>
-								<a class='nname'><?php the_sub_field('season_person'); ?>: <?php the_sub_field('season_person_role'); ?></a>
-							<?php endwhile; ?>
-								</div>
-						<?php endif; ?>
 					</div>
 					<div class='season_images'>
 						<?php if( have_rows('season_images') ): ?>
