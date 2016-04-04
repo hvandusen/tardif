@@ -660,7 +660,7 @@ li { list-style: none; }
 .copied { -moz-transform: translateY(3px); -ms-transform: translateY(3px); -webkit-transform: translateY(3px); transform: translateY(3px); }
 
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 18.6px 32px; z-index: 2002; }
-.envelope img, .copied img { max-height: 32px; }
+.envelope img, .copied img { max-height: 27px; }
 .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
 
 @media (max-height: 750px) { .season_image { max-width: 375px; } }

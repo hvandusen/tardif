@@ -54,6 +54,7 @@
 	$('.olControlPanZoom.olControlNoSelect').css({
 		'top':'-36px'
 	});
+	$('.olControlPermalink.olControlNoSelect').hide();
 $('.pdf-img').hide();
 var replace;
 $('.pdf_overlay').mouseenter(function(e){
