@@ -16,14 +16,6 @@
 
 	var moveCount = 0;
 //	$("#bio").css('color',);
-	var text_string = "Hello and welcome to Pierre Tardif's website site...";
-	currentString = text_string.slice(0,18);
-	charIndex = 18;
-	setInterval(function(){
-		currentString = currentString.slice(1,18)+ text_string.charAt(charIndex).toString();
-		$('title').text(currentString);
-		charIndex = (charIndex+1)%text_string.length;
-	},3000)
 	 function colorWheel(entry)
         {
             var key;

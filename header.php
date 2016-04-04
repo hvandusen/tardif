@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title><?php print trim(wp_title('', false)); ?><?php if(wp_title('', false)) { echo ' | '; } ?><?php bloginfo('name'); ?></title>
+	<title>Pierre Tardif is a New York-based art director and graphic designer.</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,max-width=device-width">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" href="http://openlayers.org/en/v3.14.0/css/ol.css" type="text/css">
@@ -21,8 +21,8 @@
 <div id="container" class=' <?php echo the_title().'page'; ?>'>
     <header id="header">
 	    <div class='top-bar '>
-		    <a class='link nav<?php if(is_page('Magazines')){ echo ' current-page'; }?>' href='/#magazine-wall-street-journal-magazine'>EDITORIAL</a>,
-		    <a class='link nav' href='/#books'>BOOKS</a>, and
+		    <a class='link nav<?php if(is_page('Magazines')){ echo ' current-page'; }?>' href='/#magazine-wall-street-journal-magazine'>EDITORIAL,</a>
+		    <a class='link nav' href='/#books'>BOOKS,</a> and
 		    <a class='link nav' href='/#advertisements'>ADVERTISING</a>
 	    </div>
 		 <!--<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a> <?php //the_title(); ?> -->

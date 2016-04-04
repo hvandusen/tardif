@@ -6,7 +6,7 @@
 
 
 	<footer>
-		<div class='bottom-bar'><a href='#' class='nav home'>PIERRE TARDIF</a>
+		<div class='bottom-bar'><div class='title'  class='nav home'>PIERRE TARDIF</div>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

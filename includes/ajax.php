@@ -103,13 +103,17 @@ $(function(){
   // Since the event is only triggered when the hash changes, we need to trigger
   // the event now, to handle the hash the page may have loaded with.
   $(window).trigger( 'hashchange' );
+  $(".top-bar").addClass('showAnd');
+  $('.top-bar .link.nav').addClass('current-page');
   $('.nav').click(function(){
+    $(".top-bar").removeClass('showAnd');
     $('.current-page').removeClass('current-page');
     $(this).addClass('current-page');
 
   })
+  $('.title').click(function(){
+    $('.top-bar .link.nav').addClass('current-page');
+    $(".top-bar").addClass('showAnd');
+  })
 });
-
-
-
 </script>

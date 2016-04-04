@@ -42,7 +42,7 @@
 			});
 			point.x += (dx*staggerAmount);
 			point.y += (dy*staggerAmount);
-			if(point.x+330>window.innerWidth || point.y+$(e).width()>window.innerHeight-67 || point.x<0 || point.y<250){
+			if(point.x+330>window.innerWidth || point.y+$(e).height()>window.innerHeight-67 || point.x<0 || point.y<0 ){
 				dumps++
 				dx = directions[(dumps%4)][0];
 				dy = directions[(dumps%4)][1];
