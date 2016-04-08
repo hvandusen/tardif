@@ -23,13 +23,15 @@
 			text_string = text_string.substr(1, text_string.length-1);
 
 			$('title').text(text_string);
-		},300)
+		},300);
 
 					$("#bio p").lettering('words');
 					$("#bio p span").mouseenter(function(){
 					$('.word').removeClass('word');
 					$(this).addClass('word');
 			 });
+			 var words = 0;
+			 
 	});
 
 })(jQuery);

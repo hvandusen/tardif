@@ -592,7 +592,7 @@ padding: 20px 20px 20px 50px;*/ }
 
 .season_image { max-height: 57%; max-width: 40%; border: solid rgba(0, 0, 0, 0.35) 1px; top: 0; left: 0; position: absolute; }
 
-#bio { color: black; margin: 0 25px; margin: 5% 16%; font-family: Grotesk; /*
+#bio { margin: 0 25px; margin: 5% 16%; font-family: Grotesk; /*
 color: #aebc16;
 background: -moz-linear-gradient(top,  #aebc16 0%, #e93cec 47%);
 background: -webkit-linear-gradient(top,  #aebc16 0%,#e93cec 47%);
@@ -654,7 +654,8 @@ li { list-style: none; }
 
 .brand_dividers { display: inline; }
 
-.season_image { max-width: 380px; }
+.season_image { width: 38%; max-width: 500px; }
+.season_image.vert { width: auto; max-height: 70%; max-width: none; }
 
 .people { position: static; bottom: 0; right: 0; font-size: 0.8em; }
 
@@ -668,7 +669,7 @@ li { list-style: none; }
 .envelope img, .copied img { max-height: 27px; }
 .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
 
-@media (max-height: 750px) { .season_image { max-width: 375px; } }
+@media (max-height: 809px) { .season_image { width: 70%; max-height: 80%; } }
 @media (max-width: 480px) { @-webkit-keyframes mymove { from { top: -50px; z-index: -2; }
     to { top: 0px; z-index: -2; } }
   /* Standard syntax */
@@ -696,14 +697,14 @@ li { list-style: none; }
   .showing.season_attribution { position: absolute; left: 2px; width: 80%; max-width: none; padding-left: 32px; bottom: -28px; vertical-align: text-bottom; top: auto; /* border: solid 3px black; */ /* border-left: solid 3px black; */ background: white; }
   .showing.season_attribution .people { display: none; }
   .top-bar { font-size: 17px; height: 36px; line-height: 32px; }
-  .top-bar.ads { height: 64px; }
-  .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); }
+  .top-bar.ads { height: 64px; line-height: 1.4em; }
+  .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); font-size: 1.1em; line-height: 1.2em; padding-top: 2px; }
   .top-bar.moveUp { transform: translateY(0px); }
   .envelope, .copied { padding: 14px 32px; z-index: 2002; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
   #bio { margin-bottom: 64px; margin: 0px 14px; padding-left: 16px; font-size: 15px; }
-  .season_image { max-width: 350px; max-height: 95%; }
+  .season_image { max-width: 350px; max-height: 95%; width: 80%; }
   .page-id-160 .bottom-bar { bottom: -104px !important; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
   .bottom-bar a { padding-left: 32px; }
@@ -743,7 +744,8 @@ li { list-style: none; }
 
 .next { padding: 25px; float: right; }
 
-.brands { height: 100%; position: relative; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
+.brands { height: 100%; position: relative; top: -32px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
+@media (max-width: 480px) { .brands { top: 5px; } }
 
 .brandID { display: none; }
 

@@ -1011,7 +1011,10 @@ line-height: 1.3em;
 }
 
 #bio{
- color: black;//$grey;
+ //color: black;
+ //background: -webkit-linear-gradient(#333, #888, #333);
+//  -webkit-background-clip: text;
+
  margin: 0 25px;
  margin: 5% 16%;
  font-family: Grotesk;
@@ -1197,7 +1200,14 @@ li {
   	 display:inline;
    }
    .season_image {
-  	 max-width:380px;
+  	 //max-width:380px;
+		  width: 38%;
+			max-width: 500px;
+			&.vert {
+				width: auto;
+				max-height: 70%;
+				max-width: none;
+			}
    }
    .people{
 	   position:static;
@@ -1229,14 +1239,12 @@ li {
 	 	}
 	 }
 
-	 @media (max-height: 750px) {
+	 @media (max-height: 809px) {
 	  .season_image {
-	 	max-width:375px;
+	 	width:70%;
+		max-height: 80%;
 	  }
 	 }
-
-
-
 	  @media (max-width: 480px) {
 
 			@-webkit-keyframes mymove {
@@ -1366,12 +1374,15 @@ li {
 			line-height: 32px;
 			&.ads {
 				height: 64px;
-
+				line-height: 1.4em;
 			}
 			&.magazines, &.ads {
 				top: 0px;
 				z-index: 5000;
 				transform: translateY(0px);
+				font-size: 1.1em;
+				line-height: 1.2em;
+				padding-top: 2px;
 			}
 			&.moveUp {
 				transform: translateY(0px);
@@ -1397,6 +1408,7 @@ li {
 	 	.season_image {
 	 		max-width:350px;
 			max-height: 95%;
+			width: 80%;
 	 	}
 		.page-id-160 .bottom-bar {
 			bottom: -104px!important;
@@ -1526,7 +1538,12 @@ li {
   .brands {
    height: 100%;
 	 position: relative;
+	 top: -32px;
 	 @include calc(height, "100% - 67px");
+
+	 @media(max-width: 480px){
+		 top: 5px;
+	 }
   }
 
   .brandID {

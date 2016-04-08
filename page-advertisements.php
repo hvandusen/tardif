@@ -60,15 +60,11 @@
 				echo '<ul class="seasons">';
 			 	// loop through the rows of data
 			    while ( have_rows('seasons') ) : the_row();
-				$season = get_sub_field('season_name');
-				$company = get_sub_field('season_company');
-				$role = get_sub_field('season_role');
+				$attr = get_sub_field('season_attr');
 			?>
 				<li class='season'>
 					<div class='season_attribution'>
-						<a class='company_attr'><?php echo $company; ?></a>
-						<a class='season_attr'><?php echo $season; ?></a>
-						<a class='role_attr'><?php echo $role; ?></a>
+						<a class='season_attr'><?php echo $attr; ?></a>
 
 					</div>
 					<div class='season_images'>
@@ -76,10 +72,12 @@
 							<?php while ( have_rows('season_images') ) : the_row();
 								$imag = get_sub_field('season_image');
 								$imgUrl = $imag['sizes']['medium_medium'];
-
+								$sizes = getimagesize($imgUrl);
+								$vertical = $sizes[0]<$sizes[1];
 							?>
 
-								<img class='season_image' src='<?php echo $imgUrl; ?>'></img>
+								<img class='season_image <?php 	if($vertical == 1){ echo 'vert';} ?>' src='<?php echo $imgUrl; ?>'>
+							</img>
 							<?php endwhile; ?>
 					</div>
 						<?php endif; ?>
