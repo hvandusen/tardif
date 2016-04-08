@@ -108,9 +108,11 @@ $(function(){
     $(".top-bar").removeClass('showAnd');
     $('.current-page').removeClass('current-page');
     $(this).addClass('current-page');
-
+    $('.envelope').hide();
   })
+
   $('.title').click(function(){
+    $('.envelope').show();
     $('.top-bar .link.nav').addClass('current-page');
     $(".top-bar").addClass('showAnd');
   })

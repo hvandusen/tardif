@@ -863,10 +863,16 @@ border-bottom: solid black 4px;
 	 z-index: 1000;
 	 display: inline;
 	 .title{
+
 		 display: inline;
 	  &:HOVER {
 			cursor: url(../images/mouse-hover.png) 4 12, pointer;
 		 //border-top:solid black 4px;
+	 }
+	 position: fixed;
+    bottom: 0px;
+	 @media(max-width:480px){
+		 padding-left: 30px;
 	 }
  }
 }
@@ -1390,7 +1396,7 @@ li {
 
 	 	}
 		.envelope, .copied {
-			padding: 14px 32px;
+			padding: 22px 32px;
 			z-index: 2002;
 			img {
 				max-height: 20px;
@@ -1412,6 +1418,7 @@ li {
 	 	}
 		.page-id-160 .bottom-bar {
 			bottom: -104px!important;
+			position: static;
 		}
 	 	.bottom-bar {
 	 		display:block;
@@ -1436,10 +1443,7 @@ li {
 	 	}
 
 	 	.home_image{
-	 		max-width: 40%;
-
-	 		padding:0;
-	 		float: none;
+	 		max-width: 30%;
 	 	}
 
 	  }
@@ -1778,6 +1782,8 @@ li {
    cursor: url(../images/mouse-icon-3.png) 4 12, auto;
   }
 
+	.home {
+	}
 
   #main #map {
    position: static;
@@ -1785,7 +1791,7 @@ li {
 	 position: static;
 	 @include calc(height, '100% - 38px');
 	 @media(max-width:480px){
-		 @include calc(height, '100% + 21px');
+		 @include calc(height, '100% - 5px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;

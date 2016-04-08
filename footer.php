@@ -7,6 +7,9 @@
 
 	<footer>
 		<div class='bottom-bar'><div class='title'  class='nav home'>PIERRE TARDIF</div>
+		<a class="envelope clipboard" data-clipboard-text="pierret@gmail.com">
+			<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
+		</a>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

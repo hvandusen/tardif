@@ -546,8 +546,9 @@ td, th { padding: 0; }
 .top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
 
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; }
-.bottom-bar .title { display: inline; }
+.bottom-bar .title { display: inline; position: fixed; bottom: 0px; }
 .bottom-bar .title:HOVER { cursor: url(../images/mouse-hover.png) 4 12, pointer; }
+@media (max-width: 480px) { .bottom-bar .title { padding-left: 30px; } }
 
 .bottom-bar a { z-index: 1000; }
 
@@ -700,17 +701,17 @@ li { list-style: none; }
   .top-bar.ads { height: 64px; line-height: 1.4em; }
   .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); font-size: 1.1em; line-height: 1.2em; padding-top: 2px; }
   .top-bar.moveUp { transform: translateY(0px); }
-  .envelope, .copied { padding: 14px 32px; z-index: 2002; }
+  .envelope, .copied { padding: 22px 32px; z-index: 2002; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
   #bio { margin-bottom: 64px; margin: 0px 14px; padding-left: 16px; font-size: 15px; }
   .season_image { max-width: 350px; max-height: 95%; width: 80%; }
-  .page-id-160 .bottom-bar { bottom: -104px !important; }
+  .page-id-160 .bottom-bar { bottom: -104px !important; position: static; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
   .bottom-bar a { padding-left: 32px; }
   .nav.link { border-bottom: 2px solid black; }
   .main-img-cont { width: 100%; text-align: center; }
-  .home_image { max-width: 40%; padding: 0; float: none; } }
+  .home_image { max-width: 30%; } }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
 
 /*books section*/
@@ -819,7 +820,7 @@ li { list-style: none; }
 	 height: 48px!important;
 	 border: 3px solid black!important;
 	 margin-bottom: 1px!important; }*/ }
-@media (max-width: 480px) { #main #map { height: -webkit-calc(100% + 21px); height: calc(100% + 21px); } }
+@media (max-width: 480px) { #main #map { height: -webkit-calc(100% - 5px); height: calc(100% - 5px); } }
 
 .magazine-issuez { position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 40px; line-height: 64px; padding: 0 32px; color: white; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
