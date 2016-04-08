@@ -72,6 +72,14 @@ html {
 }
 
 @font-face {
+ font-family: 'RMrollerball';
+ src: url('webfont/RMrollerball.otf')  format("opentype");
+ letter-spacing: 10px;
+ font-style:   normal;
+ font-weight:  200;
+}
+
+@font-face {
  font-family: 'Grotesk-Light';
  src: url('webfont/AktivGroteskLight.ttf');
  letter-spacing: 10px;
@@ -95,10 +103,10 @@ html {
 	font-size: 27.5px;
 }
 
-
-
-
-
+.rmRollerBall {
+	font-family: RMrollerball;
+	font-size: 42px;
+}
 
 
 
@@ -880,7 +888,7 @@ border-bottom: solid black 4px;
 
 }
 .home_image {
- max-width:18%;
+ max-width:24%;
  max-height: 16em;
  float:left;
 margin-right: 12px;
@@ -949,6 +957,17 @@ text-indent: 1em;
 letter-spacing: -.5px;
  &:first-of-type {
 	     text-indent: 0em;
+ }
+ span {
+	 &.word {
+		font-family: rmRollerBall;
+		font-size: 40px;
+		letter-spacing: 3px;
+    line-height: 0.3em;
+		font-size: 34.5px;
+		margin: 0 5px;
+		text-transform: uppercase;
+	}
  }
 }
 

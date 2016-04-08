@@ -20,7 +20,7 @@ function only_pages(){
 					wp_enqueue_script('gyro');
 
 					wp_register_script('gyroScript',get_bloginfo('template_directory') . '/js/gyroScript.js');
-					wp_enqueue_script('gyroScript');	
+					wp_enqueue_script('gyroScript');
 
         }
         if(get_post_type() === 'magazine'){
@@ -32,8 +32,10 @@ function only_pages(){
 			wp_enqueue_script('editorial');
 	    }
 	    if(is_page('Home')){
+				wp_register_script('lettering',get_bloginfo('template_directory') . '/js/lettering.js');
+			  wp_enqueue_script('lettering');
 	    	wp_register_script('home',get_bloginfo('template_directory') . '/js/home.js');
-			wp_enqueue_script('home');
+			  wp_enqueue_script('home');
 	    }
 
     }

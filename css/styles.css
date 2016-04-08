@@ -178,11 +178,14 @@ html { font-size: 100%; line-height: 1.5em; }
 
 @font-face { font-family: 'Orpheus'; src: url("webfont/orpheus.ttf"); letter-spacing: 10px; font-style: normal; font-weight: 200; }
 @font-face { font-family: 'Grotesk'; src: url("webfont/AktivGrotesk.ttf"); letter-spacing: 10px; font-style: normal; font-weight: 200; }
+@font-face { font-family: 'RMrollerball'; src: url("webfont/RMrollerball.otf") format("opentype"); letter-spacing: 10px; font-style: normal; font-weight: 200; }
 @font-face { font-family: 'Grotesk-Light'; src: url("webfont/AktivGroteskLight.ttf"); letter-spacing: 10px; font-style: normal; font-weight: 200; }
 @font-face { font-family: 'Grotesk-Italic'; src: url("webfont/AktivGroteskItalic.ttf"); letter-spacing: 10px; font-style: normal; font-weight: 200; }
 .big-font, .top-bar, .bottom-bar, .clipboard, .copied { font-size: 34px; }
 
 .small-font { font-size: 27.5px; }
+
+.rmRollerBall { font-family: RMrollerball; font-size: 42px; }
 
 /**
 * 1. Set default font family to sans-serif.
@@ -551,7 +554,7 @@ td, th { padding: 0; }
 .main-image-container { height: 100%; }
 .main-image-container .main-img-cont { float: left; background: url(http://pierre.dev/wp-content/uploads/2016/03/PT_WSJ_stipple-1.jpg); background-size: contain; background-repeat: no-repeat; height: 30%; width: 30%; height: 100px; }
 
-.home_image { max-width: 18%; max-height: 16em; float: left; margin-right: 12px; }
+.home_image { max-width: 24%; max-height: 16em; float: left; margin-right: 12px; }
 
 #mag-table caption { font-size: 32px; margin-bottom: 30px; }
 
@@ -573,6 +576,7 @@ td, th { padding: 0; }
 
 #bio p { text-indent: 1em; margin: 0; font-weight: 200; letter-spacing: -.5px; }
 #bio p:first-of-type { text-indent: 0em; }
+#bio p span.word { font-family: rmRollerBall; font-size: 40px; letter-spacing: 3px; line-height: 0.3em; font-size: 34.5px; margin: 0 5px; text-transform: uppercase; }
 
 #bio { line-height: 1.3em; font-size: 27.5px; /*max-width: 400px;*/  /* -webkit-column-count: 2;
 	 -moz-column-count: 2;
