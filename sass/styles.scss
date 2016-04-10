@@ -1147,9 +1147,10 @@ li {
 
  @media (max-width: 900px) {
  #bio {
- font-size: 18px;
+ //font-size: 18px;
  /*max-width: 400px;*/
 
+font-size: 22px;
 	 padding: 15px;
 	 padding-left:40px;
 }
@@ -1375,7 +1376,7 @@ li {
 				}
 			}
 	 	.top-bar {
-	 		font-size: 17px;
+	 		    font-size: 18px;
 			height: 36px;
 			line-height: 32px;
 			&.ads {
@@ -1408,8 +1409,9 @@ li {
 	 	#bio {
 	 		margin-bottom: 64px;
 	 		margin: 0px 14px;
+			margin: 3% 8%;
 			padding-left: 16px;
-			font-size: 15px;
+
 	 	}
 	 	.season_image {
 	 		max-width:350px;

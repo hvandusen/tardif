@@ -639,7 +639,7 @@ li { list-style: none; }
 
 .brand_dividers { display: none; }
 
-@media (max-width: 900px) { #bio { font-size: 18px; /*max-width: 400px;*/ padding: 15px; padding-left: 40px; } }
+@media (max-width: 900px) { #bio { /*max-width: 400px;*/ font-size: 22px; padding: 15px; padding-left: 40px; } }
 .dek { font-size: 45px; padding: 30px; line-height: 45px; }
 
 .magazine-issues-header { font-size: 28px; padding: 16px; }
@@ -697,14 +697,14 @@ li { list-style: none; }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
   .showing.season_attribution { position: absolute; left: 2px; width: 80%; max-width: none; padding-left: 32px; bottom: -28px; vertical-align: text-bottom; top: auto; /* border: solid 3px black; */ /* border-left: solid 3px black; */ background: white; }
   .showing.season_attribution .people { display: none; }
-  .top-bar { font-size: 17px; height: 36px; line-height: 32px; }
+  .top-bar { font-size: 18px; height: 36px; line-height: 32px; }
   .top-bar.ads { height: 64px; line-height: 1.4em; }
   .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); font-size: 1.1em; line-height: 1.2em; padding-top: 2px; }
   .top-bar.moveUp { transform: translateY(0px); }
   .envelope, .copied { padding: 22px 32px; z-index: 2002; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
-  #bio { margin-bottom: 64px; margin: 0px 14px; padding-left: 16px; font-size: 15px; }
+  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 8%; padding-left: 16px; }
   .season_image { max-width: 350px; max-height: 95%; width: 80%; }
   .page-id-160 .bottom-bar { bottom: -104px !important; position: static; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
@@ -827,3 +827,5 @@ li { list-style: none; }
 .magazine-issuez .issues-text { line-height: 64px; position: fixed; bottom: 0; }
 .magazine-issuez a { color: white; }
 .magazine-issuez a:hover { color: black; }
+
+/*# sourceMappingURL=styles.css.map */
