@@ -546,9 +546,9 @@ td, th { padding: 0; }
 .top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
 
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; }
-.bottom-bar .title { display: inline; position: fixed; bottom: 0px; }
+.bottom-bar .title { line-height: 53px; display: inline; position: static; bottom: 0px; }
 .bottom-bar .title:HOVER { cursor: url(../images/mouse-hover.png) 4 12, pointer; }
-@media (max-width: 480px) { .bottom-bar .title { padding-left: 30px; } }
+@media (max-width: 480px) { .bottom-bar .title { padding-left: 30px; position: fixed; } }
 
 .bottom-bar a { z-index: 1000; }
 
@@ -571,8 +571,6 @@ td, th { padding: 0; }
 
 .link:hover { color: black; }
 
-.nav:hover { /*	border-top: solid 1px black;*/ }
-
 #container { margin: 0 auto; }
 
 #bio p { text-indent: 1em; margin: 0; font-weight: 200; letter-spacing: -.5px; }
@@ -591,9 +589,9 @@ padding: 20px 20px 20px 50px;*/ }
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 57%; max-width: 40%; border: solid rgba(0, 0, 0, 0.35) 1px; top: 0; left: 0; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; border: solid rgba(0, 0, 0, 0.35) 1px; top: 0; left: 0; cursor: url(../images/mouse-hover.png) 4 12, pointer; position: absolute; }
 
-#bio { margin: 0 25px; margin: 5% 16%; font-family: Grotesk; /*
+#bio { margin: 0 25px; margin: 5% 16%; margin-bottom: 8%; font-family: Grotesk; /*
 color: #aebc16;
 background: -moz-linear-gradient(top,  #aebc16 0%, #e93cec 47%);
 background: -webkit-linear-gradient(top,  #aebc16 0%,#e93cec 47%);
@@ -639,7 +637,7 @@ li { list-style: none; }
 
 .brand_dividers { display: none; }
 
-@media (max-width: 900px) { #bio { /*max-width: 400px;*/ font-size: 22px; padding: 15px; padding-left: 40px; } }
+@media (max-width: 900px) { #bio { /*max-width: 400px;*/ padding: 15px; padding-left: 40px; } }
 .dek { font-size: 45px; padding: 30px; line-height: 45px; }
 
 .magazine-issues-header { font-size: 28px; padding: 16px; }
@@ -695,21 +693,22 @@ li { list-style: none; }
   /* Standard syntax */
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: absolute; left: 2px; width: 80%; max-width: none; padding-left: 32px; bottom: -28px; vertical-align: text-bottom; top: auto; /* border: solid 3px black; */ /* border-left: solid 3px black; */ background: white; }
+  .showing.season_attribution { position: absolute; left: 2px; width: 80%; max-width: none; padding-left: 32px; bottom: 0px; vertical-align: text-bottom; top: auto; /* border: solid 3px black; */ /* border-left: solid 3px black; */ background: white; }
   .showing.season_attribution .people { display: none; }
+  .book { margin: 15% 0px; }
+  .magazine { margin-top: 0px; }
   .top-bar { font-size: 18px; height: 36px; line-height: 32px; }
   .top-bar.ads { height: 64px; line-height: 1.4em; }
   .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); font-size: 1.1em; line-height: 1.2em; padding-top: 2px; }
   .top-bar.moveUp { transform: translateY(0px); }
-  .envelope, .copied { padding: 22px 32px; z-index: 2002; }
+  .envelope, .copied { padding: 22px 32px; z-index: 2002; position: static; padding: 20px 0px; padding-bottom: 0px; display: inline-block; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
-  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 8%; padding-left: 16px; }
+  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 14px; padding-left: 16px; margin-bottom: 0px; padding-bottom: 0px; font-size: 22px; }
   .season_image { max-width: 350px; max-height: 95%; width: 80%; }
   .page-id-160 .bottom-bar { bottom: -104px !important; position: static; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
   .bottom-bar a { padding-left: 32px; }
-  .nav.link { border-bottom: 2px solid black; }
   .main-img-cont { width: 100%; text-align: center; }
   .home_image { max-width: 30%; } }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
@@ -717,7 +716,7 @@ li { list-style: none; }
 /*books section*/
 .book { overflow: hidden; display: inline-block; position: relative; }
 
-.books { text-align: center; }
+.books { text-align: center; overflow: scroll; }
 
 .book_image { height: 100%; max-width: none; }
 
@@ -746,7 +745,7 @@ li { list-style: none; }
 .next { padding: 25px; float: right; }
 
 .brands { height: 100%; position: relative; top: -32px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
-@media (max-width: 480px) { .brands { top: 5px; } }
+@media (max-width: 480px) { .brands { top: 5px; height: calc(100% - 90px); } }
 
 .brandID { display: none; }
 
@@ -761,6 +760,7 @@ li { list-style: none; }
 .titles_pinch { max-width: 200px; z-index: 400; margin: 0 auto; background: white; border: solid 1px rgba(0, 0, 0, 0.35); padding: 5px; margin: auto 0 0 auto; margin-right: 16px; margin-bottom: 16px; }
 
 #main { position: static; top: 64px; bottom: 0px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
+@media (max-width: 480px) { #main { height: -webkit-calc(100% - 67px); height: calc(100% - 67px); } }
 #main .olAlphaImg, #main .olButton { width: 48px !important; height: 48px !important; }
 #main .olControlPanZoom { display: block; top: 300px; right: 6px !important; position: relative; }
 #main .olControlPanZoom .olButton { border: solid black 4px; }
@@ -820,7 +820,7 @@ li { list-style: none; }
 	 height: 48px!important;
 	 border: 3px solid black!important;
 	 margin-bottom: 1px!important; }*/ }
-@media (max-width: 480px) { #main #map { height: -webkit-calc(100% - 5px); height: calc(100% - 5px); } }
+@media (max-width: 480px) { #main #map { height: -webkit-calc(100% - 77px); height: calc(100% - 77px); } }
 
 .magazine-issuez { position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 40px; line-height: 64px; padding: 0 32px; color: white; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }

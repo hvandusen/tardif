@@ -38,6 +38,7 @@
 			vert = $(e)[0].className.indexOf('vert')>0;
 			$(e).removeClass('inactive');
 			$(e).addClass('active');
+			console.log(point.y)
 			$(e).css({
 				'z-index': z,
 				'left':point.x+'px',
@@ -54,13 +55,13 @@
 				if(point.x<0)
 					point.x=4;
 			}
-			if(window.innerWidth<480 && (point.y >0 || point.x>0)){
+			if(window.innerWidth<480 && (point.y <0 || point.x<0)){
 				console.log('sww')
 				dumps++
 				dx = directions[(dumps%4)][0];
 				dy = directions[(dumps%4)][1];
-			//	point.x = 18;
-				//point.y = 20;
+				point.x = 18;
+				point.y = 20;
 			}
 			z--;
 			if(i===totalPics-1){
@@ -124,7 +125,7 @@ function getPoint(w){
 
 function getPointMobile(w){
 	rangeX = w*.15;
-	rangeY = (window.innerHeight*.4);//- 164)/2;
+	rangeY = (window.innerHeight-450);
 	//three 64 bars worth
 	return {
 		x: Math.random()*rangeX,
