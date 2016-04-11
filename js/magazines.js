@@ -47,12 +47,14 @@
 	  map.setCenter(new OpenLayers.LonLat(10, 1), 4);
 	}
 	init();
+	var mobile = window.innerWidth<480;
+
 	$('.olButton').css({//'#OpenLayers_Control_PanZoom_44_zoomin, #OpenLayers_Control_PanZoom_44_zoomout').css({
-			'right':'20px',
+			'right': (mobile ? '10px' : '20px'),
 			'left':'auto',
 	});
 	$('.olControlPanZoom.olControlNoSelect').css({
-		'top':'-36px'
+		'top':(mobile ? '-48px' : '-36px'),
 	});
 	$('.olControlPermalink.olControlNoSelect').hide();
 $('.pdf-img').hide();

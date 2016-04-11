@@ -7,17 +7,33 @@
 
 	var mobile = window.innerWidth<480;
 
+	    //event handler to set the focus()
+			$('.envelope').on('touchstart', function () {
+	        $(this).focus();   // inside this function the focus works
+	        focused = $(this); // just for the example when I click next on fiddle
+	    });
 	$(".envelope").click(function(){
-		$(this).hide();
-		$('.copied').show();
+
+		 var html = $(this).parent().html();
+		 console.dir(html);
+		 if(!mobile)
+			$(this).html($('.copied').html())
+		else {
+			$(this).html('pierret@gmail.com');
+			$(this).select();
+
+		}
+		//$('.copied').show();
 		setTimeout(function(){
-			$('.copied').hide();
-			$('.envelope').show();
+			//$('.copied').hide();
+			//$('.envelope').show();
+			$(this).html();
+
 		},3000);
 	});
 
 if(mobile){
-	$('.envelope').appendTo($('#bio'));
+	$('.email-container').appendTo($('#bio'));
 }
 
 	var moveCount = 0;

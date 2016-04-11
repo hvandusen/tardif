@@ -649,6 +649,9 @@ th {
 	&.HOVER {
 		border-bottom: 3px solid black;
 	}
+	@media(max-width: 480px){
+		font-size: 22px;
+	}
 }
 
 .top-bar {
@@ -924,6 +927,7 @@ margin-right: 12px;
 	right: 32px;
 	z-index: 1002;
 	@extend .big-font;
+
 }
 
 
@@ -1394,8 +1398,12 @@ li {
 				z-index: 5000;
 				transform: translateY(0px);
 				font-size: 1.1em;
-				line-height: 1.2em;
+				//line-height: 1.2em;
 				padding-top: 2px;
+				line-height: 2em;
+			}
+			&.ads {
+				line-height: 1.2em;
 			}
 			&.moveUp {
 				transform: translateY(0px);
@@ -1406,9 +1414,10 @@ li {
 			padding: 22px 32px;
 			z-index: 2002;
 			position: static;
-			padding: 20px 0px;
+			padding: 20px 30px;
 			padding-bottom: 0px;
 			display: inline-block;
+			margin-bottom: 64px;
 			img {
 				max-height: 20px;
 				&:HOVER {
@@ -1621,6 +1630,10 @@ li {
 		.olAlphaImg, .olButton{
 			width: 48px!important;
 			height: 48px!important;
+			@media(max-width: 480px){
+				width: 24px!important;
+				height: 24px!important;
+			}
 		}
 
 		.olControlPanZoom {
@@ -1629,9 +1642,12 @@ li {
 	  right: 6px!important;
 	  position: relative;
 		.olButton {
-			border: solid black 4px;
+			border: solid black 2px;
 			&:last-of-type {
 				@include translateY(16px);
+				@media(max-width: 480px){
+					@include translateY(-10px);
+				}
 			}
 		}
 }
@@ -1835,7 +1851,7 @@ li {
 		font-size: 40px;
 		line-height: 64px;
 		padding: 0 32px;
-		color: white;
+
 		overflow: visible;
 		@include calc(width, "100% - 64px");
 		.issues-text {
