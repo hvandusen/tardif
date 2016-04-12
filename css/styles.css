@@ -829,7 +829,7 @@ li { list-style: none; }
 .magazine-issuez { position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 40px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
 .magazine-issuez .issues-text { line-height: 64px; position: fixed; bottom: 0; }
-.magazine-issuez a { color: white; }
+.magazine-issuez a { color: black; }
 .magazine-issuez a:hover { color: black; }
 
 /*# sourceMappingURL=styles.css.map */
