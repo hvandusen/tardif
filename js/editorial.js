@@ -150,6 +150,7 @@ function getPointMobile(w){
 			});
 	});
 	$('.season_image').click(function(){
+		console.log('clicked');
 		remaining = $('.season_image.active');
 		console.dir(remaining.length)
 		//point.x = $(remaining[remaining.length-1]).offset()['left'];
