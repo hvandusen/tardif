@@ -1,12 +1,12 @@
 (function ($) {
 	var count=0;
 	$('footer .nav').addClass('current-page')
-	$('body').mousemove(function(){
 
-	});
 
 	var mobile = window.innerWidth<480;
-
+	$("#bio p span").map(function(i,e){
+		console.log(e)
+	})
 	    //event handler to set the focus()
 			$('.envelope').on('touchstart', function () {
 	        $(this).focus();   // inside this function the focus works
@@ -35,6 +35,7 @@
 if(mobile){
 	$('.email-container').appendTo($('#bio'));
 }
+
 
 	var moveCount = 0;
 //	$("#bio").css('color',);

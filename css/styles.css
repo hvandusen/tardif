@@ -539,7 +539,7 @@ td, th { padding: 0; }
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; }
 .bottom-bar .title { line-height: 53px; display: inline; position: static; bottom: 0px; }
 .bottom-bar .title:HOVER { cursor: url(../images/mouse-hover.png) 4 12, pointer; }
-@media (max-width: 480px) { .bottom-bar .title { padding-left: 30px; position: fixed; } }
+@media (max-width: 480px) { .bottom-bar .title { padding-left: 14px; max-width: 33%; position: fixed; } }
 
 .bottom-bar a { z-index: 1000; }
 
@@ -564,9 +564,12 @@ td, th { padding: 0; }
 
 #container { margin: 0 auto; }
 
+.bio2 { position: absolute; top: 100px; }
+
 #bio p { text-indent: 1em; margin: 0; font-weight: 200; letter-spacing: -.5px; }
 #bio p:first-of-type { text-indent: 0em; }
-#bio p span.word { font-family: rmRollerBall; font-size: 40px; letter-spacing: 3px; line-height: 0.3em; font-size: 34.5px; margin: 0 5px; text-transform: uppercase; }
+#bio p span { position: relative; }
+#bio p span.word { visibility: visible !important; font-family: rmRollerBall; font-size: 40px; letter-spacing: -1px; line-height: 0.2em; font-size: 43.5px; margin: 0 2px; text-transform: uppercase; }
 
 #bio { line-height: 1.3em; font-size: 27.5px; /*max-width: 400px;*/  /* -webkit-column-count: 2;
 	 -moz-column-count: 2;
@@ -702,7 +705,7 @@ li { list-style: none; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
   .bottom-bar a { padding-left: 32px; }
   .main-img-cont { width: 100%; text-align: center; }
-  .home_image { max-width: 30%; } }
+  .home_image { max-width: 33%; } }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
 
 /*books section*/
