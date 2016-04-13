@@ -149,7 +149,7 @@ function getPointMobile(w){
 				//}
 			});
 	});
-	$(body).click(function(e){
+	$('body').click(function(e){ 
 		console.log(e);
 	})
 	$('.season_image').click(function(){
