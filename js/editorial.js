@@ -149,6 +149,9 @@ function getPointMobile(w){
 				//}
 			});
 	});
+	$(body).click(function(e){
+		console.log(e);
+	})
 	$('.season_image').click(function(){
 		console.log('clicked');
 		remaining = $('.season_image.active');
@@ -161,6 +164,7 @@ function getPointMobile(w){
 			currentAttr.removeClass('showing');
 		}
 	});
+
 	$('.season_image').map(function(e,i){
 		//$(i).css('transform','rotate('+(-10+Math.floor(Math.random()*20))+'deg)');
 	});
