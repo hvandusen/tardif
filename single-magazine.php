@@ -19,8 +19,7 @@
 		<?php $id = get_the_ID();?>
 			<a class='link nav <?php if($id===185){echo 'current';} ?>' href='/#magazine-wall-street-journal-magazine'>WSJ. MAGAZINE</a>,
 			<a class='link nav <?php if($id===186){echo 'current';} ?>' href='/#magazine-top'>TOP,</a>
-			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-v'>V,</a> and
-			<a class='link nav <?php if($id===187){echo 'current';} ?>' href='/#magazine-vman'>VMAN</a>
+			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-vman'>V and VMAN</a>
 		</div>
 <div class='magazine <?php echo get_the_ID(); ?>'>
 <div id='map' ></div>

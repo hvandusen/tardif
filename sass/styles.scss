@@ -810,42 +810,14 @@ border-bottom: solid black 4px;
 			@media (max-width: 1298px) {
 			font-size: 27px;
 			}
-			@media (max-width: 1246px) {
-			font-size: 26px;
+			@media (max-width: 1204px) {
+				line-height: 1.2em;
 			}
-			@media (max-width: 1159px) {
-			font-size: 25px;
+			@media (max-width: 633px) {
+				font-size:19px;
+				line-height: 1.7em;
 			}
-			@media (max-width: 1130px) {
-			font-size: 24px;
-			}
-			@media (max-width: 1079px) {
-			font-size: 22px;
-			}
-			@media (max-width: 980px) {
-			font-size: 20px;
-			}
-			@media (max-width: 920px) {
-			font-size: 19px;
-			}
-			@media (max-width: 881px) {
-			font-size: 18px;
-			}
-			@media (max-width: 809px) {
-			font-size: 17px;
-			}
-			@media (max-width: 760px) {
-			font-size: 16px;
-			}
-			@media (max-width: 713px) {
-			font-size: 15px;
-			}
-			@media (max-width: 676px) {
-			font-size: 14px;
-			}
-			@media (max-width: 626px) {
-			font-size: 16px;
-			}
+
 
 			}
 			&.ads.goaway {
@@ -1180,10 +1152,14 @@ li {
 .magazine{
 	margin-top: -32px;
 }
+@media (max-width: 610px) {
+	.top-bar {
+	 font-size:25px;
+	}
+}
+
  @media (max-width: 768px) {
-  .top-bar {
- 	 font-size:25px;
-  }
+
   .dek {
 		padding-bottom: 0px;
  	 font-size:24px;
@@ -1386,7 +1362,7 @@ li {
 				margin-top: 0px;
 			}
 	 	.top-bar {
-	 		    font-size: 18px;
+	 		    font-size: 21px;
 			height: 36px;
 			line-height: 32px;
 			&.ads {
@@ -1397,13 +1373,13 @@ li {
 				top: 0px;
 				z-index: 5000;
 				transform: translateY(0px);
-				font-size: 1.1em;
+				font-size: 17px;//1.1em;
 				//line-height: 1.2em;
 				padding-top: 2px;
 				line-height: 2em;
 			}
 			&.ads {
-				line-height: 1.2em;
+				line-height: 1.8em;
 			}
 			&.moveUp {
 				transform: translateY(0px);
@@ -1822,10 +1798,11 @@ li {
 
   #main #map {
    position: static;
-   border-bottom: solid black 4px;
+   //border-bottom: solid black 4px;
 	 position: static;
 	 @include calc(height, '100% - 38px');
 	 @media(max-width:480px){
+		 border-bottom: solid 4px black;
 		 @include calc(height, '100% - 77px');
 	 }
 	 width: 100%;
@@ -1844,6 +1821,7 @@ li {
 		@media(max-width: 480px){
 			display:none;
 		}
+		background:white;
 		position: absolute;
 		bottom: 0;
 		z-index: 2000;
@@ -1857,14 +1835,14 @@ li {
 		.issues-text {
 			line-height: 64px;
 
-			position: fixed;
+			//position: fixed;
 			bottom: 0;
 		}
 		a {
 			color:black;
 			&:hover {
 				color:black;
-				
+
 			}
 		}
 	}
