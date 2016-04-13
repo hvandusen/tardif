@@ -10,7 +10,7 @@
 	bottom: 64px;
 	animation: bottom-up .5s ease-in;
 }
-
+#map { position: absolute; height: 100%; width: 100%; background-color: #FFFFFF; }
 
 </style>
 

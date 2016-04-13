@@ -2,3 +2,6 @@ images
 bower_components
 page-magazines_noajax.php
 page-advertisements_noajax.php
+js/OpenLayers-min.js
+js/magazines-preImages.js
+single-magazine-ol.php
