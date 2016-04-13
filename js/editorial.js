@@ -160,6 +160,7 @@ function getPointMobile(w){
 	});
 	if(window.innerWidth>480)
 	$('.season_image').mouseenter(function(){
+		console.log('entered')
 		//$(this).css('transform','rotate(8deg)');
 
 		$('.showing').removeClass('showing');
