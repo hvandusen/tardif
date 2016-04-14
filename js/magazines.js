@@ -43,7 +43,7 @@
 	  map.addControl(new OpenLayers.Control.PanZoom());
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
-	  map.setCenter(new OpenLayers.LonLat(100, 1), 5);//2466, -308),5)//
+	  map.setCenter(new OpenLayers.LonLat(1077, -342),4)//
 	}
 	init();
 	var mobile = window.innerWidth<480;

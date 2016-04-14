@@ -820,7 +820,7 @@ li { list-style: none; }
 
 #main .olMap { cursor: url(../images/mouse-icon-3.png) 4 12, auto; }
 
-#main #map { position: static; position: static; height: -webkit-calc(100% - 38px); height: calc(100% - 38px); width: 100%; background-color: #FFFFFF;  /*.olButton {
+#main #map { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 38px); height: calc(100% - 38px); width: 100%; background-color: #FFFFFF;  /*.olButton {
 	 width: 48px!important;
 	 height: 48px!important;
 	 border: 3px solid black!important;
