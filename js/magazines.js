@@ -2,7 +2,7 @@
 	var map, layer;
 	var mapBounds = new OpenLayers.Bounds(0.000000, -3302.000000, 6265.000000, 0.000000);
 	var mapMinZoom = 0;
-	var mapMaxZoom = 6;
+	var mapMaxZoom = 5;
 	var mapMaxResolution = 0.250000;
 	var gridBounds = new OpenLayers.Bounds(0.000000, -3302.000000, 7265.000000, 0.000000);
 	function init() {
@@ -43,7 +43,7 @@
 	  map.addControl(new OpenLayers.Control.PanZoom());
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
-	  map.setCenter(new OpenLayers.LonLat(2466, -308),4)//10, 1), 4);
+	  map.setCenter(new OpenLayers.LonLat(100, 1), 5);//2466, -308),5)//
 	}
 	init();
 	var mobile = window.innerWidth<480;

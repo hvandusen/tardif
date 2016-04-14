@@ -532,7 +532,9 @@ td, th { padding: 0; }
   to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
 @media (max-width: 1233px) { .top-bar { font-size: 27.5px; } }
 @media (max-width: 633px) { .top-bar { font-size: 21px; line-height: 2.5em; } }
-.top-bar.moveUp { animation: hidetop .5s ease-out; -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
+.top-bar.showTop { z-index: 10; position: relative; }
+.top-bar.moveUp { z-index: 10; position: relative; animation: hidetop .5s ease-out; -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
+.top-bar.moveUp:hover { animation: showtop .5s ease-out; }
 .top-bar.moveDown { position: relative; animation: showtop .5s ease-out; -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
 .top-bar.magazines { top: -32px; z-index: 5; position: relative; animation: mymove .5s ease-out; }
 .top-bar.ads { top: -32px; position: relative; animation: mymove .5s ease-out; font-size: 27.5px; }
@@ -825,7 +827,7 @@ li { list-style: none; }
 	 margin-bottom: 1px!important; }*/ }
 @media (max-width: 480px) { #main #map { border-bottom: solid 4px black; height: -webkit-calc(100% - 77px); height: calc(100% - 77px); } }
 
-.magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 40px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
+.magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
 .magazine-issuez .issues-text { line-height: 64px; bottom: 0; }
 .magazine-issuez a { color: black; }

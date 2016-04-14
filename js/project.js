@@ -45,6 +45,15 @@
 						});
 				}
 
+				$('.moveUp').mouseenter(function(){
+						$(this).addClass('showtop').removeClass('moveUp');
+
+				});
+				$('.moveUp').mouseleave(function(){
+
+						$(this).removeClass('showtop').addClass('moveUp');
+
+				});
 			 var words = 0;
 
 	});
