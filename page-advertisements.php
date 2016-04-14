@@ -19,7 +19,7 @@
 					if ($wp_query->current_post == $wp_query->post_count-1) :
 					echo 'and ';
 					endif;
-					?><?php echo get_the_title(); ?><?php
+					?><?php echo strtoupper(get_the_title()); ?><?php
 					if ($wp_query->current_post !== $wp_query->post_count-1) :
 					echo ',';
 					endif;

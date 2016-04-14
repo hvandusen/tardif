@@ -1,9 +1,5 @@
 (function ($) {
 	var up,left,accel;
-	$('.brand_title').click(function(){
-		$('.brand_title').removeClass('revealed');
-		$(this).addClass('revealed');
-	})
 
 	var point = (window.innerWidth>480 ? getPoint(window.innerWidth): getPointMobile(window.innerWidth));
 	/*{
@@ -25,7 +21,7 @@
 	var dumps = 0;
 	var currentAttr;
 	function dumpImages(brand){
-		console.log('dumped');
+		//console.log('dumped');
 		var seasons = brand.find('.season');
 		var vert;
 		point = (window.innerWidth>480 ? getPoint(window.innerWidth): getPointMobile(window.innerWidth));
@@ -39,7 +35,7 @@
 			vert = $(e)[0].className.indexOf('vert')>0;
 			$(e).removeClass('inactive');
 			$(e).addClass('active');
-			console.log(point.y)
+			//console.log(point.y)
 			$(e).css({
 				'z-index': z,
 				'left':point.x+'px',
@@ -57,7 +53,7 @@
 					point.x=4;
 			}
 			if(window.innerWidth<480 && (point.y <0 || point.x<0)){
-				console.log('sww')
+				//console.log('sww')
 				dumps++
 				dx = directions[(dumps%4)][0];
 				dy = directions[(dumps%4)][1];
@@ -67,7 +63,7 @@
 			z--;
 			if(i===totalPics-1){
 				currentAttr = $(e).parent().prev();
-				//console.dir($(e))
+				////console.dir($(e))
 				currentAttr.toggleClass('showing');
 			}
 		});
@@ -81,36 +77,36 @@
 if(window.innerWidth<480){
 	$('.season_image').css('max-width',window.innerWidth-20);
 }
-
+$('.top-brand').addClass('revealed');
 
 	$(window).resize(function(){
-		console.log(window.innerWidth)
+		//console.log(window.innerWidth)
 	});
 
 function getPoint(w){
-	console.log(w)
+	//console.log(w)
 	var range = w*.62;//-375;
 	//three 64 bars worth
 	if(window.innerWidth>959){
 		range = w*.56;
-		console.log('bigger ' + range);
+		//console.log('bigger ' + range);
 		rangeHeight = window.innerHeight*.25;
 	}
 	else if(window.innerWidth>809){
 		range = w*.4;
-		console.log('big ' + range);
+		//console.log('big ' + range);
 		rangeHeight = window.innerHeight*.20;
 	}
 	else if(window.innerWidth>680){
 		range = w*.32;
-		console.log(range);
-		console.log('med-big' + range);
+		//console.log(range);
+		//console.log('med-big' + range);
 		rangeHeight = window.innerHeight*.15;
 	}
 	else if(window.innerWidth>480){
 		range = w*.3;
-		console.log(range);
-		console.log('med ' + range);
+		//console.log(range);
+		//console.log('med ' + range);
 		rangeHeight = window.innerHeight*.08;
 	}
 	rangeX = Math.random()*range;
@@ -136,7 +132,7 @@ function getPointMobile(w){
 
 
 	$('.brandID').map(function(i,e){
-			console.log($('.brandID').length)
+			//console.log($('.brandID').length)
 			rev = $('.brandID')[$('.brandID').length-1-i];
 				dumpImages($(rev).next());
 				//adjust vert images
@@ -151,7 +147,7 @@ function getPointMobile(w){
 			});
 	});
 	$('body').click(function(e){
-		console.log(e);
+		//console.log(e);
 	})
 
 
@@ -160,7 +156,7 @@ function getPointMobile(w){
 	});
 	if(window.innerWidth>480)
 	$('.season_image').mouseenter(function(){
-		console.log('entered')
+		//console.log('entered')
 		//$(this).css('transform','rotate(8deg)');
 
 		$('.showing').removeClass('showing');
@@ -170,7 +166,7 @@ function getPointMobile(w){
 			currentAttr=$(this).parent().prev()
 			currentAttr.addClass('showing');
 		}
-		console.log(currentAttr.index())
+		//console.log(currentAttr.index())
 	});
 
 	$('.season_image').mouseleave(function(){
@@ -178,15 +174,21 @@ function getPointMobile(w){
 		//$(this).css('transform','rotate(0deg)');
 
 	});
+	var setup = 0;
 	$(document).ready(function(){
 		var clickCount = 0;
 		$('.brand_title').click(function(){
+			setup === 0 && $('.brand_title').removeClass('revealed');
+			setup++
+			//$('.brand_title').removeClass('revealed');
+			$(this).addClass('revealed');
+			$('.black').removeClass('black');
 			if(clickCount===0){
 				$('.season').removeClass('active');
 			}
 			clickCount++;
 			var thisText = $(this).text().replace(',','').replace('and ','');
-			console.log(thisText)
+			//console.log(thisText)
 			$('.brandID').map(function(i,e){
 				if(thisText===$(e).text()){
 					dumpImages($(e).next())
@@ -194,14 +196,26 @@ function getPointMobile(w){
 			});
 		});
 		$('.season_image').click(function(){
-			console.log('clicked');
-			remaining = $('.season_image.active');
-			console.dir(remaining.length)
+			//console.log('clicked');
+			//$('.season_image.active');
+			//console.dir(remaining.length)
 			//point.x = $(remaining[remaining.length-1]).offset()['left'];
 			//point.y = $(remaining[remaining.length-1]).offset()['top'];
 			$(this).removeClass('active');
 			$(this).addClass('inactive');
-			if(remaining.length===1){
+			var brand = $(this).closest('.seasons');
+			if(brand.find('.inactive').length === brand.find('.season_image').length){
+			//if(brand.find('.active').length===2)
+				$('.brand_title').map(function(i,e){
+					console.log($(e).text().replace(',',''))
+					console.log($(this).closest('.brandID').text())
+					if($(e).text().replace(',','')===brand.prev().text()){
+						$(e).removeClass('revealed');
+						brand.find('.active').removeClass('active');
+					}
+				});
+				console.log(brand.prev().text())
+
 				currentAttr.removeClass('showing');
 			}
 		});
