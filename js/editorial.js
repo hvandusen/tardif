@@ -1,6 +1,11 @@
 (function ($) {
 	var up,left,accel;
-
+	$('.season_image').map(function(i,e){
+		var r = Math.random()*7-3.5;
+		$(e).css({
+			'transform': 'rotate('+r+'deg)'
+		});
+	});
 	var point = (window.innerWidth>480 ? getPoint(window.innerWidth): getPointMobile(window.innerWidth));
 
 	var staggerAmount = (window.innerWidth>480 ? 5 : 2);
