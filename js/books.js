@@ -29,8 +29,9 @@ window.onscroll = function(e){
 	function setBookSize(){
 		thirdW = Math.floor(window.innerWidth*.32);
 		thirdH = Math.floor(window.innerHeight*.32);
+		if(false)
 		$('.book').css({
-			'width': 2.2*thirdH+'px',
+			'width': thirdH+'px',
 			'height': thirdH+'px',
 		});
 	}

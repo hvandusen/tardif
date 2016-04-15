@@ -1,10 +1,10 @@
 (function ($) {
 	var map, layer;
-	var mapBounds = new OpenLayers.Bounds(0.000000, -3302.000000, 6265.000000, 0.000000);
-	var mapMinZoom = 0;
+	var mapBounds = new OpenLayers.Bounds(0.000000, -2302.000000, 6265.000000, 0.000000);
+	var mapMinZoom = 2;
 	var mapMaxZoom = 5;
-	var mapMaxResolution = 0.250000;
-	var gridBounds = new OpenLayers.Bounds(0.000000, -3302.000000, 7265.000000, 0.000000);
+	var mapMaxResolution = 0.50000;
+	var gridBounds = new OpenLayers.Bounds(0.000000, -1302.000000, 7065.000000, 0.000000);
 	function init() {
 	  var options = {
 	    controls: [],
@@ -21,7 +21,8 @@
 	    isBaseLayer: true,
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
-	    gutter: 0
+	    gutter: 0,
+			wrapDateLine: true
 	  });
 	  map.addLayer(layer);
 	  map.zoomToExtent(mapBounds);

@@ -545,7 +545,7 @@ td, th { padding: 0; }
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; }
 .bottom-bar .title { line-height: 53px; display: inline; position: static; bottom: 0px; }
 .bottom-bar .title:HOVER { cursor: url(../images/mouse-hover.png) 4 12, pointer; }
-@media (max-width: 480px) { .bottom-bar .title { padding-left: 14px; max-width: 50%; position: fixed; } }
+@media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 22px; position: fixed; } }
 
 .bottom-bar a { z-index: 1000; }
 
@@ -574,10 +574,26 @@ td, th { padding: 0; }
 @media (max-width: 633px) { .bio2 { top: 100px; } }
 @media (max-width: 480px) { .bio2 { top: 40px; } }
 
-#bio p { text-indent: 1em; margin: 0; font-weight: 200; letter-spacing: -.5px; }
+#bio p { margin: 0; font-weight: 200; letter-spacing: -.5px; }
+#bio p:before { content: "ee"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 #bio p:first-of-type { text-indent: 0em; }
+#bio p:first-of-type:before { content: ""; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
 #bio p span { position: relative; }
 #bio p span.word { visibility: visible !important; font-family: rmRollerBall; font-size: 40px; letter-spacing: -2px; margin-right: 3px; line-height: 0.2em; font-size: 43.5px; margin: 0 2px; text-transform: uppercase; }
+#bio p span:after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; }
+#bio p span:HOVER:after { line-height: 0.2em; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+
+@-webkit-keyframes fade-away { 0% { line-height: 0.2em; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+  100% { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; } }
+@-moz-keyframes fade-away { 0% { line-height: 0.2em; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+  100% { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; } }
+@-o-keyframes fade-away { 0% { line-height: 0.2em; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+  100% { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; } }
+@keyframes fade-away { 0% { line-height: 0.2em; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+  100% { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; } }
+.word-fade-from { line-height: 0.2em; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+
+.word-fade-to { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; }
 
 #bio { line-height: 1.3em; font-size: 27.5px; /*max-width: 400px;*/  /* -webkit-column-count: 2;
 	 -moz-column-count: 2;
@@ -698,15 +714,15 @@ li { list-style: none; }
   .showing.season_attribution .people { display: none; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
-  .top-bar { font-size: 21px; height: 36px; line-height: 32px; }
-  .top-bar.ads { height: 64px; line-height: 1.4em; }
+  .top-bar { font-size: 18px; height: 36px; line-height: 36px; }
+  .top-bar.ads { height: 64px; line-height: 1.4em; display: none; }
   .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; transform: translateY(0px); font-size: 17px; padding-top: 2px; line-height: 2em; }
   .top-bar.ads { line-height: 1.8em; }
   .top-bar.moveUp { transform: translateY(0px); }
   .envelope, .copied { padding: 22px 32px; z-index: 2002; position: static; padding: 20px 30px; padding-bottom: 0px; display: inline-block; margin-bottom: 64px; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
-  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 14px; padding-left: 16px; margin-bottom: 0px; padding-bottom: 0px; font-size: 22px; }
+  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 14px; padding-left: 16px; margin-bottom: 0px; padding-bottom: 0px; font-size: 18px; }
   .season_image { max-width: 350px; max-height: 95%; width: 80%; }
   .page-id-160 .bottom-bar { bottom: -104px !important; position: static; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
@@ -716,9 +732,10 @@ li { list-style: none; }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
 
 /*books section*/
-.book { overflow: hidden; display: inline-block; position: relative; }
+.book { overflow: hidden; display: inline-block; position: relative; max-width: 300px; max-height: 300px; margin: 10px; }
+@media (max-width: 480px) { .book { margin-top: 40px; width: 100%; } }
 
-.books { text-align: center; overflow: scroll; }
+.books { text-align: center; overflow: scroll; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; margin-top: 30px; }
 
 .book_image { height: 100%; max-width: none; }
 
@@ -818,14 +835,19 @@ li { list-style: none; }
 
 .copied { display: none; }
 
-#main .olMap { cursor: url(../images/mouse-icon-3.png) 4 12, auto; }
+#main .olMap:active { cursor: grabbing; cursor: -moz-grabbing; cursor: -webkit-grabbing; }
 
 #main #map { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 38px); height: calc(100% - 38px); width: 100%; background-color: #FFFFFF;  /*.olButton {
 	 width: 48px!important;
 	 height: 48px!important;
 	 border: 3px solid black!important;
-	 margin-bottom: 1px!important; }*/ }
+	 margin-bottom: 1px!important; }*/ cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
 @media (max-width: 480px) { #main #map { border-bottom: solid 4px black; height: -webkit-calc(100% - 77px); height: calc(100% - 77px); } }
+#main #map .olCursorWait { cursor: wait; }
+#main #map .olDragDown { cursor: -webkit-grabbing; }
+#main #map .olDrawBox { cursor: crosshair; }
+#main #map .olControlDragFeatureOver { cursor: -webkit-grabbing; }
+#main #map .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: -moz-grabbing; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }

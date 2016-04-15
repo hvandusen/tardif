@@ -823,6 +823,7 @@ border-bottom: solid black 4px;
 	 //@include animation(15s, mymove);
  }
 	&.ads {
+
 		top:-32px;
 		position: relative;
 	 animation: mymove .5s ease-out;
@@ -866,8 +867,8 @@ border-bottom: solid black 4px;
 		position: static;
     bottom: 0px;
 	 @media(max-width:480px){
-		 padding-left: 14px;
-		 max-width: 50%;
+		 padding-left: 17px;
+		 font-size: 22px;
 		  position: fixed;
 	 }
  }
@@ -964,12 +965,20 @@ margin-right: 12px;
 }
 
 #bio p {
-text-indent: 1em;
+// text-indent: 1em;
  margin: 0;
  font-weight: 200;
 letter-spacing: -.5px;
+&:before{
+	content: "ee";
+	@include opacity(0);
+}
  &:first-of-type {
 	     text-indent: 0em;
+			 &:before{
+			 	content: "";
+			 	@include opacity(0);
+			 }
  }
  span {
 	 position: relative;
@@ -985,8 +994,71 @@ letter-spacing: -.5px;
 		margin: 0 2px;//5px;
 		text-transform: uppercase;
 	}
+	&:after {
+		content:attr(data-text);
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:white;
+		pointer-events:none;
+		@include opacity(0);
+		font-family: rmRollerBall;
+		text-align:center;
+		font-size:150%;
+	}
+	&:HOVER {
+		&:after {
+			line-height: 0.2em;
+			@include opacity(1);
+		}
+	}
  }
 }
+
+@include keyframes(fade-away) {
+  0%   {
+		line-height: 0.2em;
+		@include opacity(1);
+	}
+  100% {
+		content:attr(data-text);
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background:white;
+		pointer-events:none;
+		@include opacity(0);
+		font-family: rmRollerBall;
+		text-align:center;
+		font-size:150%;
+	}
+}
+
+.word-fade-from {
+	line-height: 0.2em;
+	@include opacity(1);
+}
+
+.word-fade-to {
+	content:attr(data-text);
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:white;
+	pointer-events:none;
+	@include opacity(0);
+	font-family: rmRollerBall;
+	text-align:center;
+	font-size:150%;
+}
+
+
 
 #bio {
 line-height: 1.3em;
@@ -1399,12 +1471,14 @@ li {
 				margin-top: 0px;
 			}
 	 	.top-bar {
-	 		    font-size: 21px;
+	 		//font-size: 21px;
+			font-size: 18px;
 			height: 36px;
-			line-height: 32px;
+			line-height: 36px;
 			&.ads {
 				height: 64px;
 				line-height: 1.4em;
+				display: none;
 			}
 			&.magazines, &.ads {
 				top: 0px;
@@ -1445,7 +1519,8 @@ li {
 			padding-left: 16px;
 			margin-bottom: 0px;
 	    padding-bottom: 0px;
-			font-size: 22px;
+			//font-size: 22px;
+			font-size: 18px;
 	 	}
 	 	.season_image {
 	 		max-width:350px;
@@ -1495,11 +1570,23 @@ li {
    overflow: hidden;
    display: inline-block;
    position:relative;
+	 max-width: 300px;
+	     max-height: 300px;
+	     margin: 10px;
+			 @media(max-width: 480px){
+				 margin-top: 40px;
+				 width: 100%;
+			 }
   }
 
   .books {
    text-align: center;
 	 overflow: scroll;
+	 display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 30px;
   }
 
   .book_image{
@@ -1829,7 +1916,13 @@ li {
 }
 
   #main .olMap {
-   cursor: url(../images/mouse-icon-3.png) 4 12, auto;
+   //cursor: url(../images/mouse-icon-3.png) 4 12, auto;
+	 &:active {
+	     cursor: grabbing;
+	     cursor: -moz-grabbing;
+	     cursor: -webkit-grabbing;
+	 }
+
   }
 
 	.home {
@@ -1853,7 +1946,27 @@ li {
 		 border: 3px solid black!important;
 		 margin-bottom: 1px!important;
 	 }*/
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
 
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+ .olCursorWait {
+ 	cursor: wait;
+ }
+ .olDragDown {
+ 	cursor: -webkit-grabbing;
+ }
+ .olDrawBox {
+ 	cursor: crosshair;
+ }
+ .olControlDragFeatureOver {
+ 	cursor: -webkit-grabbing;
+ }
+ .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
+ 	cursor: -moz-grabbing;
+ }
 	}
 
 

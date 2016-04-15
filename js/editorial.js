@@ -146,7 +146,7 @@ function getPointMobile(w){
 		var clickCount = 0;
 		$('.brand_title').click(function(){
 			setup === 0 && $('.brand_title').removeClass('revealed');
-			setup++
+			setup++;
 			//$('.brand_title').removeClass('revealed');
 			$(this).addClass('revealed');
 			$('.black').removeClass('black');
@@ -155,8 +155,11 @@ function getPointMobile(w){
 			}
 			clickCount++;
 			var thisText = $(this).text().replace(',','').replace('and ','');
+
 			$('.brandID').map(function(i,e){
-				if(thisText===$(e).text()){
+				console.log(thisText+' matched '+$(e).text().toUpperCase());
+				if(thisText===$(e).text().toUpperCase()){
+
 					dumpImages($(e).next())
 				}
 			});
