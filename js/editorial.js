@@ -35,7 +35,7 @@
 			$(e).css({
 				'z-index': z,
 				'left':point.x+'px',
-				'top':(vert? Math.random()*30 : point.y)+'px',
+				'top':(vert? Math.abs(point.y-10) : point.y)+'px',
 			});
 			point.x += (dx*staggerAmount);
 			point.y += (dy*staggerAmount);
@@ -101,9 +101,10 @@ function getPoint(w){
 		rangeHeight = window.innerHeight*.08;
 	}
 	rangeX = Math.random()*range;
-	rangeY = Math.random()*rangeHeight;
+	rangeY = (.1+Math.random()*.9)*rangeHeight;
 if(rangeY<0)
 	 rangeY = 0;
+	 console.log(rangeY)
 	return {
 		x: rangeX,
 		y: rangeY
