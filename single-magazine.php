@@ -9,6 +9,7 @@
 	border-bottom: solid black 3px;
 	bottom: 64px;
 	animation: bottom-up .5s ease-in;
+	position: absolute;
 }
 #map { position: absolute; height: 100%; width: 100%; background-color: #FFFFFF; }
 
@@ -33,7 +34,8 @@
 		  if(is_array($pdfs) && !empty($pdfs)){
 			foreach($pdfs as $row){ ?>
 			<?php
-				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" href="' . $row['pdf'] . '">';
+				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" href="' . $row['pdf'] . '"
+				data-img="background-image: url(' . $row['image']['sizes']['medium'] . ')">';
 
 				if($pdfCount===count($pdfs)){
 					$comma = '';
@@ -53,7 +55,8 @@
 		  if(is_array($pdfs) && !empty($pdfs)){
 			foreach($pdfs as $row){ ?>
 			<?php
-			echo '<div class="pdf-img pdf-img-' . $pdfCount . '" style=" background-image: url(' . $row['image']['sizes']['medium'] . ')"></div>';
+			echo '<div class="pdf-img pdf-img-' . $pdfCount . '" style=" background-image: url(' . $row['image']['sizes']['medium'] . ')"
+			data-img="background-image: url(' . $row['image']['sizes']['medium'] . ')"></div>';
 			$pdfCount = $pdfCount +1;
 		}
 	}?>

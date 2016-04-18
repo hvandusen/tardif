@@ -1,18 +1,20 @@
 (function ($) {
 	var map, layer;
-	var mapBounds = new OpenLayers.Bounds(-15000.000000, -2202.000000, 17265.000000, 0.000000);
-	var mapMinZoom = 2;
+	var mapBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
+	var mapMinZoom = 3;
 	var mapMaxZoom = 6;
 	var mapMaxResolution = 0.50000;
-	var gridBounds = new OpenLayers.Bounds(-5000.000000, -2202.000000, 7065.000000, 0.000000);
-
+	var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
+ var restrict = new OpenLayers.Bounds(-20000.000000, -4290.000000, 17265.000000, 0.000000);
 	function init() {
 	  var options = {
 	    controls: [],
 	    maxExtent : gridBounds,
-	    minResolution: mapMaxResolution,
-	    numZoomLevels: mapMaxZoom+1,
-			restrictedExtent: mapBounds
+	    //minResolution: mapMaxResolution,
+	    numZoomLevels: mapMaxZoom,
+			restrictedExtent: restrict,//mapBounds
+			minZoom: 1,
+			maxZoom: 5
 	  };
 
 	  map = new OpenLayers.Map('map', options);
@@ -25,7 +27,7 @@
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
 	    gutter: 0,
-			wrapDateLine: true
+			wrapDateLine: true,
 	  });
 	  map.addLayer(layer);
 	  map.zoomToExtent(mapBounds);
@@ -47,7 +49,7 @@
 	  map.addControl(new OpenLayers.Control.PanZoom());
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
-	  map.setCenter(new OpenLayers.LonLat(2077, 0),3)//
+	  map.setCenter(new OpenLayers.LonLat(2077, 0),0)//
 	}
 	init();
 	var mobile = window.innerWidth<480;
@@ -65,11 +67,17 @@ var replace;
 $('.pdf_overlay').mouseenter(function(e){
 	console.dir($(this).offset().left)
 	replace = $('.'+$(this)[0].className.split(' ')[1].replace('overlay','img'));
-	replace.css('left',$(this).offset().left);
+	replace.css('left',$(this).offset().left-30);
 	replace.show();
 });
 $('.pdf_overlay').mouseleave(function(){
 	replace.hide();
+});
+
+$(window).scroll(function(e){
+	$('.pdf-img').css({
+		bottom: 67+window.scrollY
+	});
 });
 
 
