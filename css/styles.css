@@ -530,7 +530,7 @@ td, th { padding: 0; }
 /* Standard syntax */
 @keyframes showtop { from { -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
   to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-@media (max-width: 1233px) { .top-bar { font-size: 27.5px; } }
+@media (max-width: 1233px) { .top-bar { font-size: 34px; } }
 @media (max-width: 633px) { .top-bar { font-size: 21px; line-height: 2.5em; } }
 .top-bar.showTop { z-index: 10; position: relative; }
 .top-bar.moveUp { z-index: 10; position: relative; animation: hidetop .5s ease-out; -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
@@ -689,7 +689,7 @@ li { list-style: none; }
 
 .magazine { margin-top: -32px; }
 
-@media (max-width: 610px) { .top-bar { font-size: 27.5px; } }
+@media (max-width: 633px) { .top-bar { font-size: 27.5px; } }
 @media (max-width: 768px) { .dek { padding-bottom: 0px; font-size: 24px; }
   #bio { float: left; /*max-width: 400px;*/ margin: 0 auto; margin: 3% 10%; padding: 15px; padding-left: 40px; } }
 .season-attribution { -webkit-box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); -moz-box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); }
