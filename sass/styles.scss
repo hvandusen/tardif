@@ -806,7 +806,9 @@ border-bottom: solid black 4px;
 		animation: hidetop .5s ease-out;
 		@include translateY(-32px);
 		&:hover {
-			animation: showtop .5s ease-out;
+			//animation: showtop .5s ease-out;
+			//@include animation(.5s, showtop);//
+			@include translateY(0px);
 		}
 	}
 	&.moveDown {
@@ -830,13 +832,14 @@ border-bottom: solid black 4px;
 	 animation: mymove .5s ease-out;
 		font-size: 27.5px;
 
-			@media (max-width: 1233px) {
+			@media (max-width: 956px) {
 				line-height: 1.2em;
 				//font-size: 13px;
 			}
 			@media (max-width: 633px) {
-				font-size:21px;
-				line-height: 1.7em;
+				font-size: 25.5px;
+				line-height: 1.2em;
+				margin-top: 5px;
 			}
 
 
