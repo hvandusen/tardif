@@ -1818,7 +1818,8 @@ li {
 	height: 20%;
 	z-index: 9990;
 	position: fixed;
-  bottom: 67px;
+  bottom: -367px;
+	left: -3000px;
 	border: solid black 4px;
 
 	border-bottom: none;
@@ -1839,11 +1840,14 @@ li {
    height: 72px;
   	 width: 100px;
   	 background-size: contain;
+
   }
   .pdf-img.display {
    height:	200px;
    width: 140px;
+	 bottom: 67px;
 	 padding-bottom: 2px;
+	 @include translateX(-100px);
   }
 
 
@@ -2020,7 +2024,7 @@ li {
 		background:white;
 		position: absolute;
 		bottom: 0;
-		z-index: 2000;
+		z-index: 4000;
 		height: 64px;
 		font-size: 27.5px;
 		line-height: 64px;

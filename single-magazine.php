@@ -35,7 +35,7 @@
 			foreach($pdfs as $row){ ?>
 			<?php
 				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" href="' . $row['pdf'] . '"
-				data-img="background-image: url(' . $row['image']['sizes']['medium'] . ')">';
+				data-img="background-image: url(' . $row['image']['sizes']['small'] . ')">';
 
 				if($pdfCount===count($pdfs)){
 					$comma = '';

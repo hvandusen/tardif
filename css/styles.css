@@ -816,7 +816,7 @@ li { list-style: none; }
 
 .pdfs { display: flex; flex-wrap: wrap; margin-bottom: 64px; }
 
-.pdf-img { width: 10%; height: 20%; z-index: 9990; position: fixed; bottom: 67px; border: solid black 4px; border-bottom: none; }
+.pdf-img { width: 10%; height: 20%; z-index: 9990; position: fixed; bottom: -367px; left: -3000px; border: solid black 4px; border-bottom: none; }
 
 .pdf-row { position: relative; display: flex; align-items: center; padding: 3px; }
 
@@ -824,7 +824,7 @@ li { list-style: none; }
 
 .pdf-row .pdf-img { height: 72px; width: 100px; background-size: contain; }
 
-.pdf-img.display { height: 200px; width: 140px; padding-bottom: 2px; }
+.pdf-img.display { height: 200px; width: 140px; bottom: 67px; padding-bottom: 2px; -moz-transform: translateX(-100px); -ms-transform: translateX(-100px); -webkit-transform: translateX(-100px); transform: translateX(-100px); }
 
 .pdf_overlay { text-decoration: none; margin: 1px; }
 
@@ -873,7 +873,7 @@ li { list-style: none; }
 #main #map .olControlDragFeatureOver { cursor: -webkit-grabbing; }
 #main #map .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: -moz-grabbing; }
 
-.magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 2000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
+.magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
 .magazine-issuez .issues-text { line-height: 44px; bottom: 0; }
 .magazine-issuez a { color: black; }

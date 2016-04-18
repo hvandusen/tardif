@@ -62,7 +62,7 @@
 		'top':(mobile ? '-48px' : '-36px'),
 	});
 	$('.olControlPermalink.olControlNoSelect').hide();
-$('.pdf-img').hide();
+//$('.pdf-img').hide();
 var replace;
 $('.pdf_overlay').mouseenter(function(e){
 	console.dir($(this).offset().left)
@@ -73,7 +73,9 @@ $('.pdf_overlay').mouseenter(function(e){
 $('.pdf_overlay').mouseleave(function(){
 	replace.hide();
 });
-
+$('.pdf-img').css({
+	bottom: 67
+});
 $(window).scroll(function(e){
 	$('.pdf-img').css({
 		bottom: 67+window.scrollY
