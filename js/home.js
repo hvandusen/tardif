@@ -14,20 +14,15 @@
 	    });
 	$(".envelope").click(function(){
 
-		 var html = $(this).parent().html();
-		 console.dir(html);
+		 var html = $(this).html();
 		 if(!mobile)
 			$(this).html($('.copied').html())
 		else {
 			$(this).html('pierret@gmail.com');
 			$(this).select();
-
 		}
-		//$('.copied').show();
 		setTimeout(function(){
-			//$('.copied').hide();
-			//$('.envelope').show();
-			$(this).html();
+			$(".envelope").html(html);
 
 		},3000);
 	});

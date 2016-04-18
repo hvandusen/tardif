@@ -13,7 +13,7 @@
 		the_content();
 		?>
 	</div>
-	<span class='email-containter'>
+	<span class='email-container'>
 		<a class="envelope clipboard" data-clipboard-text="pierret@gmail.com">
 			<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
 		</a>

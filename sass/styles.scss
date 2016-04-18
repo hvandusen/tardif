@@ -1011,12 +1011,48 @@ letter-spacing: -.5px;
 		font-size:150%;
 	}
 	&:HOVER {
+		//@include opacity(0);
+		//animation: fade-back 1s;
+		//animation-delay: 1s;
 		&:after {
 			line-height: 0.2em;
-			@include opacity(1);
+			//@include opacity(1);
+			//@include animation(0s,fade-away);
+			//@include opacity(1);
+
+		}
+	}
+	&[class*=' hovered']
+	{
+
+		&:after {
+			line-height: 0.2em;
+
+			//@include animation(0s,fade-away);
+			animation:  fade-away 1s, appear 1s;
+			//animation-delay: 1s;
+			//@include opacity(1);
 		}
 	}
  }
+}
+
+@include keyframes(fade-back) {
+  0%   {
+		@include opacity(0);
+	}
+  100% {
+		@include opacity(1);
+	}
+}
+
+@include keyframes(appear) {
+  0%   {
+		@include opacity(1);
+	}
+  100% {
+		@include opacity(1);
+	}
 }
 
 @include keyframes(fade-away) {
@@ -1025,7 +1061,7 @@ letter-spacing: -.5px;
 		@include opacity(1);
 	}
   100% {
-		content:attr(data-text);
+		/*content:attr(data-text);
 		position:absolute;
 		top:0;
 		left:0;
@@ -1033,10 +1069,10 @@ letter-spacing: -.5px;
 		height:100%;
 		background:white;
 		pointer-events:none;
-		@include opacity(0);
-		font-family: rmRollerBall;
+	*/	@include opacity(0);
+		/*font-family: rmRollerBall;
 		text-align:center;
-		font-size:150%;
+		font-size:150%;*/
 	}
 }
 
@@ -1096,9 +1132,8 @@ line-height: 1.3em;
  border:solid $grey 1px;
  top:0;
  left:0;
-cursor: url(../images/mouse-hover.png) 4 12, pointer;
+ cursor: url(../images/mouse-hover.png) 4 12, pointer;
  position:absolute;
-
 }
 
 #bio{
@@ -1327,7 +1362,7 @@ li {
 	 	position: fixed;
 	 	bottom: 0;
 	 	right: 0;
-	 	padding: 18.6px 32px;
+	 	padding: 24.6px 32px;
 	 	z-index: 2002;
 	 	img {
 	 		max-height: 27px;
@@ -1731,10 +1766,10 @@ li {
 		.olAlphaImg, .olButton{
 			width: 48px!important;
 			height: 48px!important;
-			@media(max-width: 480px){
-				width: 24px!important;
-				height: 24px!important;
-			}
+			//@media(max-width: 480px){
+				width: 36px!important;
+				height: 36px!important;
+			//}
 		}
 
 		.olControlPanZoom {
@@ -1749,6 +1784,7 @@ li {
 			border: solid black 4px;
 			&:last-of-type {
 				@include translateY(16px);
+						@include translateY(4px);
 				@media(max-width: 480px){
 					@include translateY(-10px);
 				}

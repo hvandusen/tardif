@@ -2,9 +2,10 @@
 	var map, layer;
 	var mapBounds = new OpenLayers.Bounds(-15000.000000, -2202.000000, 17265.000000, 0.000000);
 	var mapMinZoom = 2;
-	var mapMaxZoom = 5;
+	var mapMaxZoom = 6;
 	var mapMaxResolution = 0.50000;
 	var gridBounds = new OpenLayers.Bounds(-5000.000000, -2202.000000, 7065.000000, 0.000000);
+
 	function init() {
 	  var options = {
 	    controls: [],
@@ -13,6 +14,7 @@
 	    numZoomLevels: mapMaxZoom+1,
 			restrictedExtent: mapBounds
 	  };
+
 	  map = new OpenLayers.Map('map', options);
 	  template_directory = "/wp-content/themes/tardif/images";
 	  imageID =$('.magazine')[0].className.split(' ')[1]
@@ -45,7 +47,7 @@
 	  map.addControl(new OpenLayers.Control.PanZoom());
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
-	  map.setCenter(new OpenLayers.LonLat(2077, 0),4)//
+	  map.setCenter(new OpenLayers.LonLat(2077, 0),3)//
 	}
 	init();
 	var mobile = window.innerWidth<480;

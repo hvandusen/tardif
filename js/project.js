@@ -28,21 +28,18 @@
 			$("#bio p span").map(function(i,e){
 				$(e).addClass('word-'+i).attr("data-text",$(this).html());
 			});
+				var justHovered;
 				if(window.innerHeight>480){
-					// $('#bio').clone().attr('class','bio2').appendTo($('#bio').parent());
-						// $("#bio p span").mouseenter(function(){
-						// 	words = $('.'+$(this)[0].className.split(' ')[1]);
-						// 	console.dir(words);
-						// 	$(words[1]).css('opacity','0');
-						// 		$('.word').removeClass('word');
-						// 		$(words[0]).addClass('word');
-						// });
-						// $("#bio").css('visibility','hidden');
-						// $("#bio p span").mouseleave(function(){
-						// 	words = $('.'+$(this)[0].className.split(' ')[1]);
-						// 	$(words[1]).css('opacity','1');
-						// 	$(words[0]).removeClass('word');
-						// });
+						$("#bio p span").mouseenter(function(){
+							justHovered = $(this);
+						//	newClass = 'hovered-'+Math.floor(Math.random()*100);//($(this).className.indexOf(hovered)>-1 ? 'hovered-'+Math.random() : 'hovered')
+							$(this).addClass('hovered');
+        			$(this).one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+        			function (e) {
+            	$(this).removeClass('hovered');
+        		});
+					});
+
 				}
 
 				$('.moveUp').mouseenter(function(){
