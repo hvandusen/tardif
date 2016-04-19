@@ -1032,7 +1032,7 @@ letter-spacing: -.5px;
 			line-height: 0.2em;
 
 			//@include animation(0s,fade-away);
-			animation:  fade-away 1s, appear 1s;
+			animation:  fade-away 1s, appear .5s;
 			//animation-delay: 1s;
 			//@include opacity(1);
 		}
@@ -1359,7 +1359,7 @@ li {
   	 display:none;
    }
 	 .copied {
-		 @include translateY(3px);
+		 @include translateY(4px);
 	 }
 	 .envelope,.copied {
 	 	position: fixed;
@@ -1957,7 +1957,8 @@ li {
 
 
 .copied {
-	display:none;
+	opacity: 0;
+	pointer-events: none;
 	@extend .big-font;
 
 }
@@ -2037,6 +2038,9 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 			line-height: 44px;
 			//position: fixed;
 			bottom: 0;
+			line-height: 40px;
+    	bottom: 0;
+    	padding: 10px 0px;
 		}
 		a {
 			color:black;

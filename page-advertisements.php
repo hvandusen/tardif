@@ -19,30 +19,29 @@
 				query_posts($args . "&order=ASC");
 				query_posts( $args );
 
-				// //echo "<div class='top-bar ads'>";
-				// 	$postCount = 0;
-				// 	while ( have_posts() ) : the_post();
-				// 	?>
+				echo "<div class='top-bar ads'>";
+				 	$postCount = 0;
+				 	while ( have_posts() ) : the_post();
+				 	?>
 				<?php
-				// 	//echo "<a class='top-brand brand_title '>";
-				//
-				// 	if ($wp_query->current_post == $wp_query->post_count-1) :
-				// 	//echo 'and ';
-				// 	endif;
-				//
-				//echo strtoupper(get_the_title());
-				// 	if ($wp_query->current_post !== $wp_query->post_count-1) :
-				// 	//echo ',';
-				// 	endif;
-				// //	echo '</a>';
-				// 	$postCount = $postCount+1;
-				// 	endwhile;
+				echo "<a class='top-brand brand_title '>";
+				 	if ($wp_query->current_post == $wp_query->post_count-1) :
+				echo 'and ';
+				 	endif;
 
-				//echo "</div>";
+				echo strtoupper(get_the_title());
+				 	if ($wp_query->current_post !== $wp_query->post_count-1) :
+				echo ',';
+				 	endif;
+					echo '</a>';
+				 	$postCount = $postCount+1;
+				 	endwhile;
+
+			echo "</div>";
 				// Reset Query
 				wp_reset_query();
 			?>
-
+<!--
 		<div class="top-bar ads">
 			<a class="top-brand brand_title  revealed">ELIE TAHARI,</a>
 			<a class="top-brand brand_title  revealed">GUCCI,</a>
@@ -51,7 +50,7 @@
 			<a class="top-brand brand_title  revealed">MAX MARA,</a>
 			<a class="top-brand brand_title  revealed">TOD’S</a>
 			<a class="top-brand brand_title  revealed">and Y-3</a>
-		</div>
+		</div> -->
 
 
 

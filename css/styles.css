@@ -582,7 +582,7 @@ td, th { padding: 0; }
 #bio p span.word { visibility: visible !important; font-family: rmRollerBall; font-size: 40px; letter-spacing: -2px; margin-right: 3px; line-height: 0.2em; font-size: 43.5px; margin: 0 2px; text-transform: uppercase; }
 #bio p span:after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white; pointer-events: none; text-transform: uppercase; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; font-family: rmRollerBall; text-align: center; font-size: 150%; }
 #bio p span:HOVER:after { line-height: 0.2em; }
-#bio p span[class*=' hovered']:after { line-height: 0.2em; animation: fade-away 1s, appear 1s; }
+#bio p span[class*=' hovered']:after { line-height: 0.2em; animation: fade-away 1s, appear .5s; }
 
 @-webkit-keyframes fade-back { 0% { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; }
   100% { filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; } }
@@ -705,7 +705,7 @@ li { list-style: none; }
 
 .brand:last-of-type .brand_dividers { display: none; }
 
-.copied { -moz-transform: translateY(3px); -ms-transform: translateY(3px); -webkit-transform: translateY(3px); transform: translateY(3px); }
+.copied { -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); }
 
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 24.6px 32px; z-index: 2002; }
 .envelope img, .copied img { max-height: 27px; }
@@ -857,7 +857,7 @@ li { list-style: none; }
 
 #wptime-plugin-preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: url(http://pierretardif.net/wp-content/plugins/the-preloader/images/3.gif) no-repeat #f4e7d9 50%; -moz-background-size: 64px 64px; -o-background-size: 64px 64px; -webkit-background-size: 264px 264px; /* background-size: 64px 64px; */ z-index: 99998; width: 100%; height: 100%; }
 
-.copied { display: none; }
+.copied { opacity: 0; pointer-events: none; }
 
 #main .olMap:active { cursor: url(../images/grabbing.png) 4 12, auto; cursor: url(../images/grabbing.png) 4 12, auto; cursor: url(../images/grabbing.png) 4 12, auto; }
 
@@ -875,7 +875,7 @@ li { list-style: none; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
-.magazine-issuez .issues-text { line-height: 44px; bottom: 0; }
+.magazine-issuez .issues-text { line-height: 44px; bottom: 0; line-height: 40px; bottom: 0; padding: 10px 0px; }
 .magazine-issuez a { color: black; }
 .magazine-issuez a:hover { color: black; }
 

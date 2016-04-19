@@ -11,7 +11,30 @@
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
-<script>new Clipboard('.clipboard');</script>
+<script>var clip = new Clipboard('.clipboard')
+clip.action = function(){
+	$('.envelope').css('opacity','0');
+	$('.copied').css('opacity','1');
+	setTimeout(function(){
+		$('.envelope').css('opacity','1');
+		$('.copied').css('opacity','0');
+
+  },3000);
+	return;
+	var html = $('.envelope').html();
+	if(!mobile)
+	 $('.envelope').html($('.copied').html())
+ else {
+	 $('.envelope').html('pierret@gmail.com');
+	 $('.envelope').select();
+ }
+ setTimeout(function(){
+	 $(".envelope").html(html);
+
+ },3000);
+}
+console.log(clip)
+</script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.ba-bbq.js"></script>
 <?php include('includes/ajax.php'); ?>
 <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/compressed/jquery.min.js"><\/script>')</script>

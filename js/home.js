@@ -13,7 +13,7 @@
 	        focused = $(this); // just for the example when I click next on fiddle
 	    });
 	$(".envelope").click(function(){
-
+		return;
 		 var html = $(this).html();
 		 if(!mobile)
 			$(this).html($('.copied').html())
