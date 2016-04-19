@@ -859,19 +859,19 @@ li { list-style: none; }
 
 .copied { display: none; }
 
-#main .olMap:active { cursor: grabbing; cursor: -moz-grabbing; cursor: -webkit-grabbing; }
+#main .olMap:active { cursor: url(../images/grabbing.png) 4 12, auto; cursor: url(../images/grabbing.png) 4 12, auto; cursor: url(../images/grabbing.png) 4 12, auto; }
 
 #main #map { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 38px); height: calc(100% - 38px); width: 100%; background-color: #FFFFFF;  /*.olButton {
 	 width: 48px!important;
 	 height: 48px!important;
 	 border: 3px solid black!important;
-	 margin-bottom: 1px!important; }*/ cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
+	 margin-bottom: 1px!important; }*/ cursor: move; /* fallback if grab cursor is unsupported */ cursor: url(../images/grab.png) 4 12, auto; cursor: url(../images/grab.png) 4 12, auto; cursor: url(../images/grab.png) 4 12, auto; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
 @media (max-width: 480px) { #main #map { border-bottom: solid 4px black; height: -webkit-calc(100% - 77px); height: calc(100% - 77px); } }
 #main #map .olCursorWait { cursor: wait; }
-#main #map .olDragDown { cursor: -webkit-grabbing; }
+#main #map .olDragDown { cursor: url(../images/grabbing.png) 4 12, auto; }
 #main #map .olDrawBox { cursor: crosshair; }
-#main #map .olControlDragFeatureOver { cursor: -webkit-grabbing; }
-#main #map .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: -moz-grabbing; }
+#main #map .olControlDragFeatureOver { cursor: url(../images/grabbing.png) 4 12, auto; }
+#main #map .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: url(../images/grabbing.png) 4 12, auto; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }

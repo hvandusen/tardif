@@ -1961,13 +1961,14 @@ li {
 	@extend .big-font;
 
 }
-
+$grab: url(../images/grab.png) 4 12, auto;
+$grabbing: url(../images/grabbing.png) 4 12, auto;
   #main .olMap {
    //cursor: url(../images/mouse-icon-3.png) 4 12, auto;
 	 &:active {
-	     cursor: grabbing;
-	     cursor: -moz-grabbing;
-	     cursor: -webkit-grabbing;
+	     cursor: $grabbing;//grabbing;
+	     cursor: $grabbing;//-moz-grabbing;
+	     cursor: $grabbing;//-webkit-grabbing;
 	 }
 
   }
@@ -1994,25 +1995,25 @@ li {
 		 margin-bottom: 1px!important;
 	 }*/
     cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+    cursor: $grab;//grab;
+    cursor: $grab;//-moz-grab;
+    cursor: $grab;//-webkit-$;
 
  /* (Optional) Apply a "closed-hand" cursor during drag operation. */
  .olCursorWait {
  	cursor: wait;
  }
  .olDragDown {
- 	cursor: -webkit-grabbing;
+ 	cursor: $grabbing;//-webkit-grabbing;
  }
  .olDrawBox {
  	cursor: crosshair;
  }
  .olControlDragFeatureOver {
- 	cursor: -webkit-grabbing;
+ 	cursor: $grabbing;//-webkit-grabbing;
  }
  .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
- 	cursor: -moz-grabbing;
+ 	cursor: $grabbing;//-moz-grabbing;
  }
 	}
 
