@@ -3,6 +3,7 @@
 @import "normalize";
 @import "typography";
 @import "mixins";
+@import "compass/css3/box-shadow";
 
 $grey : rgba(149, 149, 155, 0.74);
 $grey :rgba(0, 0, 0, 0.35);
@@ -212,7 +213,7 @@ a {
 a:active,
 a, .brand_title {
  outline: 0;
- cursor: url(../images/mouse-hover.png) 4 12, pointer;
+ cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
  }
 
 /* Text-level semantics
@@ -865,7 +866,7 @@ border-bottom: solid black 4px;
     line-height: 53px;
 		 display: inline;
 	  &:HOVER {
-			cursor: url(../images/mouse-hover.png) 4 12, pointer;
+			cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
 		 //border-top:solid black 4px;
 	 }
 		position: static;
@@ -1131,11 +1132,11 @@ line-height: 1.3em;
  //max-height: 45%;
  max-height: 57%;
  max-width:40%;
+@include box-shadow(black 2px 2px 10px);
 
- border:solid $grey 1px;
  top:0;
  left:0;
- cursor: url(../images/mouse-hover.png) 4 12, pointer;
+ cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
  position:absolute;
 }
 
@@ -1967,9 +1968,9 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
   #main .olMap {
    //cursor: url(../images/mouse-icon-3.png) 4 12, auto;
 	 &:active {
-	     cursor: $grabbing;//grabbing;
-	     cursor: $grabbing;//-moz-grabbing;
-	     cursor: $grabbing;//-webkit-grabbing;
+	     cursor: grabbing;//$grabbing;
+	     cursor: -moz-grabbing;//$grabbing;//
+	     cursor: -webkit-grabbing;//$grabbing;//-webkit-grabbing;
 	 }
 
   }
@@ -1996,25 +1997,25 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 		 margin-bottom: 1px!important;
 	 }*/
     cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: $grab;//grab;
-    cursor: $grab;//-moz-grab;
-    cursor: $grab;//-webkit-$;
+    cursor: grab;//$grab;
+    cursor: -moz-grab;//$grab;//
+    cursor: -webkit-grab;//$grab;//
 
  /* (Optional) Apply a "closed-hand" cursor during drag operation. */
  .olCursorWait {
  	cursor: wait;
  }
  .olDragDown {
- 	cursor: $grabbing;//-webkit-grabbing;
+ 	cursor: -webkit-grabbing;//$grabbing;
  }
  .olDrawBox {
  	cursor: crosshair;
  }
  .olControlDragFeatureOver {
- 	cursor: $grabbing;//-webkit-grabbing;
+ 	cursor: -webkit-grabbing;//$grabbing;
  }
  .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
- 	cursor: $grabbing;//-moz-grabbing;
+ 	cursor: -moz-grabbing;//$grabbing;
  }
 	}
 
