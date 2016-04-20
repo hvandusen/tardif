@@ -14,7 +14,7 @@
 		});
 
 		$('.bottom-bar .title').click(function(){
-			window.location = '/#';
+			window.location = '/about';
 		});
 
 		var text_string = "Pierre Tardif is a New York-based art director and graphic designer. ";

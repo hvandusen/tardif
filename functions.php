@@ -31,7 +31,11 @@ function only_pages(){
 	    	wp_register_script('editorial',get_bloginfo('template_directory') . '/js/editorial.js');
 			wp_enqueue_script('editorial');
 	    }
-	    if(is_page('Home')){
+			if(is_page('Home')){
+				wp_register_script('redirect',get_bloginfo('template_directory') . '/js/redirect.js');
+			  wp_enqueue_script('redirect');
+	    }
+	    if(is_page('Home') or is_page('About')){
 				wp_register_script('lettering',get_bloginfo('template_directory') . '/js/lettering.js');
 			  wp_enqueue_script('lettering');
 	    	wp_register_script('home',get_bloginfo('template_directory') . '/js/home.js');

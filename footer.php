@@ -38,6 +38,8 @@ clip.action = function(){
 console.log(clip)
 </script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.ba-bbq.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/lettering.js"></script>
+
 <?php include('includes/ajax.php'); ?>
 <script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/compressed/jquery.min.js"><\/script>')</script>
 <?php wp_footer(); ?>

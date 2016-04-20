@@ -1,4 +1,6 @@
-<?php get_header();?>
+
+<?php
+get_header();?>
 	<!-- <div class='dek'><span>Pierre Tardif is a New York-based art director and graphic designer.</span></div> -->
 	<div id='bio'>
 		<div class="main-img-cont">

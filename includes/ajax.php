@@ -12,10 +12,13 @@ $(function(){
   // new content to be displayed.
   $(window).bind( 'hashchange', function(e) {
 
-
     // Get the hash (fragment) as a string, with any leading # removed. Note that
     // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
     var url = $.param.fragment();
+    //if(url.indexOf('#')<0)
+      //window.location = '#'+url;
+
+
     if(barLoaded && !(url === 'magazines' || url === 'advertisements')){
         $('.top-bar.magazines').css('animation','none');
       //$('.top-bar.magazines').remove();
