@@ -1132,8 +1132,8 @@ line-height: 1.3em;
  //max-height: 45%;
  max-height: 57%;
  max-width:40%;
-@include box-shadow(black 2px 2px 10px);
-
+//@include box-shadow(black 2px 2px 10px);
+@include box-shadow(grey 2px 2px 9px);
  top:0;
  left:0;
  cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
