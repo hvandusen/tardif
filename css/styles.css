@@ -696,7 +696,7 @@ li { list-style: none; }
 
 .brand_dividers { display: inline; }
 
-.season_image { width: 38%; max-width: 500px; }
+.season_image { width: 38%; max-width: 500px; max-width: 450px; }
 .season_image.vert { width: auto; max-height: 70%; max-width: none; }
 
 .people { position: static; bottom: 0; right: 0; font-size: 0.8em; }
