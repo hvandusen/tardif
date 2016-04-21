@@ -632,7 +632,7 @@ padding: 20px 20px 20px 50px;*/ }
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: grey 2px 2px 4px; -webkit-box-shadow: grey 2px 2px 4px; box-shadow: grey 2px 2px 4px; top: 0; left: 0; cursor: pointer; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: grey 2px 2px 4px; -webkit-box-shadow: grey 2px 2px 4px; box-shadow: grey 2px 2px 4px; -moz-box-shadow: #ADADAD 0px 0px 4px; -webkit-box-shadow: #ADADAD 0px 0px 4px; box-shadow: #ADADAD 0px 0px 4px; top: 0; left: 0; cursor: pointer; position: absolute; }
 
 #bio { margin: 0 25px; margin: 5% 16%; margin-bottom: 8%; font-family: Grotesk; /*
 color: #aebc16;
