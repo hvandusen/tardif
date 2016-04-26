@@ -244,7 +244,7 @@ a { background: transparent; }
 /**
 * Improve readability when focused and also mouse hovered in all browsers.
 */
-a:active, a, .brand_title { outline: 0; text-decoration: none; cursor: pointer; }
+a:active, a, .brand_title { outline: 0; color: black; text-decoration: none; cursor: pointer; }
 
 /* Text-level semantics
 	========================================================================== */
@@ -541,7 +541,7 @@ td, th { padding: 0; }
 .top-bar.moveUp { z-index: 10; position: relative; animation: hidetops .5s ease-out; }
 .top-bar.moveUp:hover { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
 .top-bar.moveDown { position: relative; animation: showtops .5s ease-out; cursor: default; -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
-.top-bar.magazines, .top-bar.ads, .top-bar.single_book { height: 53px; font-size: 27.5px; }
+.top-bar.magazines, .top-bar.ads, .top-bar.single_book { height: 53px; font-size: 27.5px; color: black; }
 .top-bar.magazines { line-height: 56px; z-index: 5; position: relative; animation: mymover .5s ease-out; }
 .top-bar.ads, .top-bar.single_book { line-height: 56px; position: relative; animation: mymover .5s ease-out; font-size: 27.5px; }
 @media (max-width: 956px) { .top-bar.ads, .top-bar.single_book { line-height: 1.2em; } }
