@@ -70,7 +70,7 @@
 	<script>
 	//remove arrows
 	for(var i=0;i<4;i++){
-		$($('#main .olButton')[i]).css('display','none');
+		//$($('#main .olButton')[i]).css('display','none');
 	}
-	$($('#main .olButton')[5]).css('display','none');
+	//$($('#main .olButton')[5]).css('display','none');
 	</script>

@@ -2029,7 +2029,10 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 	     cursor: -moz-grabbing;//$grabbing;//
 	     cursor: -webkit-grabbing;//$grabbing;//-webkit-grabbing;
 	 }
-
+	 #OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown,
+	 #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft {
+	 	display: none!important;
+	 }
   }
 
 	.home {

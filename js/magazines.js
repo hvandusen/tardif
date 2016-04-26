@@ -4,8 +4,20 @@
 	var mapMinZoom = 3;
 	var mapMaxZoom = 6;
 	var mapMaxResolution = 0.50000;
+	var collages = {
+		185: {
+			size: [-20000.000000, -3990.000000,0]
+		},
+		186: {
+			size: [-20000.000000, -2420.000000, 0]
+		},
+		187: {
+			size: [-20000.000000, -2720.000000,-150.000000]
+		}
+	}
+	imageID =currentMap;
 	var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
- var restrict = new OpenLayers.Bounds(-20000.000000, -4290.000000, 17265.000000, 0.000000);
+ var restrict = new OpenLayers.Bounds(collages[imageID]['size'][0], collages[imageID]['size'][1], 17265.000000, collages[imageID]['size'][2]);
 	function init() {
 	  var options = {
 	    controls: [],
@@ -22,7 +34,6 @@
 		}
 	  map = new OpenLayers.Map('map'+currentMap, options);
 	  template_directory = "/wp-content/themes/tardif/images";
-	  imageID =$('.magazine')[0].className.split(' ')[1]
 	  console.dir(imageID)
 	  layer = new OpenLayers.Layer.XYZ( "MapTiler layer", template_directory+'/'+imageID+"/${z}/${x}/${y}.png", {
 	    transitionEffect: 'resize',
@@ -33,7 +44,7 @@
 			wrapDateLine: true,
 	  });
 	  map.addLayer(layer);
-	  map.zoomToExtent(mapBounds);
+	  //map.zoomToExtent(mapBounds);
 
 	  var mousePercent = function(evt){
 	    lonlat = map.getLonLatFromViewPortPx({x:evt.pageX,y:evt.pageY});
@@ -52,7 +63,7 @@
 	  map.addControl(new OpenLayers.Control.PanZoom());
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
-	  map.setCenter(new OpenLayers.LonLat(2077, 0),0)//
+	  map.setCenter(new OpenLayers.LonLat(2077, 1.5),4)//
 	}
 	init();
 	var mobile = window.innerWidth<480;
@@ -85,5 +96,6 @@ $(window).scroll(function(e){
 	});
 });
 
+//$('#OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown, #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft').css('display','none!important');
 
 })(jQuery);

@@ -10003,14 +10003,14 @@ OpenLayers.Control.PanZoom = OpenLayers.Class(OpenLayers.Control, {
                 h: 18
             },
             c = new OpenLayers.Pixel(a.x + b.w / 2, a.y);
-        this._addButton("panup", "north-mini.png", c, b);
+        //this._addButton("panup", "north-mini.png", c, b);
         a.y = c.y + b.h;
-        this._addButton("panleft", "west-mini.png", a, b);
-        this._addButton("panright", "east-mini.png", a.add(b.w, 0), b);
-        this._addButton("pandown", "south-mini.png",
-            c.add(0, 2 * b.h), b);
+         //this._addButton("panleft", "west-mini.png", a, b);
+        // this._addButton("panright", "east-mini.png", a.add(b.w, 0), b);
+        // this._addButton("pandown", "south-mini.png",
+          //  c.add(0, 2 * b.h), b);
         this._addButton("zoomin", "zoom-plus-mini.png", c.add(0, 3 * b.h + 5), b);
-        this._addButton("zoomworld", "zoom-world-mini.png", c.add(0, 4 * b.h + 5), b);
+        //this._addButton("zoomworld", "zoom-world-mini.png", c.add(0, 4 * b.h + 5), b);
         this._addButton("zoomout", "zoom-minus-mini.png", c.add(0, 5 * b.h + 5), b);
         return this.div
     },
