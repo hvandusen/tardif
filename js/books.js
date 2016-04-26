@@ -40,6 +40,17 @@ window.onscroll = function(e){
 		setBookSize()
 	});
 
+  $('.book_role').hide();
+
+	$('.book').mouseenter(function(){
+		//$(this).find('.book_role').text('she suckin');
+		$(this).find('.book_role').show();
+	});
+	$('.book').mouseleave(function(){
+
+		$(this).find('.book_role').hide();
+	});
+
 	function setBookSize(){
 		return;
 		thirdW = Math.floor(window.innerWidth*.32);

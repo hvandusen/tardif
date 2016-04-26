@@ -505,8 +505,8 @@ td, th { padding: 0; }
 .small-font { font-family: Grotesk; font-size: 13px; }
 @media (max-width: 480px) { .small-font { font-size: 10px; } }
 
-.mini-font, .active > .season_attribution, .mag-role { font-family: Grotesk; font-size: 16px; }
-@media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role { font-size: 10px; } }
+.mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 16px; }
+@media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 10px; } }
 
 .top-bar { z-index: 5; background: white; position: static; top: 0; color: rgba(0, 0, 0, 0.35); width: 100%; text-align: center; height: 64px; border-bottom: solid black 4px; line-height: 64px; left: 0; }
 .top-bar.showAnd { color: black; }
@@ -769,6 +769,8 @@ li { list-style: none; }
 /*books section*/
 .book { overflow: hidden; display: inline-block; position: relative; max-width: 600px; max-height: 600px; margin: 10px; margin: 10px auto; display: block; }
 @media (max-width: 480px) { .book { margin-top: 40px; max-width: 100%; max-width: 300px; max-height: 300px; } }
+
+.book_role { position: fixed; bottom: 24px; right: 30px; }
 
 .books { text-align: center; overflow: scroll; flex-direction: row; flex-wrap: wrap; justify-content: space-around; margin-bottom: 30px; }
 

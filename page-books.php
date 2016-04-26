@@ -26,9 +26,11 @@
 					echo '<div class="book"><li>';
 					//echo '<span class="book_title" ' . the_sub_field('book_title') . '</span>';
 					$image = get_field('book_image');
+          $role = get_field('book_role');
 					echo '<a class="book_page" href="'. str_replace('/book/','/#book-',get_permalink()) . '">';
 					echo '<img class="book_image -position-3-of-7" src="' . $image . '"></img>';
 					echo '</a>';
+          echo '<div class="book_role">' . $role . '</div>';
 					echo '</li></div>';
 			//endwhile;
 		endwhile;

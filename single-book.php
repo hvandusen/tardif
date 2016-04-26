@@ -6,7 +6,7 @@
 		<?php the_field('book_title') ?>:
 		<?php the_field('book_page_info') ?></div>
 </div>
-<div class='book-role'><?php the_field('book_role'); ?> </div>
+<div class='book_role'><?php the_field('book_role'); ?> </div>
 <div class='book_page_images'>
 <?php
 	 while ( have_rows('book_page_images') ) : the_row();

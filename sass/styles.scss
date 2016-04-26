@@ -1658,13 +1658,21 @@ li {
    margin: 10px;
 	 margin: 10px auto;
 	 display: block;
-			 @media(max-width: 480px){
-				 margin-top: 40px;
-				 max-width: 100%;
-				 max-width: 300px;
-			    max-height: 300px;
-			 }
+	 @media(max-width: 480px){
+		 margin-top: 40px;
+		 max-width: 100%;
+		 max-width: 300px;
+	    max-height: 300px;
+	 }
   }
+
+	.book_role {
+		position: fixed;
+		bottom: 24px;
+		right: 30px;
+		@extend .mini-font;
+
+	}
 
   .books {
    text-align: center;
