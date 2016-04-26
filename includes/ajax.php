@@ -28,12 +28,19 @@ $(function(){
         'bottom':'64px',
         'z-index': 2000
       })
+    }
       else if(document.location.hash === 'about'){
         $('.bottom-bar').css({
           'bottom':'0px',
         });
-      }
-    }else {
+    }
+    else if(document.location.hash === '#books'){
+      $('.bottom-bar').css({
+        'position':'fixed',
+        'animation':'none',
+        'bottom': '0px'
+      });
+  }else {
       $('.bottom-bar').css({
         'animation':'none',
         'bottom': '0px'
