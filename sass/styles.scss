@@ -216,6 +216,7 @@ a {
 a:active,
 a, .brand_title {
  outline: 0;
+ text-decoration: none;
  cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
  }
 
@@ -1554,7 +1555,7 @@ li {
 				line-height: 1.4em;
 				display: none;
 			}
-			&.magazines, &.ads {
+			&.magazines, &.ads, &.single_book {
 				top: 0px;
 				z-index: 5000;
 				height: 30px;

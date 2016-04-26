@@ -244,7 +244,7 @@ a { background: transparent; }
 /**
 * Improve readability when focused and also mouse hovered in all browsers.
 */
-a:active, a, .brand_title { outline: 0; cursor: pointer; }
+a:active, a, .brand_title { outline: 0; text-decoration: none; cursor: pointer; }
 
 /* Text-level semantics
 	========================================================================== */
@@ -751,7 +751,7 @@ li { list-style: none; }
   .magazine { margin-top: 0px; }
   .top-bar { font-size: 18px; height: 36px; line-height: 36px; }
   .top-bar.ads { height: 64px; line-height: 1.4em; display: none; }
-  .top-bar.magazines, .top-bar.ads { top: 0px; z-index: 5000; height: 30px; transform: translateY(0px); padding-top: 2px; font-size: 16px; padding-top: 2px; line-height: 1.8em; }
+  .top-bar.magazines, .top-bar.ads, .top-bar.single_book { top: 0px; z-index: 5000; height: 30px; transform: translateY(0px); padding-top: 2px; font-size: 16px; padding-top: 2px; line-height: 1.8em; }
   .top-bar.ads { line-height: 1.8em; }
   .top-bar.moveUp { transform: translateY(0px); }
   .envelope, .copied { padding: 22px 32px; z-index: 2002; position: static; padding: 20px 30px; padding-bottom: 0px; display: inline-block; font-size: 18px; padding: 33px 0 0px 0; }
