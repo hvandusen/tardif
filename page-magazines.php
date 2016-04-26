@@ -10,6 +10,7 @@
 	bottom: 64px;
 	animation: bottom-up .5s ease-in;
 	position: absolute;
+	z-index: 2000;
 }
 #map { position: absolute; height: 100%; width: 100%; background-color: #FFFFFF; }
 
@@ -19,9 +20,9 @@
 <script src='https://code.jquery.com/jquery-2.2.3.min.js'></script>
 	<div class='top-bar magazines'>
 		<?php $id = 185;//get_the_ID();?>
-			<a class='link nav <?php if($id===185){echo 'current';} ?>' href='/#magazine-wall-street-journal-magazine'>WSJ. MAGAZINE</a>,
-			<a class='link nav <?php if($id===186){echo 'current';} ?>' href='/#magazine-top'>TOP,</a>
-			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-vman'>V and VMAN</a>
+			<a class='link nav <?php if($id===185){echo 'current';} ?>' href='/#magazine-wall-street-journal-magazine'>WSJ. Magazine</a>,
+			<a class='link nav <?php if($id===186){echo 'current';} ?>' href='/#magazine-top'>Top,</a>
+			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-vman'>V and VMan</a>
 		</div>
 <div class='magazine <?php echo '185'; ?>'>
 <div id='map' ></div>
@@ -73,5 +74,6 @@
 		$($('#main .olButton')[i]).css('display','none');
 	}
 	$($('#main .olButton')[5]).css('display','none');
+
 	</script>
 <?php get_footer(); ?>

@@ -665,6 +665,14 @@ th {
 	}
 }
 
+.mini-font {
+	font-family: Grotesk;
+	font-size: 16px;
+	@media(max-width: 480px){
+		font-size: 10px;
+	}
+}
+
 .top-bar {
 	z-index: 5;
  background: white;
@@ -804,8 +812,8 @@ border-bottom: solid black 4px;
 	&.moveUp {
 		z-index: 10;
 		position: relative;
-		animation: hidetop .5s ease-out;
-		@include translateY(-32px);
+		animation: hidetops .5s ease-out;
+		//@include translateY(-32px);
 		&:hover {
 			//animation: showtop .5s ease-out;
 			//@include animation(.5s, showtop);//
@@ -814,23 +822,26 @@ border-bottom: solid black 4px;
 	}
 	&.moveDown {
 		position: relative;
-		animation: showtop .5s ease-out;
+		animation: showtops .5s ease-out;
 		cursor: default;
 		@include translateY(0px);
 	}
-
+	&.magazines, &.ads {
+		height: 53px;
+		font-size: 27.5px;
+	}
 	&.magazines{
-		top:-32px;
+	 line-height: 56px;
 		z-index: 5;
 		position: relative;
-	  animation: mymove .5s ease-out;
+	  animation: mymover .5s ease-out;
 	 //@include animation(15s, mymove);
  }
 	&.ads {
-
-		top:-32px;
+		    line-height: 56px;
+		//top:-32px;
 		position: relative;
-	 animation: mymove .5s ease-out;
+	 animation: mymover .5s ease-out;
 		font-size: 27.5px;
 
 			@media (max-width: 956px) {
@@ -1189,8 +1200,10 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 	right: 0px;
 	padding-right: 40px;
 	z-index: 3000;
-	font-size: 13px;
+	font-size: 15px;
 	max-width: 65%;
+	@include calc(max-width,'100% - 350px');
+	@extend .mini-font;
 }
 
 
@@ -1302,7 +1315,7 @@ li {
 	 flex-wrap: wrap;
  }
 .magazine{
-	margin-top: -32px;
+	//margin-top: -32px;
 }
 @media (max-width: 633px) {
 	.top-bar {
@@ -1527,6 +1540,7 @@ li {
 			&.magazines, &.ads {
 				top: 0px;
 				z-index: 5000;
+
 				transform: translateY(0px);
 				font-size: 17px;//1.1em;
 				//line-height: 1.2em;

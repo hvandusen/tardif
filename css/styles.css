@@ -503,6 +503,9 @@ td, th { padding: 0; }
 .small-font { font-family: Grotesk; font-size: 13px; }
 @media (max-width: 480px) { .small-font { font-size: 10px; } }
 
+.mini-font, .active > .season_attribution { font-family: Grotesk; font-size: 16px; }
+@media (max-width: 480px) { .mini-font, .active > .season_attribution { font-size: 10px; } }
+
 .top-bar { z-index: 5; background: white; position: static; top: 0; color: rgba(0, 0, 0, 0.35); width: 100%; text-align: center; height: 64px; border-bottom: solid black 4px; line-height: 64px; left: 0; }
 .top-bar.showAnd { color: black; }
 
@@ -533,11 +536,12 @@ td, th { padding: 0; }
 @media (max-width: 1233px) { .top-bar { font-size: 34px; } }
 @media (max-width: 633px) { .top-bar { font-size: 21px; line-height: 2.5em; } }
 .top-bar.showTop { z-index: 10; position: relative; }
-.top-bar.moveUp { z-index: 10; position: relative; animation: hidetop .5s ease-out; -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
+.top-bar.moveUp { z-index: 10; position: relative; animation: hidetops .5s ease-out; }
 .top-bar.moveUp:hover { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
-.top-bar.moveDown { position: relative; animation: showtop .5s ease-out; cursor: default; -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
-.top-bar.magazines { top: -32px; z-index: 5; position: relative; animation: mymove .5s ease-out; }
-.top-bar.ads { top: -32px; position: relative; animation: mymove .5s ease-out; font-size: 27.5px; }
+.top-bar.moveDown { position: relative; animation: showtops .5s ease-out; cursor: default; -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
+.top-bar.magazines, .top-bar.ads { height: 53px; font-size: 27.5px; }
+.top-bar.magazines { line-height: 56px; z-index: 5; position: relative; animation: mymover .5s ease-out; }
+.top-bar.ads { line-height: 56px; position: relative; animation: mymover .5s ease-out; font-size: 27.5px; }
 @media (max-width: 956px) { .top-bar.ads { line-height: 1.2em; } }
 @media (max-width: 633px) { .top-bar.ads { font-size: 25.5px; line-height: 1.2em; margin-top: 5px; } }
 .top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
@@ -649,7 +653,7 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 
 .brand { list-style: none; }
 
-.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; font-size: 13px; max-width: 65%; }
+.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; font-size: 15px; max-width: 65%; max-width: -webkit-calc(100% - 350px); max-width: calc(100% - 350px); }
 
 .active .brand_title { font-weight: bold; /*cursor: none;*/ }
 
@@ -686,8 +690,6 @@ li { list-style: none; }
 .magazine-issues-header { font-size: 28px; padding: 16px; }
 
 .magazine-issues { display: flex; float: left; margin: 12px; padding-bottom: 67px; flex-direction: column; justify-content: space-around; flex-wrap: wrap; }
-
-.magazine { margin-top: -32px; }
 
 @media (max-width: 633px) { .top-bar { font-size: 27.5px; } }
 @media (max-width: 768px) { .dek { padding-bottom: 0px; font-size: 24px; }

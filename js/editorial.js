@@ -164,7 +164,7 @@ function getPointMobile(w){
 
 			$('.brandID').map(function(i,e){
 				console.log(thisText+' matched '+$(e).text().toUpperCase());
-				if(thisText===$(e).text().toUpperCase()){
+				if(thisText.toUpperCase()===$(e).text().toUpperCase()){
 
 					dumpImages($(e).next())
 				}

@@ -1,6 +1,5 @@
 
 <?php
-
 				$trackCategory = "";
 				$args = array(
 					'post_type'=> 'brand',
@@ -29,7 +28,7 @@
 				echo 'and ';
 				 	endif;
 
-				echo strtoupper(get_the_title());
+				echo ucwords(get_the_title());
 				 	if ($wp_query->current_post !== $wp_query->post_count-1) :
 				echo ',';
 				 	endif;
