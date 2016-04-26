@@ -25,8 +25,8 @@
 			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-vman'>V and VMan</a>
 		</div>
 <div class='magazine <?php echo '185'; ?>'>
-<div id='map' ></div>
-
+<div id='map<?php echo $id; ?>' ></div>
+<div class='mag-role'><?php the_field('magazine_role',185); ?></div>
 <div class='magazine-issuez'>
 	<div class='issues-text'>
 	<a>Issue</a>
@@ -67,6 +67,7 @@
 </div>
 
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/OpenLayers.js"></script>
+<script> currentMap = <?php echo $id; ?></script>
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/magazines.js"></script>
 	<script>
 	//remove arrows

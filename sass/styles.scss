@@ -105,6 +105,9 @@ html {
 .small-font {
 	font-size: 27.5px;
 }
+.medium-font {
+	font-size: 27.5px;
+}
 
 .rmRollerBall {
 	font-family: RMrollerball;
@@ -826,7 +829,7 @@ border-bottom: solid black 4px;
 		cursor: default;
 		@include translateY(0px);
 	}
-	&.magazines, &.ads {
+	&.magazines, &.ads, &.single_book {
 		height: 53px;
 		font-size: 27.5px;
 	}
@@ -837,7 +840,7 @@ border-bottom: solid black 4px;
 	  animation: mymover .5s ease-out;
 	 //@include animation(15s, mymove);
  }
-	&.ads {
+	&.ads, &.single_book {
 		    line-height: 56px;
 		//top:-32px;
 		position: relative;
@@ -1111,7 +1114,17 @@ letter-spacing: -.5px;
 	font-size:150%;
 }
 
-
+.book_text {
+	margin-top: 1.5em;
+	@extend .medium-font;
+	p {
+		margin-top: 0;
+		text-indent: 1em;
+	}
+	@media(max-width:480px){
+		font-size: 18px;
+	}
+}
 
 #bio {
 line-height: 1.3em;
@@ -1314,8 +1327,11 @@ li {
 	 justify-content: space-around;
 	 flex-wrap: wrap;
  }
-.magazine{
-	//margin-top: -32px;
+.mag-role{
+	position: absolute;
+    bottom: 64px;
+    right: 30px;
+		@extend .mini-font;
 }
 @media (max-width: 633px) {
 	.top-bar {
@@ -1377,6 +1393,7 @@ li {
    }
 	 .copied {
 		 @include translateY(4px);
+		 font-size: 18px;
 	 }
 	 .envelope,.copied {
 	 	position: fixed;
@@ -1540,12 +1557,13 @@ li {
 			&.magazines, &.ads {
 				top: 0px;
 				z-index: 5000;
-
+				height: 30px;
 				transform: translateY(0px);
-				font-size: 17px;//1.1em;
 				//line-height: 1.2em;
 				padding-top: 2px;
-				line-height: 2em;
+				font-size: 16px;
+				padding-top: 2px;
+				line-height: 1.8em;
 			}
 			&.ads {
 				line-height: 1.8em;
@@ -1562,7 +1580,8 @@ li {
 			padding: 20px 30px;
 			padding-bottom: 0px;
 			display: inline-block;
-			margin-bottom: 64px;
+			font-size: 18px;
+			padding: 33px 0 0px 0;
 			img {
 				max-height: 20px;
 				&:HOVER {
@@ -1577,6 +1596,7 @@ li {
 			padding-left: 16px;
 			margin-bottom: 0px;
 	    padding-bottom: 0px;
+
 			//font-size: 22px;
 			font-size: 18px;
 	 	}
@@ -1628,23 +1648,29 @@ li {
    overflow: hidden;
    display: inline-block;
    position:relative;
-	 max-width: 300px;
-	     max-height: 300px;
-	     margin: 10px;
+	 //max-width: 300px;
+   //max-height: 300px;
+	 max-width: 600px;
+    max-height: 600px;
+   margin: 10px;
+	 margin: 10px auto;
+	 display: block;
 			 @media(max-width: 480px){
 				 margin-top: 40px;
-				 width: 100%;
+				 max-width: 100%;
+				 max-width: 300px;
+			    max-height: 300px;
 			 }
   }
 
   .books {
    text-align: center;
 	 overflow: scroll;
-	 display: flex;
+	 //display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		margin-top: 30px;
+		margin-bottom: 30px;
   }
 
   .book_image{
@@ -1975,10 +2001,13 @@ li {
 
 
 .copied {
+
 	opacity: 0;
 	pointer-events: none;
 	@extend .big-font;
-
+	@media(max-width: 480px){
+		display: none;
+	}
 }
 $grab: url(../images/grab.png) 4 12, auto;
 $grabbing: url(../images/grabbing.png) 4 12, auto;
@@ -1995,12 +2024,12 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 	.home {
 	}
 
-  #main #map {
+  #main .olMap {
 		cursor: grab;
    position: static;
    //border-bottom: solid black 4px;
 	 position: static;
-	 @include calc(height, '100% - 38px');
+	 @include calc(height, '100% - 64px');
 	 @media(max-width:480px){
 		 border-bottom: solid 4px black;
 		 @include calc(height, '100% - 77px');
@@ -2066,5 +2095,10 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 				color:black;
 
 			}
+		}
+	}
+	@media (max-width:480px){
+		.bottom-bar{
+			border-bottom: none!important;
 		}
 	}

@@ -16,8 +16,11 @@
 			minZoom: 1,
 			maxZoom: 5
 	  };
-
-	  map = new OpenLayers.Map('map', options);
+		console.log($('#map'+currentMap));
+		if($('#map'+currentMap)[0].className === 'olMap'){
+			$('#map'+currentMap).remove();
+		}
+	  map = new OpenLayers.Map('map'+currentMap, options);
 	  template_directory = "/wp-content/themes/tardif/images";
 	  imageID =$('.magazine')[0].className.split(' ')[1]
 	  console.dir(imageID)

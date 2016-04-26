@@ -13,8 +13,12 @@
 <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
 <script>var clip = new Clipboard('.clipboard')
 clip.action = function(){
-	if(window.innerWidth<480)
+	if(window.innerWidth<480){
+		$('.envelope').css('padding','24px 0 0px 0')
 		$('.copied').text('pierret@gmail.com')
+		return;
+	}
+
 	$('.envelope').css('opacity','0');
 	$('.copied').css('opacity','1');
 	setTimeout(function(){

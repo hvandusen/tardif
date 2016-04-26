@@ -1,5 +1,5 @@
 (function ($) {
-	
+
 	var count=0;
 	$('footer .nav').addClass('current-page')
 
@@ -12,6 +12,7 @@
 			$('.envelope').on('touchstart', function () {
 	        $(this).focus();   // inside this function the focus works
 	        focused = $(this); // just for the example when I click next on fiddle
+					$(this).text('pierret@gmail.com');
 	    });
 	$(".envelope").click(function(){
 		return;

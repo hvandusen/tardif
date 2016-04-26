@@ -1,11 +1,12 @@
 <?php //get_header();
 ?>
-
+<div class='top-bar single_book'><a href='/#books'> Back </a></div>
 <div class='book_page_info'>
-	<h1> <?php the_field('book_title') ?> </h1>
-	<a> <?php the_field('book_page_info') ?></a>
+	<div class='book_text'>
+		<?php the_field('book_title') ?>:
+		<?php the_field('book_page_info') ?></div>
 </div>
-
+<div class='book-role'><?php the_field('book_role'); ?> </div>
 <div class='book_page_images'>
 <?php
 	 while ( have_rows('book_page_images') ) : the_row();

@@ -22,9 +22,9 @@
 			<a class='link nav <?php if($id===186){echo 'current';} ?>' href='/#magazine-top'>Top,</a>
 			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-vman'>V and VMan</a>
 		</div>
-<div class='magazine <?php echo get_the_ID(); ?>'>
-<div id='map' ></div>
+<div class='magazine <?php echo $id; ?>'>
 
+<div id='map<?php echo $id; ?>' ></div>
 <div class='magazine-issuez'>
 	<div class='issues-text'>
 	<a>Issue</a>
@@ -32,8 +32,7 @@
 			$pdfCount = 1;
 		  $pdfs = get_field('pdfs');
 		  if(is_array($pdfs) && !empty($pdfs)){
-			foreach($pdfs as $row){ ?>
-			<?php
+			foreach($pdfs as $row){
 				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" href="' . $row['pdf'] . '"
 				data-img="background-image: url(' . $row['image']['sizes']['small'] . ')">';
 
@@ -50,6 +49,7 @@
 				}
 			}
 			echo '	</div>';
+			echo '<div class="mag-role">' . get_field('magazine_role') . '</div>';
 			$pdfCount = 1;
 		  $pdfs = get_field('pdfs');
 		  if(is_array($pdfs) && !empty($pdfs)){
@@ -65,6 +65,7 @@
 </div>
 
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/OpenLayers.js"></script>
+	<script> currentMap = <?php echo $id; ?></script>
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/magazines.js"></script>
 	<script>
 	//remove arrows

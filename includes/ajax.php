@@ -11,7 +11,6 @@ $(function(){
   // gets the url from the hash and displays either our cached content or fetches
   // new content to be displayed.
   $(window).bind( 'hashchange', function(e) {
-    $('#map').remove()
     // Get the hash (fragment) as a string, with any leading # removed. Note that
     // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
     var url = $.param.fragment();
@@ -21,18 +20,13 @@ $(function(){
         $('.top-bar.magazines').css('animation','none');
       //$('.top-bar.magazines').remove();
     }
-
+    console.log('the hash is'+document.location.toString().indexOf('about'))
     if((url.indexOf('magazine-')>-1) && window.innerWidth>480 || document.location.hash === ''){
       $('.bottom-bar').css({
         'animation':'bottom-up .5s ease-in',
         'bottom':'64px',
         'z-index': 2000
       })
-    }
-      else if(document.location.hash === 'about'){
-        $('.bottom-bar').css({
-          'bottom':'0px',
-        });
     }
     else if(document.location.hash === '#books'){
       $('.bottom-bar').css({
@@ -46,6 +40,19 @@ $(function(){
         'bottom': '0px'
       });
     }
+    if(document.location.toString().indexOf('about')>-1){
+      if(window.innerWidth<480)
+      $('.bottom-bar').css({
+        'bottom':'-80px',
+        'animation':''
+      });
+      else {
+        $('.bottom-bar').css({
+          'bottom':'0px',
+          'animation':''
+        });
+      }
+  }
 
     if(url.indexOf('magazine-')>-1 || url === 'advertisements'){
       $('header .top-bar').removeClass('moveDown');
@@ -118,6 +125,8 @@ $(function(){
   $(".top-bar").addClass('showAnd');
   $('.top-bar .link.nav').addClass('current-page');
   $('.nav').click(function(){
+  //  if($('#map').length>0)
+  //    $('#map').remove()
     $(".top-bar").removeClass('showAnd');
     $('.current-page').removeClass('current-page');
     $(this).addClass('current-page');
