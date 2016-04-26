@@ -6,13 +6,18 @@
 	var mapMaxResolution = 0.50000;
 	var collages = {
 		185: {
-			size: [-20000.000000, -3990.000000,0]
+			size: [-20000.000000, -3990.000000,0],
+			pos: [2077, 1.5,4],
+			map : [-4608.000000, 7424.000000]
 		},
 		186: {
-			size: [-20000.000000, -2420.000000, 0]
+			size: [-20000.000000, -2420.000000, 0],
+			pos: [2077, 0,4],
+			map : [-3072.000000, 8192.000000]
 		},
 		187: {
-			size: [-20000.000000, -2720.000000,-150.000000]
+			size: [-20000.000000, -2720.000000,-150.000000],
+			pos: [2077, 1.5,4]
 		}
 	}
 	imageID =currentMap;
@@ -63,7 +68,8 @@
 	  map.addControl(new OpenLayers.Control.PanZoom());
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
-	  map.setCenter(new OpenLayers.LonLat(2077, 1.5),4)//
+	  //map.setCenter(new OpenLayers.LonLat(2077, 1.5),4)
+		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]),collages[currentMap]['pos'][2])
 	}
 	init();
 	var mobile = window.innerWidth<480;

@@ -508,7 +508,7 @@ td, th { padding: 0; }
 .mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 16px; }
 @media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 10px; } }
 
-.top-bar { z-index: 5; background: white; position: static; top: 0; color: rgba(0, 0, 0, 0.35); width: 100%; text-align: center; height: 64px; border-bottom: solid black 4px; line-height: 64px; left: 0; }
+.top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 64px; border-bottom: solid black 4px; line-height: 64px; left: 0; }
 .top-bar.showAnd { color: black; }
 
 @-webkit-keyframes mymove { from { top: -364px; z-index: -2; }
@@ -562,7 +562,7 @@ td, th { padding: 0; }
 
 #mag-table caption { font-size: 32px; margin-bottom: 30px; }
 
-.link { text-decoration: none; color: rgba(0, 0, 0, 0.35); }
+.link { text-decoration: none; }
 
 .clipboard { position: fixed; bottom: 0; right: 32px; z-index: 1002; }
 
@@ -873,6 +873,7 @@ li { list-style: none; }
 @media (max-width: 480px) { .copied { display: none; } }
 
 #main .olMap:active { cursor: grabbing; cursor: -moz-grabbing; cursor: -webkit-grabbing; }
+#main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
 #main .olMap { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); width: 100%; background-color: #FFFFFF;  /*.olButton {
 	 width: 48px!important;
