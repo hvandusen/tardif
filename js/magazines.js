@@ -1,34 +1,38 @@
 (function ($) {
 	var map, layer;
-	var mapBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
-	var mapMinZoom = 3;
+//	var mapBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
+	var mapMinZoom = 0;
 	var mapMaxZoom = 6;
-	var mapMaxResolution = 0.50000;
+	var mapMaxResolution = 0.500000;
 	var collages = {
 		185: {
 			size: [-20000.000000, -3990.000000,0],
 			pos: [2077, 1.5,4],
-			map : [-4608.000000, 7424.000000]
+				map : [-4608.000000, 7424.000000],
 		},
 		186: {
-			size: [-20000.000000, -2420.000000, 0],
+			size: [-20000.000000, -2920.000000, 0],
 			pos: [2077, 0,4],
-			map : [-3072.000000, 8192.000000]
+			map : [-3072.000000, 7192.000000]
 		},
 		187: {
-			size: [-20000.000000, -2720.000000,-150.000000],
-			pos: [2077, 1.5,4]
+			size: [-20000.000000, -3020.000000,-150.000000],
+			pos: [2077, 1.5,4],
+			map : [-3072.000000, 8192.000000]
 		}
 	}
 	imageID =currentMap;
-	var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
+	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
+var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
+	var mapBounds = gridBounds;
+console.log(gridBounds);
  var restrict = new OpenLayers.Bounds(collages[imageID]['size'][0], collages[imageID]['size'][1], 17265.000000, collages[imageID]['size'][2]);
 	function init() {
 	  var options = {
 	    controls: [],
 	    maxExtent : gridBounds,
-	    //minResolution: mapMaxResolution,
-	    numZoomLevels: mapMaxZoom,
+	    minResolution: mapMaxResolution,
+	    numZoomLevels: mapMaxZoom+1,
 			restrictedExtent: restrict,//mapBounds
 			minZoom: 1,
 			maxZoom: 5
@@ -45,7 +49,7 @@
 	    isBaseLayer: true,
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
-	    gutter: 0,
+	    //gutter: 0,
 			wrapDateLine: true,
 	  });
 	  map.addLayer(layer);
