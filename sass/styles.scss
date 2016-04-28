@@ -892,11 +892,27 @@ border-bottom: solid black 4px;
 	 .title{
     line-height: 53px;
 		 display: inline;
-	  &:HOVER {
-			cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
-		 //border-top:solid black 4px;
-	 }
-		position: static;
+		 &:hover {
+			 cursor: pointer;
+			 //z-
+			 visibility: hidden;
+			 &:after {
+				 content: "ABOUT";
+				 opacity: 1;
+				 position: absolute;
+				 left:0;
+				 visibility: visible;
+			 }
+		 }
+			 &:after {
+				 opacity: 0;
+				 content: "ABOUT";
+				 position: absolute;
+				 left:0;
+				 z-index: 8000;
+			 }
+
+			 position: relative;
     bottom: 0px;
 	 @media(max-width:480px){
 		 padding-left: 17px;
@@ -1635,6 +1651,7 @@ li {
 			a {
 				padding-left: 32px;
 			}
+
 	 	}
 
 	 	.nav.link {
