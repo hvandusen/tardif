@@ -13,11 +13,12 @@
 		$('.top-bar.magazines a.link').click(function(){
 		});
 
+
 		$('.bottom-bar .title').click(function(){
 			window.location = '/about';
 		});
 
-		var text_string = "Pierre Tardif is a New York-based art director and graphic designer. ";
+		var text_string = "As is the atom, so is the Universe. ";
 		setInterval(function(){
 			text_string = text_string+text_string.substr(0,1);
 			text_string = text_string.substr(1, text_string.length-1);

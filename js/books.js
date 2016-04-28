@@ -16,9 +16,13 @@
 	    return ((docViewTop < elTop) && (docViewBottom > elBottom));
 	}
 
-window.onscroll = function(e){
-	console.log(window.scrollY);
-}
+$(window).scroll(function(e){
+
+	if(window.location.hash === '#books'){
+		window.sessionStorage.books = window.scrollY;
+			console.dir(e);
+	}
+});
 
 	$(document).ready(function(){
 	setBookSize();

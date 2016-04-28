@@ -78,6 +78,7 @@ $(function(){
       // created, so instead of creating it again, let's just show it!
       cache[ url ].show();
 
+
     } else {
       // Show "loading" content while AJAX content loads.
       $( '.bbq-loading' ).show();
@@ -116,6 +117,10 @@ $(function(){
             //$(newBottomBar).appendTo('.top-bar');
           }*/
         });
+    }
+    if(window.sessionStorage.books){
+      window.scrollTo(0,parseInt(window.sessionStorage.books));
+      console.log('ffff' + window.sessionStorage.books);
     }
   });
 

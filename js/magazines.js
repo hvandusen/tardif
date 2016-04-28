@@ -6,14 +6,14 @@
 	var mapMaxResolution = 0.500000;
 	var collages = {
 		185: {
-			size: [-20000.000000, -3990.000000,0],
+			size: [-20000.000000, -4590.000000,0],
 			pos: [2077, 1.5,4],
 				map : [-4608.000000, 7424.000000],
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
 			pos: [2077, 0,4],
-			map : [-3072.000000, 7192.000000]
+			map : [-2560.000000, 7268.000000]
 		},
 		187: {
 			size: [-20000.000000, -3020.000000,-150.000000],
@@ -24,7 +24,7 @@
 	imageID =currentMap;
 	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
-	var mapBounds = gridBounds;
+	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 console.log(gridBounds);
  var restrict = new OpenLayers.Bounds(collages[imageID]['size'][0], collages[imageID]['size'][1], 17265.000000, collages[imageID]['size'][2]);
 	function init() {
@@ -34,8 +34,8 @@ console.log(gridBounds);
 	    minResolution: mapMaxResolution,
 	    numZoomLevels: mapMaxZoom+1,
 			restrictedExtent: restrict,//mapBounds
-			minZoom: 1,
-			maxZoom: 5
+			//minZoom: 1,
+			//maxZoom: 5
 	  };
 		console.log($('#map'+currentMap));
 		if($('#map'+currentMap)[0].className === 'olMap'){
@@ -46,7 +46,7 @@ console.log(gridBounds);
 	  console.dir(imageID)
 	  layer = new OpenLayers.Layer.XYZ( "MapTiler layer", template_directory+'/'+imageID+"/${z}/${x}/${y}.png", {
 	    transitionEffect: 'resize',
-	    isBaseLayer: true,
+	    //isBaseLayer: true,
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
 	    //gutter: 0,
@@ -104,6 +104,24 @@ $(window).scroll(function(e){
 	$('.pdf-img').css({
 		bottom: 67+window.scrollY
 	});
+});
+
+//whether z_in is showing
+var z_in = true;
+var z_out = true;
+var both = true;
+$('#OpenLayers_Control_PanZoom_15_zoomin, #OpenLayers_Control_PanZoom_15_zoomout').click(function(){
+	console.dir($(this));
+	if(both){
+		$(this).addClass('noZoom');
+		//z_in = false;
+		both = false;
+	}
+	else {
+		$('.noZoom').removeClass('noZoom');
+		both = true;
+	}
+
 });
 
 //$('#OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown, #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft').css('display','none!important');
