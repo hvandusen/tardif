@@ -12,12 +12,12 @@
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [2077, 0,4],
-			map : [-2560.000000, 7268.000000]
+			pos: [2577, -0,4],
+			map : [-2560.000000, 7168.000000]
 		},
 		187: {
 			size: [-20000.000000, -3020.000000,-150.000000],
-			pos: [2077, 1.5,4],
+			pos: [4452, -2143,4],
 			map : [-3072.000000, 8192.000000]
 		}
 	}
@@ -53,7 +53,7 @@ console.log(gridBounds);
 			wrapDateLine: true,
 	  });
 	  map.addLayer(layer);
-	  //map.zoomToExtent(mapBounds);
+	  //map.zoomToExtent(new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0]+200, collages[imageID]['map'][1], 0.000000));
 
 	  var mousePercent = function(evt){
 	    lonlat = map.getLonLatFromViewPortPx({x:evt.pageX,y:evt.pageY});
