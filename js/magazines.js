@@ -12,20 +12,22 @@
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [2577, -0,4],
+			pos: [841, -1951,4],
 			map : [-2560.000000, 7168.000000]
 		},
 		187: {
-			size: [-20000.000000, -3020.000000,-150.000000],
+			size: [-20000.000000, -3190.000000,-150.000000],
 			pos: [4452, -2143,4],
 			map : [-3072.000000, 8192.000000]
 		}
 	}
 	imageID =currentMap;
+	if(currentMap === 187)
+		$('.issues-text').hide()
 	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
-console.log(gridBounds);
+
  var restrict = new OpenLayers.Bounds(collages[imageID]['size'][0], collages[imageID]['size'][1], 17265.000000, collages[imageID]['size'][2]);
 	function init() {
 	  var options = {
@@ -50,6 +52,7 @@ console.log(gridBounds);
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
 	    //gutter: 0,
+			//leftTolerance: -1300,
 			wrapDateLine: true,
 	  });
 	  map.addLayer(layer);
@@ -110,7 +113,11 @@ $(window).scroll(function(e){
 var z_in = true;
 var z_out = true;
 var both = true;
-$('#OpenLayers_Control_PanZoom_15_zoomin, #OpenLayers_Control_PanZoom_15_zoomout').click(function(){
+var buttonString = '#OpenLayers_Control_PanZoom_15_zoomin, #OpenLayers_Control_PanZoom_15_zoomout, '+
+	'#OpenLayers_Control_PanZoom_16_zoomin, #OpenLayers_Control_PanZoom_16_zoomout,'+
+	'#OpenLayers_Control_PanZoom_17_zoomin, #OpenLayers_Control_PanZoom_17_zoomout, '+
+	'#OpenLayers_Control_PanZoom_18_zoomin, #OpenLayers_Control_PanZoom_18_zoomout';
+$(buttonString).click(function(){
 	console.dir($(this));
 	if(both){
 		$(this).addClass('noZoom');
@@ -121,7 +128,6 @@ $('#OpenLayers_Control_PanZoom_15_zoomin, #OpenLayers_Control_PanZoom_15_zoomout
 		$('.noZoom').removeClass('noZoom');
 		both = true;
 	}
-
 });
 
 //$('#OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown, #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft').css('display','none!important');

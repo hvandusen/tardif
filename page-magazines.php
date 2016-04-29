@@ -52,6 +52,7 @@
 				}
 			}
 			echo '	</div>';
+			echo '<div class="mag-role">' . get_field('magazine_role', $id) . '</div>';
 			$pdfCount = 1;
 		  $pdfs = get_field('pdfs', $id);
 		  if(is_array($pdfs) && !empty($pdfs)){
@@ -72,9 +73,9 @@
 	<script>
 	//remove arrows
 	for(var i=0;i<4;i++){
-		$($('#main .olButton')[i]).css('display','none');
+		//$($('#main .olButton')[i]).css('display','none');
 	}
-	$($('#main .olButton')[5]).css('display','none');
+	//$($('#main .olButton')[5]).css('display','none');
 
 	</script>
 <?php get_footer(); ?>

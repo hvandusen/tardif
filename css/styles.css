@@ -719,7 +719,7 @@ li { list-style: none; }
 
 .brand:last-of-type .brand_dividers { display: none; }
 
-.copied { -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); font-size: 18px; }
+.copied { -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); }
 
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 24.6px 32px; z-index: 2002; }
 .envelope img, .copied img { max-height: 27px; }
@@ -829,7 +829,8 @@ li { list-style: none; }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton { display: none; } }
 #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(16px); -ms-transform: translateY(16px); -webkit-transform: translateY(16px); transform: translateY(16px); -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(-10px); -ms-transform: translateY(-10px); -webkit-transform: translateY(-10px); transform: translateY(-10px); } }
-#main .olControlPanZoom .olButton.noZoom { display: none; }
+#main .olControlPanZoom .olButton.noZoom { pointer-events: none; }
+#main .olControlPanZoom .olButton.noZoom img { -webkit-filter: invert(1); filter: invert(1); }
 
 .home { text-decoration: none; color: black; }
 
