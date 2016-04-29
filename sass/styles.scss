@@ -861,7 +861,7 @@ border-bottom: solid black 4px;
 		//font-size: 27.5px;
 
 			@media (max-width: 956px) {
-				line-height: 1.2em;
+				//line-height: 1.2em;
 				//font-size: 13px;
 			}
 			@media (max-width: 633px) {
@@ -875,7 +875,15 @@ border-bottom: solid black 4px;
 			&.ads.goaway {
 			 animation: mymoveup .5s ease-out;
 			}
+			&.ads {
+				@media(max-width:770px){
+					font-size: 18px;
+			}
+		}
 }
+
+
+
 
 .bottom-bar {
  	position: fixed;
@@ -899,6 +907,7 @@ border-bottom: solid black 4px;
 			 &:after {
 				 content: "ABOUT";
 				 opacity: 1;
+				 text-align: center;
 				 position: absolute;
 				 left:0;
 				 visibility: visible;
@@ -1904,9 +1913,6 @@ li {
   }
 
   .home:hover {
-
-
-
   }
 
   .pdfs {
@@ -1915,14 +1921,13 @@ li {
    margin-bottom: 64px;
   }
 .pdf-img{
-	width: 10%;
-	height: 20%;
+	width: 143px;//13%;
+	height: 167px;//20%;
 	z-index: 9990;
 	position: fixed;
   bottom: -367px;
 	left: -3000px;
 	border: solid black 4px;
-
 	border-bottom: none;
 }
   .pdf-row {
