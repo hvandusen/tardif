@@ -27,7 +27,6 @@
 		dx = -1//directions[(dumps%4)][0];
 		dy = 1//directions[(dumps%4)][1];
 		brand.find('.season_image').map(function(i,e){
-
 			vert = $(e)[0].className.indexOf('vert')>0;
 			$(e).removeClass('inactive');
 			$(e).addClass('active');
@@ -40,6 +39,7 @@
 			point.x += (dx*staggerAmount);
 			point.y += (dy*staggerAmount);
 			if(point.x+330>window.innerWidth || point.y+$(e).height()>window.innerHeight-67 || point.x<0 || point.y<0 ){
+				console.log(point)
 				dumps++
 				dx = -1//directions[(dumps%4)][0];
 				dy = 1//directions[(dumps%4)][1];
@@ -57,6 +57,9 @@
 				point.y = 20;
 			}
 			z--;
+			if(vert && window.innerWidth<480){
+				point.y = Math.floor(Math.random()*100)
+			}
 			if(i===totalPics-1){
 				currentAttr = $(e).parent().prev();
 				////console.dir($(e))
@@ -113,7 +116,7 @@ if(rangeY<0)
 
 function getPointMobile(w){
 	rangeX = w*.15;
-	rangeY = (window.innerHeight-450);
+	rangeY = (window.innerHeight-275);
 	//three 64 bars worth
 	return {
 		x: Math.random()*rangeX,

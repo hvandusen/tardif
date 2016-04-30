@@ -912,6 +912,9 @@ border-bottom: solid black 4px;
 				 position: absolute;
 				 left:0;
 				 visibility: visible;
+				 @media(max-width:480px){
+					 opacity:0;
+				 }
 			 }
 		 }
 			 &:after {
@@ -1317,7 +1320,7 @@ li {
 
 .season_attribution {
  display:none;
- 	background: white;
+ 	//background: white;
 }
 
 .showing.season_attribution {
@@ -1327,7 +1330,7 @@ li {
 
 .showing.season_attribution {
 	a{
- 		background-color:white;
+ 		//background-color:white;
 	}
 }
 
@@ -1583,7 +1586,7 @@ li {
 		    padding-right: 20px;
 				line-height: 13px;
 				    padding-bottom: 16px;
-		    background: white;
+		    //background: white;
 				.people{
 					display:none;
 				}
@@ -1665,7 +1668,7 @@ li {
 	 		padding:0;
 	 		text-align: left;
 			font-size: 27px;
-
+			height: 30px;
 			a {
 				padding-left: 32px;
 			}
@@ -1721,6 +1724,8 @@ li {
 		 max-width: 100%;
 		 max-width: 350px;
 		 max-height: 256px;
+		 max-width: 320px;
+		 max-height: 236px;
 	 }
   }
 
@@ -2113,7 +2118,7 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 	 @include calc(height, '100% - 64px');
 	 @media(max-width:480px){
 		 border-bottom: solid 4px black;
-		 @include calc(height, '100% - 77px');
+		 @include calc(height, '100% - 65px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;

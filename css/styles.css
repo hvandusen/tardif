@@ -554,6 +554,7 @@ td, th { padding: 0; }
 .bottom-bar .title { line-height: 53px; display: inline; position: relative; bottom: 0px; }
 .bottom-bar .title:hover { cursor: pointer; visibility: hidden; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: center; position: absolute; left: 0; visibility: visible; }
+@media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 .bottom-bar .title:after { width: 254px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 22px; position: fixed; } }
 
@@ -682,11 +683,9 @@ li { list-style: none; }
 
 .showing.season > .season_attribution { display: block; z-index: 9000; }
 
-.season_attribution { display: none; background: white; }
+.season_attribution { display: none; }
 
 .showing.season_attribution { display: block; }
-
-.showing.season_attribution a { background-color: white; }
 
 .season_attr, .company_attr { padding-bottom: 0px; }
 
@@ -749,7 +748,7 @@ li { list-style: none; }
   /* Standard syntax */
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: fixed; /* right: 2px; */ max-width: calc(100% - 211px); /* max-width: none; */ text-align: right; /* padding-left: 32px; */ bottom: 0px; vertical-align: text-bottom; /* top: auto; */ bottom: 0px; /* border: solid 3px black; */ /* border-left: solid 3px black; */ /* background: black; */ padding-right: 20px; line-height: 13px; padding-bottom: 16px; background: white; }
+  .showing.season_attribution { position: fixed; /* right: 2px; */ max-width: calc(100% - 211px); /* max-width: none; */ text-align: right; /* padding-left: 32px; */ bottom: 0px; vertical-align: text-bottom; /* top: auto; */ bottom: 0px; /* border: solid 3px black; */ /* border-left: solid 3px black; */ /* background: black; */ padding-right: 20px; line-height: 13px; padding-bottom: 16px; }
   .showing.season_attribution .people { display: none; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
@@ -764,7 +763,7 @@ li { list-style: none; }
   #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 14px; padding-left: 16px; margin-bottom: 0px; padding-bottom: 0px; font-size: 18px; }
   .season_image { max-width: 350px; max-height: 95%; width: 80%; }
   .page-id-160 .bottom-bar { bottom: -104px !important; position: static; }
-  .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; }
+  .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; height: 30px; }
   .bottom-bar a { padding-left: 32px; }
   .main-img-cont { width: 100%; text-align: center; }
   .home_image { max-width: 33%; } }
@@ -774,7 +773,7 @@ li { list-style: none; }
 .book { overflow: hidden; display: inline-block; position: relative; max-width: 800px; max-height: 600px; margin: 10px; margin: 10px auto; display: block; }
 @media (max-width: 800px) { .book { margin-top: 40px; max-width: 600px; max-height: 450px; } }
 @media (max-width: 600px) { .book { margin-top: 40px; max-width: 500px; max-height: 375px; } }
-@media (max-width: 480px) { .book { margin-top: 40px; max-width: 100%; max-width: 350px; max-height: 256px; } }
+@media (max-width: 480px) { .book { margin-top: 40px; max-width: 100%; max-width: 350px; max-height: 256px; max-width: 320px; max-height: 236px; } }
 
 .book_role { position: fixed; bottom: 24px; right: 30px; z-index: 10; }
 
@@ -889,7 +888,7 @@ li { list-style: none; }
 	 height: 48px!important;
 	 border: 3px solid black!important;
 	 margin-bottom: 1px!important; }*/ cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
-@media (max-width: 480px) { #main .olMap { border-bottom: solid 4px black; height: -webkit-calc(100% - 77px); height: calc(100% - 77px); } }
+@media (max-width: 480px) { #main .olMap { border-bottom: solid 4px black; height: -webkit-calc(100% - 65px); height: calc(100% - 65px); } }
 #main .olMap .olCursorWait { cursor: wait; }
 #main .olMap .olDragDown { cursor: -webkit-grabbing; }
 #main .olMap .olDrawBox { cursor: crosshair; }
