@@ -508,7 +508,7 @@ td, th { padding: 0; }
 @media (max-width: 480px) { .small-font { font-size: 10px; } }
 
 .mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 18px; }
-@media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 10px; } }
+@media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 13px; } }
 
 .top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 64px; border-bottom: solid black 4px; line-height: 64px; left: 0; }
 .top-bar.showAnd { color: black; }
@@ -749,11 +749,11 @@ li { list-style: none; }
   /* Standard syntax */
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: absolute; left: 2px; width: 80%; max-width: none; padding-left: 32px; bottom: 0px; vertical-align: text-bottom; top: auto; /* border: solid 3px black; */ /* border-left: solid 3px black; */ background: white; }
+  .showing.season_attribution { position: fixed; /* right: 2px; */ max-width: calc(100% - 211px); /* max-width: none; */ text-align: right; /* padding-left: 32px; */ bottom: 0px; vertical-align: text-bottom; /* top: auto; */ bottom: 0px; /* border: solid 3px black; */ /* border-left: solid 3px black; */ /* background: black; */ padding-right: 20px; line-height: 13px; padding-bottom: 16px; background: white; }
   .showing.season_attribution .people { display: none; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
-  .top-bar { font-size: 18px; height: 36px; line-height: 36px; }
+  .top-bar { font-size: 17px; height: 36px; line-height: 36px; }
   .top-bar.ads { height: 64px; line-height: 1.4em; display: none; }
   .top-bar.magazines, .top-bar.ads, .top-bar.single_book { top: 0px; z-index: 5000; height: 30px; transform: translateY(0px); padding-top: 2px; font-size: 16px; padding-top: 2px; line-height: 1.8em; }
   .top-bar.ads { line-height: 1.8em; }
@@ -797,6 +797,7 @@ li { list-style: none; }
 .book_image.-position-6-of-7 { -webkit-transform: translateX(-85.71429%); -ms-transform: translateX(-85.71429%); transform: translateX(-85.71429%); }
 
 .book_page_info { padding: 0 15% 0 15%; }
+@media (max-width: 480px) { .book_page_info { padding: 0% 10% 15% 10%; } }
 
 .book_page_images { text-align: center; }
 

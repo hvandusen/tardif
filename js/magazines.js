@@ -22,8 +22,8 @@
 		}
 	}
 	imageID =currentMap;
-	if(currentMap === 187)
-		$('.issues-text').hide()
+	//if(currentMap === 187)
+	//	$('.issues-text').hide()
 	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);

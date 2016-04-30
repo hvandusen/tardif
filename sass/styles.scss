@@ -681,7 +681,8 @@ th {
 	font-family: Grotesk;
 	font-size: 18px;
 	@media(max-width: 480px){
-		font-size: 10px;
+		//font-size: 10px;
+		font-size: 13px;
 	}
 }
 
@@ -1163,6 +1164,7 @@ letter-spacing: -.5px;
 	}
 	@media(max-width:480px){
 		font-size: 18px;
+
 	}
 }
 
@@ -1564,18 +1566,23 @@ li {
 			  	}
 			   }
 			.showing.season_attribution {
-				position: absolute;
-		    left: 2px;
+				position: fixed;
+		    /* right: 2px; */
+		    max-width: calc(100% - 211px);
+		    /* max-width: none; */
+		    text-align: right;
+		    /* padding-left: 32px; */
+		    bottom: 0px;
 
-		    width: 80%;
-		    max-width: none;
-				padding-left: 32px;
-		    //bottom: -28px;
-				bottom: 0px;
 		    vertical-align: text-bottom;
-		    top: auto;
+		    /* top: auto; */
+		    bottom: 0px;
 		    /* border: solid 3px black; */
 		    /* border-left: solid 3px black; */
+		    /* background: black; */
+		    padding-right: 20px;
+				line-height: 13px;
+				    padding-bottom: 16px;
 		    background: white;
 				.people{
 					display:none;
@@ -1589,7 +1596,7 @@ li {
 			}
 	 	.top-bar {
 	 		//font-size: 21px;
-			font-size: 18px;
+			font-size: 17px;
 			height: 36px;
 			line-height: 36px;
 			&.ads {
@@ -1788,6 +1795,9 @@ li {
 
   .book_page_info {
    padding: 0 15% 0 15%;
+	 	@media(max-width: 480px){
+		 padding: 0% 10% 15% 10%;
+	 	}
    }
 
   .book_page_images {
@@ -1901,7 +1911,7 @@ li {
 			}
 			&.noZoom{
 				//display:none;
-				
+
 				pointer-events: none;
 				img {
 					-webkit-filter: invert(1);

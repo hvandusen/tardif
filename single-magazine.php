@@ -27,7 +27,9 @@
 <div id='map<?php echo $id; ?>' ></div>
 <div class='magazine-issuez'>
 	<div class='issues-text'>
-	<a>Issue</a>
+	<?php if($id != 187){
+		echo '<a>Issue </a>';}
+		 ?>
 <?php //
 			$pdfCount = 1;
 		  $pdfs = get_field('pdfs');
