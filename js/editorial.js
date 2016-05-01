@@ -34,10 +34,11 @@
 			$(e).css({
 				'z-index': z,
 				'left':point.x+'px',
-				'top':(vert? Math.abs(point.y-10) : point.y)+'px',
+				'top':(vert? Math.abs(Math.random()*200) : point.y)+'px',
 			});
 			point.x += (dx*staggerAmount);
 			point.y += (dy*staggerAmount);
+			if(window.innerWidth>480)
 			if(point.x+330>window.innerWidth || point.y+$(e).height()>window.innerHeight-67 || point.x<0 || point.y<0 ){
 				console.log(point)
 				dumps++
@@ -57,8 +58,9 @@
 				point.y = 20;
 			}
 			z--;
-			if(vert && window.innerWidth<480){
+			if(vert  && window.innerWidth<480 ){
 				point.y = Math.floor(Math.random()*100)
+				console.log('moved')
 			}
 			if(i===totalPics-1){
 				currentAttr = $(e).parent().prev();
@@ -116,8 +118,10 @@ if(rangeY<0)
 
 function getPointMobile(w){
 	rangeX = w*.15;
-	rangeY = (window.innerHeight-275);
+	rangeY = (window.innerHeight-300);
 	//three 64 bars worth
+	if(rangeY>300)
+		rangeY =(window.innerHeight-300);
 	return {
 		x: Math.random()*rangeX,
 		y: Math.random()*rangeY
