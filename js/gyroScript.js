@@ -23,7 +23,11 @@
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
 							$('.book').map(function(i,e){
-								console.log(i);
+								console.log('visible: '+$(e).visible());
+								if($(e).visible()){
+									$($(e)[current]).addClass('-position-'+show+'-of-7');
+		        			$($(e)[current]).removeClass(classes[1]);
+								}
 							});
 
 							//	if($(e).visible()){
