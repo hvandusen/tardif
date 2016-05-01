@@ -22,11 +22,11 @@
 
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
-							$('.book').map(function(i,e){
+							//$('.book').map(function(i,e){
 
-								if($(e).visible()){
-									console.log('visible');
-									console.log($(e));
+							//	if($(e).visible()){
+									//console.log('visible');
+									//console.log($(e));
 									// classes = $('.book_image:visible')[current].classList
 		        			// $($('.book_image:visible')[current]).addClass('-position-'+show+'-of-7');
 		        			// $($('.book_image:visible')[current]).removeClass(classes[1]);
@@ -35,7 +35,10 @@
 		        			$($(e)[current]).addClass('-position-'+show+'-of-7');
 		        			$($(e)[current]).removeClass(classes[1]);
 		        			angle = show;
-									}
+									//}
+								//});
+								$('.book').map(function(i,e){
+									console.log($(e));
 								});
 	        	}
 	        count++;
