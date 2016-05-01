@@ -23,7 +23,8 @@
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
 							console.log($('.book_image:visible'))
-					classes = $('.book_image')[current].classList
+					//classes = $('.book_image')[current].classList
+						 classes = $('.book_image:visible').classList;
 		        	$($('.book_image:visible')[current]).addClass('-position-'+show+'-of-7');
 		        	$($('.book_image:visible')[current]).removeClass(classes[1]);
 		        	angle = show;
