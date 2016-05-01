@@ -26,6 +26,7 @@
 								//console.log('visible: '+$(e).visible());
 								if($(e).visible()){
 									current = i;
+									console.log('new current');
 									console.log(current);
 									// return;
 									// var image = $(e).find('.book_image');
