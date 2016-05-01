@@ -38,7 +38,7 @@
 									//}
 								//});
 								$('.book').map(function(i,e){
-									console.log($(e));
+									console.log(e);
 								});
 	        	}
 	        count++;
