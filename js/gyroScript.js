@@ -25,7 +25,7 @@
 							$('.book').map(function(i,e){
 								//console.log('visible: '+$(e).visible());
 								if($(e).visible()){
-									var image = $(e).find('.book_image');
+									var image = $($(e).find('.book_image'));
 									console.log('found this')
 									console.dir(image);
 									classes = image.classList
