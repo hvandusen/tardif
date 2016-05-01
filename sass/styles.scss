@@ -889,8 +889,10 @@ border-bottom: solid black 4px;
 .bottom-bar {
  	position: fixed;
  	clear: both;
+
 	 bottom: 0px;
 	 width: 100%;
+	 width: calc(100% - 32px);
 	 height: 64px;
 	 //font-size: 40px;
 	 @extend .big-font;
@@ -898,9 +900,11 @@ border-bottom: solid black 4px;
 	 line-height: 64px;
 	 z-index: 1000;
 	 display: inline;
+	 pointer-events: none;
 	 .title{
     line-height: 53px;
 		 display: inline;
+		     pointer-events: visible;
 		 &:hover {
 			 cursor: pointer;
 			 //z-
@@ -1492,9 +1496,11 @@ li {
 			 @-webkit-keyframes bottom-up {
 				 from {    //@include translateY(-67px);
 			 		bottom: 0px;
+					border-bottom: none;
 			 	 }
 			 	 to {   // @include translateY(0px);
 			 		  bottom: 64px;
+						border-bottom: solid black 3px;
 			 	 }
 			 }
 

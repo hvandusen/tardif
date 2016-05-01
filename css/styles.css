@@ -550,8 +550,8 @@ td, th { padding: 0; }
 .top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
 @media (max-width: 770px) { .top-bar.ads { font-size: 18px; } }
 
-.bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; }
-.bottom-bar .title { line-height: 53px; display: inline; position: relative; bottom: 0px; }
+.bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
+.bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
 .bottom-bar .title:hover { cursor: pointer; visibility: hidden; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
@@ -729,8 +729,8 @@ li { list-style: none; }
   /* Standard syntax */
   @keyframes mymove { from { top: -50px; z-index: -2; }
     to { top: 0px; z-index: -2; } }
-  @-webkit-keyframes bottom-up { from { bottom: 0px; }
-    to { bottom: 64px; } }
+  @-webkit-keyframes bottom-up { from { bottom: 0px; border-bottom: none; }
+    to { bottom: 64px; border-bottom: solid black 3px; } }
   @keyframes bottom-up { from { bottom: 0px; }
     to { bottom: 64px; } }
   @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }

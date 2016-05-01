@@ -12,7 +12,7 @@
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [841, -1951,4],
+			pos: [891, -1951,4],
 			map : [-2560.000000, 7168.000000]
 		},
 		187: {
@@ -25,6 +25,7 @@
 	//if(currentMap === 187)
 	//	$('.issues-text').hide()
 	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
+	$('')
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 
@@ -56,7 +57,7 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 			wrapDateLine: true,
 	  });
 	  map.addLayer(layer);
-	  //map.zoomToExtent(new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0]+200, collages[imageID]['map'][1], 0.000000));
+	  map.zoomToExtent(new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000));
 
 	  var mousePercent = function(evt){
 	    lonlat = map.getLonLatFromViewPortPx({x:evt.pageX,y:evt.pageY});
@@ -117,7 +118,7 @@ var buttonString = '#OpenLayers_Control_PanZoom_15_zoomin, #OpenLayers_Control_P
 	'#OpenLayers_Control_PanZoom_16_zoomin, #OpenLayers_Control_PanZoom_16_zoomout,'+
 	'#OpenLayers_Control_PanZoom_17_zoomin, #OpenLayers_Control_PanZoom_17_zoomout, '+
 	'#OpenLayers_Control_PanZoom_18_zoomin, #OpenLayers_Control_PanZoom_18_zoomout';
-$(buttonString).click(function(){
+$('.olButton').click(function(){
 	console.dir($(this));
 	if(both){
 		$(this).addClass('noZoom');
