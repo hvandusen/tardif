@@ -553,7 +553,7 @@ td, th { padding: 0; }
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; }
 .bottom-bar .title { line-height: 53px; display: inline; position: relative; bottom: 0px; }
 .bottom-bar .title:hover { cursor: pointer; visibility: hidden; }
-.bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: center; position: absolute; left: 0; visibility: visible; }
+.bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 .bottom-bar .title:after { width: 254px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 22px; position: fixed; } }
