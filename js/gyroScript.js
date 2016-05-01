@@ -37,11 +37,9 @@
 		        			angle = show;
 									//}
 								//});
-								$('.book').map(function(i,e){
-									console.log(e);
-								});
 	        	}
 	        count++;
 	    	});
+
 	});
 })(jQuery);
