@@ -22,8 +22,10 @@
 
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
-							$('.book').map(function(i,e){
+							$('.book').map(function(e,i){
+
 								if($(e).visible()){
+									console.log($(e))
 									console.log($(e))
 									// classes = $('.book_image:visible')[current].classList
 		        			// $($('.book_image:visible')[current]).addClass('-position-'+show+'-of-7');
