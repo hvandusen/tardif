@@ -16,6 +16,8 @@ function only_pages(){
         if(is_page('Books')){
 	        wp_register_script('books',get_bloginfo('template_directory') . '/js/books.js');
 					wp_enqueue_script('books');
+					wp_register_script('visible',get_bloginfo('template_directory') . '/js/jquery.visible.min.js');
+					wp_enqueue_script('visible');
 					wp_register_script('gyro',get_bloginfo('template_directory') . '/js/gyro.min.js');
 					wp_enqueue_script('gyro');
 
