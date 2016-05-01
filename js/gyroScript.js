@@ -25,21 +25,24 @@
 							$('.book').map(function(i,e){
 								//console.log('visible: '+$(e).visible());
 								if($(e).visible()){
-									var image = $(e).find('.book_image');
-									console.log('found this')
-									console.dir(image);
-									classes = $(image).prop('classList')
-									image.addClass('-position-'+show+'-of-7');
-		        			image.removeClass(classes[1]);
+									current = i;
+									console.log(current);
+									// return;
+									// var image = $(e).find('.book_image');
+									// console.log('found this')
+									// console.dir(image);
+									// classes = $(image).prop('classList')
+									// image.addClass('-position-'+show+'-of-7');
+		        			// image.removeClass(classes[1]);
 								}
 							});
 
 							//	if($(e).visible()){
 									//console.log('visible');
 									//console.log($(e));
-									// classes = $('.book_image:visible')[current].classList
-		        			// $($('.book_image:visible')[current]).addClass('-position-'+show+'-of-7');
-		        			// $($('.book_image:visible')[current]).removeClass(classes[1]);
+									 classes = $('.book_image')[current].classList
+		        			 $($('.book_image')[current]).addClass('-position-'+show+'-of-7');
+		        			 $($('.book_image')[current]).removeClass(classes[1]);
 		        			// angle = show;
 									// classes = $(e)[current].classList
 		        			// $($(e)[current]).addClass('-position-'+show+'-of-7');
