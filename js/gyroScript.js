@@ -22,7 +22,7 @@
 
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
-							$('.book_image').map(function(i,e){
+							$('.book').map(function(i,e){
 								if($(e).visible()){
 									console.log($(e))
 									// classes = $('.book_image:visible')[current].classList
