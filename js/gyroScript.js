@@ -28,7 +28,7 @@
 									var image = $(e).find('.book_image')[0];
 									console.log('found this')
 									console.dir(image);
-									classes = $(image).classList
+									classes = image.classList
 									$(image).addClass('-position-'+show+'-of-7');
 		        			$(image).removeClass(classes[1]);
 								}
