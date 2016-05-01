@@ -23,6 +23,7 @@
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
 							$('.book').map(function(i,e){
+								return;
 								//console.log('visible: '+$(e).visible());
 								if($(e).visible()){
 									current = i;
