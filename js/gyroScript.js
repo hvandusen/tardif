@@ -26,7 +26,7 @@
 								//console.log('visible: '+$(e).visible());
 								if($(e).visible()){
 									var image = $(e).find('.book_image');
-									classes = $(image).classList
+									classes = image.classList
 									$(image).addClass('-position-'+show+'-of-7');
 		        			$(image).removeClass(classes[1]);
 								}
