@@ -25,9 +25,9 @@
 							$('.book').map(function(i,e){
 								console.log('visible: '+$(e).visible());
 								if($(e).visible()){
-									classes = $(e)[current].classList
-									$($(e)[current]).addClass('-position-'+show+'-of-7');
-		        			$($(e)[current]).removeClass(classes[1]);
+									classes = $(e).classList
+									$(e).addClass('-position-'+show+'-of-7');
+		        			$(e).removeClass(classes[1]);
 								}
 							});
 
