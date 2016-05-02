@@ -26,7 +26,7 @@
 		</div>
 <div class='magazine <?php echo '185'; ?>'>
 <div id='map<?php echo $id; ?>' ></div>
-<div class='mag-role'><?php the_field('magazine_role',185); ?></div>
+<div class='mag-role'></div>
 <div class='magazine-issuez'>
 	<div class='issues-text'>
 	<a>Issue</a>
