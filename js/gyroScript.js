@@ -23,7 +23,6 @@
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
 							$('.book').map(function(i,e){
-								return;
 								//console.log('visible: '+$(e).visible());
 								if($(e).visible()){
 									current = i;
@@ -43,8 +42,8 @@
 									//console.log('visible');
 									//console.log($(e));
 									 classes = $('.book_image')[current].classList
-		        			 $($('.book_image')[current]).addClass('-position-'+show+'-of-7');
-		        			 $($('.book_image')[current]).removeClass(classes[1]);
+									 $($('.book_image')[current]).addClass('-position-'+show+'-of-7');
+		        			$($('.book_image')[current]).removeClass(classes[1]);
 		        			// angle = show;
 									// classes = $(e)[current].classList
 		        			// $($(e)[current]).addClass('-position-'+show+'-of-7');
