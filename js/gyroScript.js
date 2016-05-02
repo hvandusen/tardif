@@ -28,20 +28,13 @@
 									current = i;
 									console.log('new current');
 									console.log(current);
-									// return;
-									// var image = $(e).find('.book_image');
-									// console.log('found this')
-									// console.dir(image);
-									// classes = $(image).prop('classList')
-									// image.addClass('-position-'+show+'-of-7');
-		        			// image.removeClass(classes[1]);
 								}
 							});
 
 							//	if($(e).visible()){
 									//console.log('visible');
 									//console.log($(e));
-									 classes = $('.book_image')[current].classList
+									 var classes = $('.book_image')[current].classList
 									 $($('.book_image')[current]).addClass('-position-'+show+'-of-7');
 		        			$($('.book_image')[current]).removeClass(classes[1]);
 		        			// angle = show;
