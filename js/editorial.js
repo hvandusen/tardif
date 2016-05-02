@@ -93,7 +93,7 @@ function getPoint(w){
 	else if(window.innerWidth>809){
 		range = w*.4;
 		//console.log('big ' + range);
-		rangeHeight = window.innerHeight*.20;
+		rangeHeight = window.innerHeight-450;
 	}
 	else if(window.innerWidth>680){
 		range = w*.32;

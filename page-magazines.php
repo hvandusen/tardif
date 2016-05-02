@@ -6,7 +6,7 @@
 	display:none;
 }
 .bottom-bar {
-	border-bottom: solid black 3px;
+	border-bottom: solid black 4px;
 	bottom: 64px;
 	animation: bottom-up .5s ease-in;
 	position: absolute;
@@ -36,7 +36,12 @@
 		  if(is_array($pdfs) && !empty($pdfs)){
 			foreach($pdfs as $row){ ?>
 			<?php
-				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" href="' . $row['pdf'] . '"
+			if($id === 198)
+				$linkClass = 'hrefs="' . $row['pdf'] . '"';
+			else {
+				$linkClass = '';
+			}
+				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" '.$linkClass .'
 				data-img="background-image: url(' . $row['image']['sizes']['small'] . ')">';
 
 				if($pdfCount===count($pdfs)){
