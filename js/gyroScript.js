@@ -37,9 +37,9 @@
 							//	if($(e).visible()){
 									//console.log('visible');
 									//console.log($(e));
-									 var classes = $('.book_image')[current].classList
-									 $($('.book_image')[current]).addClass('-position-'+show+'-of-7');
-		        			$($('.book_image')[current]).removeClass(classes[1]);
+									// var classes = $('.book_image')[current].classList
+									 //$($('.book_image')[current]).addClass('-position-'+show+'-of-7');
+		        			//$($('.book_image')[current]).removeClass(classes[1]);
 		        			// angle = show;
 									// classes = $(e)[current].classList
 		        			// $($(e)[current]).addClass('-position-'+show+'-of-7');
