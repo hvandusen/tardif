@@ -16,7 +16,7 @@ $(function(){
     var url = $.param.fragment();
     //if(url.indexOf('#')<0)
       //window.location = '#'+url;
-      if(url === 'advertising' || url === 'books' )
+      if(url === 'advertising' || url === 'books' || 'about'  )
         $('.bottom-bar').css('border-bottom','none');
       else {
         $('.bottom-bar').css('border-bottom','solid black 4px');
