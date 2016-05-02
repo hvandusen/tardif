@@ -212,5 +212,5 @@ if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 	})
 }
 
-$('.bottom-bar').css('border-bottom','none');
+
 })(jQuery);

@@ -26,7 +26,7 @@
 
 <div id='map<?php echo $id; ?>' ></div>
 <div class='magazine-issuez'>
-	<div class='issues-text'>
+	<div class='issues-text' >
 	<?php if($id != 187){
 		echo '<a>Issue </a>';}
 		 ?>

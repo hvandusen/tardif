@@ -93,7 +93,13 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	$('.olControlPermalink.olControlNoSelect').hide();
 //$('.pdf-img').hide();
 var replace;
+if(currentMap === 187){
+	$('.issues-text').css('pointer-events','none');
+}
+
 $('.pdf_overlay').mouseenter(function(e){
+	if(currentMap === 187)
+		return;
 	console.dir($(this).offset().left)
 	replace = $('.'+$(this)[0].className.split(' ')[1].replace('overlay','img'));
 	replace.css('left',$(this).offset().left-30);
