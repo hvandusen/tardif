@@ -31,6 +31,7 @@
 									console.log(classes);
 									$($('.book_image')[current]).addClass('-position-'+show+'-of-7');
 								 $($('.book_image')[current]).removeClass(classes[1]);
+								 angle = show;
 								}
 							});
 
