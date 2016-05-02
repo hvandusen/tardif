@@ -615,6 +615,8 @@ th {
 	z-index: -4;
 	}
 
+
+
 @keyframes fadein {
  from {
 	 opacity: 0; }
@@ -932,7 +934,8 @@ border-bottom: solid black 4px;
 	 @media(max-width:480px){
 		 padding-left: 17px;
 		 font-size: 22px;
-		  position: fixed;
+		 position: fixed;
+     line-height: 1.6em;
 	 }
  }
 }
@@ -2119,7 +2122,7 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 	 @include calc(height, '100% - 64px');
 	 @media(max-width:480px){
 		 border-bottom: solid 4px black;
-		 @include calc(height, '100% - 65px');
+		 @include calc(height, '100% - 50px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;

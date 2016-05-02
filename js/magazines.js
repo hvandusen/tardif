@@ -4,20 +4,22 @@
 	var mapMinZoom = 0;
 	var mapMaxZoom = 6;
 	var mapMaxResolution = 0.500000;
+	var isMob = window.innerWidth < 480;
+	var zLevel = isMob? 3 : 4;
 	var collages = {
 		185: {
 			size: [-20000.000000, -4590.000000,0],
-			pos: [4200, -1924,4],
+			pos: [4200, -1924, zLevel],
 				map : [-4608.000000, 7168.000000],
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [750, -1975,4],
+			pos: [750, -1975,zLevel],
 			map : [-2560.000000, 7168.000000]
 		},
 		187: {
 			size: [-20000.000000, -3190.000000,-150.000000],
-			pos: [4452, -2230,4],
+			pos: [4452, -2230,zLevel],
 			map : [-3072.000000, 8192.000000]
 		}
 	}
@@ -69,6 +71,9 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	  var editorials = [];
 	  map.addControl(new OpenLayers.Control.Navigation(
 	    {
+				dragPan: function(){
+					console.log('dragged');
+				},
 	      zoomWheelEnabled: false,
 	      defaultClick: function(evt){
 	        console.log(mousePercent(evt));

@@ -49,7 +49,8 @@ $(function(){
       if(window.innerWidth<480)
       $('.bottom-bar').css({
         'bottom':'-80px',
-        'animation':''
+        'animation':'',
+        'display':'none'
       });
       else {
         $('.bottom-bar').css({

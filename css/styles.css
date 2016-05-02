@@ -555,7 +555,7 @@ td, th { padding: 0; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 .bottom-bar .title:after { width: 254px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
-@media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 22px; position: fixed; } }
+@media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 22px; position: fixed; line-height: 1.6em; } }
 
 .bottom-bar a { z-index: 1000; }
 
@@ -883,7 +883,7 @@ li { list-style: none; }
 #main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
 #main .olMap { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); width: 100%; background-color: #FFFFFF; cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
-@media (max-width: 480px) { #main .olMap { border-bottom: solid 4px black; height: -webkit-calc(100% - 65px); height: calc(100% - 65px); } }
+@media (max-width: 480px) { #main .olMap { border-bottom: solid 4px black; height: -webkit-calc(100% - 50px); height: calc(100% - 50px); } }
 #main .olMap .olCursorWait { cursor: wait; }
 #main .olMap .olDragDown { cursor: -webkit-grabbing; }
 #main .olMap .olDrawBox { cursor: crosshair; }
