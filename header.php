@@ -23,7 +23,7 @@
 	    <div class='top-bar '>
 		    <a class='link nav<?php if(is_page('Magazines')){ echo ' current-page'; }?>' href='/#magazine-wsj'>EDITORIAL,</a>
 		    <a class='link nav' href='/#books'>BOOKS,</a> AND
-		    <a class='link nav' href='/#advertisements'>ADVERTISING</a>
+		    <a class='link nav' href='/#advertising'>ADVERTISING</a>
 	    </div>
 		 <!--<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a> <?php //the_title(); ?> -->
     </header>
