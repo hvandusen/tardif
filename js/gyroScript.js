@@ -27,7 +27,10 @@
 								if($(e).visible()){
 									current = i;
 									console.log('current');
-									console.log($($('.book_image')[current]));
+									var classes = $($('.book_image')[current]).prop('classList');
+									console.log(classes);
+									$($('.book_image')[current]).addClass('-position-'+show+'-of-7');
+								 $($('.book_image')[current]).removeClass(classes[1]);
 								}
 							});
 
