@@ -1710,21 +1710,17 @@ li {
    position:relative;
 	 //max-width: 300px;
    //max-height: 300px;
-	 max-width: 700px;
-  max-height: 525px;
+	 max-width: 600px;
+  max-height: 450px;
    margin: 10px;
 	 margin: 10px auto;
 	 display: block;
 	 @media(max-width: 800px){
 		 margin-top: 40px;
-		 max-width: 520;
-	    max-height: 390;
-	 }
-	 @media(max-width: 600px){
-		 margin-top: 40px;
 		 max-width: 460px;
 			max-height: 345px;
 	 }
+
 	 @media(max-width: 480px){
 		 margin-top: 40px;
 		 max-width: 100%;
