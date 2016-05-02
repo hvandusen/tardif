@@ -211,4 +211,6 @@ if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 	'max-height':'none'
 	})
 }
+
+$('.bottom-bar').css('border-bottom','none');
 })(jQuery);

@@ -16,7 +16,7 @@ $(function(){
     var url = $.param.fragment();
     //if(url.indexOf('#')<0)
       //window.location = '#'+url;
-    if(barLoaded && !(url === 'magazines' || url === 'advertisements')){
+    if(barLoaded && !(url === 'magazines' || url === 'advertising')){
         $('.top-bar.magazines').css('animation','none');
       //$('.top-bar.magazines').remove();
     }
@@ -54,7 +54,7 @@ $(function(){
       }
   }
 
-    if(url.indexOf('magazine-')>-1 || url === 'advertisements'){
+    if(url.indexOf('magazine-')>-1 || url === 'advertising'){
       $('header .top-bar').removeClass('moveDown');
     	$('header .top-bar').addClass('moveUp');
     }
