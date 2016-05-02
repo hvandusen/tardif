@@ -34,7 +34,7 @@
 			$(e).css({
 				'z-index': z,
 				'left':point.x+'px',
-				'top':(vert? 100+Math.abs(Math.random()*100) : point.y)+'px',
+				'top':(vert? 50+ Math.abs(Math.random()*100) : point.y)+'px',
 			});
 			point.x += (dx*staggerAmount);
 			point.y += (dy*staggerAmount);
@@ -120,8 +120,8 @@ function getPointMobile(w){
 	rangeX = w*.15;
 	rangeY = (window.innerHeight-300);
 	//three 64 bars worth
-	if(rangeY>300)
-		rangeY =(window.innerHeight-300);
+	if(rangeY>200)
+		rangeY =(window.innerHeight-400);
 	return {
 		x: Math.random()*rangeX,
 		y: Math.random()*rangeY
@@ -129,7 +129,7 @@ function getPointMobile(w){
 }
 
 
-	if(window.innerWidth>480){
+	//if(window.innerWidth>480){
 		$('.season_image').mouseenter(function(){
 			//console.log('entered')
 			//$(this).css('transform','rotate(8deg)');
@@ -149,7 +149,7 @@ function getPointMobile(w){
 			//$(this).css('transform','rotate(0deg)');
 
 		});
-	}
+	//}
 	var startStuff = function (){
 
 	}
@@ -178,7 +178,6 @@ function getPointMobile(w){
 			});
 		});
 		$('.season_image').click(function(){
-
 			$(this).removeClass('active');
 			$(this).addClass('inactive');
 			var brand = $(this).closest('.seasons');
@@ -193,9 +192,11 @@ function getPointMobile(w){
 						brand.find('.active').removeClass('active');
 					}
 				});
-				console.log(brand.prev().text())
-
+				if(window.innerWidth<480)
+					$(currentAttr.closest('.brand').next().find('.season_attribution')[0]).addClass('showing');
 				currentAttr.removeClass('showing');
+				//currentAttr =
+
 			}
 
 	});
