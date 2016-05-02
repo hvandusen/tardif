@@ -34,7 +34,7 @@
 			$(e).css({
 				'z-index': z,
 				'left':point.x+'px',
-				'top':(vert? Math.abs(Math.random()*200) : point.y)+'px',
+				'top':(vert? 100+Math.abs(Math.random()*100) : point.y)+'px',
 			});
 			point.x += (dx*staggerAmount);
 			point.y += (dy*staggerAmount);
