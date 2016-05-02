@@ -770,7 +770,7 @@ li { list-style: none; }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
 
 /*books section*/
-.book { overflow: hidden; display: inline-block; position: relative; max-width: 800px; max-height: 600px; margin: 10px; margin: 10px auto; display: block; }
+.book { overflow: hidden; display: inline-block; position: relative; max-width: 700px; max-height: 525px; margin: 10px; margin: 10px auto; display: block; }
 @media (max-width: 800px) { .book { margin-top: 40px; max-width: 600px; max-height: 450px; } }
 @media (max-width: 600px) { .book { margin-top: 40px; max-width: 500px; max-height: 375px; } }
 @media (max-width: 480px) { .book { margin-top: 40px; max-width: 100%; max-width: 350px; max-height: 256px; max-width: 320px; max-height: 236px; } }
