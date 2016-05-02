@@ -16,6 +16,11 @@ $(function(){
     var url = $.param.fragment();
     //if(url.indexOf('#')<0)
       //window.location = '#'+url;
+      if(url === 'advertising')
+        $('.bottom-bar').css('border-bottom','none');
+      else {
+        $('.bottom-bar').css('border-bottom','solid black 4px');
+      }
     if(barLoaded && !(url === 'magazines' || url === 'advertising')){
         $('.top-bar.magazines').css('animation','none');
       //$('.top-bar.magazines').remove();
