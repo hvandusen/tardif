@@ -1741,7 +1741,10 @@ li {
 		right: 30px;
 		z-index: 10;
 		@extend .mini-font;
-
+		@media(max-width: 480px){
+			display:none;
+			right: -40000px;
+		}
 	}
 
   .books {
