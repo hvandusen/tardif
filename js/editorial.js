@@ -105,7 +105,7 @@ function getPoint(w){
 		range = w*.3;
 		rangeHeight = window.innerHeight*.08;
 	}
-	rangeX = Math.random()*range;
+	rangeX = (.1+Math.random()*.9)*range;
 	rangeY = (.3+Math.random()*.7)*rangeHeight;
 if(rangeY<0)
 	 rangeY = 0;
