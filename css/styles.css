@@ -510,6 +510,7 @@ td, th { padding: 0; }
 @media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 13px; } }
 
 .top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 64px; border-bottom: solid black 4px; line-height: 64px; left: 0; }
+@media (max-width: 480px) { .top-bar { border-bottom: solid 2px black; } }
 .top-bar.showAnd { color: black; }
 
 @-webkit-keyframes mymove { from { top: -364px; z-index: -2; }
@@ -759,7 +760,7 @@ li { list-style: none; }
   .envelope, .copied { padding: 22px 32px; z-index: 2002; position: static; padding: 20px 30px; padding-bottom: 0px; display: inline-block; font-size: 18px; padding: 33px 0 0px 0; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
-  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 14px; padding-left: 16px; margin-bottom: 0px; padding-bottom: 0px; font-size: 18px; }
+  #bio { margin-bottom: 64px; margin: 0px 14px; margin: 3% 14px; padding-left: 16px; padding-bottom: 0px; margin-bottom: 90px; font-size: 18px; }
   .season_image { max-width: 350px; max-height: 95%; width: 80%; }
   .page-id-160 .bottom-bar { bottom: -104px !important; position: static; }
   .bottom-bar { display: block; position: absolute; padding: 0; text-align: left; font-size: 27px; height: 30px; }
@@ -837,6 +838,7 @@ li { list-style: none; }
 .pdfs { display: flex; flex-wrap: wrap; margin-bottom: 64px; }
 
 .pdf-img { width: 143px; height: 167px; z-index: 9990; position: fixed; bottom: -367px; left: -3000px; border: solid black 4px; border-bottom: none; }
+@media (max-width: 480px) { .pdf-img { border-bottom: solid 2px black; } }
 
 .pdf-row { position: relative; display: flex; align-items: center; padding: 3px; }
 
@@ -884,7 +886,7 @@ li { list-style: none; }
 #main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
 #main .olMap { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); width: 100%; background-color: #FFFFFF; cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
-@media (max-width: 480px) { #main .olMap { border-bottom: solid 4px black; height: -webkit-calc(100% - 50px); height: calc(100% - 50px); } }
+@media (max-width: 480px) { #main .olMap { border-bottom: solid 2px black; height: -webkit-calc(100% - 45px); height: calc(100% - 45px); } }
 #main .olMap .olCursorWait { cursor: wait; }
 #main .olMap .olDragDown { cursor: -webkit-grabbing; }
 #main .olMap .olDrawBox { cursor: crosshair; }
