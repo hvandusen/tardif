@@ -499,7 +499,6 @@ td, th { padding: 0; }
 /* henry's stuff */
 @media (min-width: 1200px) { .season_image { max-width: none; } }
 .big-font, .top-bar, .bottom-bar, .clipboard, .copied { font-family: Grotesk; font-size: 37px; line-height: 34px; }
-.big-font.HOVER, .HOVER.top-bar, .HOVER.bottom-bar, .HOVER.clipboard, .HOVER.copied { border-bottom: 3px solid black; }
 @media (max-width: 480px) { .big-font, .top-bar, .bottom-bar, .clipboard, .copied { font-size: 22px; } }
 
 .medium-font, .top-bar.magazines, .top-bar.ads, .top-bar.single_book, .book_text { font-family: Grotesk; font-size: 25px; }
@@ -730,7 +729,7 @@ li { list-style: none; }
   @keyframes mymove { from { top: -50px; z-index: -2; }
     to { top: 0px; z-index: -2; } }
   @-webkit-keyframes bottom-up { from { bottom: 0px; border-bottom: none; }
-    to { bottom: 64px; border-bottom: solid black 3px; } }
+    to { bottom: 64px; border-bottom: solid black 4px; } }
   @keyframes bottom-up { from { bottom: 0px; }
     to { bottom: 64px; } }
   @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
@@ -771,14 +770,15 @@ li { list-style: none; }
 
 /*books section*/
 .book { overflow: hidden; display: inline-block; position: relative; max-width: 600px; max-height: 450px; margin: 10px; margin: 10px auto; display: block; }
-@media (max-width: 800px) { .book { margin-top: 40px; max-width: 460px; max-height: 345px; } }
+@media (max-width: 800px) { .book { margin-top: 40px; max-width: 460px; max-height: 345px; }
+  .book .book_image { max-height: 345px; } }
 @media (max-width: 480px) { .book { margin-top: 40px; max-width: 100%; max-width: 350px; max-height: 256px; max-width: 320px; max-height: 236px; } }
 
 .book_role { position: fixed; bottom: 20px; right: 30px; z-index: 10; }
 
-.books { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: space-around; margin-bottom: 30px; }
+.books { text-align: center; flex-direction: row; flex-wrap: wrap; justify-content: space-around; margin-bottom: 80px; }
 
-.book_image { height: 100%; max-width: none; }
+.book_image { height: 100%; max-height: 450px; max-width: none; }
 
 .book_image.-position-0-of-7 { -webkit-transform: translateX(0%); -ms-transform: translateX(0%); transform: translateX(0%); }
 
@@ -882,11 +882,7 @@ li { list-style: none; }
 #main .olMap:active { cursor: grabbing; cursor: -moz-grabbing; cursor: -webkit-grabbing; }
 #main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
-#main .olMap { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); width: 100%; background-color: #FFFFFF;  /*.olButton {
-	 width: 48px!important;
-	 height: 48px!important;
-	 border: 3px solid black!important;
-	 margin-bottom: 1px!important; }*/ cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
+#main .olMap { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); width: 100%; background-color: #FFFFFF; cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
 @media (max-width: 480px) { #main .olMap { border-bottom: solid 4px black; height: -webkit-calc(100% - 65px); height: calc(100% - 65px); } }
 #main .olMap .olCursorWait { cursor: wait; }
 #main .olMap .olDragDown { cursor: -webkit-grabbing; }
@@ -901,5 +897,9 @@ li { list-style: none; }
 .magazine-issuez a:hover { color: black; }
 
 @media (max-width: 480px) { .bottom-bar { border-bottom: none !important; } }
+#landscape { position: fixed; width: 100%; height: 100%; left: 30000; top: 0; text-align: center; display: flex; flex-direction: column; justify-content: space-around; align-content: stretch; visibility: hidden; }
+
+@media (max-width: 740px) and (orientation: landscape) { body { visibility: hidden; }
+  #landscape { visibility: visible; left: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

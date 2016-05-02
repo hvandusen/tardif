@@ -13,7 +13,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/compressed/modernizr.js"></script>
 	<?php wp_head(); ?>
 </head>
-
+<div id='landscape'> Please refresh in portrait mode.</div>
 <body  <?php body_class(); ?>>
 <!-- <div id="wptime-plugin-preloader">
 

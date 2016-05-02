@@ -656,9 +656,6 @@ th {
 	font-size: 37px;
 	line-height: 34px;
 
-	&.HOVER {
-		border-bottom: 3px solid black;
-	}
 	@media(max-width: 480px){
 		font-size: 22px;
 	}
@@ -1500,7 +1497,7 @@ li {
 			 	 }
 			 	 to {   // @include translateY(0px);
 			 		  bottom: 64px;
-						border-bottom: solid black 3px;
+						border-bottom: solid black 4px;
 			 	 }
 			 }
 
@@ -1719,6 +1716,9 @@ li {
 		 margin-top: 40px;
 		 max-width: 460px;
 			max-height: 345px;
+			  .book_image{
+					max-height: 345px;
+				}
 	 }
 
 	 @media(max-width: 480px){
@@ -1729,6 +1729,7 @@ li {
 		 max-width: 320px;
 		 max-height: 236px;
 	 }
+
   }
 
 	.book_role {
@@ -1747,12 +1748,12 @@ li {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		margin-bottom: 30px;
+		margin-bottom: 80px;
   }
 
   .book_image{
    height:100%;
-
+	 max-height: 450px;
    max-width:none;
   }
 
@@ -1856,7 +1857,6 @@ li {
 	}
 
   .brand_title:hover {
-   //border-bottom: solid black 4px;
 	 color: black;
   }
 
@@ -2115,7 +2115,6 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
   #main .olMap {
 		cursor: grab;
    position: static;
-   //border-bottom: solid black 4px;
 	 position: static;
 	 @include calc(height, '100% - 64px');
 	 @media(max-width:480px){
@@ -2124,12 +2123,6 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;
-	 /*.olButton {
-		 width: 48px!important;
-		 height: 48px!important;
-		 border: 3px solid black!important;
-		 margin-bottom: 1px!important;
-	 }*/
     cursor: move; /* fallback if grab cursor is unsupported */
     cursor: grab;//$grab;
     cursor: -moz-grab;//$grab;//
@@ -2190,3 +2183,25 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 			border-bottom: none!important;
 		}
 	}
+	#landscape {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 30000;
+		top: 0;
+		text-align: center;
+		display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: stretch;
+		visibility: hidden;
+	}
+@media (max-width: 740px) and (orientation: landscape) {
+	body {
+		visibility: hidden;
+	}
+	#landscape {
+		visibility: visible;
+		left: 0;
+	}
+}
