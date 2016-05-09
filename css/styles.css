@@ -821,7 +821,7 @@ li { list-style: none; }
 
 .pdfs { display: flex; flex-wrap: wrap; margin-bottom: 64px; }
 
-.pdf-img { width: 143px; height: 167px; width: 215px; height: 250px; background-size: cover; z-index: 9990; position: fixed; bottom: -367px; left: -3000px; border: solid black 4px; border-bottom: none; }
+.pdf-img { width: 143px; height: 167px; width: 172px; height: 200px; background-size: cover; z-index: 9990; position: fixed; bottom: -367px; left: -3000px; border: solid black 4px; border-bottom: none; }
 @media (max-width: 480px) { .pdf-img { border-bottom: solid 2px black; } }
 
 .pdf-row { position: relative; display: flex; align-items: center; padding: 3px; }
