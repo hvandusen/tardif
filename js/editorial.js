@@ -113,13 +113,17 @@ function getPointMobile(w){
 }
 
 		$('.season_image').mouseenter(function(){
-			console.log('mouse entered'); 
+
 			$('.showing').removeClass('showing');
 			$(this).parent().prev().addClass('showing');
 			if($(this).parent().prev()!== currentAttr){
 				currentAttr.removeClass('showing');
 				currentAttr=$(this).parent().prev()
 				currentAttr.addClass('showing');
+			}
+			if(window.innerWidth<480){
+				$(this).removeClass('active');
+				$(this).addClass('inactive');
 			}
 		});
 
@@ -151,7 +155,7 @@ function getPointMobile(w){
 			});
 		});
 		$('.season_image').click(function(){
-			console.log('clicked image')
+
 			$(this).removeClass('active');
 			$(this).addClass('inactive');
 			var brand = $(this).closest('.seasons');
