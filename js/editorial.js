@@ -113,6 +113,7 @@ function getPointMobile(w){
 }
 
 		$('.season_image').mouseenter(function(){
+			console.log('mouse entered')
 			$('.showing').removeClass('showing');
 			$(this).parent().prev().addClass('showing');
 			if($(this).parent().prev()!== currentAttr){
