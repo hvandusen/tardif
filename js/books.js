@@ -20,7 +20,6 @@ $(window).scroll(function(e){
 
 	if(window.location.hash === '#books'){
 		window.sessionStorage.books = window.scrollY;
-			console.dir(e);
 	}
 });
 

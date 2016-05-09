@@ -160,7 +160,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
-#main { -webkit-animation: fadein 0.2s; /* Safari and Chrome */ -moz-animation: fadein 0.2s; /* Firefox */ -ms-animation: fadein 0.2s; /* Internet Explorer */ -o-animation: fadein 0.2s; /* Opera */ animation: fadein 0.2s; }
+#main { -webkit-animation: fadein 0.2s; -moz-animation: fadein 0.2s; -ms-animation: fadein 0.2s; -o-animation: fadein 0.2s; animation: fadein 0.2s; }
 
 @keyframes fadein { from { opacity: 0; }
   to { opacity: 1; } }
@@ -187,7 +187,7 @@ html { font-size: 100%; line-height: 1.5em; }
 
 .small-font { font-size: 27.5px; }
 
-.medium-font, .top-bar.magazines, .top-bar.ads, .top-bar.single_book, .book_text { font-size: 27.5px; }
+.medium-font, .top-bar.magazines, .top-bar.ads, .top-bar.single_book, .bottom-bar .art-dir, .book_text { font-size: 27.5px; }
 
 .rmRollerBall { font-family: RMrollerball; font-size: 42px; }
 
@@ -196,7 +196,7 @@ html { font-size: 100%; line-height: 1.5em; }
 * 2. Prevent iOS text size adjust after orientation change, without disabling
 *    user zoom.
 */
-html { font-family: monospace; font-family: Grotesk, Orpheus, Times, Courier, sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+html { font-family: monospace; font-family: Grotesk, Orpheus, Times, Courier, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
 /**
 * Remove default margin.
@@ -216,7 +216,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 * 1. Correct `inline-block` display not defined in IE 8/9.
 * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
 */
-audio, canvas, progress, video { display: inline-block; /* 1 */ *display: inline; *zoom: 1; vertical-align: baseline; /* 2 */ }
+audio, canvas, progress, video { display: inline-block; *display: inline; *zoom: 1; vertical-align: baseline; }
 
 /**
 * Prevent modern browsers from displaying `audio` without controls.
@@ -244,7 +244,7 @@ a { background: transparent; }
 /**
 * Improve readability when focused and also mouse hovered in all browsers.
 */
-a:active, a, .brand_title { outline: 0; color: black; text-decoration: none; cursor: pointer; }
+a:active, a, .brand_title { outline: 0; color: black; text-decoration: none; cursor: url(../images/Glove_point.png) 25 12, auto; }
 
 /* Text-level semantics
 	========================================================================== */
@@ -272,7 +272,7 @@ dfn { font-style: italic; }
 * Address variable `h1` font-size and margin within `section` and `article`
 * contexts in Firefox 4+, Safari, and Chrome.
 */
-h1 { /* Set the font-size and line-height while keeping a proper vertical rhythm. */ font-size: 2em; line-height: 1.5em; /* Set 1 unit of vertical rhythm on the top and bottom margins. */ margin-top: 0.75em; margin-bottom: 0.75em; }
+h1 { font-size: 2em; line-height: 1.5em; margin-top: 0.75em; margin-bottom: 0.75em; }
 
 h2 { font-size: 1.5em; line-height: 2em; margin-top: 1em; margin-bottom: 1em; }
 
@@ -332,7 +332,7 @@ nav ul, nav ol { list-style: none; list-style-image: none; }
 /**
 * Remove border when inside `a` element in IE 8/9/10.
 */
-img { border: 0; /* Improve image quality when scaled in IE 7. */ -ms-interpolation-mode: bicubic; }
+img { border: 0; -ms-interpolation-mode: bicubic; }
 
 /**
 * Correct overflow not hidden in IE 9/10/11.
@@ -380,7 +380,7 @@ form { margin: 0; }
 * 4. Address `font-family` inconsistency between `textarea` and other form in IE 7
 * 5. Improve appearance and consistency with IE 6/7.
 */
-button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ *font-family: Times; /* 4 */ *vertical-align: middle; /* 5 */ }
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; *font-family: Times; *vertical-align: middle; }
 
 /**
 * Address `overflow` set to `hidden` in IE 8/9/10/11.
@@ -404,7 +404,7 @@ button, select { text-transform: none; }
 * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
 *    Known issue: inner spacing remains in IE 6.
 */
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ *overflow: visible; /* 4 */ }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; cursor: url(../images/Glove_point.png) 25 12, auto; *overflow: visible; }
 
 /**
 * Re-set default cursor for disabled elements.
@@ -429,7 +429,7 @@ input { line-height: normal; }
 * 3. Remove excess padding in IE 7.
 *    Known issue: excess padding remains in IE 6.
 */
-input[type="checkbox"], input[type="radio"] { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ *height: 13px; /* 3 */ *width: 13px; /* 3 */ }
+input[type="checkbox"], input[type="radio"] { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; *height: 13px; *width: 13px; }
 
 /**
 * Fix the cursor style for Chrome's increment/decrement buttons. For certain
@@ -443,7 +443,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
 *    (include `-moz` to future-proof).
 */
-input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; /* 2 */  /**
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;  /**
 	* Remove inner padding and search cancel button in Safari and Chrome on OS X.
 	* Safari (but not Chrome) clips the cancel button when the search input has
 	* padding (and `textfield` appearance).
@@ -454,14 +454,14 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 /**
 * Define consistent border, margin, and padding.
 */
-fieldset { margin: 0 2px; /* Apply borders and padding that keep the vertical rhythm. */ border-color: #c0c0c0; border-top-width: 0.0625em; border-top-style: solid; padding-top: 0.4625em; border-bottom-width: 0.0625em; border-bottom-style: solid; padding-bottom: 0.9125em; border-left-width: 0.0625em; border-left-style: solid; padding-left: 0.875em; border-right-width: 0.0625em; border-right-style: solid; padding-right: 0.875em; }
+fieldset { margin: 0 2px; border-color: #c0c0c0; border-top-width: 0.0625em; border-top-style: solid; padding-top: 0.4625em; border-bottom-width: 0.0625em; border-bottom-style: solid; padding-bottom: 0.9125em; border-left-width: 0.0625em; border-left-style: solid; padding-left: 0.875em; border-right-width: 0.0625em; border-right-style: solid; padding-right: 0.875em; }
 
 /**
 * 1. Correct `color` not being inherited in IE 8/9/10/11.
 * 2. Remove padding so people aren't caught out if they zero out fieldsets.
 * 3. Correct alignment displayed oddly in IE 6/7.
 */
-legend { border: 0; /* 1 */ padding: 0; /* 2 */ *margin-left: -7px; /* 3 */ }
+legend { border: 0; padding: 0; *margin-left: -7px; }
 
 /**
 * Remove default vertical scrollbar in IE 8/9/10/11.
@@ -483,7 +483,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 td, th { padding: 0; }
 
-/* Fade In Page Contents */
 #main { z-index: -4; }
 
 @keyframes fadein { from { opacity: 0; }
@@ -496,12 +495,11 @@ td, th { padding: 0; }
   to { opacity: 1; } }
 @-o-keyframes fadein { from { opacity: 0; }
   to { opacity: 1; } }
-/* henry's stuff */
 @media (min-width: 1200px) { .season_image { max-width: none; } }
 .big-font, .top-bar, .bottom-bar, .clipboard, .copied { font-family: Grotesk; font-size: 37px; line-height: 34px; }
 @media (max-width: 480px) { .big-font, .top-bar, .bottom-bar, .clipboard, .copied { font-size: 22px; } }
 
-.medium-font, .top-bar.magazines, .top-bar.ads, .top-bar.single_book, .book_text { font-family: Grotesk; font-size: 25px; }
+.medium-font, .top-bar.magazines, .top-bar.ads, .top-bar.single_book, .bottom-bar .art-dir, .book_text { font-family: Grotesk; font-size: 25px; }
 
 .small-font { font-family: Grotesk; font-size: 13px; }
 @media (max-width: 480px) { .small-font { font-size: 10px; } }
@@ -515,7 +513,6 @@ td, th { padding: 0; }
 
 @-webkit-keyframes mymove { from { top: -364px; z-index: -2; }
   to { top: 0px; z-index: -2; } }
-/* Standard syntax */
 @keyframes mymove { from { top: -364px; z-index: -2; }
   to { top: 0px; z-index: -2; } }
 @-webkit-keyframes bottom-up { from { bottom: 0px; }
@@ -524,17 +521,14 @@ td, th { padding: 0; }
   to { bottom: 64px; } }
 @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
   to { top: -0px; z-index: -2; } }
-/* Standard syntax */
 @keyframes mymoveup { from { top: -32px; z-index: -2; }
   to { top: -64px; z-index: -2; } }
 @-webkit-keyframes hidetop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
   to { -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); } }
-/* Standard syntax */
 @keyframes hidetop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
   to { -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); } }
 @-webkit-keyframes showtop { from { -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
   to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-/* Standard syntax */
 @keyframes showtop { from { -moz-transform: translateY(-32px); -ms-transform: translateY(-32px); -webkit-transform: translateY(-32px); transform: translateY(-32px); }
   to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
 @media (max-width: 1233px) { .top-bar { font-size: 34px; } }
@@ -552,11 +546,12 @@ td, th { padding: 0; }
 
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
 .bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
-.bottom-bar .title:hover { cursor: pointer; visibility: hidden; }
+.bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point.png) 25 12, auto; visibility: hidden; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
-.bottom-bar .title:after { width: 254px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
+.bottom-bar .title:after { width: 400px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 22px; position: fixed; line-height: 1.6em; } }
+.bottom-bar .art-dir { display: inline; }
 
 .bottom-bar a { z-index: 1000; }
 
@@ -635,7 +630,7 @@ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0;
 .book_text p { margin-top: 0; text-indent: 1em; }
 @media (max-width: 480px) { .book_text { font-size: 18px; } }
 
-#bio { line-height: 1.3em; font-size: 27.5px; /*max-width: 400px;*/  /* -webkit-column-count: 2;
+#bio { line-height: 1.3em; font-size: 27.5px;  /* -webkit-column-count: 2;
 	 -moz-column-count: 2;
 	 column-count: 2;
 	 -webkit-column-gap: 50px;
@@ -647,7 +642,7 @@ padding: 20px 20px 20px 50px;*/ }
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point.png) 25 12, auto; position: absolute; }
 
 #bio { margin: 0 25px; margin: 5% 16%; margin-bottom: 8%; font-family: Grotesk; /*
 color: #aebc16;
@@ -664,9 +659,9 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 
 .brand { list-style: none; }
 
-.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; max-width: 65%; text-align: right; max-width: -webkit-calc(100% - 350px); max-width: calc(100% - 350px); }
+.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; max-width: 65%; text-align: right; max-width: -webkit-calc(100% - 550px); max-width: calc(100% - 550px); }
 
-.active .brand_title { font-weight: bold; /*cursor: none;*/ }
+.active .brand_title { font-weight: bold; }
 
 .season_image { display: none; margin: auto; background: #ccc; filter: grayscale(100%) blur(50%); -webkit-filter: grayscale(100%) blur(80%); 	 /*
 	 box-shadow: -3px 11px 52px rgba(, 0, 0, 0.99);
@@ -693,7 +688,7 @@ li { list-style: none; }
 
 .brand_dividers { display: none; }
 
-@media (max-width: 900px) { #bio { /*max-width: 400px;*/ padding: 15px; padding-left: 40px; } }
+@media (max-width: 900px) { #bio { padding: 15px; padding-left: 40px; } }
 .dek { font-size: 45px; padding: 30px; line-height: 45px; }
 
 .magazine-issues-header { font-size: 28px; padding: 16px; }
@@ -704,7 +699,7 @@ li { list-style: none; }
 
 @media (max-width: 633px) { .top-bar { font-size: 27.5px; } }
 @media (max-width: 768px) { .dek { padding-bottom: 0px; font-size: 24px; }
-  #bio { float: left; /*max-width: 400px;*/ margin: 0 auto; margin: 3% 10%; padding: 15px; padding-left: 40px; } }
+  #bio { float: left; margin: 0 auto; margin: 3% 10%; padding: 15px; padding-left: 40px; } }
 .season-attribution { -webkit-box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); -moz-box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); box-shadow: 6px 10px 76px 211px rgba(0, 0, 0, 0.75); }
 
 .brand_dividers { display: inline; }
@@ -726,7 +721,6 @@ li { list-style: none; }
 @media (max-height: 809px) { .season_image { width: 70%; max-height: 80%; } }
 @media (max-width: 480px) { @-webkit-keyframes mymove { from { top: -50px; z-index: -2; }
     to { top: 0px; z-index: -2; } }
-  /* Standard syntax */
   @keyframes mymove { from { top: -50px; z-index: -2; }
     to { top: 0px; z-index: -2; } }
   @-webkit-keyframes bottom-up { from { bottom: 0px; border-bottom: none; }
@@ -735,20 +729,17 @@ li { list-style: none; }
     to { bottom: 64px; } }
   @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
     to { top: -0px; z-index: -2; } }
-  /* Standard syntax */
   @keyframes mymoveup { from { top: -32px; z-index: -2; }
     to { top: -64px; z-index: -2; } }
   @-webkit-keyframes hidetop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  /* Standard syntax */
   @keyframes hidetop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
   @-webkit-keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  /* Standard syntax */
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: fixed; /* right: 2px; */ max-width: calc(100% - 211px); /* max-width: none; */ text-align: right; /* padding-left: 32px; */ bottom: 0px; vertical-align: text-bottom; /* top: auto; */ bottom: 0px; /* border: solid 3px black; */ /* border-left: solid 3px black; */ /* background: black; */ padding-right: 20px; line-height: 13px; padding-bottom: 8px; }
+  .showing.season_attribution { position: fixed; max-width: calc(100% - 211px); text-align: right; bottom: 0px; vertical-align: text-bottom; bottom: 0px; padding-right: 20px; line-height: 13px; padding-bottom: 8px; }
   .showing.season_attribution .people { display: none; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
@@ -769,7 +760,6 @@ li { list-style: none; }
   .home_image { max-width: 33%; } }
 .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 { position: fixed; font-size: 28px; }
 
-/*books section*/
 .book { overflow: hidden; display: inline-block; position: relative; max-width: 600px; max-height: 450px; margin: 10px; margin: 10px auto; display: block; }
 @media (max-width: 800px) { .book { margin-top: 40px; max-width: 460px; max-height: 345px; }
   .book .book_image { max-height: 345px; } }
@@ -824,11 +814,11 @@ li { list-style: none; }
 
 #main { position: static; top: 64px; bottom: 0px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
 @media (max-width: 480px) { #main { height: -webkit-calc(100% - 67px); height: calc(100% - 67px); } }
-#main .olAlphaImg, #main .olButton { width: 48px !important; height: 48px !important; width: 36px !important; height: 36px !important; }
+#main .olAlphaImg, #main .olButton { width: 45px !important; height: 45px !important; }
 #main .olControlPanZoom { display: block; top: 300px; right: 6px !important; position: relative; }
 #main .olControlPanZoom .olButton { border: solid black 4px; }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton { display: none; } }
-#main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(16px); -ms-transform: translateY(16px); -webkit-transform: translateY(16px); transform: translateY(16px); -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); }
+#main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(16px); -ms-transform: translateY(16px); -webkit-transform: translateY(16px); transform: translateY(16px); -moz-transform: translateY(13px); -ms-transform: translateY(13px); -webkit-transform: translateY(13px); transform: translateY(13px); }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(-10px); -ms-transform: translateY(-10px); -webkit-transform: translateY(-10px); transform: translateY(-10px); } }
 #main .olControlPanZoom .olButton.noZoom { pointer-events: none; }
 #main .olControlPanZoom .olButton.noZoom img { -webkit-filter: invert(1); filter: invert(1); }
@@ -856,14 +846,13 @@ li { list-style: none; }
 
 .pdf-txt p { margin: 0; text-decoration: none; font-family: Grotesk-Italic; }
 
-/* henry's magazine stuff */
 #bg_image, #bg_outer { background-repeat: repeat; height: 500px; max-height: 50%; }
 
 #bg_outer { overflow: auto; max-width: 100%; }
 
 #bg_image { height: 5000px; width: 5000px; background-position: 25000px 25000px; display: none; }
 
-#bg_inner { height: 50000px; width: 50000px; /* max-width: 100%; */ /* position: absolute; */ /* overflow: scroll;*/ background-image: url("../images/LARGE_elevation_hi.jpg"); }
+#bg_inner { height: 50000px; width: 50000px; }
 
 #mag-table { background-color: white; width: 100%; }
 
@@ -877,21 +866,22 @@ li { list-style: none; }
 
 .table-img-cont { width: 10%; }
 
-#wptime-plugin-preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: url(http://pierretardif.net/wp-content/plugins/the-preloader/images/3.gif) no-repeat #f4e7d9 50%; -moz-background-size: 64px 64px; -o-background-size: 64px 64px; -webkit-background-size: 264px 264px; /* background-size: 64px 64px; */ z-index: 99998; width: 100%; height: 100%; }
+#wptime-plugin-preloader { position: fixed; top: 0; left: 0; right: 0; bottom: 0; -o-background-size: 64px 64px; -webkit-background-size: 264px 264px; z-index: 99998; width: 100%; height: 100%; }
 
 .copied { opacity: 0; pointer-events: none; }
 @media (max-width: 480px) { .copied { display: none; } }
 
-#main .olMap:active { cursor: grabbing; cursor: -moz-grabbing; cursor: -webkit-grabbing; }
+#main .olMap .olControlMousePosition { display: none; }
+#main .olMap:active { cursor: url(../images/Glove_grab.png) 4 12, auto; }
 #main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
-#main .olMap { cursor: grab; position: static; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); width: 100%; background-color: #FFFFFF; cursor: move; /* fallback if grab cursor is unsupported */ cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; /* (Optional) Apply a "closed-hand" cursor during drag operation. */ }
+#main .olMap { cursor: grab; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); height: -moz-calc(100% -  64px); width: 100%; background-color: #FFFFFF; cursor: move; cursor: url(../images/Glove_open.png) 4 12, auto; }
 @media (max-width: 480px) { #main .olMap { border-bottom: solid 2px black; height: -webkit-calc(100% - 45px); height: calc(100% - 45px); } }
 #main .olMap .olCursorWait { cursor: wait; }
-#main .olMap .olDragDown { cursor: -webkit-grabbing; }
+#main .olMap .olDragDown { cursor: url(../images/Glove_grab.png) 4 12, auto; }
 #main .olMap .olDrawBox { cursor: crosshair; }
-#main .olMap .olControlDragFeatureOver { cursor: -webkit-grabbing; }
-#main .olMap .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: -moz-grabbing; }
+#main .olMap .olControlDragFeatureOver { cursor: url(../images/Glove_grab.png) 4 12, auto; }
+#main .olMap .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: url(../images/Glove_grab.png) 4 12, auto; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }

@@ -9,39 +9,45 @@ $grey : rgba(149, 149, 155, 0.74);
 $grey :rgba(0, 0, 0, 0.35);
 
 #main {
-	-webkit-animation: fadein 0.2s; /* Safari and Chrome */
-	-moz-animation: fadein 0.2s; /* Firefox */
-	-ms-animation: fadein 0.2s; /* Internet Explorer */
-	-o-animation: fadein 0.2s; /* Opera */
+	-webkit-animation: fadein 0.2s;
+	-moz-animation: fadein 0.2s;
+	-ms-animation: fadein 0.2s;
+	-o-animation: fadein 0.2s;
 	animation: fadein 0.2s;
 }
 
 @keyframes fadein {
-	from { opacity: 0; }
-	to   { opacity: 1; }
+	from { opacity: 0;
+}
+	to   { opacity: 1;
+}
 }
 @-moz-keyframes fadein {
-	from { opacity: 0; }
-	to   { opacity: 1; }
+	from { opacity: 0;
+}
+	to   { opacity: 1;
+}
 }
 @-webkit-keyframes fadein {
-	from { opacity: 0; }
-	to   { opacity: 1; }
+	from { opacity: 0;
+}
+	to   { opacity: 1;
+}
 }
 @-ms-keyframes fadein {
-	from { opacity: 0; }
-	to   { opacity: 1; }
+	from { opacity: 0;
+}
+	to   { opacity: 1;
+}
 }
 @-o-keyframes fadein {
-	from { opacity: 0; }
-	to { opacity: 1; }
+	from { opacity: 0;
+}
+	to { opacity: 1;
+}
 }
 
-// sticky footer mixin; see: http://compass-style.org/reference/compass/layout/sticky_footer/
-// $footerHeight:100px;
-// @include sticky-footer($footerHeight);
 
-// Remove image link borders (if relevant)
 a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 	text-decoration: none;
 	border: 0 none;
@@ -51,8 +57,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 html {
  font-size: 100%;
  line-height: 1.5em;
-	 //cursor: url(../images/mouse-icon-3.png) 4 12, auto;
- }
+	  }
 
 @font-face {
  font-family: 'Orpheus';
@@ -127,20 +132,20 @@ html {
  font-family: monospace;
  font-family: Grotesk, Orpheus, Times, Courier, sans-serif;
 
- /* 1 */
+
  -ms-text-size-adjust: 100%;
- /* 2 */
+
  -webkit-text-size-adjust: 100%;
- /* 2 */ }
+  }
 
 /**
 * Remove default margin.
 */
 body {
  margin: 0;
-
-
  }
+
+ $glove_info: url(../images/Glove_point.png) 25 12, auto;
 
 /* HTML5 display definitions
 	========================================================================== */
@@ -161,7 +166,8 @@ main,
 nav,
 section,
 summary {
- display: block; }
+ display: block;
+}
 
 header {
 }
@@ -175,11 +181,11 @@ canvas,
 progress,
 video {
  display: inline-block;
- /* 1 */
+
  *display: inline;
  *zoom: 1;
  vertical-align: baseline;
- /* 2 */ }
+  }
 
 /**
 * Prevent modern browsers from displaying `audio` without controls.
@@ -187,19 +193,22 @@ video {
 */
 audio:not([controls]) {
  display: none;
- height: 0; }
+ height: 0;
+}
 
 /**
 * Address `[hidden]` styling not present in IE 8/9/10.
 */
 [hidden] {
- display: none; }
+ display: none;
+}
 
 /**
 * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
 */
 template {
- display: none; }
+ display: none;
+}
 
 /* Links
 	========================================================================== */
@@ -218,8 +227,8 @@ a, .brand_title {
  outline: 0;
  color: black;
  text-decoration: none;
- cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
- }
+ cursor: $glove_info;
+}
 
 /* Text-level semantics
 	========================================================================== */
@@ -227,88 +236,101 @@ a, .brand_title {
 * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
 */
 abbr[title] {
- border-bottom: 1px dotted; }
+ border-bottom: 1px dotted;
+}
 
 /**
 * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
 */
 b,
 strong {
- font-weight: bold; }
+ font-weight: bold;
+}
 
 /**
 * Set 1 unit of vertical rhythm on the top and bottom margin.
 */
 blockquote {
- margin: 1.5em 40px; }
+ margin: 1.5em 40px;
+}
 
 /**
 * Address styling not present in Safari and Chrome.
 */
 dfn {
- font-style: italic; }
+ font-style: italic;
+}
 
 /**
 * Address variable `h1` font-size and margin within `section` and `article`
 * contexts in Firefox 4+, Safari, and Chrome.
 */
 h1 {
- /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+
  font-size: 2em;
  line-height: 1.5em;
- /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+
  margin-top: 0.75em;
- margin-bottom: 0.75em; }
+ margin-bottom: 0.75em;
+}
 
 h2 {
  font-size: 1.5em;
  line-height: 2em;
  margin-top: 1em;
- margin-bottom: 1em; }
+ margin-bottom: 1em;
+}
 
 h3 {
  font-size: 1.17em;
  line-height: 1.28205em;
  margin-top: 1.28205em;
- margin-bottom: 1.28205em; }
+ margin-bottom: 1.28205em;
+}
 
 h4 {
  font-size: 1em;
  line-height: 1.5em;
  margin-top: 1.5em;
- margin-bottom: 1.5em; }
+ margin-bottom: 1.5em;
+}
 
 h5 {
  font-size: 0.83em;
  line-height: 1.80723em;
  margin-top: 1.80723em;
- margin-bottom: 1.80723em; }
+ margin-bottom: 1.80723em;
+}
 
 h6 {
  font-size: 0.67em;
  line-height: 2.23881em;
  margin-top: 2.23881em;
- margin-bottom: 2.23881em; }
+ margin-bottom: 2.23881em;
+}
 
 /**
 * Address styling not present in IE 8/9.
 */
 mark {
  background: #ff0;
- color: #000; }
+ color: #000;
+}
 
 /**
 * Set 1 unit of vertical rhythm on the top and bottom margin.
 */
 p,
 pre {
- margin: 1.5em 0; }
+ margin: 1.5em 0;
+}
 
 /**
 * Address inconsistent and variable font size in all browsers.
 */
 small {
- font-size: 80%; }
+ font-size: 80%;
+}
 
 /**
 * Prevent `sub` and `sup` affecting `line-height` in all browsers.
@@ -318,13 +340,16 @@ sup {
  font-size: 75%;
  line-height: 0;
  position: relative;
- vertical-align: baseline; }
+ vertical-align: baseline;
+}
 
 sup {
- top: -0.5em; }
+ top: -0.5em;
+}
 
 sub {
- bottom: -0.25em; }
+ bottom: -0.25em;
+}
 
 /* Lists
 	========================================================================== */
@@ -339,7 +364,8 @@ ul {
  }
 
 dd {
- margin: 0 0 0 40px; }
+ margin: 0 0 0 40px;
+}
 
 /**
 * Address paddings set differently in IE 6/7.
@@ -347,7 +373,8 @@ dd {
 menu,
 ol,
 ul {
- padding: 0 0 0 10px; }
+ padding: 0 0 0 10px;
+}
 
 /**
 * Correct list images handled incorrectly in IE 7.
@@ -355,7 +382,8 @@ ul {
 nav ul,
 nav ol {
  list-style: none;
- list-style-image: none; }
+ list-style-image: none;
+}
 
 /* Embedded content
 	========================================================================== */
@@ -364,14 +392,16 @@ nav ol {
 */
 img {
  border: 0;
- /* Improve image quality when scaled in IE 7. */
- -ms-interpolation-mode: bicubic; }
+
+ -ms-interpolation-mode: bicubic;
+}
 
 /**
 * Correct overflow not hidden in IE 9/10/11.
 */
 svg:not(:root) {
- overflow: hidden; }
+ overflow: hidden;
+}
 
 /* Grouping content
 	========================================================================== */
@@ -379,7 +409,8 @@ svg:not(:root) {
 * Address margin not present in IE 8/9 and Safari.
 */
 figure {
- margin: 1.5em 40px; }
+ margin: 1.5em 40px;
+}
 
 /**
 * Address differences between Firefox and other browsers.
@@ -388,13 +419,15 @@ hr {
  -moz-box-sizing: content-box;
  -webkit-box-sizing: content-box;
  box-sizing: content-box;
- height: 0; }
+ height: 0;
+}
 
 /**
 * Contain overflow in all browsers.
 */
 pre {
- overflow: auto; }
+ overflow: auto;
+}
 
 /**
 * Address odd `em`-unit font size rendering in all browsers.
@@ -404,7 +437,8 @@ kbd,
 pre,
 samp {
  font-family: Times, monospace, monospace;
- font-size: 1em; }
+ font-size: 1em;
+}
 
 /* Forms
 	========================================================================== */
@@ -416,7 +450,8 @@ samp {
 * Correct margin displayed oddly in IE 6/7.
 */
 form {
- margin: 0; }
+ margin: 0;
+}
 
 /**
 * 1. Correct color not being inherited.
@@ -432,21 +467,22 @@ optgroup,
 select,
 textarea {
  color: inherit;
- /* 1 */
+
  font: inherit;
- /* 2 */
+
  margin: 0;
- /* 3 */
+
  *font-family:  Times;
- /* 4 */
+
  *vertical-align: middle;
- /* 5 */ }
+  }
 
 /**
 * Address `overflow` set to `hidden` in IE 8/9/10/11.
 */
 button {
- overflow: visible; }
+ overflow: visible;
+}
 
 /**
 * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -456,7 +492,8 @@ button {
 */
 button,
 select {
- text-transform: none; }
+ text-transform: none;
+}
 
 /**
 * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -472,11 +509,12 @@ html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
  -webkit-appearance: button;
- /* 2 */
+
  cursor: pointer;
- /* 3 */
+ cursor:  $glove_info;
+
  *overflow: visible;
- /* 4 */ }
+  }
 
 /**
 * Re-set default cursor for disabled elements.
@@ -491,14 +529,16 @@ html input[disabled] {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
  border: 0;
- padding: 0; }
+ padding: 0;
+}
 
 /**
 * Address Firefox 4+ setting `line-height` on `input` using `!important` in
 * the UA stylesheet.
 */
 input {
- line-height: normal; }
+ line-height: normal;
+}
 
 /**
 * It's recommended that you don't attempt to style these elements.
@@ -514,13 +554,13 @@ input[type="radio"] {
  -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  box-sizing: border-box;
- /* 1 */
+
  padding: 0;
- /* 2 */
+
  *height: 13px;
- /* 3 */
+
  *width: 13px;
- /* 3 */ }
+  }
 
 /**
 * Fix the cursor style for Chrome's increment/decrement buttons. For certain
@@ -529,7 +569,8 @@ input[type="radio"] {
 */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
- height: auto; }
+ height: auto;
+}
 
 /**
 * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
@@ -538,25 +579,26 @@ input[type="number"]::-webkit-outer-spin-button {
 */
 input[type="search"] {
  -webkit-appearance: textfield;
- /* 1 */
+
  -moz-box-sizing: content-box;
  -webkit-box-sizing: content-box;
  box-sizing: content-box;
- /* 2 */
+
  /**
 	* Remove inner padding and search cancel button in Safari and Chrome on OS X.
 	* Safari (but not Chrome) clips the cancel button when the search input has
 	* padding (and `textfield` appearance).
 	*/ }
  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-	 -webkit-appearance: none; }
+	 -webkit-appearance: none;
+}
 
 /**
 * Define consistent border, margin, and padding.
 */
 fieldset {
  margin: 0 2px;
- /* Apply borders and padding that keep the vertical rhythm. */
+
  border-color: #c0c0c0;
  border-top-width: 0.0625em;
  border-top-style: solid;
@@ -569,7 +611,8 @@ fieldset {
  padding-left: 0.875em;
  border-right-width: 0.0625em;
  border-right-style: solid;
- padding-right: 0.875em; }
+ padding-right: 0.875em;
+}
 
 /**
 * 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -578,24 +621,26 @@ fieldset {
 */
 legend {
  border: 0;
- /* 1 */
+
  padding: 0;
- /* 2 */
+
  *margin-left: -7px;
- /* 3 */ }
+  }
 
 /**
 * Remove default vertical scrollbar in IE 8/9/10/11.
 */
 textarea {
- overflow: auto; }
+ overflow: auto;
+}
 
 /**
 * Don't inherit the `font-weight` (applied by a rule above).
 * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
 */
 optgroup {
- font-weight: bold; }
+ font-weight: bold;
+}
 
 /* Tables
 	========================================================================== */
@@ -604,13 +649,15 @@ optgroup {
 */
 table {
  border-collapse: collapse;
- border-spacing: 0; }
+ border-spacing: 0;
+}
 
 td,
 th {
- padding: 0; }
+ padding: 0;
+}
 
-/* Fade In Page Contents */
+
 #main {
 	z-index: -4;
 	}
@@ -619,34 +666,44 @@ th {
 
 @keyframes fadein {
  from {
-	 opacity: 0; }
+	 opacity: 0;
+}
  to {
-	 opacity: 1; } }
+	 opacity: 1;
+} }
 @-moz-keyframes fadein {
  from {
-	 opacity: 0; }
+	 opacity: 0;
+}
  to {
-	 opacity: 1; } }
+	 opacity: 1;
+} }
 @-webkit-keyframes fadein {
  from {
-	 opacity: 0; }
+	 opacity: 0;
+}
  to {
-	 opacity: 1; } }
+	 opacity: 1;
+} }
 @-ms-keyframes fadein {
  from {
-	 opacity: 0; }
+	 opacity: 0;
+}
  to {
-	 opacity: 1; } }
+	 opacity: 1;
+} }
 @-o-keyframes fadein {
  from {
-	 opacity: 0; }
+	 opacity: 0;
+}
  to {
-	 opacity: 1; } }
+	 opacity: 1;
+} }
 
 
 
 
-/* henry's stuff */
+
 $bord: solid black 4px;
 @media(min-width: 480px){
 	$bord: solid black 2px;
@@ -659,8 +716,7 @@ $bord: solid black 4px;
 }
 .big-font {
 	font-family: Grotesk;
-	//font-size: 34px;
-	font-size: 37px;
+		font-size: 37px;
 	line-height: 34px;
 
 	@media(max-width: 480px){
@@ -685,8 +741,7 @@ $bord: solid black 4px;
 	font-family: Grotesk;
 	font-size: 18px;
 	@media(max-width: 480px){
-		//font-size: 10px;
-		font-size: 13px;
+				font-size: 13px;
 	}
 }
 
@@ -711,17 +766,15 @@ border-bottom: $bord;
 }
 
 @-webkit-keyframes mymove {
-	 from {    //@include translateY(-67px);
-		 top: -364px;
+	 from {    		 top: -364px;
 		 z-index: -2;
 	 }
-	 to {   // @include translateY(0px);
-		 top:0px;
+	 to {   		 top:0px;
 		 z-index: -2;
 	 }
 }
 
-/* Standard syntax */
+
 @keyframes mymove {
 	from {
 		top: -364px;
@@ -730,40 +783,33 @@ border-bottom: $bord;
 	to {
 		top:0px;
 		z-index: -2;
-		//height:67;
-	}
+			}
  }
 
  @-webkit-keyframes bottom-up {
-	 from {    //@include translateY(-67px);
- 		bottom: 0px;
+	 from {     		bottom: 0px;
  	 }
- 	 to {   // @include translateY(0px);
- 		  bottom: 64px;
+ 	 to {    		  bottom: 64px;
  	 }
  }
 
  @keyframes bottom-up {
- 	 from {    //@include translateY(-67px);
- 		bottom: 0px;
+ 	 from {     		bottom: 0px;
  	 }
- 	 to {   // @include translateY(0px);
- 		  bottom: 64px;
+ 	 to {    		  bottom: 64px;
  	 }
  }
 
  @-webkit-keyframes mymoveup {
- 	 from {    //@include translateY(-67px);
- 		top:-32px;
+ 	 from {     		top:-32px;
  		 z-index: -2;
  	 }
- 	 to {   // @include translateY(0px);
- 		  top: -0px;
+ 	 to {    		  top: -0px;
  		 z-index: -2;
  	 }
  }
 
- /* Standard syntax */
+
  @keyframes mymoveup {
  	from {
  		top:-32px;
@@ -772,8 +818,7 @@ border-bottom: $bord;
  	to {
  		top: -64px;
  		z-index: -2;
- 		//height:67;
- 	}
+ 		 	}
   }
 
  @-webkit-keyframes hidetop {
@@ -785,7 +830,7 @@ border-bottom: $bord;
  	 }
  }
 
- /* Standard syntax */
+
  @keyframes hidetop {
 	 from {
  		@include translateY(0px);
@@ -804,7 +849,7 @@ border-bottom: $bord;
 		 }
   }
 
-  /* Standard syntax */
+
   @keyframes showtop {
  	 from {
 		 @include translateY(-32px);
@@ -831,11 +876,8 @@ border-bottom: $bord;
 		z-index: 10;
 		position: relative;
 		animation: hidetops .5s ease-out;
-		//@include translateY(-32px);
-		&:hover {
-			//animation: showtop .5s ease-out;
-			//@include animation(.5s, showtop);//
-			@include translateY(0px);
+				&:hover {
+									@include translateY(0px);
 		}
 	}
 	&.moveDown {
@@ -846,8 +888,7 @@ border-bottom: $bord;
 	}
 	&.magazines, &.ads, &.single_book {
 		height: 53px;
-		//font-size: 27.5px;
-		@extend .medium-font;
+				@extend .medium-font;
 		color: black;
 	}
 	&.magazines{
@@ -856,20 +897,15 @@ border-bottom: $bord;
 		position: relative;
 	  animation: mymove .5s ease-out;
 
-	 //@include animation(15s, mymove);
- }
+	  }
 	&.ads, &.single_book {
 		    line-height: 56px;
 				@extend .medium-font;
-		//top:-32px;
-		position: relative;
+				position: relative;
 	 animation: mymove .5s ease-out;
-		//font-size: 27.5px;
 
 			@media (max-width: 956px) {
-				//line-height: 1.2em;
-				//font-size: 13px;
-			}
+											}
 			@media (max-width: 633px) {
 				font-size: 25.5px;
 				line-height: 1.2em;
@@ -899,8 +935,7 @@ border-bottom: $bord;
 	 width: 100%;
 	 width: calc(100% - 32px);
 	 height: 64px;
-	 //font-size: 40px;
-	 @extend .big-font;
+	 	 @extend .big-font;
 	 padding-left: 32px;
 	 line-height: 64px;
 	 z-index: 1000;
@@ -912,8 +947,8 @@ border-bottom: $bord;
 		     pointer-events: visible;
 		 &:hover {
 			 cursor: pointer;
-			 //z-
-			 visibility: hidden;
+			 cursor:  $glove_info;
+			 			 visibility: hidden;
 			 &:after {
 				 content: "ABOUT";
 				 opacity: 1;
@@ -927,7 +962,7 @@ border-bottom: $bord;
 			 }
 		 }
 			 &:after {
-				 width: 254px;
+				 width: 400px;
 				 opacity: 0;
 				 content: "ABOUT";
 				 position: absolute;
@@ -943,6 +978,10 @@ border-bottom: $bord;
 		 position: fixed;
      line-height: 1.6em;
 	 }
+ }
+ .art-dir {
+	 display: inline;
+	 @extend .medium-font;
  }
 }
 .bottom-bar a {
@@ -977,12 +1016,12 @@ margin-right: 12px;
 
 .Homepage {
 	.top-bar, .link {
-		//color:black;
-	}
+			}
 }
 
 .link {
 	text-decoration: none;
+
 }
 
 .clipboard{
@@ -1036,7 +1075,6 @@ margin-right: 12px;
 }
 
 #bio p {
-// text-indent: 1em;
  margin: 0;
  font-weight: 200;
 letter-spacing: -.5px;
@@ -1061,9 +1099,7 @@ letter-spacing: -.5px;
 		margin-right: 3px;
     line-height: 0.2em;
 		font-size: 43.5px;
-		//font-size: 34.5px;
-		margin: 0 2px;//5px;
-		text-transform: uppercase;
+				margin: 0 2px;		text-transform: uppercase;
 	}
 	&:after {
 		content:attr(data-text);
@@ -1081,14 +1117,8 @@ letter-spacing: -.5px;
 		font-size:150%;
 	}
 	&:HOVER {
-		//@include opacity(0);
-		//animation: fade-back 1s;
-		//animation-delay: 1s;
-		&:after {
+								&:after {
 			line-height: 0.2em;
-			//@include opacity(1);
-			//@include animation(0s,fade-away);
-			//@include opacity(1);
 
 		}
 	}
@@ -1098,11 +1128,8 @@ letter-spacing: -.5px;
 		&:after {
 			line-height: 0.2em;
 
-			//@include animation(0s,fade-away);
-			animation:  fade-away 1s, appear .5s;
-			//animation-delay: 1s;
-			//@include opacity(1);
-		}
+						animation:  fade-away 1s, appear .5s;
+								}
 	}
  }
 }
@@ -1185,7 +1212,7 @@ letter-spacing: -.5px;
 line-height: 1.3em;
  font-size: 27.5px;
 
- /*max-width: 400px;*/
+
 
 
  /*
@@ -1208,23 +1235,17 @@ line-height: 1.3em;
 }
 
 .season_image {
- //max-height: 45%;
- max-height: 57%;
+  max-height: 57%;
  max-width:40%;
-//@include box-shadow(black 2px 2px 10px);
-//@include box-shadow(grey 2px 2px 7px);
 @include box-shadow(#AFAFAF 2px 2px 4px);
-//@include box-shadow(#D0D0D0 4px 4px 14px);
  top:0;
  left:0;
- cursor: pointer;//url(../images/mouse-hover.png) 4 12, pointer;
+ cursor: pointer;
+cursor:  $glove_info;
  position:absolute;
 }
 
 #bio{
- //color: black;
- //background: -webkit-linear-gradient(#333, #888, #333);
-//  -webkit-background-clip: text;
 
  margin: 0 25px;
  margin: 5% 16%;
@@ -1268,13 +1289,11 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 	right: 0px;
 	padding-right: 40px;
 	z-index: 3000;
-	//font-size: 15px;
-	max-width: 65%;
+		max-width: 65%;
 	text-align: right;
-	@include calc(max-width,'100% - 350px');
+	@include calc(max-width,'100% - 550px');
 	@extend .mini-font;
-	//font-size: 19px;
-}
+	}
 
 
 
@@ -1285,7 +1304,7 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 .active .brand_title {
  font-weight:bold;
 
- /*cursor: none;*/
+
 }
 
 .brand_title {
@@ -1330,8 +1349,7 @@ li {
 
 .season_attribution {
  display:none;
- 	//background: white;
-}
+ 	}
 
 .showing.season_attribution {
  display: block;
@@ -1340,8 +1358,7 @@ li {
 
 .showing.season_attribution {
 	a{
- 		//background-color:white;
-	}
+ 			}
 }
 
 .season_attr, .company_attr {
@@ -1358,10 +1375,8 @@ li {
 
  @media (max-width: 900px) {
  #bio {
- //font-size: 18px;
- /*max-width: 400px;*/
 
-//font-size: 22px;
+
 	 padding: 15px;
 	 padding-left:40px;
 }
@@ -1405,7 +1420,7 @@ li {
  #bio {
  	float: left;
 
-  /*max-width: 400px;*/
+
   margin:0 auto;
 	margin: 3% 10%;
  	 padding: 15px;
@@ -1425,8 +1440,7 @@ li {
   	 display:inline;
    }
    .season_image {
-  	 //max-width:380px;
-		  width: 38%;
+  	 		  width: 38%;
 			max-width: 500px;
 			    max-width: 450px;
 			&.vert {
@@ -1462,8 +1476,7 @@ li {
 	 	img {
 	 		max-height: 27px;
 	 		&:HOVER {
-	 			//opacity:0.6;
-	 		}
+	 				 		}
 	 	}
 	 }
 
@@ -1476,17 +1489,15 @@ li {
 	  @media (max-width: 480px) {
 
 			@-webkit-keyframes mymove {
-				 from {    //@include translateY(-67px);
-					 top: -50px;
+				 from {    					 top: -50px;
 					 z-index: -2;
 				 }
-				 to {   // @include translateY(0px);
-					 top:0px;
+				 to {   					 top:0px;
 					 z-index: -2;
 				 }
 			}
 
-			/* Standard syntax */
+
 			@keyframes mymove {
 				from {
 					top: -50px;
@@ -1495,42 +1506,35 @@ li {
 				to {
 					top:0px;
 					z-index: -2;
-					//height:67;
-				}
+									}
 			 }
 
 			 @-webkit-keyframes bottom-up {
-				 from {    //@include translateY(-67px);
-			 		bottom: 0px;
+				 from {    			 		bottom: 0px;
 					border-bottom: none;
 			 	 }
-			 	 to {   // @include translateY(0px);
-			 		  bottom: 64px;
+			 	 to {   			 		  bottom: 64px;
 						border-bottom: $bord;
 			 	 }
 			 }
 
 			 @keyframes bottom-up {
-			 	 from {    //@include translateY(-67px);
-			 		bottom: 0px;
+			 	 from {    			 		bottom: 0px;
 			 	 }
-			 	 to {   // @include translateY(0px);
-			 		  bottom: 64px;
+			 	 to {   			 		  bottom: 64px;
 			 	 }
 			 }
 
 			 @-webkit-keyframes mymoveup {
-			 	 from {    //@include translateY(-67px);
-			 		top:-32px;
+			 	 from {    			 		top:-32px;
 			 		 z-index: -2;
 			 	 }
-			 	 to {   // @include translateY(0px);
-			 		  top: -0px;
+			 	 to {   			 		  top: -0px;
 			 		 z-index: -2;
 			 	 }
 			 }
 
-			 /* Standard syntax */
+
 			 @keyframes mymoveup {
 			 	from {
 			 		top:-32px;
@@ -1539,8 +1543,7 @@ li {
 			 	to {
 			 		top: -64px;
 			 		z-index: -2;
-			 		//height:67;
-			 	}
+			 					 	}
 			  }
 
 			 @-webkit-keyframes hidetop {
@@ -1552,7 +1555,7 @@ li {
 			 	 }
 			 }
 
-			 /* Standard syntax */
+
 			 @keyframes hidetop {
 				 from {
 			 		@include translateY(0px);
@@ -1571,7 +1574,7 @@ li {
 					 }
 			  }
 
-			  /* Standard syntax */
+
 			  @keyframes showtop {
 			 	 from {
 					 @include translateY(0px);
@@ -1582,24 +1585,23 @@ li {
 			   }
 			.showing.season_attribution {
 				position: fixed;
-		    /* right: 2px; */
+
 		    max-width: calc(100% - 211px);
-		    /* max-width: none; */
+
 		    text-align: right;
-		    /* padding-left: 32px; */
+
 		    bottom: 0px;
 
 		    vertical-align: text-bottom;
-		    /* top: auto; */
+
 		    bottom: 0px;
-		    /* border: solid 3px black; */
-		    /* border-left: solid 3px black; */
-		    /* background: black; */
+
+
+
 		    padding-right: 20px;
 				line-height: 13px;
 				padding-bottom: 8px;
-		    //background: white;
-				.people{
+		    				.people{
 					display:none;
 				}
 			}
@@ -1610,8 +1612,7 @@ li {
 				margin-top: 0px;
 			}
 	 	.top-bar {
-	 		//font-size: 21px;
-			font-size: 17px;
+	 					font-size: 17px;
 			height: 36px;
 			line-height: 36px;
 			&.ads {
@@ -1624,8 +1625,7 @@ li {
 				z-index: 5000;
 				height: 30px;
 				transform: translateY(0px);
-				//line-height: 1.2em;
-				padding-top: 2px;
+								padding-top: 2px;
 				font-size: 16px;
 				padding-top: 2px;
 				line-height: 1.8em;
@@ -1659,11 +1659,9 @@ li {
 	 		margin: 0px 14px;
 			margin: 3% 14px;
 			padding-left: 16px;
-			//margin-bottom: 0px;
-	    padding-bottom: 0px;
+				    padding-bottom: 0px;
 			margin-bottom: 90px;
-			//font-size: 22px;
-			font-size: 18px;
+						font-size: 18px;
 	 	}
 	 	.season_image {
 	 		max-width:350px;
@@ -1697,34 +1695,27 @@ li {
 
 	 	.home_image{
 			max-width: 33%;
-
 	 	}
-
-	  }
-
+	}
 
   .load, .load-1, .load-2, .load-3, .load-4, .load-5, .load-6, .load-7, .load-8 {
    position:fixed;
    font-size: 28px;
   }
 
-
-  /*books section*/
   .book {
    overflow: hidden;
    display: inline-block;
    position:relative;
-	 //max-width: 300px;
-   //max-height: 300px;
 	 max-width: 600px;
-  max-height: 450px;
+   max-height: 450px;
    margin: 10px;
 	 margin: 10px auto;
-	 display: block;
+   display: block;
 	 @media(max-width: 800px){
 		 margin-top: 40px;
 		 max-width: 460px;
-			max-height: 345px;
+		 max-height: 345px;
 			  .book_image{
 					max-height: 345px;
 				}
@@ -1755,9 +1746,7 @@ li {
 
   .books {
    text-align: center;
-	 //overflow: scroll;
-	 //display: flex;
-		flex-direction: row;
+	 	 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
 		margin-bottom: 80px;
@@ -1903,13 +1892,10 @@ li {
 			@include calc(height, '100% - 67px');
 		}
 		.olAlphaImg, .olButton{
-			width: 48px!important;
-			height: 48px!important;
-			//@media(max-width: 480px){
-				width: 36px!important;
-				height: 36px!important;
-			//}
-		}
+			width: 45px!important;
+			height: 45px!important;
+
+					}
 
 		.olControlPanZoom {
 	  display:block;
@@ -1923,13 +1909,12 @@ li {
 			border: $bord;
 			&:last-of-type {
 				@include translateY(16px);
-						@include translateY(4px);
+						@include translateY(13px);
 				@media(max-width: 480px){
 					@include translateY(-10px);
 				}
 			}
 			&.noZoom{
-				//display:none;
 
 				pointer-events: none;
 				img {
@@ -1938,9 +1923,7 @@ li {
 				}
 			}
 		}
-
 }
-
   }
 
   .home{
@@ -1957,9 +1940,7 @@ li {
    margin-bottom: 64px;
   }
 .pdf-img{
-	width: 143px;//13%;
-	height: 167px;//20%;
-	z-index: 9990;
+	width: 143px;	height: 167px;	z-index: 9990;
 	position: fixed;
   bottom: -367px;
 	left: -3000px;
@@ -2021,7 +2002,7 @@ li {
    font-family: Grotesk-Italic;
   }
 
-  /* henry's magazine stuff */
+
   #bg_image, #bg_outer {
    background-repeat:repeat;
    height:500px;
@@ -2044,11 +2025,6 @@ li {
   #bg_inner {
    height: 50000px;
   	 width: 50000px;
-
-  	 /* max-width: 100%; */
-  	 /* position: absolute; */
-  	 /* overflow: scroll;*/
-  	 background-image: url('../images/LARGE_elevation_hi.jpg');
   }
 
 
@@ -2064,9 +2040,6 @@ li {
   .t-row, td, table{
    border:solid 1px black;
   }
-
-
-
 
   .table-img-cont{
    position:static;
@@ -2087,11 +2060,9 @@ li {
   	 left: 0;
   	 right: 0;
   	 bottom: 0;
-  	 background: url(http://pierretardif.net/wp-content/plugins/the-preloader/images/3.gif) no-repeat #f4e7d9 50%;
-  	 -moz-background-size: 64px 64px;
   	 -o-background-size: 64px 64px;
   	 -webkit-background-size: 264px 264px;
-  	 /* background-size: 64px 64px; */
+
   	 z-index: 99998;
   	 width: 100%;
   	 height: 100%;
@@ -2109,15 +2080,18 @@ li {
 		display: none;
 	}
 }
-$grab: url(../images/grab.png) 4 12, auto;
-$grabbing: url(../images/grabbing.png) 4 12, auto;
+
+
+$grab: url(../images/Glove_open.png) 4 12, auto;
+$grabbing: url(../images/Glove_grab.png) 4 12, auto;
   #main .olMap {
-   //cursor: url(../images/mouse-icon-3.png) 4 12, auto;
+		.olControlMousePosition{
+			display:none;
+		}
 	 &:active {
-	     cursor: grabbing;//$grabbing;
-	     cursor: -moz-grabbing;//$grabbing;//
-	     cursor: -webkit-grabbing;//$grabbing;//-webkit-grabbing;
-	 }
+		 cursor: $grabbing;
+	     //cursor: grabbing;	     cursor: -moz-grabbing;	     cursor: -webkit-grabbing;
+		 }
 	 #OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown,
 	 #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft {
 	 	display: none!important;
@@ -2130,35 +2104,33 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
   #main .olMap {
 		cursor: grab;
    position: static;
-	 position: static;
 	 @include calc(height, '100% - 64px');
+	 height: -moz-calc(100% -  64px);
 	 @media(max-width:480px){
 		 border-bottom: solid 2px black;
 		 @include calc(height, '100% - 45px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;//$grab;
-    cursor: -moz-grab;//$grab;//
-    cursor: -webkit-grab;//$grab;//
+    cursor: move;
+    //cursor: grab;    cursor: -moz-grab;    cursor: -webkit-grab;
+		cursor: $grab;
 
- /* (Optional) Apply a "closed-hand" cursor during drag operation. */
  .olCursorWait {
  	cursor: wait;
  }
  .olDragDown {
- 	cursor: -webkit-grabbing;//$grabbing;
+ 	cursor: $grabbing;//-webkit-grabbing;
  }
  .olDrawBox {
  	cursor: crosshair;
  }
  .olControlDragFeatureOver {
- 	cursor: -webkit-grabbing;//$grabbing;
- }
+ 		cursor: $grabbing;//cursor: -webkit-grabbing;
+}
  .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
- 	cursor: -moz-grabbing;//$grabbing;
- }
+ 		cursor: $grabbing;//cursor: -moz-grabbing;
+}
 	}
 
 
@@ -2179,8 +2151,7 @@ $grabbing: url(../images/grabbing.png) 4 12, auto;
 		@include calc(width, "100% - 64px");
 		.issues-text {
 			line-height: 44px;
-			//position: fixed;
-			bottom: 0;
+						bottom: 0;
 			line-height: 40px;
     	bottom: 0;
     	padding: 10px 0px;

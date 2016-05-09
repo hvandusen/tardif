@@ -72,15 +72,7 @@
 </div>
 </div>
 
-<script src="<?php echo get_bloginfo('template_directory'); ?>/js/OpenLayers.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/OpenLayers.js"></script>
 <script> currentMap = <?php echo $id; ?></script>
-	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/magazines.js"></script>
-	<script>
-	//remove arrows
-	for(var i=0;i<4;i++){
-		//$($('#main .olButton')[i]).css('display','none');
-	}
-	//$($('#main .olButton')[5]).css('display','none');
-
-	</script>
+	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/magazines.js"></script>
 <?php get_footer(); ?>

@@ -6,7 +6,6 @@
 
 	var mobile = window.innerWidth<480;
 	$("#bio p span").map(function(i,e){
-		//console.log(e)
 	})
 	    //event handler to set the focus()
 			$('.envelope').on('touchstart', function () {

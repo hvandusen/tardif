@@ -43,13 +43,11 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 			//minZoom: 1,
 			//maxZoom: 5
 	  };
-		console.log($('#map'+currentMap));
 		if($('#map'+currentMap)[0].className === 'olMap'){
 			$('#map'+currentMap).remove();
 		}
 	  map = new OpenLayers.Map('map'+currentMap, options);
 	  template_directory = "/wp-content/themes/tardif/images";
-	  console.dir(imageID)
 	  layer = new OpenLayers.Layer.XYZ( "MapTiler layer", template_directory+'/'+imageID+"/${z}/${x}/${y}.png", {
 	    transitionEffect: 'resize',
 	    //isBaseLayer: true,
@@ -72,11 +70,9 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	  map.addControl(new OpenLayers.Control.Navigation(
 	    {
 				dragPan: function(){
-					console.log('dragged');
 				},
 	      zoomWheelEnabled: false,
 	      defaultClick: function(evt){
-	        console.log(mousePercent(evt));
 	    }
 	  }));
 	  map.addControl(new OpenLayers.Control.PanZoom());
@@ -105,7 +101,6 @@ if(currentMap === 187){
 $('.pdf_overlay').mouseenter(function(e){
 	if(currentMap === 187)
 		return;
-	console.dir($(this).offset().left)
 	replace = $('.'+$(this)[0].className.split(' ')[1].replace('overlay','img'));
 	replace.css('left',$(this).offset().left-30);
 	replace.show();
@@ -131,7 +126,6 @@ var buttonString = '#OpenLayers_Control_PanZoom_15_zoomin, #OpenLayers_Control_P
 	'#OpenLayers_Control_PanZoom_17_zoomin, #OpenLayers_Control_PanZoom_17_zoomout, '+
 	'#OpenLayers_Control_PanZoom_18_zoomin, #OpenLayers_Control_PanZoom_18_zoomout';
 $('.olButton').click(function(){
-	console.dir($(this));
 	if(both){
 		$(this).addClass('noZoom');
 		//z_in = false;

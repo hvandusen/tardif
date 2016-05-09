@@ -6,7 +6,7 @@
 
 
 	<footer>
-		<div class='bottom-bar'><div class='title'  class='nav home'>PIERRE TARDIF</div>
+		<div class='bottom-bar'><div class='title'  class='nav home'>PIERRE TARDIF, <div class='art-dir'> Art Director</div></div>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -39,7 +39,7 @@ clip.action = function(){
 
  },3000);
 }
-console.log(clip)
+
 </script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.ba-bbq.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/lettering.js"></script>

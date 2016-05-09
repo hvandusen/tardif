@@ -1960,7 +1960,7 @@ OpenLayers.Map = OpenLayers.Class({
         this.tileSize = new OpenLayers.Size(OpenLayers.Map.TILE_WIDTH,
             OpenLayers.Map.TILE_HEIGHT);
         this.paddingForPopups = new OpenLayers.Bounds(15, 15, 15, 15);
-        this.theme = OpenLayers._getScriptLocation() + "theme/default/style.css";
+        //this.theme = OpenLayers._getScriptLocation() + "theme/default/style.css";
         this.options = OpenLayers.Util.extend({}, b);
         OpenLayers.Util.extend(this, b);
         OpenLayers.Util.applyDefaults(this, OpenLayers.Projection.defaults[this.projection instanceof OpenLayers.Projection ? this.projection.projCode : this.projection]);

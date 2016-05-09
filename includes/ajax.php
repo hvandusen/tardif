@@ -25,7 +25,6 @@ $(function(){
         $('.top-bar.magazines').css('animation','none');
       //$('.top-bar.magazines').remove();
     }
-    console.log('the hash is'+document.location.toString().indexOf('about'))
     if((url.indexOf('magazine-')>-1) && window.innerWidth>480 || document.location.hash === ''){
       $('.bottom-bar').css({
         'animation':'bottom-up .5s ease-in',
@@ -91,15 +90,10 @@ $(function(){
 
       // Create container for this url's content and store a reference to it in
       // the cache.
-      console.log($('.bbq-item').length)
       $('.mag-clean').map(function(i,e){
-        console.log('here is the object')
-        console.dir($(e)[0].attributes[0].nodeValue)
       //  if($(e)[0].hasOwnProperty('attributes') && $(e)[0].attributes[0].hasOwnProperty('nodeValue')){
           urlVal = $(e)[0].attributes[0].nodeValue;
-          console.log(cache[urlVal])
           delete cache[urlVal];
-          console.log(cache);
         //}
         //if($(e).hasOwnProperty('attributes') && $(e).attributes.hasOwnProperty('urlid'))
         $(e).remove();
@@ -126,7 +120,6 @@ $(function(){
     }
     if(window.sessionStorage.books){
       window.scrollTo(0,parseInt(window.sessionStorage.books));
-      console.log('ffff' + window.sessionStorage.books);
     }
   });
 
