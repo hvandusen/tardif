@@ -1,7 +1,7 @@
 
 <style>
 .bottom-bar {
-  position: fixed;
+
   border-bottom: none;
 
 }

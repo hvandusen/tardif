@@ -516,9 +516,9 @@ td, th { padding: 0; }
 @keyframes mymove { from { top: -364px; z-index: -2; }
   to { top: 0px; z-index: -2; } }
 @-webkit-keyframes bottom-up { from { bottom: 0px; }
-  to { bottom: 64px; } }
+  to { bottom: 64px; position: absolute; } }
 @keyframes bottom-up { from { bottom: 0px; }
-  to { bottom: 64px; } }
+  to { bottom: 64px; position: absolute; } }
 @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
   to { top: -0px; z-index: -2; } }
 @keyframes mymoveup { from { top: -32px; z-index: -2; }
@@ -724,9 +724,9 @@ li { list-style: none; }
   @keyframes mymove { from { top: -50px; z-index: -2; }
     to { top: 0px; z-index: -2; } }
   @-webkit-keyframes bottom-up { from { bottom: 0px; border-bottom: none; }
-    to { bottom: 64px; border-bottom: solid black 4px; } }
+    to { bottom: 64px; border-bottom: solid black 4px; position: absolute; } }
   @keyframes bottom-up { from { bottom: 0px; }
-    to { bottom: 64px; } }
+    to { bottom: 64px; position: absolute; } }
   @-webkit-keyframes mymoveup { from { top: -32px; z-index: -2; }
     to { top: -0px; z-index: -2; } }
   @keyframes mymoveup { from { top: -32px; z-index: -2; }

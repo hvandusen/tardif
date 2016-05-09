@@ -3,7 +3,6 @@
 	var count=0;
 	$('footer .nav').addClass('current-page')
 
-
 	var mobile = window.innerWidth<480;
 	$("#bio p span").map(function(i,e){
 	})
@@ -35,5 +34,10 @@ if(mobile){
 
 	var moveCount = 0;
 //	$("#bio").css('color',);
+$('.bottom-bar').css({
+	'position':'fixed',
+	'animation':'none',
+	'bottom': '0px'
+});
 
 })(jQuery);

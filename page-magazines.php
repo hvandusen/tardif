@@ -9,7 +9,7 @@
 	border-bottom: solid black 4px;
 	bottom: 64px;
 	animation: bottom-up .5s ease-in;
-	position: absolute;
+
 	z-index: 2000;
 }
 #map { position: absolute; height: 100%; width: 100%; background-color: #FFFFFF; }
@@ -29,18 +29,18 @@
 <div class='mag-role'></div>
 <div class='magazine-issuez'>
 	<div class='issues-text'>
-	<a>Issue</a>
+	<a>Open full issue:</a>
 <?php //
 			$pdfCount = 1;
 		  $pdfs = get_field('pdfs', $id);
 		  if(is_array($pdfs) && !empty($pdfs)){
 			foreach($pdfs as $row){ ?>
 			<?php
-			if($id === 198)
-				$linkClass = 'hrefs="' . $row['pdf'] . '"';
-			else {
-				$linkClass = '';
-			}
+			//if($id === 198)
+				$linkClass = 'href="' . $row['pdf'] . '"';
+			//else {
+			//	$linkClass = '';
+			//}
 				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" '.$linkClass .'
 				data-img="background-image: url(' . $row['image']['sizes']['small'] . ')">';
 

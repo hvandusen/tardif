@@ -29,10 +29,11 @@ $(function(){
       $('.bottom-bar').css({
         'animation':'bottom-up .5s ease-in',
         'bottom':'64px',
-        'z-index': 2000
+        'z-index': 2000,
+        'position': 'absolute'
       })
     }
-    else if(document.location.hash === '#books'){
+    else if(document.location.hash === '#books' || document.location.pathname === '/about/'){
       $('.bottom-bar').css({
         'position':'fixed',
         'animation':'none',
@@ -40,6 +41,7 @@ $(function(){
       });
   }else {
       $('.bottom-bar').css({
+        //'position':'absolute',
         'animation':'none',
         'bottom': '0px'
       });
@@ -49,7 +51,8 @@ $(function(){
       $('.bottom-bar').css({
         'bottom':'-80px',
         'animation':'',
-        'display':'none'
+        'display':'none',
+        'position': 'fixed'
       });
       else {
         $('.bottom-bar').css({
@@ -121,6 +124,8 @@ $(function(){
     if(window.sessionStorage.books){
       window.scrollTo(0,parseInt(window.sessionStorage.books));
     }
+    if(window.location.pathname.indexOf('about')>-1)
+      $('.bottom-bar').css('position','fixed');
   });
 
   // Since the event is only triggered when the hash changes, we need to trigger

@@ -790,6 +790,7 @@ border-bottom: $bord;
 	 from {     		bottom: 0px;
  	 }
  	 to {    		  bottom: 64px;
+		 position: absolute;
  	 }
  }
 
@@ -797,6 +798,7 @@ border-bottom: $bord;
  	 from {     		bottom: 0px;
  	 }
  	 to {    		  bottom: 64px;
+		 position: absolute;
  	 }
  }
 
@@ -1515,6 +1517,7 @@ li {
 			 	 }
 			 	 to {   			 		  bottom: 64px;
 						border-bottom: $bord;
+						position: absolute;
 			 	 }
 			 }
 
@@ -1522,6 +1525,7 @@ li {
 			 	 from {    			 		bottom: 0px;
 			 	 }
 			 	 to {   			 		  bottom: 64px;
+					 position: absolute;
 			 	 }
 			 }
 
@@ -1940,7 +1944,8 @@ li {
    margin-bottom: 64px;
   }
 .pdf-img{
-	width: 143px;	height: 167px;	z-index: 9990;
+	width: 143px;	height: 167px;	
+	z-index: 9990;
 	position: fixed;
   bottom: -367px;
 	left: -3000px;
