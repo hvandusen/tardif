@@ -150,6 +150,7 @@ function getPointMobile(w){
 			});
 		});
 		$('.season_image').click(function(){
+			console.log('clicked image')
 			$(this).removeClass('active');
 			$(this).addClass('inactive');
 			var brand = $(this).closest('.seasons');

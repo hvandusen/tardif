@@ -6,7 +6,7 @@
 
 
 	<footer>
-		<div class='bottom-bar'><div class='title'  class='nav home'>PIERRE TARDIF, <div class='art-dir'> Art Director</div></div>
+		<div class='bottom-bar'><div class='title'  class='nav home'>PIERRE TARDIF, ART DIRECTOR </div>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -146,6 +146,9 @@ body {
  }
 
  $glove_info: url(../images/Glove_point.png) 25 12, auto;
+ $glove_infos: url(../images/Glove_info_soft.png) 25 12, auto;
+ $glove_close: url(../images/Glove_close.png) 25 12, auto;
+
 
 /* HTML5 display definitions
 	========================================================================== */
@@ -739,7 +742,7 @@ $bord: solid black 4px;
 
 .mini-font {
 	font-family: Grotesk;
-	font-size: 18px;
+	font-size: 16px;
 	@media(max-width: 480px){
 				font-size: 13px;
 	}
@@ -964,7 +967,7 @@ border-bottom: $bord;
 			 }
 		 }
 			 &:after {
-				 width: 400px;
+				 width: 523px;
 				 opacity: 0;
 				 content: "ABOUT";
 				 position: absolute;
@@ -976,7 +979,8 @@ border-bottom: $bord;
     bottom: 0px;
 	 @media(max-width:480px){
 		 padding-left: 17px;
-		 font-size: 22px;
+		 //font-size: 22px;
+		 font-size: 17px;
 		 position: fixed;
      line-height: 1.6em;
 	 }
@@ -1213,21 +1217,6 @@ letter-spacing: -.5px;
 #bio {
 line-height: 1.3em;
  font-size: 27.5px;
-
-
-
-
- /*
- -webkit-column-count: 2;
-	 -moz-column-count: 2;
-	 column-count: 2;
-	 -webkit-column-gap: 50px;
-	 -moz-column-gap: 50px;
-	 column-gap: 50px;*/
-	 /* -webkit-column-rule: 1px solid light$grey;
-	 -moz-column-rule: 1px solid light$grey;
-	 column-rule: 1px solid light$grey;
-	 padding: 20px 20px 20px 50px;*/
 }
 
 
@@ -1243,7 +1232,7 @@ line-height: 1.3em;
  top:0;
  left:0;
  cursor: pointer;
-cursor:  $glove_info;
+cursor:  $glove_close;
  position:absolute;
 }
 
@@ -1753,7 +1742,8 @@ li {
 	 	 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		margin-bottom: 80px;
+		margin-bottom: 180px;
+
   }
 
   .book_image{
@@ -1805,6 +1795,12 @@ li {
   	 -ms-transform: translateX(-85.71429%);
   	 transform: translateX(-85.71429%)
   }
+	.book {
+		a{
+				cursor: $glove_infos;
+		}
+	}
+
 
   .book_page_info {
    padding: 0 15% 0 15%;
@@ -1944,7 +1940,7 @@ li {
    margin-bottom: 64px;
   }
 .pdf-img{
-	width: 143px;	height: 167px;	
+	width: 143px;	height: 167px;
 	z-index: 9990;
 	position: fixed;
   bottom: -367px;
@@ -2113,7 +2109,7 @@ $grabbing: url(../images/Glove_grab.png) 4 12, auto;
 	 height: -moz-calc(100% -  64px);
 	 @media(max-width:480px){
 		 border-bottom: solid 2px black;
-		 @include calc(height, '100% - 45px');
+		 @include calc(height, '100% - 35px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;
