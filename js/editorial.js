@@ -2,9 +2,9 @@
 	var up,left,accel;
 	$('.season_image').map(function(i,e){
 		var r = Math.random()*7-3.5;
-		$(e).css({
-			'transform': 'rotate('+r+'deg)'
-		});
+		//$(e).css({
+	//		'transform': 'rotate('+r+'deg)'
+		//});
 	});
 	var point = (window.innerWidth>480 ? getPoint(window.innerWidth): getPointMobile(window.innerWidth));
 	var staggerAmount = (window.innerWidth>480 ? 5 : 2);
@@ -146,8 +146,10 @@ function getPointMobile(w){
 			}
 			clickCount++;
 			var thisText = $(this).text().replace(',','').replace('and ','');
-
+			if(thisText[thisText.length-1]===' ')
+				thisText = thisText.substr(0,thisText.length-1)
 			$('.brandID').map(function(i,e){
+				console.log([thisText.toUpperCase(),$(e).text().toUpperCase()]);
 				if(thisText.toUpperCase()===$(e).text().toUpperCase()){
 
 					dumpImages($(e).next())

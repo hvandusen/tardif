@@ -6,6 +6,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>As is the atom, so is the Universe.</title>
+	<meta name="Description" CONTENT="Pierre Tardif is a New York based art director and graphic designer.
+Tardif is best known for his work as Design Director of WSJ., a monthly style magazine published by The Wall Street Journal. ">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="stylesheet" href="http://openlayers.org/en/v3.14.0/css/ol.css" type="text/css">
