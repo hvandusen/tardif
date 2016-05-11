@@ -549,6 +549,7 @@ td, th { padding: 0; }
 .bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point.png) 25 12, auto; visibility: hidden; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
+@media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }
 .bottom-bar .title:after { width: 523px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 17px; position: fixed; line-height: 1.6em; } }
 .bottom-bar .art-dir { display: inline; }

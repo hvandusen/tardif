@@ -953,7 +953,7 @@ border-bottom: $bord;
 		 &:hover {
 			 cursor: pointer;
 			 cursor:  $glove_info;
-			 			 visibility: hidden;
+			 visibility: hidden;
 			 &:after {
 				 content: "ABOUT";
 				 opacity: 1;
@@ -964,6 +964,9 @@ border-bottom: $bord;
 				 @media(max-width:480px){
 					 opacity:0;
 				 }
+			 }
+			 @media(max-width: 480px){
+				 visibility: visible;
 			 }
 		 }
 			 &:after {
