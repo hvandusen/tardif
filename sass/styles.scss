@@ -1069,9 +1069,11 @@ margin-right: 12px;
 }
 
 .squiggle {
+	@media(min-width: 480px){
 	&:hover {
 			animation: scroller 10s linear infinite;
 	}
+}
 	font-family: monospace;
 	color: transparent;
 	display: inline-block;
