@@ -1,7 +1,6 @@
 
 <style>
 .bottom-bar {
-
   border-bottom: none;
 
 }

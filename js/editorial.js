@@ -134,12 +134,21 @@ function getPointMobile(w){
 	}
 	var setup = 0;
 
+	function applySquiggle(el){
+    $(el).append('<div class="squiggle"></div>');
+    var squigWidth = Math.floor($(el).width()/19)*19
+    $(el).find('.squiggle').width(squigWidth)
+    $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
+		console.log($('.current')[$('.current').length-1]);
+  }
+
 	$(document).ready(function(){
 		var clickCount = 0;
 		$('.brand_title').click(function(){
 			setup === 0 && $('.brand_title').removeClass('revealed');
 			setup++;
 			$(this).addClass('revealed');
+			applySquiggle(this);
 			$('.black').removeClass('black');
 			if(clickCount===0){
 				$('.season').removeClass('active');

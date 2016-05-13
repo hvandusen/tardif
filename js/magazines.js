@@ -9,17 +9,17 @@
 	var collages = {
 		185: {
 			size: [-20000.000000, -4590.000000,0],
-			pos: [4200, -1924, zLevel],
+			pos: [4200, -1904, zLevel],
 				map : [-4608.000000, 7168.000000],
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [750, -1975,zLevel],
+			pos: [750, -1954,zLevel],
 			map : [-2560.000000, 7168.000000]
 		},
 		187: {
 			size: [-20000.000000, -3190.000000,-150.000000],
-			pos: [4452, -2230,zLevel],
+			pos: [4452, -2210,zLevel],
 			map : [-3072.000000, 8192.000000]
 		}
 	}
@@ -138,5 +138,6 @@ $('.olButton').click(function(){
 });
 
 //$('#OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown, #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft').css('display','none!important');
+
 
 })(jQuery);

@@ -8,10 +8,20 @@
 	    var delta = e.wheelDelta ? e.wheelDelta : -e.detail;
 	}
 
+	function applySquiggle(el){
+		console.log($(el));
+		$(el).append('<div class="squiggle"></div>');
+		var squigWidth = Math.floor($(el).width()/19)*19
+		$(el).find('.squiggle').width(squigWidth)
+		$(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
+	}
+
+
 	$(document).ready(function(){
 		$('.top-bar.magazines a.link').click(function(){
 		});
-
+		//applySquiggle('.current-page');
+		//applySquiggle('.current');
 
 		$('.bottom-bar .title').click(function(){
 			window.location = '/about';

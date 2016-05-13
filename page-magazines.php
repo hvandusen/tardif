@@ -37,7 +37,7 @@
 			foreach($pdfs as $row){ ?>
 			<?php
 			//if($id === 198)
-				$linkClass = 'href="' . $row['pdf'] . '"';
+				$linkClass = 'href="' . $row['pdf'] . '#view=fitW"';
 			//else {
 			//	$linkClass = '';
 			//}

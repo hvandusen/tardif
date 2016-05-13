@@ -11,6 +11,16 @@ $(function(){
   // gets the url from the hash and displays either our cached content or fetches
   // new content to be displayed.
   $(window).bind( 'hashchange', function(e) {
+    if((e.fragment.indexOf('magazine')>-1 || e.fragment === '') && window.location.pathname.indexOf('about')===-1){
+      $($('.link')[0]).addClass('current-page');
+    }
+    else if(e.fragment.indexOf('books')>-1){
+      $($('.link')[1]).addClass('current-page');
+    }
+    else if(e.fragment.indexOf('advertising')>-1){
+      $($('.link')[2]).addClass('current-page');
+    }
+
     // Get the hash (fragment) as a string, with any leading # removed. Note that
     // in jQuery 1.4, you should use e.fragment instead of $.param.fragment().
     var url = $.param.fragment();
@@ -62,6 +72,7 @@ $(function(){
       }
   }
 
+    if(false)
     if(url.indexOf('magazine-')>-1 || url === 'advertising'){
       $('header .top-bar').removeClass('moveDown');
     	$('header .top-bar').addClass('moveUp');
@@ -120,6 +131,8 @@ $(function(){
             //$(newBottomBar).appendTo('.top-bar');
           }*/
         });
+        applySquiggle('.current-page');
+        applySquiggle('.current');
     }
     if(window.sessionStorage.books){
       window.scrollTo(0,parseInt(window.sessionStorage.books));
@@ -132,15 +145,38 @@ $(function(){
   // the event now, to handle the hash the page may have loaded with.
   $(window).trigger( 'hashchange' );
   $(".top-bar").addClass('showAnd');
-  $('.top-bar .link.nav').addClass('current-page');
+  //nono!
+  //$('.top-bar .link.nav').addClass('current-page');
   $('.nav').click(function(){
   //  if($('#map').length>0)
   //    $('#map').remove()
     $(".top-bar").removeClass('showAnd');
     $('.current-page').removeClass('current-page');
+    $('.squiggle').remove();
     $(this).addClass('current-page');
+    console.log('this is current');
+    // var cnt = '';
+    // for(var i=0;i<1+Math.floor($(this).width()/19);i++){
+    //   cnt += '-';
+    // }
+    //console.log($(this).attr('squig_width',cnt));
+    //console.log($(this).find(':after').width(100));
+    applySquiggle(this);
     $('.envelope').hide();
-  })
+  });
+
+  applySquiggle('.current-page');
+  applySquiggle('.current');
+
+
+  function applySquiggle(el){
+    console.log($(el));
+    $(el).append('<div class="squiggle"></div>');
+    var squigWidth = Math.floor($(el).width()/19)*19
+    $(el).find('.squiggle').width(squigWidth)
+    $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
+  }
+
   $('.title').click(function(){
     $('.envelope').show();
     $('.top-bar .link.nav').addClass('current-page');

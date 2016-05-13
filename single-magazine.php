@@ -20,7 +20,7 @@
 		<?php $id = get_the_ID();?>
 			<a class='link nav <?php if($id===185){echo 'current';} ?>' href='/#magazine-wsj'>WSJ. Magazine</a>,
 			<a class='link nav <?php if($id===186){echo 'current';} ?>' href='/#magazine-top'>Top,</a>
-			<a class='link nav <?php if($id===198){echo 'current';} ?>' href='/#magazine-v'>V and VMan</a>
+			<a class='link nav <?php if($id===187){echo 'current';} ?>' href='/#magazine-v'>V and VMan</a>
 		</div>
 <div class='magazine <?php echo $id; ?>'>
 
@@ -68,4 +68,18 @@
 
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/OpenLayers.js"></script>
 	<script> currentMap = <?php echo $id; ?></script>
+
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/magazines.js"></script>
+	<script>
+	applySquiggle($('.current-page'));
+  applySquiggle($('.current')[$('.current').length-1]);
+
+
+  function applySquiggle(el){
+    $(el).append('<div class="squiggle"></div>');
+    var squigWidth = Math.floor($(el).width()/19)*19
+    $(el).find('.squiggle').width(squigWidth)
+    $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
+		console.log($('.current')[$('.current').length-1]);
+  }
+	</script>

@@ -57,6 +57,7 @@ a[href$=jpg], a[href$=jpeg], a[href$=jpe], a[href$=png], a[href$=gif] {
 html {
  font-size: 100%;
  line-height: 1.5em;
+ overflow-x: hidden;
 	  }
 
 @font-face {
@@ -145,9 +146,9 @@ body {
  margin: 0;
  }
 
- $glove_info: url(../images/Glove_point.png) 25 12, auto;
- $glove_infos: url(../images/Glove_info_soft.png) 25 12, auto;
- $glove_close: url(../images/Glove_close.png) 25 12, auto;
+ $glove_info: url(../images/Glove_point-01.svg) 25 12, auto;
+ $glove_infos: url(../images/Glove_point_info-01.svg) 25 12, auto;
+ $glove_close: url(../images/Glove_point_x-01.svg) 25 12, auto;
 
 
 /* HTML5 display definitions
@@ -755,13 +756,14 @@ $bord: solid black 4px;
  top:0;
  width:100%;
  text-align:center;
- height: 64px;
-border-bottom: $bord;
+ //height: 64px;
+ height: 56px;
+//border-bottom: $bord;
 @media(max-width:480px){
-	border-bottom: solid 2px black;
+	//border-bottom: solid 2px black;
 }
 @extend .big-font;
-	 line-height: 64px;
+	 line-height: 56px;
 	 left: 0;
 	 &.showAnd{
 		 color:black;
@@ -864,6 +866,12 @@ border-bottom: $bord;
   	}
    }
 
+.page-id-365 .top-bar {
+	border-bottom: solid black 4px;
+	@media(max-width: 480px){
+			border-bottom: solid black 2px;
+	}
+}
 
 .top-bar{
 	@media(max-width: 1233px){
@@ -892,12 +900,12 @@ border-bottom: $bord;
 		@include translateY(0px);
 	}
 	&.magazines, &.ads, &.single_book {
-		height: 53px;
+		height: 48px;//53px;
 				@extend .medium-font;
 		color: black;
 	}
 	&.magazines{
-	 line-height: 56px;
+	 line-height: 48px;//56px;
 		z-index: 5;
 		position: relative;
 	  animation: mymove .5s ease-out;
@@ -923,6 +931,7 @@ border-bottom: $bord;
 			 animation: mymoveup .5s ease-out;
 			}
 			&.ads {
+				border-bottom: $bord;
 				@media(max-width:770px){
 					font-size: 18px;
 			}
@@ -1048,14 +1057,134 @@ margin-right: 12px;
 	border: $bord;
 }
 
+@keyframes scroller {
+  0% {
+      background-position-x: 0%;
+  }
+  100% {
+        background-position-x: 104%;
+  }
+}
+
+.squiggle {
+	animation: scroller 1s linear infinite;
+	font-family: monospace;
+	color: transparent;
+	display: inline-block;
+	font-size: 31px;
+	/* width: 76px; */
+	//letter-spacing: 0.4px;
+	position: absolute;
+	left: 0;
+	//width: 100%;
+	background-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg);
+	height: 66px;
+/* background: white; */
+z-index: 230;
+background-size: auto 7px;
+background-repeat-y: no-repeat;
+background-repeat:repeat-x ;
+background-position-y: 55px;
+margin-left: 4px;
+	&:before {
+		content: 'a ';
+		color: transparent;
+    border-bottom: solid black 4px;
+    width: 2000px;
+    height: 10px;
+    position: absolute;
+    left: -2000;
+		bottom: 6px;
+	}
+	&:after {
+		content: 'a ';
+		color: transparent;
+    border-bottom: solid black 4px;
+		width: 2000px;
+		height: 10px;
+		position: absolute;
+	  right: -2000px;
+		bottom: 6px;
+	}
+	@media(max-width:480px){
+		background-position-y: 35px;
+    background-size: auto 5px;
+		height: 45px;
+		&:before{
+			border-bottom: solid black 2px;
+		}
+		&:after{
+			border-bottom: solid black 2px;
+		}
+	}
+}
+
 .link.nav.current {
 		color:black;
-
+		position: relative;
+		//border-bottom: solid white 4px;
+		//padding-bottom: 10px;
+		.squiggle {
+			    background-position-y: 47px;
+					&:before{
+						bottom: 14px;
+					}
+					&:after{
+						bottom: 14px;
+					}
+					@media(max-width:480px){
+						background-position-y: 28px;
+						&:before{
+							border-bottom: solid black 2px;
+						}
+						&:after{
+							border-bottom: solid black 2px;
+						}
+					}
+		}
 }
 
 .link.nav.current-page {
  color:black;
+ position: relative;
 
+//border-style: solid;
+border-width: 0px 0px 20px;
+-moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
+-webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
+-o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
+border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
+border-image-slice: 3 27 3 27;
+border-image-width: 0px 0px 14px 0px;
+border-image-outset: 0px 0px 0px 0px;
+border-image-repeat: round round;
+border:none;
+//padding-bottom: 7px;
+//border-bottom: solid white 4px;
+	&:hover{
+
+	}
+
+	&:after {
+		content: attr(squig_width);
+		font-family: monospace;
+		color: transparent;
+    font-size: 31px;
+    /* width: 76px; */
+    //letter-spacing: 0.4px;
+		position: absolute;
+		left: 0;
+		//width: 100%;
+		background-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg);
+		height: 66px;
+/* background: white; */
+z-index: 230;
+background-size: auto 7px;
+background-repeat-y: no-repeat;
+background-repeat:no-repeat ;
+background-position-y: 55px;
+
+	}
 }
 
 .link:hover{
@@ -1068,7 +1197,7 @@ margin-right: 12px;
 
 #container {
  margin: 0 auto;
-
+overflow-x: hidden;
 }
 
 .bio2 {
@@ -1581,7 +1710,7 @@ li {
 			   }
 			.showing.season_attribution {
 				position: fixed;
-
+				pointer-events: none;
 		    max-width: calc(100% - 20px);
 				width: 100%;
 				//max-width: none;
@@ -1616,17 +1745,21 @@ li {
 			&.magazines, &.ads, &.single_book {
 				top: 0px;
 				z-index: 5000;
-				height: 30px;
+				//    z-index: -1;
+				//height: 30px;
+				height: 33px;
 				transform: translateY(0px);
 								padding-top: 2px;
 				font-size: 16px;
 				padding-top: 2px;
+				    overflow-x: hidden;
 				line-height: 1.8em;
 			}
 			&.ads {
 				line-height: 1.8em;
 			}
 			&.moveUp {
+				z-index: 9000;
 				transform: translateY(0px);
 			}
 
@@ -1852,8 +1985,19 @@ li {
    z-index: 5000;
   }
 	.brand_title{
+		position: relative;
 		&.revealed {
 			color:black;
+			.squiggle {
+				background-position-y: 47px;
+				background-image: url(http://candusen.net/imgs/squigz_try7_ads.svg);
+				&:before{
+					border: none;
+				}
+				&:after{
+					border: none;
+				}
+			}
 		}
 	}
 
@@ -1903,6 +2047,7 @@ li {
 	  right: 6px!important;
 	  position: relative;
 		.olButton {
+			cursor: $glove_info!important;
 			@media(max-width: 480px){
 				display: none;
 			}
@@ -2086,13 +2231,16 @@ li {
 }
 
 
-$grab: url(../images/Glove_open.png) 4 12, auto;
+$grab: url(../images/Glove_point_drag.svg) 4 12, auto;
 //$grab: url(../images/Glove_open.svg) 4 12, auto;
-$grabbing: url(../images/Glove_grab.png) 4 12, auto;
+$grabbing: url(../images/Glove_point_grabbing.svg) 4 12, auto;
 //$grabbing: url(../images/Glove_grab.svg) 4 12, auto;
   #main .olMap {
 		.olControlMousePosition{
 			display:none;
+		}
+		.olMapViewport {
+			z-index: 0;
 		}
 	 &:active {
 		 cursor: $grabbing;
@@ -2115,6 +2263,7 @@ $grabbing: url(../images/Glove_grab.png) 4 12, auto;
 	 @media(max-width:480px){
 		 border-bottom: solid 2px black;
 		 @include calc(height, '100% - 35px');
+		 @include calc(height, '100% - 37px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;
