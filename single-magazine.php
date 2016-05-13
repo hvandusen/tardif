@@ -71,7 +71,7 @@
 
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/magazines.js"></script>
 	<script>
-	applySquiggle($('.current-page'));
+	//applySquiggle($('.current-page'));
   applySquiggle($('.current')[$('.current').length-1]);
 
 

@@ -244,7 +244,7 @@ a { background: transparent; }
 /**
 * Improve readability when focused and also mouse hovered in all browsers.
 */
-a:active, a, .brand_title { outline: 0; color: black; text-decoration: none; cursor: url(../images/Glove_point-01.svg) 25 12, auto; }
+a:active, a, .brand_title { outline: 0; color: black; text-decoration: none; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
 
 /* Text-level semantics
 	========================================================================== */
@@ -404,7 +404,7 @@ button, select { text-transform: none; }
 * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
 *    Known issue: inner spacing remains in IE 6.
 */
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; cursor: url(../images/Glove_point-01.svg) 25 12, auto; *overflow: visible; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; *overflow: visible; }
 
 /**
 * Re-set default cursor for disabled elements.
@@ -549,7 +549,7 @@ td, th { padding: 0; }
 
 .bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
 .bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
-.bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 25 12, auto; visibility: hidden; }
+.bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; visibility: hidden; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 @media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }
@@ -573,8 +573,9 @@ td, th { padding: 0; }
 .top-bar.magazines .link .current-mag { color: black; border: solid black 4px; }
 
 @keyframes scroller { 0% { background-position-x: 0%; }
-  100% { background-position-x: 104%; } }
-.squiggle { animation: scroller 1s linear infinite; font-family: monospace; color: transparent; display: inline-block; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: repeat-x; background-position-y: 55px; margin-left: 4px; }
+  100% { background-position-x: -100%; } }
+.squiggle { font-family: monospace; color: transparent; display: inline-block; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: repeat-x; background-position-y: 55px; margin-left: 4px; }
+.squiggle:hover { animation: scroller 10s linear infinite; }
 .squiggle:before { content: 'a '; color: transparent; border-bottom: solid black 4px; width: 2000px; height: 10px; position: absolute; left: -2000; bottom: 6px; }
 .squiggle:after { content: 'a '; color: transparent; border-bottom: solid black 4px; width: 2000px; height: 10px; position: absolute; right: -2000px; bottom: 6px; }
 @media (max-width: 480px) { .squiggle { background-position-y: 35px; background-size: auto 5px; height: 45px; }
@@ -589,8 +590,8 @@ td, th { padding: 0; }
   .link.nav.current .squiggle:before { border-bottom: solid black 2px; }
   .link.nav.current .squiggle:after { border-bottom: solid black 2px; } }
 
-.link.nav.current-page { color: black; position: relative; border-width: 0px 0px 20px; -moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat; -webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat; -o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat; border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat; border-image-slice: 3 27 3 27; border-image-width: 0px 0px 14px 0px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round; border: none; }
-.link.nav.current-page:after { content: attr(squig_width); font-family: monospace; color: transparent; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: no-repeat; background-position-y: 55px; }
+.link.nav.current-page { color: black; position: relative; border-width: 0px 0px 20px; -moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; -webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; -o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; border-image-slice: 3 27 3 27; border-image-width: 0px 0px 14px 0px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round; border: none; }
+.link.nav.current-page:after { content: attr(squig_width); font-family: monospace; color: transparent; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: no-repeat; background-position-y: 55px; }
 
 .link:hover { color: black; }
 
@@ -654,7 +655,7 @@ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0;
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point_x-01.svg) 25 12, auto; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point_x-01.svg) 0 12, auto; position: absolute; }
 
 #bio { margin: 0 25px; margin: 5% 16%; margin-bottom: 8%; font-family: Grotesk; /*
 color: #aebc16;
@@ -798,7 +799,7 @@ li { list-style: none; }
 
 .book_image.-position-6-of-7 { -webkit-transform: translateX(-85.71429%); -ms-transform: translateX(-85.71429%); transform: translateX(-85.71429%); }
 
-.book a { cursor: url(../images/Glove_point_info-01.svg) 25 12, auto; }
+.book a { cursor: url(../images/Glove_point_info-01.svg) 0 12, auto; }
 
 .book_page_info { padding: 0 15% 0 15%; }
 @media (max-width: 480px) { .book_page_info { padding: 0% 10% 15% 10%; } }
@@ -834,7 +835,7 @@ li { list-style: none; }
 @media (max-width: 480px) { #main { height: -webkit-calc(100% - 67px); height: calc(100% - 67px); } }
 #main .olAlphaImg, #main .olButton { width: 45px !important; height: 45px !important; }
 #main .olControlPanZoom { display: block; top: 300px; right: 6px !important; position: relative; }
-#main .olControlPanZoom .olButton { cursor: url(../images/Glove_point-01.svg) 25 12, auto !important; border: solid black 4px; }
+#main .olControlPanZoom .olButton { cursor: url(../images/Glove_point-01.svg) 0 12, auto !important; border: solid black 4px; }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton { display: none; } }
 #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(16px); -ms-transform: translateY(16px); -webkit-transform: translateY(16px); transform: translateY(16px); -moz-transform: translateY(13px); -ms-transform: translateY(13px); -webkit-transform: translateY(13px); transform: translateY(13px); }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(-10px); -ms-transform: translateY(-10px); -webkit-transform: translateY(-10px); transform: translateY(-10px); } }

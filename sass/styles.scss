@@ -146,9 +146,9 @@ body {
  margin: 0;
  }
 
- $glove_info: url(../images/Glove_point-01.svg) 25 12, auto;
- $glove_infos: url(../images/Glove_point_info-01.svg) 25 12, auto;
- $glove_close: url(../images/Glove_point_x-01.svg) 25 12, auto;
+ $glove_info: url(../images/Glove_point-01.svg) 0 12, auto;
+ $glove_infos: url(../images/Glove_point_info-01.svg) 0 12, auto;
+ $glove_close: url(../images/Glove_point_x-01.svg) 0 12, auto;
 
 
 /* HTML5 display definitions
@@ -1059,15 +1059,19 @@ margin-right: 12px;
 
 @keyframes scroller {
   0% {
-      background-position-x: 0%;
+      //background-position-x: 0%;
+			background-position-x: 0%;
   }
   100% {
-        background-position-x: 104%;
+        //background-position-x: 104%;
+				background-position-x: -100%;
   }
 }
 
 .squiggle {
-	animation: scroller 1s linear infinite;
+	&:hover {
+			animation: scroller 10s linear infinite;
+	}
 	font-family: monospace;
 	color: transparent;
 	display: inline-block;
@@ -1077,7 +1081,7 @@ margin-right: 12px;
 	position: absolute;
 	left: 0;
 	//width: 100%;
-	background-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg);
+	background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg);
 	height: 66px;
 /* background: white; */
 z-index: 230;
@@ -1150,10 +1154,10 @@ margin-left: 4px;
 
 //border-style: solid;
 border-width: 0px 0px 20px;
--moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
--webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
--o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg) 15 22 14 6 repeat;
+-moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
+-webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
+-o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
+border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
 border-image-slice: 3 27 3 27;
 border-image-width: 0px 0px 14px 0px;
 border-image-outset: 0px 0px 0px 0px;
@@ -1175,7 +1179,7 @@ border:none;
 		position: absolute;
 		left: 0;
 		//width: 100%;
-		background-image: url(http://candusen.net/imgs/squigz_try7_upperbar.svg);
+		background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg);
 		height: 66px;
 /* background: white; */
 z-index: 230;

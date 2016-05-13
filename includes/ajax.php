@@ -131,8 +131,8 @@ $(function(){
             //$(newBottomBar).appendTo('.top-bar');
           }*/
         });
-        applySquiggle('.current-page');
-        applySquiggle('.current');
+        //applySquiggle('.current-page');
+        //applySquiggle('.current');
     }
     if(window.sessionStorage.books){
       window.scrollTo(0,parseInt(window.sessionStorage.books));
