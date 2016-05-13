@@ -147,8 +147,8 @@ body {
  }
 
  $glove_info: url(../images/Glove_point-01.svg) 0 12, auto;
- $glove_infos: url(../images/Glove_point_info-01.svg) 0 12, auto;
- $glove_close: url(../images/Glove_point_x-01.svg) 0 12, auto;
+ $glove_infos: url(../images/Glove_point_info-01.svg) 24 12, auto;
+ $glove_close: url(../images/Glove_point_x-01.svg) 24 12, auto;
 
 
 /* HTML5 display definitions
@@ -2235,9 +2235,9 @@ li {
 }
 
 
-$grab: url(../images/Glove_point_drag.svg) 4 12, auto;
+$grab: url(../images/Glove_point_drag.svg) 24 12, auto;
 //$grab: url(../images/Glove_open.svg) 4 12, auto;
-$grabbing: url(../images/Glove_point_dragging.svg) 4 12, auto;
+$grabbing: url(../images/Glove_point_dragging.svg) 0 0, auto;
 //$grabbing: url(../images/Glove_grab.svg) 4 12, auto;
   #main .olMap {
 		.olControlMousePosition{

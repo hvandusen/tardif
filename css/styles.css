@@ -655,7 +655,7 @@ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0;
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point_x-01.svg) 0 12, auto; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point_x-01.svg) 24 12, auto; position: absolute; }
 
 #bio { margin: 0 25px; margin: 5% 16%; margin-bottom: 8%; font-family: Grotesk; /*
 color: #aebc16;
@@ -799,7 +799,7 @@ li { list-style: none; }
 
 .book_image.-position-6-of-7 { -webkit-transform: translateX(-85.71429%); -ms-transform: translateX(-85.71429%); transform: translateX(-85.71429%); }
 
-.book a { cursor: url(../images/Glove_point_info-01.svg) 0 12, auto; }
+.book a { cursor: url(../images/Glove_point_info-01.svg) 24 12, auto; }
 
 .book_page_info { padding: 0 15% 0 15%; }
 @media (max-width: 480px) { .book_page_info { padding: 0% 10% 15% 10%; } }
@@ -892,16 +892,16 @@ li { list-style: none; }
 
 #main .olMap .olControlMousePosition { display: none; }
 #main .olMap .olMapViewport { z-index: 0; }
-#main .olMap:active { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
+#main .olMap:active { cursor: url(../images/Glove_point_dragging.svg) 0 0, auto; }
 #main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
-#main .olMap { cursor: grab; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); height: -moz-calc(100% -  64px); width: 100%; background-color: #FFFFFF; cursor: move; cursor: url(../images/Glove_point_drag.svg) 4 12, auto; }
+#main .olMap { cursor: grab; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); height: -moz-calc(100% -  64px); width: 100%; background-color: #FFFFFF; cursor: move; cursor: url(../images/Glove_point_drag.svg) 24 12, auto; }
 @media (max-width: 480px) { #main .olMap { border-bottom: solid 2px black; height: -webkit-calc(100% - 35px); height: calc(100% - 35px); height: -webkit-calc(100% - 37px); height: calc(100% - 37px); } }
 #main .olMap .olCursorWait { cursor: wait; }
-#main .olMap .olDragDown { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
+#main .olMap .olDragDown { cursor: url(../images/Glove_point_dragging.svg) 0 0, auto; }
 #main .olMap .olDrawBox { cursor: crosshair; }
-#main .olMap .olControlDragFeatureOver { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
-#main .olMap .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
+#main .olMap .olControlDragFeatureOver { cursor: url(../images/Glove_point_dragging.svg) 0 0, auto; }
+#main .olMap .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: url(../images/Glove_point_dragging.svg) 0 0, auto; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
