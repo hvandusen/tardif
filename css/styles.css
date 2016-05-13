@@ -891,16 +891,16 @@ li { list-style: none; }
 
 #main .olMap .olControlMousePosition { display: none; }
 #main .olMap .olMapViewport { z-index: 0; }
-#main .olMap:active { cursor: url(../images/Glove_point_grabbing.svg) 4 12, auto; }
+#main .olMap:active { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
 #main .olMap #OpenLayers_Control_PanZoom_39_zoomworld, #main .olMap #OpenLayers_Control_PanZoom_39_pandown, #main .olMap #OpenLayers_Control_PanZoom_39_panright, #main .olMap #OpenLayers_Control_PanZoom_39_panleft { display: none !important; }
 
 #main .olMap { cursor: grab; position: static; height: -webkit-calc(100% - 64px); height: calc(100% - 64px); height: -moz-calc(100% -  64px); width: 100%; background-color: #FFFFFF; cursor: move; cursor: url(../images/Glove_point_drag.svg) 4 12, auto; }
 @media (max-width: 480px) { #main .olMap { border-bottom: solid 2px black; height: -webkit-calc(100% - 35px); height: calc(100% - 35px); height: -webkit-calc(100% - 37px); height: calc(100% - 37px); } }
 #main .olMap .olCursorWait { cursor: wait; }
-#main .olMap .olDragDown { cursor: url(../images/Glove_point_grabbing.svg) 4 12, auto; }
+#main .olMap .olDragDown { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
 #main .olMap .olDrawBox { cursor: crosshair; }
-#main .olMap .olControlDragFeatureOver { cursor: url(../images/Glove_point_grabbing.svg) 4 12, auto; }
-#main .olMap .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: url(../images/Glove_point_grabbing.svg) 4 12, auto; }
+#main .olMap .olControlDragFeatureOver { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
+#main .olMap .olControlDragFeatureActive.olControlDragFeatureOver.olDragDown { cursor: url(../images/Glove_point_dragging.svg) 4 12, auto; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
