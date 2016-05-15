@@ -916,6 +916,7 @@ $bord: solid black 4px;
 				@extend .medium-font;
 				position: relative;
 	 animation: mymove .5s ease-out;
+	 border-bottom: solid black 4px;
 
 			@media (max-width: 956px) {
 											}
@@ -923,6 +924,7 @@ $bord: solid black 4px;
 				font-size: 25.5px;
 				line-height: 1.2em;
 				margin-top: 5px;
+				border-bottom: solid black 2px;
 			}
 
 
@@ -945,10 +947,13 @@ $bord: solid black 4px;
  	position: fixed;
  	clear: both;
 
+	background: white;
+	border-top: $bord;
 	 bottom: 0px;
 	 width: 100%;
 	 width: calc(100% - 32px);
 	 height: 64px;
+	 height: 55px;
 	 	 @extend .big-font;
 	 padding-left: 32px;
 	 line-height: 64px;
@@ -1083,14 +1088,16 @@ margin-right: 12px;
 	position: absolute;
 	left: 0;
 	//width: 100%;
-	background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg);
+	background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg);
 	height: 66px;
 /* background: white; */
 z-index: 230;
 background-size: auto 7px;
 background-repeat-y: no-repeat;
 background-repeat:repeat-x ;
+background-position: 0px 54px;
 background-position-y: 55px;
+
 margin-left: 4px;
 	&:before {
 		content: 'a ';
@@ -1113,6 +1120,7 @@ margin-left: 4px;
 		bottom: 6px;
 	}
 	@media(max-width:480px){
+		background-position: 0px 35px;
 		background-position-y: 35px;
     background-size: auto 5px;
 		height: 45px;
@@ -1131,6 +1139,7 @@ margin-left: 4px;
 		//border-bottom: solid white 4px;
 		//padding-bottom: 10px;
 		.squiggle {
+			background-position: 0px 47px;
 			    background-position-y: 47px;
 					&:before{
 						bottom: 14px;
@@ -1139,6 +1148,7 @@ margin-left: 4px;
 						bottom: 14px;
 					}
 					@media(max-width:480px){
+						background-position: 0px 28px;
 						background-position-y: 28px;
 						&:before{
 							border-bottom: solid black 2px;
@@ -1156,10 +1166,10 @@ margin-left: 4px;
 
 //border-style: solid;
 border-width: 0px 0px 20px;
--moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
--webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
--o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat;
+-moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat;
+-webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat;
+-o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat;
+border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat;
 border-image-slice: 3 27 3 27;
 border-image-width: 0px 0px 14px 0px;
 border-image-outset: 0px 0px 0px 0px;
@@ -1181,13 +1191,14 @@ border:none;
 		position: absolute;
 		left: 0;
 		//width: 100%;
-		background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg);
+		background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg);
 		height: 66px;
 /* background: white; */
 z-index: 230;
 background-size: auto 7px;
 background-repeat-y: no-repeat;
 background-repeat:no-repeat ;
+background-position: 0px 55px;
 background-position-y: 55px;
 
 	}

@@ -15,12 +15,13 @@
 		$(el).find('.squiggle').width(squigWidth)
 		$(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
 	}
-
+	window.squig = applySquiggle;
 
 	$(document).ready(function(){
 		$('.top-bar.magazines a.link').click(function(){
 		});
-		//applySquiggle('.current-page');
+		console.log($('.current-page'));
+		applySquiggle('.current-page');
 		//applySquiggle('.current');
 
 		$('.bottom-bar .title').click(function(){

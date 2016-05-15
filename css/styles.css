@@ -541,13 +541,13 @@ td, th { padding: 0; }
 .top-bar.moveDown { position: relative; animation: showtops .5s ease-out; cursor: default; -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
 .top-bar.magazines, .top-bar.ads, .top-bar.single_book { height: 48px; color: black; }
 .top-bar.magazines { line-height: 48px; z-index: 5; position: relative; animation: mymove .5s ease-out; }
-.top-bar.ads, .top-bar.single_book { line-height: 56px; position: relative; animation: mymove .5s ease-out; }
-@media (max-width: 633px) { .top-bar.ads, .top-bar.single_book { font-size: 25.5px; line-height: 1.2em; margin-top: 5px; } }
+.top-bar.ads, .top-bar.single_book { line-height: 56px; position: relative; animation: mymove .5s ease-out; border-bottom: solid black 4px; }
+@media (max-width: 633px) { .top-bar.ads, .top-bar.single_book { font-size: 25.5px; line-height: 1.2em; margin-top: 5px; border-bottom: solid black 2px; } }
 .top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
 .top-bar.ads { border-bottom: solid black 4px; }
 @media (max-width: 770px) { .top-bar.ads { font-size: 18px; } }
 
-.bottom-bar { position: fixed; clear: both; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
+.bottom-bar { position: fixed; clear: both; background: white; border-top: solid black 4px; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; height: 55px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
 .bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
 .bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; visibility: hidden; }
 .bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
@@ -574,24 +574,24 @@ td, th { padding: 0; }
 
 @keyframes scroller { 0% { background-position-x: 0%; }
   100% { background-position-x: -100%; } }
-.squiggle { font-family: monospace; color: transparent; display: inline-block; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: repeat-x; background-position-y: 55px; margin-left: 4px; }
+.squiggle { font-family: monospace; color: transparent; display: inline-block; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: repeat-x; background-position: 0px 54px; background-position-y: 55px; margin-left: 4px; }
 @media (min-width: 480px) { .squiggle:hover { animation: scroller 10s linear infinite; } }
 .squiggle:before { content: 'a '; color: transparent; border-bottom: solid black 4px; width: 2000px; height: 10px; position: absolute; left: -2000; bottom: 6px; }
 .squiggle:after { content: 'a '; color: transparent; border-bottom: solid black 4px; width: 2000px; height: 10px; position: absolute; right: -2000px; bottom: 6px; }
-@media (max-width: 480px) { .squiggle { background-position-y: 35px; background-size: auto 5px; height: 45px; }
+@media (max-width: 480px) { .squiggle { background-position: 0px 35px; background-position-y: 35px; background-size: auto 5px; height: 45px; }
   .squiggle:before { border-bottom: solid black 2px; }
   .squiggle:after { border-bottom: solid black 2px; } }
 
 .link.nav.current { color: black; position: relative; }
-.link.nav.current .squiggle { background-position-y: 47px; }
+.link.nav.current .squiggle { background-position: 0px 47px; background-position-y: 47px; }
 .link.nav.current .squiggle:before { bottom: 14px; }
 .link.nav.current .squiggle:after { bottom: 14px; }
-@media (max-width: 480px) { .link.nav.current .squiggle { background-position-y: 28px; }
+@media (max-width: 480px) { .link.nav.current .squiggle { background-position: 0px 28px; background-position-y: 28px; }
   .link.nav.current .squiggle:before { border-bottom: solid black 2px; }
   .link.nav.current .squiggle:after { border-bottom: solid black 2px; } }
 
-.link.nav.current-page { color: black; position: relative; border-width: 0px 0px 20px; -moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; -webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; -o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg) 15 22 14 6 repeat; border-image-slice: 3 27 3 27; border-image-width: 0px 0px 14px 0px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round; border: none; }
-.link.nav.current-page:after { content: attr(squig_width); font-family: monospace; color: transparent; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-02.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: no-repeat; background-position-y: 55px; }
+.link.nav.current-page { color: black; position: relative; border-width: 0px 0px 20px; -moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; -webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; -o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; border-image-slice: 3 27 3 27; border-image-width: 0px 0px 14px 0px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round; border: none; }
+.link.nav.current-page:after { content: attr(squig_width); font-family: monospace; color: transparent; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: no-repeat; background-position: 0px 55px; background-position-y: 55px; }
 
 .link:hover { color: black; }
 

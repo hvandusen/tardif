@@ -19,3 +19,7 @@
 	//echo '</div>';
 	//get_footer();
 	?>
+	<script>
+	$($('.link')[1]).addClass('current-page');
+	squig('.current-page');
+	</script>
