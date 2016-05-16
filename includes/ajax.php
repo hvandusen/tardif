@@ -31,7 +31,7 @@ $(function(){
     }
     //if(url.indexOf('#')<0)
       //window.location = '#'+url;
-      if(url === 'advertising' || url === 'books' || url ==='about'   )
+      if(url === 'advertising' || url === 'books' || window.location.pathname.indexOf('about')>-1   )
         $('.bottom-bar').css('border-bottom','none');
       else {
         $('.bottom-bar').css('border-bottom','solid black 4px');
@@ -155,15 +155,11 @@ $(function(){
   //    $('#map').remove()
     $(".top-bar").removeClass('showAnd');
     $('.current-page').removeClass('current-page');
-    $('.squiggle').remove();
+    $('.actual').removeClass('actual');
+    $('.moveUp .squiggle').remove();
     $(this).addClass('current-page');
+    $(this).addClass('actual');
     console.log('this is current');
-    // var cnt = '';
-    // for(var i=0;i<1+Math.floor($(this).width()/19);i++){
-    //   cnt += '-';
-    // }
-    //console.log($(this).attr('squig_width',cnt));
-    //console.log($(this).find(':after').width(100));
     applySquiggle(this);
     $('.envelope').hide();
   });

@@ -888,6 +888,7 @@ $bord: solid black 4px;
 	&.moveUp {
 		z-index: 10;
 		position: relative;
+		border-bottom: solid black 4px;
 		animation: hidetops .5s ease-out;
 				&:hover {
 									@include translateY(0px);
@@ -909,6 +910,7 @@ $bord: solid black 4px;
 		z-index: 5;
 		position: relative;
 	  animation: mymove .5s ease-out;
+		border-bottom: solid black 4px;
 
 	  }
 	&.ads, &.single_book {
@@ -1066,6 +1068,7 @@ margin-right: 12px;
   0% {
       //background-position-x: 0%;
 			background-position-x: 0%;
+
   }
   100% {
         //background-position-x: 104%;
@@ -1097,27 +1100,29 @@ background-repeat-y: no-repeat;
 background-repeat:repeat-x ;
 background-position: 0px 54px;
 background-position-y: 55px;
+//margin-left: 4px;
 
-margin-left: 4px;
 	&:before {
 		content: 'a ';
 		color: transparent;
     border-bottom: solid black 4px;
-    width: 2000px;
+    width: 10px;
     height: 10px;
     position: absolute;
-    left: -2000;
+    left: -10px;
 		bottom: 6px;
+		pointer-events: none;
 	}
 	&:after {
 		content: 'a ';
 		color: transparent;
     border-bottom: solid black 4px;
-		width: 2000px;
+		width: 10px;
 		height: 10px;
 		position: absolute;
-	  right: -2000px;
+	  right: -10px;
 		bottom: 6px;
+		pointer-events: none;
 	}
 	@media(max-width:480px){
 		background-position: 0px 35px;
@@ -1138,6 +1143,8 @@ margin-left: 4px;
 		position: relative;
 		//border-bottom: solid white 4px;
 		//padding-bottom: 10px;
+		border-bottom: solid white 5px;
+    padding-bottom: 11px;
 		.squiggle {
 			background-position: 0px 47px;
 			    background-position-y: 47px;
@@ -1160,6 +1167,7 @@ margin-left: 4px;
 		}
 }
 
+
 .link.nav.current-page {
  color:black;
  position: relative;
@@ -1175,6 +1183,8 @@ border-image-width: 0px 0px 14px 0px;
 border-image-outset: 0px 0px 0px 0px;
 border-image-repeat: round round;
 border:none;
+border-bottom: solid white 4px;
+    padding-bottom: 9px;
 //padding-bottom: 7px;
 //border-bottom: solid white 4px;
 	&:hover{
@@ -2339,6 +2349,8 @@ $grabbing: url(../images/Glove_point_dragging.svg) 0 0, auto;
 	@media (max-width:480px){
 		.bottom-bar{
 			border-bottom: none!important;
+			border-top: none;
+			    bottom: 0px!important;
 		}
 	}
 	#landscape {

@@ -10,7 +10,7 @@
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.8/clipboard.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/clipboard.min.js"></script>
 <script>var clip = new Clipboard('.clipboard')
 clip.action = function(){
 	if(window.innerWidth<480){

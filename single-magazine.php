@@ -28,7 +28,7 @@
 <div class='magazine-issuez'>
 	<div class='issues-text' >
 	<?php if($id != 187){
-		echo '<a>Open full issue: </a>';}
+		echo '<a>Open full issues here: </a>';}
 		 ?>
 <?php //
 			$pdfCount = 1;

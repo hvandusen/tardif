@@ -29,7 +29,7 @@
 <div class='mag-role'></div>
 <div class='magazine-issuez'>
 	<div class='issues-text'>
-	<a>Open full issue:</a>
+	<a>Open full issues here:</a>
 <?php //
 			$pdfCount = 1;
 		  $pdfs = get_field('pdfs', $id);
