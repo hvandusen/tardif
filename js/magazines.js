@@ -79,9 +79,18 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
 	  //map.setCenter(new OpenLayers.LonLat(2077, 1.5),4)
-		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]),collages[currentMap]['pos'][2])
+		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+900, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
+		var lonlat = new OpenLayers.LonLat(collages[imageID]['pos'][0], collages[imageID]['pos'][1]);
+		map.panTo(lonlat);
+		//map.zoomTo(3.8);
+		return map;
 	}
-	init();
+	var returnedMap = init();
+
+	$(window).ready(function(i){
+		//map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+900, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
+	})
+
 	var mobile = window.innerWidth<480;
 
 	$('.olButton').css({//'#OpenLayers_Control_PanZoom_44_zoomin, #OpenLayers_Control_PanZoom_44_zoomout').css({

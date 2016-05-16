@@ -948,7 +948,6 @@ $bord: solid black 4px;
 .bottom-bar {
  	position: fixed;
  	clear: both;
-
 	background: white;
 	border-top: $bord;
 	 bottom: 0px;
@@ -956,20 +955,33 @@ $bord: solid black 4px;
 	 width: calc(100% - 32px);
 	 height: 64px;
 	 height: 55px;
-	 	 @extend .big-font;
+	 @extend .big-font;
 	 padding-left: 32px;
 	 line-height: 64px;
 	 z-index: 1000;
 	 display: inline;
 	 pointer-events: none;
 	 .title{
-    line-height: 53px;
+     line-height: 53px;
 		 display: inline;
-		     pointer-events: visible;
+		 pointer-events: visible;
+
 		 &:hover {
 			 cursor: pointer;
 			 cursor:  $glove_info;
 			 visibility: hidden;
+			 span {
+			 }
+			 &:before {
+				 content: "Pierre Tardif";
+				 color: transparent;
+				 background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg);
+				 background-size: auto 7px;
+    		 background-repeat-y: no-repeat;
+    		background-repeat: repeat-x;
+    		background-position: 0px 54px;
+    		background-position-y: 55px;
+			 }
 			 &:after {
 				 content: "ABOUT";
 				 opacity: 1;
@@ -980,6 +992,8 @@ $bord: solid black 4px;
 				 @media(max-width:480px){
 					 opacity:0;
 				 }
+				 //border-top: solid white 4px;
+				 //padding-top: 5px;
 			 }
 			 @media(max-width: 480px){
 				 visibility: visible;

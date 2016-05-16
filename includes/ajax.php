@@ -150,7 +150,7 @@ $(function(){
   $(".top-bar").addClass('showAnd');
   //nono!
   //$('.top-bar .link.nav').addClass('current-page');
-  $('.nav').click(function(){
+  $('.moveUp .nav').click(function(){
   //  if($('#map').length>0)
   //    $('#map').remove()
     $(".top-bar").removeClass('showAnd');
