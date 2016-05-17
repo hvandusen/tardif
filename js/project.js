@@ -11,10 +11,12 @@
 	var isMob =  window.innerWidth < 480;
 
 	function applySquiggle(el){
-		console.log('from project')
+		//console.log('from project')
 		$(el).append('<div class="squiggle"></div>');
-		var squigWidth = //Math.floor($(el).width()/19)*19+19//(smallEnough? 0 : 1);
-		Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
+		//var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
+		var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
+		//console.log($(el).width())
+		//console.log(squigWidth)
 		$(el).find('.squiggle').width(squigWidth);
 
 		$(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
@@ -71,13 +73,13 @@
 	if(window.innerWidth<480)
 		return;
 	$('.moveUp .link').mouseenter(function(e){
-		console.log('squiggle amt')
-		console.log($(this).find('.squiggle').length)
-		//console.log($(this).find('.squiggle'))
+		//console.log('squiggle amt')
+		//console.log($(this).find('.squiggle').length)
+		////console.log($(this).find('.squiggle'))
 		if($(this).find('.squiggle').length>0 || $(this).hasClass('current-page') || $(this).hasClass('actual'))
 			return;
 			else{
-				//console.log('added a squig')
+				////console.log('added a squig')
 				$('.squigHover').removeClass('squigHover');
 				$(this).addClass('squigHover');
 				$(this).addClass('current-page');
@@ -88,7 +90,7 @@
 	$('.magazines .link').mouseenter(function(){
 		if($(this).hasClass('current'))
 			return;
-			//console.dir($(this).hasClass('current'));
+			////console.dir($(this).hasClass('current'));
 			$(this).addClass('current');
 			$(this).addClass('squigHover');
 			applySquiggle('.squigHover');
@@ -96,13 +98,13 @@
 
 	$('.link').mouseleave(function(){
 		if($(this).hasClass('actual')){
-			//console.log('you shouldnt change this')
+			////console.log('you shouldnt change this')
 		}
 			if(!$(this).hasClass('squigHover') || $(this).hasClass('actual'))
 				return;
 				//if($(this).hasClass('actual'))
 				//	return;
-			//console.log('was a hover squig')
+			////console.log('was a hover squig')
 			$(this).find('.squiggle').hide()
 			$(this).find('.squiggle').remove();
 			$(this).removeClass('current');

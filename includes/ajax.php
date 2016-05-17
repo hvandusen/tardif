@@ -170,12 +170,10 @@ $(function(){
   squig('.current');
 
 
-  function applySquiggle(el){
-    console.log('from ajax')
+  function applySquiggler(el){
+    //console.log('from ajax')
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
-    console.log($(el).width());
-    console.log(squigWidth);
     $(el).find('.squiggle').width(squigWidth);
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
   }

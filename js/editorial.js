@@ -135,12 +135,12 @@ function getPointMobile(w){
 	var setup = 0;
 
 	function applySquiggle(el){
-		console.log('from editorial')
+		//console.log('from editorial')
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19
     $(el).find('.squiggle').width(squigWidth)
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
-		console.log($('.current')[$('.current').length-1]);
+		//console.log($('.current')[$('.current').length-1]);
   }
 
 	$(document).ready(function(){
@@ -159,7 +159,7 @@ function getPointMobile(w){
 			if(thisText[thisText.length-1]===' ')
 				thisText = thisText.substr(0,thisText.length-1)
 			$('.brandID').map(function(i,e){
-				console.log([thisText.toUpperCase(),$(e).text().toUpperCase()]);
+				//console.log([thisText.toUpperCase(),$(e).text().toUpperCase()]);
 				if(thisText.toUpperCase()===$(e).text().toUpperCase()){
 
 					dumpImages($(e).next())

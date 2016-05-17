@@ -942,9 +942,6 @@ $bord: solid black 4px;
 		}
 }
 
-
-
-
 .bottom-bar {
  	position: fixed;
  	clear: both;
@@ -967,8 +964,10 @@ $bord: solid black 4px;
 		 pointer-events: visible;
 		 span {
 			     padding-left: 4px;
+
 		 }
 		 &:hover {
+			 color: white;
 			 cursor: pointer;
 			 cursor:  $glove_info;
 			 //visibility: hidden;
@@ -976,11 +975,15 @@ $bord: solid black 4px;
 				 padding: 15px 0 0 4px;
 				 position: relative;
 	    	background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg);
-
+				color: black;
 				background-repeat: repeat-x;
 				background-size: auto 7px;
 				background-position: 0px 5px;
 				animation: scroller 5s linear infinite;
+				&:before {
+					content: 'About ';
+
+				}
 				&:after {
 					content: '-----------------';
 			    position: absolute;
@@ -1028,7 +1031,7 @@ $bord: solid black 4px;
 				 display: none;
 				 width: 523px;
 				 opacity: 0;
-				 content: "ABOUT";
+				 content: "About Pierre Tardif";
 				 position: absolute;
 				 left:0;
 				 z-index: 8000;
@@ -1222,6 +1225,67 @@ height: 44px;
 						}
 					}
 		}
+}
+
+.page-id-365 .title{
+
+		cursor: pointer;
+		cursor:  $glove_info;
+		//visibility: hidden;
+		span {
+			padding: 15px 0 0 4px;
+			position: relative;
+		 background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg);
+
+		 background-repeat: repeat-x;
+		 background-size: auto 7px;
+		 background-position: 0px 5px;
+		 &:hover {
+			 animation: scroller 5s linear infinite;
+		 }
+		 &:after {
+			 content: '-----------------';
+			 position: absolute;
+			 left: 0;
+			 color: transparent;
+			 width: 100%;
+			 overflow: hidden;
+			 top: 6px;
+			 z-index: -1;
+			 height: 4px;
+			 background: white;
+		 }
+		}
+	 //  &:before {
+	 // 	 content: "Pierre Tardif";
+	 //
+	 // 	 background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg);
+	 // 	 background-size: auto 7px;
+	 // 	 background-repeat-y: no-repeat;
+	 // 	background-repeat: repeat-x;
+	 // 	background-position: 0px 54px;
+	 // 	background-position-y: 55px;
+	 //  }
+		&:after {
+			display: none;
+			//content: "ABOUT";
+			opacity: 1;
+			text-align: left;
+			position: absolute;
+			left:0;
+			visibility: visible;
+			padding: 9px 0 0 0;
+	 background: white;
+			@media(max-width:480px){
+				opacity:0;
+			}
+			//border-top: solid white 4px;
+			//padding-top: 5px;
+		}
+		@media(max-width: 480px){
+			visibility: visible;
+		}
+
 }
 
 
@@ -1496,6 +1560,7 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 	right: 0px;
 	padding-right: 40px;
 	z-index: 3000;
+	bottom: 4px;
 		max-width: 65%;
 	text-align: right;
 	@include calc(max-width,'100% - 550px');
@@ -1685,6 +1750,7 @@ li {
 	 	img {
 	 		max-height: 27px;
 	 		&:HOVER {
+				opacity: .7;
 	 				 		}
 	 	}
 	 }
@@ -1798,22 +1864,21 @@ li {
 				position: fixed;
 				pointer-events: none;
 		    max-width: calc(100% - 20px);
-				width: 100%;
+				max-width: 326px;;
 				//max-width: none;
 		    bottom: 0px;
 		    vertical-align: text-bottom;
-		    bottom: 0px;
+		    top: 45px;
     padding-left: 1px;
 				padding-right: 10px;
 				line-height: 13px;
 				padding-bottom: 8px;
 				padding-bottom: 29px;
-		    				.people{
-					display:none;
-				}
+				bottom:	auto;
 				text-align: left;
-				left:20px;
+				@include calc(left, '(100% - 305px) / 2');
 				right:auto;
+				font-size: 12px;
 			}
 			.book {
 				margin: 15% 0px;
@@ -2060,6 +2125,8 @@ li {
 
 	 @media(max-width: 480px){
 		 top: 5px;
+		 top: 30px;
+		 max-width: 325px;
 		 height: calc(100% - 90px);
 	 }
   }
@@ -2129,7 +2196,7 @@ li {
 		.olAlphaImg, .olButton{
 			width: 45px!important;
 			height: 45px!important;
-			    background: white;
+			    //background: white;
 					}
 
 		.olControlPanZoom {
@@ -2139,6 +2206,7 @@ li {
 	  position: relative;
 		.olButton {
 			cursor: $glove_info!important;
+			background: white;
 			@media(max-width: 480px){
 				display: none;
 			}
@@ -2154,10 +2222,10 @@ li {
 
 				pointer-events: none;
 				img {
-					background: black;
+					//background: black;
 					//    opacity: 0.2;
-					// -webkit-filter: invert(1);
-					// filter: invert(1);
+					 -webkit-filter: invert(.5);
+					 filter: invert(.4);
 				}
 			}
 		}

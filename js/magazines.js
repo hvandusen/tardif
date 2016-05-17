@@ -3,23 +3,24 @@
 //	var mapBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
 	var mapMinZoom = 0;
 	var mapMaxZoom = 6;
-	var mapMaxResolution = 0.500000;
 	var isMob = window.innerWidth < 480;
-	var zLevel = isMob? 3 : 4;
+	var zLevel = isMob? 3.7:4;
+var mapMaxResolution = 0.500000;
+
 	var collages = {
 		185: {
 			size: [-20000.000000, -4590.000000,0],
-			pos: [4200, -1904, zLevel],
+			pos: [(isMob? 4190 : 4200), (isMob? -1704 : -1904), zLevel],
 				map : [-4608.000000, 7168.000000],
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [750, -1954,zLevel],
+			pos: [750, (isMob? -1804 : -1954),zLevel],
 			map : [-2560.000000, 7168.000000]
 		},
 		187: {
 			size: [-20000.000000, -3190.000000,-150.000000],
-			pos: [4452, -2210,zLevel],
+			pos: [(isMob? 5232 : 4452), (isMob? -2040 : -2210),zLevel],
 			map : [-3072.000000, 8192.000000]
 		}
 	}
@@ -28,7 +29,7 @@
 	//if(currentMap === 187)
 	//	$('.issues-text').hide()
 	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
-	$('')
+	var homePageAction = window.location.hash === '';
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 var layer;
@@ -82,7 +83,7 @@ var layer;
 	  map.addControl(new OpenLayers.Control.Permalink());
 	  //map.setCenter(new OpenLayers.LonLat(2077, 1.5),4)
 		//map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+400, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
-		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+500, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
+		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]-(homePageAction ? 500 : 0), collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
 		lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]);
 			//map.moveTo(lonlat,4,{duration: 10});
 			//map.panTo(lonlat)
@@ -95,7 +96,8 @@ var layer;
 //returnedMap.render(new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]));
 	$(window).load(function(i){
 		time = 0;
-
+		if(!homePageAction)
+			return;
 		var i = 0;
 		var times = 50;
 	while(i<times){
@@ -105,9 +107,9 @@ break;
 			setTimeout(function(j) {
 					return function() {
 						//console.log(layer.numLoadingTiles)
-						
+
 							////console.log("var is now", j);
-							lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0]+(500-10*j), collages[currentMap]['pos'][1]);
+							lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0]-(500-10*j), collages[currentMap]['pos'][1]);
 							//lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]);
 							returnedMap.panTo(lonlat);
 							layer.strategies[0].refresh()

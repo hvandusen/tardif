@@ -550,13 +550,14 @@ td, th { padding: 0; }
 .bottom-bar { position: fixed; clear: both; background: white; border-top: solid black 4px; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; height: 55px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
 .bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
 .bottom-bar .title span { padding-left: 4px; }
-.bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
-.bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); background-repeat: repeat-x; background-size: auto 7px; background-position: 0px 5px; animation: scroller 5s linear infinite; }
+.bottom-bar .title:hover { color: white; cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
+.bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); color: black; background-repeat: repeat-x; background-size: auto 7px; background-position: 0px 5px; animation: scroller 5s linear infinite; }
+.bottom-bar .title:hover span:before { content: 'About '; }
 .bottom-bar .title:hover span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
 .bottom-bar .title:hover:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 @media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }
-.bottom-bar .title:after { display: none; width: 523px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
+.bottom-bar .title:after { display: none; width: 523px; opacity: 0; content: "About Pierre Tardif"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 17px; position: fixed; line-height: 1.6em; } }
 .bottom-bar .art-dir { display: inline; }
 
@@ -595,6 +596,14 @@ td, th { padding: 0; }
 @media (max-width: 480px) { .link.nav.current .squiggle { background-position: 4px 28px; background-position-y: 28px; background-position-y: 33px; }
   .link.nav.current .squiggle:before { border-bottom: solid black 2px; display: none; }
   .link.nav.current .squiggle:after { border-bottom: solid black 2px; display: none; } }
+
+.page-id-365 .title { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
+.page-id-365 .title span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); background-repeat: repeat-x; background-size: auto 7px; background-position: 0px 5px; }
+.page-id-365 .title span:hover { animation: scroller 5s linear infinite; }
+.page-id-365 .title span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
+.page-id-365 .title:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
+@media (max-width: 480px) { .page-id-365 .title:after { opacity: 0; } }
+@media (max-width: 480px) { .page-id-365 .title { visibility: visible; } }
 
 .link.nav.current-page { color: black; position: relative; border-width: 0px 0px 20px; -moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; -webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; -o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; border-image-slice: 3 27 3 27; border-image-width: 0px 0px 14px 0px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round; border: none; border-bottom: solid white 4px; padding-bottom: 9px; }
 .link.nav.current-page:after { content: attr(squig_width); font-family: monospace; color: transparent; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: no-repeat; background-position: 0px 55px; background-position-y: 55px; }
@@ -678,7 +687,7 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 
 .brand { list-style: none; }
 
-.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; max-width: 65%; text-align: right; max-width: -webkit-calc(100% - 550px); max-width: calc(100% - 550px); }
+.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; bottom: 4px; max-width: 65%; text-align: right; max-width: -webkit-calc(100% - 550px); max-width: calc(100% - 550px); }
 
 .active .brand_title { font-weight: bold; }
 
@@ -736,6 +745,7 @@ li { list-style: none; }
 
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 13.6px 32px; z-index: 2002; }
 .envelope img, .copied img { max-height: 27px; }
+.envelope img:HOVER, .copied img:HOVER { opacity: .7; }
 
 @media (max-height: 809px) { .season_image { width: 70%; max-height: 80%; } }
 @media (max-width: 480px) { @-webkit-keyframes mymove { from { top: -50px; z-index: -2; }
@@ -758,8 +768,7 @@ li { list-style: none; }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: fixed; pointer-events: none; max-width: calc(100% - 20px); width: 100%; bottom: 0px; vertical-align: text-bottom; bottom: 0px; padding-left: 1px; padding-right: 10px; line-height: 13px; padding-bottom: 8px; padding-bottom: 29px; text-align: left; left: 20px; right: auto; }
-  .showing.season_attribution .people { display: none; }
+  .showing.season_attribution { position: fixed; pointer-events: none; max-width: calc(100% - 20px); max-width: 326px; bottom: 0px; vertical-align: text-bottom; top: 45px; padding-left: 1px; padding-right: 10px; line-height: 13px; padding-bottom: 8px; padding-bottom: 29px; bottom: auto; text-align: left; left: -webkit-calc((100% - 305px) / 2); left: calc((100% - 305px) / 2); right: auto; font-size: 12px; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
   .top-bar { font-size: 17px; height: 36px; line-height: 36px; }
@@ -819,7 +828,7 @@ li { list-style: none; }
 .next { padding: 25px; float: right; }
 
 .brands { height: 100%; position: relative; top: -32px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
-@media (max-width: 480px) { .brands { top: 5px; height: calc(100% - 90px); } }
+@media (max-width: 480px) { .brands { top: 5px; top: 30px; max-width: 325px; height: calc(100% - 90px); } }
 
 .brandID { display: none; }
 
@@ -839,14 +848,14 @@ li { list-style: none; }
 
 #main { position: static; top: 64px; bottom: 0px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
 @media (max-width: 480px) { #main { height: -webkit-calc(100% - 67px); height: calc(100% - 67px); } }
-#main .olAlphaImg, #main .olButton { width: 45px !important; height: 45px !important; background: white; }
+#main .olAlphaImg, #main .olButton { width: 45px !important; height: 45px !important; }
 #main .olControlPanZoom { display: block; top: 300px; right: 6px !important; position: relative; }
-#main .olControlPanZoom .olButton { cursor: url(../images/Glove_point-01.svg) 0 12, auto !important; border: solid black 4px; }
+#main .olControlPanZoom .olButton { cursor: url(../images/Glove_point-01.svg) 0 12, auto !important; background: white; border: solid black 4px; }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton { display: none; } }
 #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(16px); -ms-transform: translateY(16px); -webkit-transform: translateY(16px); transform: translateY(16px); -moz-transform: translateY(13px); -ms-transform: translateY(13px); -webkit-transform: translateY(13px); transform: translateY(13px); }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(-10px); -ms-transform: translateY(-10px); -webkit-transform: translateY(-10px); transform: translateY(-10px); } }
 #main .olControlPanZoom .olButton.noZoom { pointer-events: none; }
-#main .olControlPanZoom .olButton.noZoom img { background: black; }
+#main .olControlPanZoom .olButton.noZoom img { -webkit-filter: invert(0.5); filter: invert(0.4); }
 
 .home { text-decoration: none; color: black; }
 

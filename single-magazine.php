@@ -71,17 +71,18 @@
 
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/magazines.js"></script>
 	<script>
-	//applySquiggle($('.current-page'));
-  applySquiggle($('.current')[$('.current').length-1]);
+	//applySquiggle($('.current-page'));($('.current')[$('.current').length-1]);
+applySquiggle($('.current')[$('.current').length-1]);
 
 
   function applySquiggle(el){
-		console.log('from mag')
-		console.log($(el).width());
+		//console.log('from mag')
+		//console.log($(el).width());
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19 + 16
+		//var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
     $(el).find('.squiggle').width(squigWidth)
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
-		console.log($('.current')[$('.current').length-1]);
+		//console.log($('.current')[$('.current').length-1]);
   }
 	</script>
