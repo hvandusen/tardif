@@ -76,8 +76,10 @@
 
 
   function applySquiggle(el){
+		console.log('from mag')
+		console.log($(el).width());
     $(el).append('<div class="squiggle"></div>');
-    var squigWidth = Math.floor($(el).width()/19)*19
+    var squigWidth = Math.floor($(el).width()/19)*19 + 16
     $(el).find('.squiggle').width(squigWidth)
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
 		console.log($('.current')[$('.current').length-1]);

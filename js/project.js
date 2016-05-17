@@ -9,10 +9,12 @@
 	}
 	var smallEnough = window.innerWidth < 1222;
 	var isMob =  window.innerWidth < 480;
+
 	function applySquiggle(el){
-		//console.log($(el));
+		console.log('from project')
 		$(el).append('<div class="squiggle"></div>');
-		var squigWidth = Math.floor($(el).width()/19)*19//(smallEnough? 0 : 1);
+		var squigWidth = //Math.floor($(el).width()/19)*19+19//(smallEnough? 0 : 1);
+		Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
 		$(el).find('.squiggle').width(squigWidth);
 
 		$(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');

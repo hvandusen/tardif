@@ -592,7 +592,7 @@ td, th { padding: 0; }
 .link.nav.current .squiggle { background-position: 0px 47px; background-position-y: 47px; }
 .link.nav.current .squiggle:before { bottom: 14px; }
 .link.nav.current .squiggle:after { bottom: 14px; }
-@media (max-width: 480px) { .link.nav.current .squiggle { background-position: 0px 28px; background-position-y: 28px; background-position-y: 33px; }
+@media (max-width: 480px) { .link.nav.current .squiggle { background-position: 4px 28px; background-position-y: 28px; background-position-y: 33px; }
   .link.nav.current .squiggle:before { border-bottom: solid black 2px; display: none; }
   .link.nav.current .squiggle:after { border-bottom: solid black 2px; display: none; } }
 

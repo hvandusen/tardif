@@ -135,6 +135,7 @@ function getPointMobile(w){
 	var setup = 0;
 
 	function applySquiggle(el){
+		console.log('from editorial')
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19
     $(el).find('.squiggle').width(squigWidth)

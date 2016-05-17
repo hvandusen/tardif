@@ -164,15 +164,19 @@ $(function(){
     $('.envelope').hide();
   });
 
-  applySquiggle('.current-page');
-  applySquiggle('.current');
+  //applySquiggle('.current-page');
+  //applySquiggle('.current');
+  squig('.current-page');
+  squig('.current');
 
 
   function applySquiggle(el){
-    console.log($(el));
+    console.log('from ajax')
     $(el).append('<div class="squiggle"></div>');
-    var squigWidth = Math.floor($(el).width()/19)*19
-    $(el).find('.squiggle').width(squigWidth)
+    var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
+    console.log($(el).width());
+    console.log(squigWidth);
+    $(el).find('.squiggle').width(squigWidth);
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
   }
 
