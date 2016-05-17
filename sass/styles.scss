@@ -1500,6 +1500,7 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 	text-align: right;
 	@include calc(max-width,'100% - 550px');
 	@extend .mini-font;
+
 	}
 
 
@@ -1799,18 +1800,20 @@ li {
 		    max-width: calc(100% - 20px);
 				width: 100%;
 				//max-width: none;
-		    text-align: right;
 		    bottom: 0px;
 		    vertical-align: text-bottom;
 		    bottom: 0px;
-		    padding-left: 20px;
+    padding-left: 1px;
 				padding-right: 10px;
 				line-height: 13px;
 				padding-bottom: 8px;
-				padding-bottom: 26px;
+				padding-bottom: 29px;
 		    				.people{
 					display:none;
 				}
+				text-align: left;
+				left:20px;
+				right:auto;
 			}
 			.book {
 				margin: 15% 0px;

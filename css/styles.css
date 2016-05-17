@@ -758,7 +758,7 @@ li { list-style: none; }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: fixed; pointer-events: none; max-width: calc(100% - 20px); width: 100%; text-align: right; bottom: 0px; vertical-align: text-bottom; bottom: 0px; padding-left: 20px; padding-right: 10px; line-height: 13px; padding-bottom: 8px; padding-bottom: 26px; }
+  .showing.season_attribution { position: fixed; pointer-events: none; max-width: calc(100% - 20px); width: 100%; bottom: 0px; vertical-align: text-bottom; bottom: 0px; padding-left: 1px; padding-right: 10px; line-height: 13px; padding-bottom: 8px; padding-bottom: 29px; text-align: left; left: 20px; right: auto; }
   .showing.season_attribution .people { display: none; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
