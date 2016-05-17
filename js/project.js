@@ -7,12 +7,14 @@
 	function mouseWheelEvent(e) {
 	    var delta = e.wheelDelta ? e.wheelDelta : -e.detail;
 	}
-
+	var smallEnough = window.innerWidth < 1222;
+	var isMob =  window.innerWidth < 480;
 	function applySquiggle(el){
 		//console.log($(el));
 		$(el).append('<div class="squiggle"></div>');
-		var squigWidth = Math.floor($(el).width()/19)*19
-		$(el).find('.squiggle').width(squigWidth)
+		var squigWidth = Math.floor($(el).width()/19)*19//(smallEnough? 0 : 1);
+		$(el).find('.squiggle').width(squigWidth);
+
 		$(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
 	}
 
@@ -47,14 +49,6 @@
 
 				}
 
-				$('.moveUp').mouseenter(function(){
-						//$(this).addClass('showtop').removeClass('moveUp');
-
-				});
-				$('.moveUp').mouseleave(function(){
-						//$(this).removeClass('showtop').addClass('moveUp');
-
-				});
 				$('.magazines  .link').mouseenter(function(){
 					return;
 					$(this).addClass('current');
@@ -72,6 +66,8 @@
 
 	});
 
+	if(window.innerWidth<480)
+		return;
 	$('.moveUp .link').mouseenter(function(e){
 		console.log('squiggle amt')
 		console.log($(this).find('.squiggle').length)
@@ -90,7 +86,6 @@
 	$('.magazines .link').mouseenter(function(){
 		if($(this).hasClass('current'))
 			return;
-
 			//console.dir($(this).hasClass('current'));
 			$(this).addClass('current');
 			$(this).addClass('squigHover');
@@ -113,19 +108,5 @@
 			$(this).removeClass('squigHover');
 			//$(this).removeClass('current');
 	});
-
-	// $('.link').mouseleave(function(e){
-	// 	if(!$(this).hasClass('squigHover')){
-	// 		console.log('hi')
-	// 		console.log($(this).hasClass('current-page'));
-	// 		return;
-	// 	}
-	//
-	// 		//$(this).removeClass('current-page');
-	// 	//$(this).find('.squiggle').remove();
-	// 	//$(this).removeClass('squigHover');
-	//
-	//
-	// })
 
 })(jQuery);

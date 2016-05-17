@@ -31,7 +31,7 @@
 	$('')
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
-
+var layer;
  var restrict = new OpenLayers.Bounds(collages[imageID]['size'][0], collages[imageID]['size'][1], 17265.000000, collages[imageID]['size'][2]);
 	function init() {
 	  var options = {
@@ -50,13 +50,17 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	  template_directory = "/wp-content/themes/tardif/images";
 	  layer = new OpenLayers.Layer.XYZ( "MapTiler layer", template_directory+'/'+imageID+"/${z}/${x}/${y}.png", {
 	    transitionEffect: 'resize',
+			buffer:1,
 	    //isBaseLayer: true,
 	    tileSize: new OpenLayers.Size(256, 256),
 	    tileOrigin: new OpenLayers.LonLat(gridBounds.left, gridBounds.top),
 	    //gutter: 0,
 			//leftTolerance: -1300,
 			wrapDateLine: true,
+			preload: 3,
+			strategies: [new OpenLayers.Strategy.Refresh({force: true})]
 	  });
+		//layer.addTile(mapBounds);
 	  map.addLayer(layer);
 	  map.zoomToExtent(new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000));
 
@@ -69,8 +73,6 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	  var editorials = [];
 	  map.addControl(new OpenLayers.Control.Navigation(
 	    {
-				dragPan: function(){
-				},
 	      zoomWheelEnabled: false,
 	      defaultClick: function(evt){
 	    }
@@ -79,19 +81,49 @@ var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], co
 	  map.addControl(new OpenLayers.Control.MousePosition({  numDigits: 0 }));
 	  map.addControl(new OpenLayers.Control.Permalink());
 	  //map.setCenter(new OpenLayers.LonLat(2077, 1.5),4)
-		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+900, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
-		var lonlat = new OpenLayers.LonLat(collages[imageID]['pos'][0], collages[imageID]['pos'][1]);
-		map.panTo(lonlat);
+		//map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+400, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
+		map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+500, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
+		lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]);
+			//map.moveTo(lonlat,4,{duration: 10});
+			//map.panTo(lonlat)
+//console.log('post')
 		//map.zoomTo(3.8);
 		return map;
 	}
-	var returnedMap = init();
+	returnedMap = init();
 
-	$(window).ready(function(i){
+//returnedMap.render(new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]));
+	$(window).load(function(i){
+		time = 0;
+
+		var i = 0;
+		var times = 50;
+	while(i<times){
+		if(layer.numLoadingTiles>0)
+break;
+			time += i/5;
+			setTimeout(function(j) {
+					return function() {
+						//console.log(layer.numLoadingTiles)
+						
+							////console.log("var is now", j);
+							lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0]+(500-10*j), collages[currentMap]['pos'][1]);
+							//lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]);
+							returnedMap.panTo(lonlat);
+							layer.strategies[0].refresh()
+							//returnedMap.zoomTo(4);
+							//returnedMap.render();
+					}
+			}(i), time);
+			i = i+1
+	}
+		//lonlat = new OpenLayers.LonLat(collages[currentMap]['pos'][0], collages[currentMap]['pos'][1]);
+		//returnedMap.panTo(lonlat);
 		//map.setCenter(new OpenLayers.LonLat(collages[currentMap]['pos'][0]+900, collages[currentMap]['pos'][1]), collages[currentMap]['pos'][2]);
 	})
 
 	var mobile = window.innerWidth<480;
+
 
 	$('.olButton').css({//'#OpenLayers_Control_PanZoom_44_zoomin, #OpenLayers_Control_PanZoom_44_zoomout').css({
 			'right': (mobile ? '10px' : '20px'),
@@ -150,7 +182,7 @@ $('.olButton').click(function(){
 $('.magazines > .link').mouseenter(function(){
 	if($(this).hasClass('current'))
 		return;
-		console.dir($(this).hasClass('current'));
+		//console.dir($(this).hasClass('current'));
 		$(this).addClass('current');
 		$(this).addClass('squigHover');
 		squig(this);

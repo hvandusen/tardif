@@ -178,8 +178,8 @@ $(function(){
 
   $('.title').click(function(){
     $('.envelope').show();
-    $('.top-bar .link.nav').addClass('current-page');
-    $(".top-bar").addClass('showAnd');
+    //$('.top-bar .link.nav').addClass('current-page');
+    //$(".top-bar").addClass('showAnd');
   })
 });
 </script>

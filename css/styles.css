@@ -549,12 +549,14 @@ td, th { padding: 0; }
 
 .bottom-bar { position: fixed; clear: both; background: white; border-top: solid black 4px; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; height: 55px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
 .bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
-.bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; visibility: hidden; }
-.bottom-bar .title:hover:before { content: "Pierre Tardif"; color: transparent; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg); background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: repeat-x; background-position: 0px 54px; background-position-y: 55px; }
-.bottom-bar .title:hover:after { content: "ABOUT"; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; }
+.bottom-bar .title span { padding-left: 4px; }
+.bottom-bar .title:hover { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
+.bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); background-repeat: repeat-x; background-size: auto 7px; background-position: 0px 5px; animation: scroller 5s linear infinite; }
+.bottom-bar .title:hover span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
+.bottom-bar .title:hover:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 @media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }
-.bottom-bar .title:after { width: 523px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
+.bottom-bar .title:after { display: none; width: 523px; opacity: 0; content: "ABOUT"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 17px; position: fixed; line-height: 1.6em; } }
 .bottom-bar .art-dir { display: inline; }
 
@@ -576,20 +578,23 @@ td, th { padding: 0; }
 @keyframes scroller { 0% { background-position-x: 0%; }
   100% { background-position-x: -100%; } }
 .squiggle { font-family: monospace; color: transparent; display: inline-block; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: repeat-x; background-position: 0px 54px; background-position-y: 55px; }
-@media (min-width: 480px) { .squiggle:hover { animation: scroller 10s linear infinite; } }
+@media (max-width: 480px) { .squiggle { background-size: auto 4px; height: 44px; } }
+.squiggle:hover { animation: scroller 10s linear infinite; }
 .squiggle:before { content: 'a '; color: transparent; border-bottom: solid black 4px; width: 10px; height: 10px; position: absolute; left: -10px; bottom: 6px; pointer-events: none; }
 .squiggle:after { content: 'a '; color: transparent; border-bottom: solid black 4px; width: 10px; height: 10px; position: absolute; right: -10px; bottom: 6px; pointer-events: none; }
-@media (max-width: 480px) { .squiggle { background-position: 0px 35px; background-position-y: 35px; background-size: auto 5px; height: 45px; }
+@media (min-width: 1100px) { .squiggle:after { width: 15px; right: -15px; } }
+@media (max-width: 480px) { .squiggle { background-position: 0px 35px; background-position-y: 35px; background-size: auto 5px; height: 45px; background-size: auto 4px; height: 44px; }
+  .squiggle:after { width: 15px; right: -15px; }
   .squiggle:before { border-bottom: solid black 2px; }
   .squiggle:after { border-bottom: solid black 2px; } }
 
-.link.nav.current { color: black; position: relative; border-bottom: solid white 5px; padding-bottom: 11px; }
+.link.nav.current { color: black; position: relative; border-bottom: solid white 3px; padding-bottom: 11px; }
 .link.nav.current .squiggle { background-position: 0px 47px; background-position-y: 47px; }
 .link.nav.current .squiggle:before { bottom: 14px; }
 .link.nav.current .squiggle:after { bottom: 14px; }
-@media (max-width: 480px) { .link.nav.current .squiggle { background-position: 0px 28px; background-position-y: 28px; }
-  .link.nav.current .squiggle:before { border-bottom: solid black 2px; }
-  .link.nav.current .squiggle:after { border-bottom: solid black 2px; } }
+@media (max-width: 480px) { .link.nav.current .squiggle { background-position: 0px 28px; background-position-y: 28px; background-position-y: 33px; }
+  .link.nav.current .squiggle:before { border-bottom: solid black 2px; display: none; }
+  .link.nav.current .squiggle:after { border-bottom: solid black 2px; display: none; } }
 
 .link.nav.current-page { color: black; position: relative; border-width: 0px 0px 20px; -moz-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; -webkit-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; -o-border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; border-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg) 15 22 14 6 repeat; border-image-slice: 3 27 3 27; border-image-width: 0px 0px 14px 0px; border-image-outset: 0px 0px 0px 0px; border-image-repeat: round round; border: none; border-bottom: solid white 4px; padding-bottom: 9px; }
 .link.nav.current-page:after { content: attr(squig_width); font-family: monospace; color: transparent; font-size: 31px; /* width: 76px; */ position: absolute; left: 0; background-image: url(http://candusen.net/imgs/squigz_try7_upperbar-thinner.svg); height: 66px; /* background: white; */ z-index: 230; background-size: auto 7px; background-repeat-y: no-repeat; background-repeat: no-repeat; background-position: 0px 55px; background-position-y: 55px; }
@@ -729,7 +734,7 @@ li { list-style: none; }
 
 .copied { -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); }
 
-.envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 24.6px 32px; z-index: 2002; }
+.envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 13.6px 32px; z-index: 2002; }
 .envelope img, .copied img { max-height: 27px; }
 
 @media (max-height: 809px) { .season_image { width: 70%; max-height: 80%; } }
@@ -759,9 +764,9 @@ li { list-style: none; }
   .magazine { margin-top: 0px; }
   .top-bar { font-size: 17px; height: 36px; line-height: 36px; }
   .top-bar.ads { height: 64px; line-height: 1.4em; display: none; }
-  .top-bar.magazines, .top-bar.ads, .top-bar.single_book { top: 0px; z-index: 5000; height: 33px; transform: translateY(0px); padding-top: 2px; font-size: 16px; padding-top: 2px; overflow-x: hidden; line-height: 1.8em; }
+  .top-bar.magazines, .top-bar.ads, .top-bar.single_book { top: 0px; z-index: 5000; height: 33px; transform: translateY(0px); padding-top: 2px; font-size: 16px; padding-top: 2px; overflow-x: hidden; overflow: visible; line-height: 1.8em; border-bottom: solid black 2px; }
   .top-bar.ads { line-height: 1.8em; }
-  .top-bar.moveUp { z-index: 9000; transform: translateY(0px); }
+  .top-bar.moveUp { z-index: 9000; transform: translateY(0px); border-bottom: solid black 2px; }
   .envelope, .copied { padding: 22px 32px; z-index: 2002; position: static; padding: 20px 30px; padding-bottom: 0px; display: inline-block; font-size: 18px; padding: 33px 0 0px 0; }
   .envelope img, .copied img { max-height: 20px; }
   .envelope img:HOVER, .copied img:HOVER { opacity: 0.6; }
@@ -834,14 +839,14 @@ li { list-style: none; }
 
 #main { position: static; top: 64px; bottom: 0px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
 @media (max-width: 480px) { #main { height: -webkit-calc(100% - 67px); height: calc(100% - 67px); } }
-#main .olAlphaImg, #main .olButton { width: 45px !important; height: 45px !important; }
+#main .olAlphaImg, #main .olButton { width: 45px !important; height: 45px !important; background: white; }
 #main .olControlPanZoom { display: block; top: 300px; right: 6px !important; position: relative; }
 #main .olControlPanZoom .olButton { cursor: url(../images/Glove_point-01.svg) 0 12, auto !important; border: solid black 4px; }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton { display: none; } }
 #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(16px); -ms-transform: translateY(16px); -webkit-transform: translateY(16px); transform: translateY(16px); -moz-transform: translateY(13px); -ms-transform: translateY(13px); -webkit-transform: translateY(13px); transform: translateY(13px); }
 @media (max-width: 480px) { #main .olControlPanZoom .olButton:last-of-type { -moz-transform: translateY(-10px); -ms-transform: translateY(-10px); -webkit-transform: translateY(-10px); transform: translateY(-10px); } }
 #main .olControlPanZoom .olButton.noZoom { pointer-events: none; }
-#main .olControlPanZoom .olButton.noZoom img { -webkit-filter: invert(1); filter: invert(1); }
+#main .olControlPanZoom .olButton.noZoom img { background: black; }
 
 .home { text-decoration: none; color: black; }
 

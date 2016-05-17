@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Pierre Tardif, Art Directo</title>
+	<title>Pierre Tardif, Art Director</title>
 	<meta name="Description" CONTENT="Pierre Tardif is a New York based art director and graphic designer.
 Tardif is best known for his work as Design Director of WSJ., a monthly style magazine published by The Wall Street Journal. ">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
