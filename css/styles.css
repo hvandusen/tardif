@@ -828,7 +828,7 @@ li { list-style: none; }
 .next { padding: 25px; float: right; }
 
 .brands { height: 100%; position: relative; top: -32px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
-@media (max-width: 480px) { .brands { top: 5px; top: 30px; max-width: 325px; height: calc(100% - 90px); } }
+@media (max-width: 480px) { .brands { top: 5px; top: 40px; max-width: 325px; height: calc(100% - 90px); } }
 
 .brandID { display: none; }
 

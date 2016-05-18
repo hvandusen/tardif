@@ -72,7 +72,7 @@
 	<script src="<?php echo get_bloginfo('template_directory'); ?>/js/compressed/magazines.js"></script>
 	<script>
 	//applySquiggle($('.current-page'));($('.current')[$('.current').length-1]);
-applySquiggle($('.current')[$('.current').length-1]);
+squig($('.current')[$('.current').length-1]);
 
 
   function applySquiggle(el){

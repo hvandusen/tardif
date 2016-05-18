@@ -170,8 +170,8 @@ $(function(){
   squig('.current');
 
 
-  function applySquiggler(el){
-    //console.log('from ajax')
+  function applySquiggle(el){
+    console.log('from ajax')
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
     $(el).find('.squiggle').width(squigWidth);

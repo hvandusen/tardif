@@ -10,7 +10,7 @@ var mapMaxResolution = 0.500000;
 	var collages = {
 		185: {
 			size: [-20000.000000, -4590.000000,0],
-			pos: [(isMob? 4190 : 4200), (isMob? -1704 : -1904), zLevel],
+			pos: [(isMob? 4290 : 4200), (isMob? -1704 : -1904), zLevel],
 				map : [-4608.000000, 7168.000000],
 		},
 		186: {
