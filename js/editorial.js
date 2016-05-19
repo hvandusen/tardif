@@ -103,7 +103,7 @@ if(rangeY<0)
 
 function getPointMobile(w){
 	rangeX = w*.15;
-	rangeY = (window.innerHeight-300);
+	rangeY = (window.innerHeight-270);
 	if(rangeY>200)
 		rangeY =(window.innerHeight-400);
 	return {

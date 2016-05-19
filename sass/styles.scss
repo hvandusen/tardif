@@ -743,7 +743,7 @@ $bord: solid black 4px;
 
 .mini-font {
 	font-family: Grotesk;
-	font-size: 16px;
+	font-size: 15px;
 	@media(max-width: 480px){
 				font-size: 13px;
 	}
@@ -1225,6 +1225,10 @@ height: 44px;
 						}
 					}
 		}
+		@media(max-width: 480px){
+			border-bottom: solid white 2px;
+			padding-bottom: 10px;
+		}
 }
 
 .page-id-365 .title{
@@ -1558,10 +1562,11 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 	position: fixed;
 	bottom: 20px;
 	right: 0px;
+	    line-height: 1.2em;
 	padding-right: 40px;
 	z-index: 3000;
-	bottom: 4px;
-		max-width: 65%;
+	bottom: 11px;//4px;
+	max-width: 65%;
 	text-align: right;
 	@include calc(max-width,'100% - 550px');
 	@extend .mini-font;
@@ -1875,6 +1880,8 @@ li {
 				padding-bottom: 8px;
 				padding-bottom: 29px;
 				bottom:	auto;
+				bottom: 11px;
+				top:auto;
 				text-align: left;
 				@include calc(left, '(100% - 305px) / 2');
 				right:auto;
@@ -2125,7 +2132,7 @@ li {
 
 	 @media(max-width: 480px){
 		 top: 5px;
-		 top: 40px;
+		 //top: 40px;
 		 max-width: 325px;
 		 height: calc(100% - 90px);
 	 }
@@ -2482,8 +2489,9 @@ $grabbing: url(../images/Glove_point_dragging.svg) 0 0, auto;
 	}
 	@media (max-width:480px){
 		.bottom-bar{
+
 			border-bottom: none!important;
-			border-top: none;
+			border-top: solid black 2px;//none;
 			    bottom: 0px!important;
 		}
 	}

@@ -504,7 +504,7 @@ td, th { padding: 0; }
 .small-font { font-family: Grotesk; font-size: 13px; }
 @media (max-width: 480px) { .small-font { font-size: 10px; } }
 
-.mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 16px; }
+.mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 15px; }
 @media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 13px; } }
 
 .top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 56px; line-height: 56px; left: 0; }
@@ -596,6 +596,7 @@ td, th { padding: 0; }
 @media (max-width: 480px) { .link.nav.current .squiggle { background-position: 4px 28px; background-position-y: 28px; background-position-y: 33px; }
   .link.nav.current .squiggle:before { border-bottom: solid black 2px; display: none; }
   .link.nav.current .squiggle:after { border-bottom: solid black 2px; display: none; } }
+@media (max-width: 480px) { .link.nav.current { border-bottom: solid white 2px; padding-bottom: 10px; } }
 
 .page-id-365 .title { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
 .page-id-365 .title span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); background-repeat: repeat-x; background-size: auto 7px; background-position: 0px 5px; }
@@ -687,7 +688,7 @@ background: linear-gradient(to bottom,  #aebc16 0%,#e93cec 47%);
 
 .brand { list-style: none; }
 
-.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; padding-right: 40px; z-index: 3000; bottom: 4px; max-width: 65%; text-align: right; max-width: -webkit-calc(100% - 550px); max-width: calc(100% - 550px); }
+.active > .season_attribution { position: fixed; bottom: 20px; right: 0px; line-height: 1.2em; padding-right: 40px; z-index: 3000; bottom: 11px; max-width: 65%; text-align: right; max-width: -webkit-calc(100% - 550px); max-width: calc(100% - 550px); }
 
 .active .brand_title { font-weight: bold; }
 
@@ -768,7 +769,7 @@ li { list-style: none; }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
   @keyframes showtop { from { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
     to { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); } }
-  .showing.season_attribution { position: fixed; pointer-events: none; max-width: calc(100% - 20px); max-width: 326px; bottom: 0px; vertical-align: text-bottom; top: 45px; padding-left: 1px; padding-right: 10px; line-height: 13px; padding-bottom: 8px; padding-bottom: 29px; bottom: auto; text-align: left; left: -webkit-calc((100% - 305px) / 2); left: calc((100% - 305px) / 2); right: auto; font-size: 12px; }
+  .showing.season_attribution { position: fixed; pointer-events: none; max-width: calc(100% - 20px); max-width: 326px; bottom: 0px; vertical-align: text-bottom; top: 45px; padding-left: 1px; padding-right: 10px; line-height: 13px; padding-bottom: 8px; padding-bottom: 29px; bottom: auto; bottom: 11px; top: auto; text-align: left; left: -webkit-calc((100% - 305px) / 2); left: calc((100% - 305px) / 2); right: auto; font-size: 12px; }
   .book { margin: 15% 0px; }
   .magazine { margin-top: 0px; }
   .top-bar { font-size: 17px; height: 36px; line-height: 36px; }
@@ -828,7 +829,7 @@ li { list-style: none; }
 .next { padding: 25px; float: right; }
 
 .brands { height: 100%; position: relative; top: -32px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
-@media (max-width: 480px) { .brands { top: 5px; top: 40px; max-width: 325px; height: calc(100% - 90px); } }
+@media (max-width: 480px) { .brands { top: 5px; max-width: 325px; height: calc(100% - 90px); } }
 
 .brandID { display: none; }
 
@@ -924,7 +925,7 @@ li { list-style: none; }
 .magazine-issuez a { color: black; }
 .magazine-issuez a:hover { color: black; }
 
-@media (max-width: 480px) { .bottom-bar { border-bottom: none !important; border-top: none; bottom: 0px !important; } }
+@media (max-width: 480px) { .bottom-bar { border-bottom: none !important; border-top: solid black 2px; bottom: 0px !important; } }
 #landscape { position: fixed; width: 100%; height: 100%; left: 30000; top: 0; text-align: center; display: flex; flex-direction: column; justify-content: space-around; align-content: stretch; visibility: hidden; }
 
 @media (max-width: 740px) and (orientation: landscape) { body { visibility: hidden; }
