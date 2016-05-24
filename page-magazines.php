@@ -41,7 +41,7 @@
 			//else {
 			//	$linkClass = '';
 			//}
-				echo '<a style="display:inline" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" '.$linkClass .'
+				echo '<a style="display:inline" rel="nofollow" class="pdf_overlay pdf-overlay-' . $pdfCount . '" target="_blank" '.$linkClass .'
 				data-img="background-image: url(' . $row['image']['sizes']['small'] . ')">';
 
 				if($pdfCount===count($pdfs)){

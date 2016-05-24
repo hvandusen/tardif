@@ -56,7 +56,7 @@ $(window).scroll(function(e){
 	});
 
   $('.book_role').hide();
-
+if(window.innerWidth>480)
 	$('.book').mouseenter(function(){
 		//$(this).find('.book_role').text('she suckin');
 		$(this).find('.book_role').show();

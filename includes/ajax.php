@@ -11,6 +11,7 @@ $(function(){
   // gets the url from the hash and displays either our cached content or fetches
   // new content to be displayed.
   $(window).bind( 'hashchange', function(e) {
+    console.log(e.fragment);
     //if it's a magazine page(or the home page..)
     if((e.fragment.indexOf('magazine')>-1 || e.fragment === '') && window.location.pathname.indexOf('about')===-1){
       $($('.link')[0]).addClass('current-page');
@@ -19,9 +20,10 @@ $(function(){
     else if(e.fragment.indexOf('books')>-1){
       $($('.link')[1]).addClass('current-page');
       $('.top-bar').css('position','fixed');
+      console.log('fix it!!!')
     }
-    else if(e.fragment.indexOf('advertising')>-1){
-      $($('.link')[2]).addClass('current-page');
+    else if(e.fragment.indexOf('book-')>-1){
+      //$($('.link')[2]).addClass('current-page');
       $('.top-bar').css('position','relative');
     }
     //else it's the about page

@@ -59,7 +59,7 @@ function getClosest(width){
 				$(e).addClass('word-'+i).attr("data-text",$(this).html());
 			});
 				var justHovered;
-				if(window.innerHeight>480){
+				if(window.innerWidth>480){
 						$("#bio p span").mouseenter(function(){
 							justHovered = $(this);
 						//	newClass = 'hovered-'+Math.floor(Math.random()*100);//($(this).className.indexOf(hovered)>-1 ? 'hovered-'+Math.random() : 'hovered')
