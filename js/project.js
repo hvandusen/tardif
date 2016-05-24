@@ -25,12 +25,12 @@ function getClosest(width){
 }
 	function applySquiggle(el){
 		//console.log('from project')
-		var is_current = el ==='.current' || $(el).hasClass('current');
+		var is_brand = $(el).hasClass('current');
 		//console.log(el === '.current' && window.innerWidth<480)
 		$(el).append('<div class="squiggle"></div>');
 		//var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
 		//var squigWidth = Math.floor($(el).width()/19)*19+(is_current && window.innerWidth<480 ? 16 : 0);
-		var squigWidth = Math.ceil($(el).width()/25)*24.9+(is_current && window.innerWidth<480 ? 22 : 0);
+		var squigWidth = Math.ceil($(el).width()/25)*24.9+(is_brand && window.innerWidth<480 ? 22 : 0);
 		if(squigWidth<50)
 			squigWidth = 50;
 			squigWidth = getClosest($(el).width());

@@ -153,6 +153,9 @@ function getPointMobile(w){
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19
 		squigWidth = getClosest($(el).width())
+		if( $(el).hasClass('top-brand') && squigWidth === 116)
+			squigWidth+=5;
+		console.log()
 		$(el).find('.squiggle').width(squigWidth)
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
 		$(el).find('.squiggle').css('height',100+'px');
