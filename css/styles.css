@@ -557,7 +557,7 @@ td, th { padding: 0; }
 .bottom-bar .title:hover:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 @media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }
-.bottom-bar .title:after { display: none; width: 523px; opacity: 0; content: "About Pierre Tardif"; position: absolute; left: 0; z-index: 8000; }
+.bottom-bar .title:after { display: none; width: 523px; opacity: 0; content: "About PIERRE TARDIF"; position: absolute; left: 0; z-index: 8000; }
 @media (max-width: 480px) { .bottom-bar .title { padding-left: 17px; font-size: 17px; position: fixed; line-height: 1.6em; } }
 .bottom-bar .art-dir { display: inline; }
 
