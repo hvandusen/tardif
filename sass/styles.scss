@@ -749,10 +749,6 @@ $bord: solid black 4px;
 	}
 }
 
-.page-id-90 .top-bar{
-	position:fixed;
-}
-
 .top-bar {
 	z-index: 5;
  background: white;
@@ -2157,7 +2153,7 @@ li {
   }
 	.brand_title{
 		position: relative;
-		&.revealed {
+		//&.revealed {
 			color:black;
 			.squiggle {
 				//background-position-y: 47px;
@@ -2170,7 +2166,7 @@ li {
 					border: none;
 				}
 			}
-		}
+		//}
 	}
 
   .brand_title:hover {

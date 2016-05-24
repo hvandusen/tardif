@@ -507,8 +507,6 @@ td, th { padding: 0; }
 .mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 15px; }
 @media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 13px; } }
 
-.page-id-90 .top-bar { position: fixed; }
-
 .top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 56px; line-height: 56px; left: 0; }
 .top-bar.showAnd { color: black; }
 
@@ -837,11 +835,10 @@ li { list-style: none; }
 
 .brand_titles { position: fixed; bottom: 0; right: 12px; width: 40%; z-index: 5000; }
 
-.brand_title { position: relative; }
-.brand_title.revealed { color: black; }
-.brand_title.revealed .squiggle { background-position: -19px 48px; }
-.brand_title.revealed .squiggle:before { border: none; }
-.brand_title.revealed .squiggle:after { border: none; }
+.brand_title { position: relative; color: black; }
+.brand_title .squiggle { background-position: -19px 48px; }
+.brand_title .squiggle:before { border: none; }
+.brand_title .squiggle:after { border: none; }
 
 .brand_title:hover { color: black; }
 

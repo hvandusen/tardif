@@ -134,7 +134,7 @@ function getPointMobile(w){
 	}
 	var setup = 0;
 	//var squigWidths = [49,66,74,91,98,121,147,164,171,189,196,220,238,245];
-	var squigWidths =isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,115,121,147,164,171,189,196,213,238,245];
+	var squigWidths =isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,121,147,164,171,189,196,213,238,245];
 	function getClosest(width){
 		var closest = 1000;
 		ret = 0;
@@ -155,6 +155,8 @@ function getPointMobile(w){
 		squigWidth = getClosest($(el).width())
 		$(el).find('.squiggle').width(squigWidth)
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
+		$(el).find('.squiggle').css('height',100+'px');
+
 		//console.log($('.current')[$('.current').length-1]);
   }
 
@@ -164,6 +166,7 @@ function getPointMobile(w){
 			setup === 0 && $('.brand_title').removeClass('revealed');
 			setup++;
 			$(this).addClass('revealed');
+			$(this).find('.squiggle').remove();
 			applySquiggle(this);
 			$('.black').removeClass('black');
 			if(clickCount===0){
@@ -182,7 +185,6 @@ function getPointMobile(w){
 			});
 		});
 		$('.season_image').click(function(){
-
 			$(this).removeClass('active');
 			$(this).addClass('inactive');
 			var brand = $(this).closest('.seasons');
@@ -211,6 +213,32 @@ if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 	'max-height':'none'
 	})
 }
+
+	if(window.innerWidth>480){
+
+		$('.top-brand').mouseenter(function(){
+			if($(this).hasClass('revealed'))
+				return;
+				////console.dir($(this).hasClass('current'));
+				//$(this).addClass('current');
+				$(this).addClass('squigHover');
+				applySquiggle(this);
+		});
+
+		$('.top-brand').mouseleave(function(){
+				if(!$(this).hasClass('squigHover') || $(this).hasClass('revealed'))
+					return;
+					//if($(this).hasClass('actual'))
+					//	return;
+				////console.log('was a hover squig')
+				$(this).find('.squiggle').hide()
+				$(this).find('.squiggle').remove();
+				//$(this).removeClass('current');
+				//$(this).removeClass('current-page');
+				$(this).removeClass('squigHover');
+				//$(this).removeClass('current');
+		});
+	}
 
 
 })(jQuery);
