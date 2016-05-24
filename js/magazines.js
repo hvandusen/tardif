@@ -4,31 +4,28 @@
 	var mapMinZoom = 0;
 	var mapMaxZoom = 6;
 	var isMob = window.innerWidth < 480;
-	var zLevel = isMob? 3.7:4;
+	var zLevel = isMob? 3 : 4;
 var mapMaxResolution = 0.500000;
 
 	var collages = {
 		185: {
 			size: [-20000.000000, -4590.000000,0],
-			pos: [(isMob? 4290 : 4200), (isMob? -1704 : -1904), zLevel],
+			pos: [4200, -1904, zLevel],
 				map : [-4608.000000, 7168.000000],
 		},
 		186: {
 			size: [-20000.000000, -2920.000000, 0],
-			pos: [750, (isMob? -1804 : -1954),zLevel],
+			pos: [750, -1954,zLevel],
 			map : [-2560.000000, 7168.000000]
 		},
 		187: {
 			size: [-20000.000000, -3190.000000,-150.000000],
-			pos: [(isMob? 5232 : 4452), (isMob? -2040 : -2210),zLevel],
+			pos: [4452, -2210 ,zLevel],
 			map : [-3072.000000, 8192.000000]
 		}
 	}
 
 	imageID =currentMap;
-	//if(currentMap === 187)
-	//	$('.issues-text').hide()
-	//var gridBounds = new OpenLayers.Bounds(0.000000, -4302.000000, 7265.000000, 0.000000);
 	var homePageAction = window.location.hash === '';
 var gridBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);
 	var mapBounds = new OpenLayers.Bounds(0.000000, collages[imageID]['map'][0], collages[imageID]['map'][1], 0.000000);

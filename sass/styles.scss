@@ -749,6 +749,10 @@ $bord: solid black 4px;
 	}
 }
 
+.page-id-90 .top-bar{
+	position:fixed;
+}
+
 .top-bar {
 	z-index: 5;
  background: white;
@@ -887,7 +891,7 @@ $bord: solid black 4px;
 	}
 	&.moveUp {
 		z-index: 10;
-		position: relative;
+		//position: relative;
 		border-bottom: solid black 4px;
 		animation: hidetops .5s ease-out;
 				&:hover {
@@ -915,6 +919,7 @@ $bord: solid black 4px;
 	  }
 	&.ads, &.single_book {
 		    line-height: 56px;
+				line-height: 48px;
 				@extend .medium-font;
 				position: relative;
 	 animation: mymove .5s ease-out;

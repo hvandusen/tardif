@@ -10,7 +10,7 @@
 	var smallEnough = window.innerWidth < 1222;
 	var isMob =  window.innerWidth < 480;
 	window.isMob = isMob;
-var squigWidths =isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,115,121,147,164,171,189,196,220,238,245];
+var squigWidths =isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,115,121,147,164,171,189,196,213,238,245];
 
 function getClosest(width){
 	var closest = 1000;

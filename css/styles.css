@@ -507,6 +507,8 @@ td, th { padding: 0; }
 .mini-font, .active > .season_attribution, .mag-role, .book_role { font-family: Grotesk; font-size: 15px; }
 @media (max-width: 480px) { .mini-font, .active > .season_attribution, .mag-role, .book_role { font-size: 13px; } }
 
+.page-id-90 .top-bar { position: fixed; }
+
 .top-bar { z-index: 5; background: white; position: static; top: 0; width: 100%; text-align: center; height: 56px; line-height: 56px; left: 0; }
 .top-bar.showAnd { color: black; }
 
@@ -536,12 +538,12 @@ td, th { padding: 0; }
 @media (max-width: 1233px) { .top-bar { font-size: 34px; } }
 @media (max-width: 633px) { .top-bar { font-size: 21px; line-height: 2.5em; } }
 .top-bar.showTop { z-index: 10; position: relative; }
-.top-bar.moveUp { z-index: 10; position: relative; border-bottom: solid black 4px; animation: hidetops .5s ease-out; }
+.top-bar.moveUp { z-index: 10; border-bottom: solid black 4px; animation: hidetops .5s ease-out; }
 .top-bar.moveUp:hover { -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
 .top-bar.moveDown { position: relative; animation: showtops .5s ease-out; cursor: default; -moz-transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); transform: translateY(0px); }
 .top-bar.magazines, .top-bar.ads, .top-bar.single_book { height: 48px; color: black; }
 .top-bar.magazines { line-height: 48px; z-index: 5; position: relative; animation: mymove .5s ease-out; border-bottom: solid black 4px; }
-.top-bar.ads, .top-bar.single_book { line-height: 56px; position: relative; animation: mymove .5s ease-out; border-bottom: solid black 4px; }
+.top-bar.ads, .top-bar.single_book { line-height: 56px; line-height: 48px; position: relative; animation: mymove .5s ease-out; border-bottom: solid black 4px; }
 @media (max-width: 633px) { .top-bar.ads, .top-bar.single_book { font-size: 25.5px; line-height: 1.2em; margin-top: 5px; border-bottom: solid black 2px; } }
 .top-bar.ads.goaway { animation: mymoveup .5s ease-out; }
 .top-bar.ads { border-bottom: solid black 4px; }
@@ -551,7 +553,7 @@ td, th { padding: 0; }
 .bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
 .bottom-bar .title span { padding-left: 4px; }
 .bottom-bar .title:hover { color: white; cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
-.bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); color: black; background-repeat: repeat-x; background-size: auto 9px; background-position: 0px 5px; animation: scroller 5s linear infinite; }
+.bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg); color: black; background-repeat: repeat-x; background-size: auto 9px; background-position: 0px 2px; animation: scroller 5s linear infinite; }
 .bottom-bar .title:hover span:before { content: 'About '; }
 .bottom-bar .title:hover span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
 .bottom-bar .title:hover:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
