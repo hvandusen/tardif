@@ -9,16 +9,31 @@
 	}
 	var smallEnough = window.innerWidth < 1222;
 	var isMob =  window.innerWidth < 480;
+	window.isMob = isMob;
+var squigWidths =isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,115,121,147,164,171,189,196,220,238,245];
 
+function getClosest(width){
+	var closest = 1000;
+	ret = 0;
+	squigWidths.map(function(e){
+		if(Math.abs(width-e)<closest){
+			ret = e;
+			closest = Math.abs(width-e);
+		}
+	});
+	return ret;
+}
 	function applySquiggle(el){
 		//console.log('from project')
 		var is_current = el ==='.current' || $(el).hasClass('current');
-		console.log(el);
-		console.log( $(el).hasClass('current'))
 		//console.log(el === '.current' && window.innerWidth<480)
 		$(el).append('<div class="squiggle"></div>');
 		//var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
-		var squigWidth = Math.floor($(el).width()/19)*19+(is_current && window.innerWidth<480 ? 16 : 0);
+		//var squigWidth = Math.floor($(el).width()/19)*19+(is_current && window.innerWidth<480 ? 16 : 0);
+		var squigWidth = Math.ceil($(el).width()/25)*24.9+(is_current && window.innerWidth<480 ? 22 : 0);
+		if(squigWidth<50)
+			squigWidth = 50;
+			squigWidth = getClosest($(el).width());
 		//console.log($(el).width())
 		//console.log(squigWidth)
 		$(el).find('.squiggle').width(squigWidth);

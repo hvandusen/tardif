@@ -977,8 +977,8 @@ $bord: solid black 4px;
 	    	background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg);
 				color: black;
 				background-repeat: repeat-x;
-				background-size: auto 7px;
-				background-position: 0px 5px;
+				background-size: auto 9px;
+				background-position: 0px 2px;
 				animation: scroller 5s linear infinite;
 				&:before {
 					content: 'About ';
@@ -1142,10 +1142,11 @@ margin-right: 12px;
 	height: 66px;
 /* background: white; */
 z-index: 230;
-background-size: auto 7px;
+//background-size: auto 7px;
+background-size: auto 9px;
 background-repeat-y: no-repeat;
 background-repeat:repeat-x ;
-background-position: 0px 54px;
+background-position: -22px 54px;
 background-position-y: 55px;
 //margin-left: 4px;
 
@@ -1203,8 +1204,8 @@ height: 44px;
 		border-bottom: solid white 3px;
     padding-bottom: 11px;
 		.squiggle {
-			background-position: 0px 47px;
-			    background-position-y: 47px;
+			background-position: -18px 48px;
+			    background-position-y: 48px;
 					&:before{
 						bottom: 14px;
 					}
@@ -1237,13 +1238,13 @@ height: 44px;
 		cursor:  $glove_info;
 		//visibility: hidden;
 		span {
-			padding: 15px 0 0 4px;
+			padding: 15px 10px 0 4px;
 			position: relative;
 		 background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg);
 
 		 background-repeat: repeat-x;
-		 background-size: auto 7px;
-		 background-position: 0px 5px;
+		 background-size: auto 9px;
+		 background-position: -34px 2px;
 		 &:hover {
 			 animation: scroller 5s linear infinite;
 		 }
@@ -2154,8 +2155,9 @@ li {
 		&.revealed {
 			color:black;
 			.squiggle {
-				background-position-y: 47px;
-				background-image: url(http://candusen.net/imgs/squigz_try7_ads.svg);
+				//background-position-y: 47px;
+				    background-position: -19px 48px;
+				//background-image: url(http://candusen.net/imgs/squigz_try7_ads.svg);
 				&:before{
 					border: none;
 				}

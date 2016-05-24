@@ -169,11 +169,26 @@ $(function(){
   squig('.current-page');
   squig('.current');
 
+  //var squigWidths = [49,66,74,91,98,115,121,147,164,171,189,196,220,238,245];
+  var squigWidths =isMob ? [11,16,22,27,33,38,43,49,54,60,65,71,76,82,87,98,103,109,114] :[49,66,74,91,98,115,121,147,164,171,189,196,220,238,245];
+  function getClosest(width){
+  	var closest = 1000;
+  	ret = 0;
+  	squigWidths.map(function(e){
+  		if(Math.abs(width-e)<closest){
+  			ret = e;
+  			closest = Math.abs(width-e);
+  		}
+  	});
+  	return ret;
+  }
+
 
   function applySquiggle(el){
     console.log('from ajax')
     $(el).append('<div class="squiggle"></div>');
     var squigWidth = Math.floor($(el).width()/19)*19+(el === '.current' && window.innerWidth<480 ? 16 : 0);
+    squigWidth = getClosest($(el).width())
     $(el).find('.squiggle').width(squigWidth);
     $(el).find('.squiggle').css('margin-left',-(squigWidth-$(el).width)/2+'px');
   }

@@ -27,9 +27,9 @@ Tardif is best known for his work as Design Director of WSJ., a monthly style ma
 <div id="container" class=' <?php echo the_title().'page'; ?>'>
     <header id="header">
 	    <div class='top-bar  moveUp'>
-		    <a class='link nav<?php if($theId === 1){ echo ' current-page'; }?>' href='/#magazine-wsj'>EDITORIAL</a>,
-		    <a class='link nav <?php if($theId === 9){ echo ' current-page'; }?>' href='/#books'>BOOKS</a>, AND
-		    <a class='link nav' href='/#advertising'>ADVERTISING</a>
+		    <a class='edit-link link nav<?php if($theId === 1){ echo ' current-page'; }?>' href='/#magazine-wsj'>EDITORIAL</a>,
+		    <a class='books-link link nav <?php if($theId === 9){ echo ' current-page'; }?>' href='/#books'>BOOKS</a>, AND
+		    <a class='ads-link link nav' href='/#advertising'>ADVERTISING</a>
 	    </div>
 		 <!--<a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a> <?php //the_title(); ?> -->
     </header>
