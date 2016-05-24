@@ -975,11 +975,11 @@ $bord: solid black 4px;
 			 span {
 				 padding: 15px 0 0 4px;
 				 position: relative;
-	    	background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg);
+	    	background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner8.svg);
 				color: black;
 				background-repeat: repeat-x;
 				background-size: auto 9px;
-				background-position: 0px 2px;
+				background-position: -36px 1px;
 				animation: scroller 5s linear infinite;
 				&:before {
 					content: 'About ';
@@ -1240,12 +1240,14 @@ height: 44px;
 		//visibility: hidden;
 		span {
 			padding: 15px 10px 0 4px;
+			    padding: 15px 4px 0 4px;
 			position: relative;
-		 background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner.svg);
+		 background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner8.svg);
 
 		 background-repeat: repeat-x;
 		 background-size: auto 9px;
-		 background-position: -34px 2px;
+		 //background-position: -34px 2px;
+		     background-position: -36px 1px;
 		 &:hover {
 			 animation: scroller 5s linear infinite;
 		 }
