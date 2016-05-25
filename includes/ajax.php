@@ -22,7 +22,7 @@ $(function(){
       $('.top-bar').css('position','fixed');
       console.log('fix it!!!')
     }
-    else if(e.fragment.indexOf('book-')>-1){
+    else{ //if(e.fragment.indexOf('book-')>-1){
       //$($('.link')[2]).addClass('current-page');
       $('.top-bar').css('position','relative');
     }

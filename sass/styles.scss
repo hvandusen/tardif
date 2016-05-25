@@ -2437,9 +2437,9 @@ $grabbing: url(../images/Glove_point_dragging.svg) 0 0, auto;
 	 @include calc(height, '100% - 64px');
 	 height: -moz-calc(100% -  64px);
 	 @media(max-width:480px){
-		 border-bottom: solid 2px black;
+		// border-bottom: solid 2px black;
 		 @include calc(height, '100% - 35px');
-		 @include calc(height, '100% - 37px');
+		 @include calc(height, '100% - 40px');
 	 }
 	 width: 100%;
 	 background-color: #FFFFFF;
