@@ -552,9 +552,9 @@ td, th { padding: 0; }
 .bottom-bar .title span { padding-left: 4px; }
 .bottom-bar .title:hover { color: white; cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
 .bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner8.svg); color: black; background-repeat: repeat-x; background-size: auto 9px; background-position: -36px 1px; animation: scroller 9s linear infinite; }
-@media (max-width: 480px) { .bottom-bar .title:hover span { animation: none; } }
+@media (max-width: 480px) { .bottom-bar .title:hover span { animation: none; background: none; } }
 .bottom-bar .title:hover span:before { content: 'About '; }
-.bottom-bar .title:hover span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
+@media (min-width: 480px) { .bottom-bar .title:hover span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; } }
 .bottom-bar .title:hover:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 @media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }

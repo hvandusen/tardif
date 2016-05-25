@@ -983,11 +983,13 @@ $bord: solid black 4px;
 				animation: scroller 9s linear infinite;
 				@media(max-width: 480px){
 					animation:none;
+					background: none;
 				}
 				&:before {
 					content: 'About ';
 
 				}
+				@media(min-width:480px){
 				&:after {
 					content: '-----------------';
 			    position: absolute;
@@ -999,6 +1001,8 @@ $bord: solid black 4px;
 			    z-index: -1;
 			    height: 4px;
 			    background: white;
+
+				}
 				}
 			 }
 			//  &:before {
