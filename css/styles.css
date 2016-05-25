@@ -671,7 +671,7 @@ filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0;
 
 .ad_card { display: none; position: fixed; }
 
-.season_image { max-height: 57%; max-width: 40%; -moz-box-shadow: #AFAFAF 2px 2px 4px; -webkit-box-shadow: #AFAFAF 2px 2px 4px; box-shadow: #AFAFAF 2px 2px 4px; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point_x-01.svg) 24 12, auto; position: absolute; }
+.season_image { max-height: 57%; max-width: 40%; border: solid 1px #AFAFAF; top: 0; left: 0; cursor: pointer; cursor: url(../images/Glove_point_x-01.svg) 24 12, auto; position: absolute; }
 
 #bio { margin: 0 25px; margin: 5% 16%; margin-bottom: 8%; font-family: Grotesk; /*
 color: #aebc16;

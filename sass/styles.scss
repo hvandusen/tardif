@@ -1516,7 +1516,8 @@ line-height: 1.3em;
 .season_image {
   max-height: 57%;
  max-width:40%;
-@include box-shadow(#AFAFAF 2px 2px 4px);
+//@include box-shadow(#AFAFAF 2px 2px 4px);
+border: solid 1px #AFAFAF;
  top:0;
  left:0;
  cursor: pointer;
