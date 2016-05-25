@@ -13,6 +13,7 @@
 					$(this).text('pierret@gmail.com');
 	    });
 	$(".envelope").click(function(e){
+		alert();
 		e.preventDefault();
 		return;
 		 var html = $(this).html();
