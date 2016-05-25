@@ -18,7 +18,7 @@
 	        	start = o;
 
 
-	        show = Math.floor(3.5+(o.x/5)*3.5)
+	        show = Math.floor(3.5+(o.x/2)*3.5)
 
 	        if(show<7 && show>=0 && show!=angle)
 	        	{
