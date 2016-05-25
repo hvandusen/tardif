@@ -192,11 +192,20 @@ function getPointMobile(w){
 			$(this).addClass('inactive');
 			var brand = $(this).closest('.seasons');
 			if(brand.find('.inactive').length === brand.find('.season_image').length){
+				console.log('all out!!!')
 				$('.brand_title').map(function(i,e){
 					var t1 = brand.prev().text().toUpperCase();
-					var t2 = $(e).text().replace(',','').toUpperCase();
-					if(t2===t1){
+					var t2Txt = $(e).text().replace(', ','').toUpperCase()
+					if(t2Txt.indexOf('Tod')>-1){
+						t2Txt = "Tod's";
+					}
+					var t2 = $(e).text().replace(', ','').toUpperCase();
+					console.log(t1);
+					console.log(t2Txt);
+					if(t2Txt===t1){
+						console.log('removed this one!!!')
 						$(e).removeClass('revealed');
+						$(e).find('.squiggle').remove();
 						brand.find('.active').removeClass('active');
 					}
 				});
