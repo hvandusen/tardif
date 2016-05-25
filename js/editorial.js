@@ -251,6 +251,11 @@ if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 				//$(this).removeClass('current');
 		});
 	}
-
+	if(navigator.userAgent.indexOf('Mozilla')>-1){
+		$('.brands').css({
+			'height':'85%',
+		'top':'-77px'
+	});
+	}
 
 })(jQuery);

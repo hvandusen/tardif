@@ -749,6 +749,8 @@ li { list-style: none; }
 
 @media (max-width: 480px) { .email-container a { display: none; } }
 
+.word-112, .word-113, .word-114 { cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
+
 @media (min-width: 480px) { .env-mob { display: none; } }
 
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 13.6px 32px; z-index: 2002; }
@@ -835,7 +837,7 @@ li { list-style: none; }
 
 .next { padding: 25px; float: right; }
 
-.brands { height: 100%; position: relative; top: -32px; height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
+.brands { height: 100%; position: relative; top: -32px; height: -moz-calc("100% - 67px"); height: -webkit-calc(100% - 67px); height: calc(100% - 67px); }
 @media (max-width: 480px) { .brands { top: 5px; max-width: 325px; height: calc(100% - 90px); } }
 
 .brandID { display: none; }
@@ -927,7 +929,7 @@ li { list-style: none; }
 
 .magazine-issuez { background: white; position: absolute; bottom: 0; z-index: 4000; height: 64px; font-size: 27.5px; line-height: 64px; padding: 0 32px; overflow: visible; width: -webkit-calc(100% - 64px); width: calc(100% - 64px); }
 @media (max-width: 480px) { .magazine-issuez { display: none; } }
-.magazine-issuez .issues-text { line-height: 44px; bottom: 0; line-height: 40px; bottom: 0; padding: 10px 0px; }
+.magazine-issuez .issues-text { line-height: 44px; bottom: 0; background: white; line-height: 40px; bottom: 0; padding: 10px 0px; }
 .magazine-issuez a { color: black; }
 .magazine-issuez a:hover { color: black; }
 

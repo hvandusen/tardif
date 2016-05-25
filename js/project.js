@@ -56,7 +56,7 @@ function getClosest(width){
 
 		$("#bio p").lettering('words');
 			$("#bio p span").map(function(i,e){
-				$(e).addClass('word-'+i).attr("data-text",$(this).html());
+				$(e).addClass('word-'+i).attr("data-text",$(this).html().replace('&nbsp;',''));
 			});
 				var justHovered;
 				if(window.innerWidth>480){
@@ -131,5 +131,8 @@ function getClosest(width){
 			$(this).removeClass('squigHover');
 			//$(this).removeClass('current');
 	});
+	if(navigator.userAgent.indexOf('Mozilla')>-1){
+		$('.brands').css('height','100%');
+	}
 
 })(jQuery);

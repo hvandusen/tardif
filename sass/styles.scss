@@ -1769,7 +1769,9 @@ li {
 			 display: none;
 		 }
 	 }
-
+	 .word-112, .word-113, .word-114{
+		 cursor: $glove_info;
+	 }
 	 .env-mob{
 		 @media(min-width: 480px){
 			 display: none;
@@ -2158,6 +2160,7 @@ li {
    height: 100%;
 	 position: relative;
 	 top: -32px;
+	 height: -moz-calc("100% - 67px");
 	 @include calc(height, "100% - 67px");
 
 	 @media(max-width: 480px){
@@ -2507,7 +2510,8 @@ $grabbing: url(../images/Glove_point_dragging.svg) 0 0, auto;
 		@include calc(width, "100% - 64px");
 		.issues-text {
 			line-height: 44px;
-						bottom: 0;
+			bottom: 0;
+			background:white;
 			line-height: 40px;
     	bottom: 0;
     	padding: 10px 0px;

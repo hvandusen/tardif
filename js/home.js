@@ -42,6 +42,11 @@ $('.bottom-bar').css({
 	'animation':'none',
 	'bottom': '0px'
 });
+$('#bio p').click(function(e){
+	var t = $(e.target);
+	if(t.hasClass('word-112') || t.hasClass('word-113') || t.hasClass('word-114'))
+	window.location = 'http://candusen.net';
+})
 // if(window.innerWidth<480)
 // $('.envelope').click(function(e){
 // 	e.preventDefault();
