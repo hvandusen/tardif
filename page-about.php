@@ -21,6 +21,9 @@
 			<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
 		</a>
 	<a class="copied">Email Copied</a>
+	<span class='env-mob envelope clipboard'>
+		<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
+	</span>
 </span>
 
 

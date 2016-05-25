@@ -747,6 +747,10 @@ li { list-style: none; }
 
 .copied { -moz-transform: translateY(4px); -ms-transform: translateY(4px); -webkit-transform: translateY(4px); transform: translateY(4px); }
 
+@media (max-width: 480px) { .email-container a { display: none; } }
+
+@media (min-width: 480px) { .env-mob { display: none; } }
+
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 13.6px 32px; z-index: 2002; }
 .envelope img, .copied img { max-height: 27px; }
 .envelope img:HOVER, .copied img:HOVER { opacity: .7; }

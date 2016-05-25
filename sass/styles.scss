@@ -1763,6 +1763,18 @@ li {
 		 @extend .big-font;
 
 	 }
+
+	 .email-container a {
+		 @media(max-width: 480px){
+			 display: none;
+		 }
+	 }
+
+	 .env-mob{
+		 @media(min-width: 480px){
+			 display: none;
+		 }
+	 }
 	 .envelope,.copied {
 	 	position: fixed;
 	 	bottom: 0;

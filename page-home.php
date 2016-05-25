@@ -19,6 +19,9 @@ get_header();?>
 		<a class="envelope clipboard" data-clipboard-text="pierret@gmail.com">
 			<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
 		</a>
+		<span class='env-mob envelope clipboard'>
+			<img src="<?php bloginfo('template_directory'); ?>/images/Tardif_E-Mail_icon.png"></img>
+		</span>
 	<a class="copied">EMAIL COPIED</a>
 </span>
 
