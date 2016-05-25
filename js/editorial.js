@@ -201,8 +201,8 @@ function getPointMobile(w){
 					}
 					var t2 = $(e).text().replace(', ','').toUpperCase();
 					console.log(t1);
-					console.log(t2Txt);
-					if(t2Txt===t1){
+					console.log(t2Txt.replace('AND ',''));
+					if(t2Txt.replace('AND ','')===t1){
 						console.log('removed this one!!!')
 						$(e).removeClass('revealed');
 						$(e).find('.squiggle').remove();
