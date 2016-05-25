@@ -12,7 +12,7 @@
 	        focused = $(this); // just for the example when I click next on fiddle
 					$(this).text('pierret@gmail.com');
 	    });
-	$(".envelope").click(function(){
+	$(".envelope").click(function(e){
 		e.preventDefault();
 		return;
 		 var html = $(this).html();
