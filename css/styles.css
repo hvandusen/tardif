@@ -558,7 +558,7 @@ td, th { padding: 0; }
 @media (max-width: 480px) { .bottom-bar .title:hover:after { opacity: 0; } }
 @media (max-width: 480px) { .bottom-bar .title:hover { visibility: visible; } }
 .bottom-bar .title:after { display: none; width: 523px; opacity: 0; content: "About PIERRE TARDIF"; position: absolute; left: 0; z-index: 8000; }
-@media (max-width: 480px) { .bottom-bar .title { padding-left: 30px; font-size: 17px; position: fixed; line-height: 1.6em; } }
+@media (max-width: 480px) { .bottom-bar .title { padding-left: 2px; font-size: 17px; position: fixed; line-height: 1.6em; } }
 .bottom-bar .art-dir { display: inline; }
 
 .bottom-bar a { z-index: 1000; }
