@@ -131,8 +131,6 @@ function getClosest(width){
 			$(this).removeClass('squigHover');
 			//$(this).removeClass('current');
 	});
-	if(navigator.userAgent.indexOf('Mozilla')>-1){
-		$('.brands').css('height','100%');
-	}
+	
 
 })(jQuery);

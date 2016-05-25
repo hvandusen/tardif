@@ -251,11 +251,16 @@ if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
 				//$(this).removeClass('current');
 		});
 	}
-	if(navigator.userAgent.indexOf('Mozilla')>-1){
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+
+	//if(navigator.userAgent.indexOf('Mozilla')>-1){
+	if(isFirefox){
 		$('.brands').css({
-			'height':'85%',
-		'top':'-77px'
+			'height':'85%'
+		//'top':'-77px'
 	});
+
 	}
 
 })(jQuery);
