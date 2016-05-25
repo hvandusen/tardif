@@ -13,6 +13,7 @@
 					$(this).text('pierret@gmail.com');
 	    });
 	$(".envelope").click(function(){
+		e.preventDefault();
 		return;
 		 var html = $(this).html();
 		 if(!mobile)
@@ -39,9 +40,9 @@ $('.bottom-bar').css({
 	'animation':'none',
 	'bottom': '0px'
 });
-if(window.innerWidth<480)
-$('.email-container').click(function(e){
-	e.preventDefault();
-});
+// if(window.innerWidth<480)
+// $('.envelope').click(function(e){
+// 	e.preventDefault();
+// });
 
 })(jQuery);
