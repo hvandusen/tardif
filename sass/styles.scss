@@ -981,6 +981,9 @@ $bord: solid black 4px;
 				background-size: auto 9px;
 				background-position: -36px 1px;
 				animation: scroller 9s linear infinite;
+				@media(max-width: 480px){
+					animation:none;
+				}
 				&:before {
 					content: 'About ';
 
@@ -1040,7 +1043,7 @@ $bord: solid black 4px;
 			 position: relative;
     bottom: 0px;
 	 @media(max-width:480px){
-		 padding-left: 2px; 
+		 padding-left: 2px;
 		 //font-size: 22px;
 		 font-size: 17px;
 		 position: fixed;
@@ -1129,6 +1132,9 @@ margin-right: 12px;
 }
 &:hover {
 		animation: scroller 10s linear infinite;
+		@media(max-width: 480px){
+			animation:none;
+		}
 }
 	font-family: monospace;
 	color: transparent;
@@ -1250,6 +1256,9 @@ height: 44px;
 		     background-position: -36px 1px;
 		 &:hover {
 			 animation: scroller 9s linear infinite;
+			 @media(max-width: 480px){
+				 animation:none;
+			 }
 		 }
 		 &:after {
 			 content: '-----------------';
