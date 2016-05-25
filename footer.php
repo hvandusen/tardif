@@ -14,8 +14,6 @@
 <script src="<?php bloginfo('template_directory'); ?>/js/clipboard.min.js"></script>
 <script>var clip = new Clipboard('.clipboard')
 clip.action = function(e){
-	console.log(e);
-	e.preventDefault();
 	if(window.innerWidth<480){
 		$('.envelope').css('padding','24px 0 0px 0')
 		$('.copied').text('pierret@gmail.com')
