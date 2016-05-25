@@ -8,6 +8,7 @@
 	<footer>
 		<div class='bottom-bar'><div class='title'  class='nav home'><span>PIERRE TARDIF</span>, Art Director </div>
 	</footer>
+	<div id='hld'></div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/clipboard.min.js"></script>
