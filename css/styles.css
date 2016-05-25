@@ -548,7 +548,7 @@ td, th { padding: 0; }
 @media (max-width: 770px) { .top-bar.ads { font-size: 18px; } }
 
 .bottom-bar { position: fixed; clear: both; background: white; border-top: solid black 4px; bottom: 0px; width: 100%; width: calc(100% - 32px); height: 64px; height: 55px; padding-left: 32px; line-height: 64px; z-index: 1000; display: inline; pointer-events: none; }
-.bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; position: relative; bottom: 0px; }
+.bottom-bar .title { line-height: 53px; display: inline; pointer-events: visible; font-size: 36.8px; position: relative; bottom: 0px; }
 .bottom-bar .title span { padding-left: 4px; }
 .bottom-bar .title:hover { color: white; cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
 .bottom-bar .title:hover span { padding: 15px 0 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner8.svg); color: black; background-repeat: repeat-x; background-size: auto 9px; background-position: -36px 1px; animation: scroller 5s linear infinite; }
@@ -599,7 +599,7 @@ td, th { padding: 0; }
 @media (max-width: 480px) { .link.nav.current { border-bottom: solid white 2px; padding-bottom: 10px; } }
 
 .page-id-365 .title { cursor: pointer; cursor: url(../images/Glove_point-01.svg) 0 12, auto; }
-.page-id-365 .title span { padding: 15px 10px 0 4px; padding: 15px 4px 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner8.svg); background-repeat: repeat-x; background-size: auto 9px; background-position: -36px 1px; }
+.page-id-365 .title span { padding: 15px 10px 0 4px; padding: 15px 7px 0 4px; position: relative; background-image: url(http://candusen.net/imgs/squigz_try7_lowerbar-thinner8.svg); background-repeat: repeat-x; background-size: auto 9px; background-position: -36px 1px; }
 .page-id-365 .title span:hover { animation: scroller 5s linear infinite; }
 .page-id-365 .title span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
 .page-id-365 .title:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
