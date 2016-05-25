@@ -13,7 +13,8 @@
 					$(this).text('pierret@gmail.com');
 	    });
 	$(".envelope").click(function(e){
-		alert();
+		//alert();
+		e.preventDefault();
 		e.preventDefault();
 		return;
 		 var html = $(this).html();
