@@ -177,24 +177,26 @@ $('.olButton').click(function(){
 	}
 });
 
-
-$('.magazines > .link').mouseenter(function(){
-	if($(this).hasClass('current'))
-		return;
-		//console.dir($(this).hasClass('current'));
-		$(this).addClass('current');
-		$(this).addClass('squigHover');
-		squig(this);
-});
-
-$('.magazines > .link').mouseleave(function(){
-		if(!$(this).hasClass('squigHover'))
+if(window.innerWidth>480){
+	$('.magazines > .link').mouseenter(function(){
+		if($(this).hasClass('current'))
 			return;
-			$(this).find('.squiggle').remove();
-		$(this).removeClass('current');
-		$(this).removeClass('squigHover');
-		//$(this).removeClass('current');
-});
+			//console.dir($(this).hasClass('current'));
+			$(this).addClass('current');
+			$(this).addClass('squigHover');
+			squig(this);
+	});
+
+	$('.magazines > .link').mouseleave(function(){
+			if(!$(this).hasClass('squigHover')) 
+				return;
+				$(this).find('.squiggle').remove();
+			$(this).removeClass('current');
+			$(this).removeClass('squigHover');
+			//$(this).removeClass('current');
+	});
+}
+
 
 //$('#OpenLayers_Control_PanZoom_39_zoomworld, #OpenLayers_Control_PanZoom_39_pandown, #OpenLayers_Control_PanZoom_39_panright, #OpenLayers_Control_PanZoom_39_panleft').css('display','none!important');
 
