@@ -39,5 +39,9 @@ $('.bottom-bar').css({
 	'animation':'none',
 	'bottom': '0px'
 });
+if(window.innerWidth<480)
+$('.email-container').click(function(e){
+	e.preventDefault();
+});
 
 })(jQuery);
