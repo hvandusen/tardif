@@ -42,11 +42,23 @@ $('.bottom-bar').css({
 	'animation':'none',
 	'bottom': '0px'
 });
-$('#bio p').click(function(e){
+//$('#bio p').click(function(e){
+$('.candusen').click(function(e){
 	var t = $(e.target);
-	if(t.hasClass('word-112') || t.hasClass('word-113') || t.hasClass('word-114'))
-	window.location = 'http://candusen.net';
-})
+	//if(t.hasClass('word-112') || t.hasClass('word-113') || t.hasClass('word-114'))
+	window.location = 'http://pierre.dev/wp-content/themes/tardif/css/webfont/RMRollerball.otf';//'http://candusen.net';
+
+});
+//$('.font-dl').attr({
+// $('.candusen').attr({
+//
+// 		target: '_blank',
+// 		href  : 'http://pierre.dev/wp-content/themes/tardif/css/webfont/RMRollerball.otf'
+// 	});
+
+$('.font-dl').click(function(e){
+
+});
 // if(window.innerWidth<480)
 // $('.envelope').click(function(e){
 // 	e.preventDefault();

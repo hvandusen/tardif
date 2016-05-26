@@ -65,6 +65,16 @@ function getClosest(width){
 		$("#bio p").lettering('words');
 			$("#bio p span").map(function(i,e){
 				$(e).addClass('word-'+i).attr("data-text",$(this).html().replace('&nbsp;',''));
+				if($(e).text()==='Henry' || $(e).text()==='Van' || $(e).text().indexOf('Dusen')>-1 ){
+						//$(e).html($(e).html().replace('<p></a>')
+						//console.log($(e).html())
+						$(e).wrap('<a href="http://candusen.net"></a>')
+						$(e).addClass('candusen');
+				}
+				else if($(e).text()==='here'){
+					$(e).wrap('<a href="http://pierre.dev/wp-content/themes/tardif/css/webfont/RMRollerball.otf"></a>')
+					$(e).addClass('dlFont');
+				}
 			});
 				var justHovered;
 				if(window.innerWidth>480){
