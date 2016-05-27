@@ -9,7 +9,7 @@ var mapMaxResolution = 0.500000;
 
 	var collages = {
 		185: {
-			size: [-20000.000000, -4590.000000,0],
+			size: [-20000.000000, -4790.000000,0],
 			pos: [4200, -1904, zLevel],
 				map : [-4608.000000, 7168.000000],
 		},
@@ -188,7 +188,7 @@ if(window.innerWidth>480){
 	});
 
 	$('.magazines > .link').mouseleave(function(){
-			if(!$(this).hasClass('squigHover')) 
+			if(!$(this).hasClass('squigHover'))
 				return;
 				$(this).find('.squiggle').remove();
 			$(this).removeClass('current');

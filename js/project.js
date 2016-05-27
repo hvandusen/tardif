@@ -78,7 +78,7 @@ function getClosest(width){
 					linkToFont = true;
 				}
 				if(linkToFont){
-					$(e).wrap('<a href="http://pierre.dev/wp-content/themes/tardif/css/webfont/RMRollerball.otf"></a>')
+					$(e).wrap('<a href="http://pierretardif.net/wp-content/themes/tardif/css/webfont/RMRollerball.otf"></a>')
 					$(e).addClass('dlFont');
 				}
 				if($(e).text()==='font.'){

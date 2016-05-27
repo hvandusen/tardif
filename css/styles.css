@@ -755,7 +755,6 @@ li { list-style: none; }
 
 .envelope, .copied { position: fixed; bottom: 0; right: 0; padding: 13.6px 32px; z-index: 2002; }
 .envelope img, .copied img { max-height: 27px; }
-.envelope img:HOVER, .copied img:HOVER { opacity: .7; }
 
 @media (max-height: 809px) { .season_image { width: 70%; max-height: 80%; } }
 @media (max-width: 480px) { @-webkit-keyframes mymove { from { top: -50px; z-index: -2; }
