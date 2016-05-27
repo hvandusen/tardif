@@ -63,19 +63,29 @@ function getClosest(width){
 		});
 
 		$("#bio p").lettering('words');
+		var linkToFont = false;
 			$("#bio p span").map(function(i,e){
 				$(e).addClass('word-'+i).attr("data-text",$(this).html().replace('&nbsp;',''));
 				if($(e).text()==='Henry' || $(e).text()==='Van' || $(e).text().indexOf('Dusen')>-1 ){
 						//$(e).html($(e).html().replace('<p></a>')
 						//console.log($(e).html())
-						$(e).wrap('<a href="http://candusen.net"></a>')
+						$(e).wrap('<a target="_blank" href="http://candusen.net"></a>')
 						$(e).addClass('candusen');
 				}
 				else if($(e).text()==='here'){
+				}
+				else if($(e).text()==='Click'){
+					linkToFont = true;
+				}
+				if(linkToFont){
 					$(e).wrap('<a href="http://pierre.dev/wp-content/themes/tardif/css/webfont/RMRollerball.otf"></a>')
 					$(e).addClass('dlFont');
 				}
+				if($(e).text()==='font.'){
+					linkToFont = false;
+				}
 			});
+
 				var justHovered;
 				if(window.innerWidth>480){
 						$("#bio p span").mouseenter(function(){
