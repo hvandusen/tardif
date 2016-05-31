@@ -59,6 +59,12 @@ $('.candusen').click(function(e){
 $('.font-dl').click(function(e){
 
 });
+
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+		$('.copied').text('pierret@gmail.com');
+		//$('.copied').css('pointer-events','')
+}
+
 // if(window.innerWidth<480)
 // $('.envelope').click(function(e){
 // 	e.preventDefault();
