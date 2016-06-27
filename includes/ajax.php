@@ -20,6 +20,7 @@ $(function(){
     else if(e.fragment.indexOf('books')>-1){
       $($('.link')[1]).addClass('current-page');
       $('.top-bar').css('position','fixed');
+
       console.log('fix it!!!')
     }
     else{ //if(e.fragment.indexOf('book-')>-1){
@@ -176,7 +177,16 @@ $(function(){
   squig('.current');
 
   //var squigWidths = [49,66,74,91,98,115,121,147,164,171,189,196,220,238,245];
-  var squigWidths =isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,116,147,164,171,189,196,213,238,245];
+  var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+	var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+	if ((is_chrome)&&(is_safari)) {is_safari=false;}
+var squigWidths;
+if(is_safari)
+	squigWidths = isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,116,147,164,171,189,196,213,238,245];
+else {
+	$('.page-id-365 .title span').addClass('notSafari');
+	squigWidths = isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,116,132,164,186,196,213,233,245];
+}
   function getClosest(width){
   	var closest = 1000;
   	ret = 0;
@@ -188,7 +198,6 @@ $(function(){
   	});
   	return ret;
   }
-
 
   function applySquiggle(el){
     console.log('from ajax')

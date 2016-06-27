@@ -605,6 +605,7 @@ td, th { padding: 0; }
 .page-id-365 .title span:hover { animation: scroller 9s linear infinite; }
 @media (max-width: 480px) { .page-id-365 .title span:hover { animation: none; } }
 .page-id-365 .title span:after { content: '-----------------'; position: absolute; left: 0; color: transparent; width: 100%; overflow: hidden; top: 6px; z-index: -1; height: 4px; background: white; }
+.page-id-365 .title span.notSafari { padding: 15px 1px 0 4px; background-position: -33px 2px; }
 .page-id-365 .title:after { display: none; opacity: 1; text-align: left; position: absolute; left: 0; visibility: visible; padding: 9px 0 0 0; background: white; }
 @media (max-width: 480px) { .page-id-365 .title:after { opacity: 0; } }
 @media (max-width: 480px) { .page-id-365 .title { visibility: visible; } }

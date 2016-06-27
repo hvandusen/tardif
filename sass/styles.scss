@@ -1276,6 +1276,10 @@ height: 44px;
 			 height: 4px;
 			 background: white;
 		 }
+		 &.notSafari {
+			     padding: 15px 1px 0 4px;
+					 background-position: -33px 2px;
+		 }
 		}
 	 //  &:before {
 	 // 	 content: "Pierre Tardif";
