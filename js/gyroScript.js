@@ -7,7 +7,7 @@
 		var angle = 3;
 		var show = 3;
 		//if(gyro.hasFeature('devicemotion'))
-		gyro.frequency = 5;
+		gyro.frequency = 15;
 		console.log(gyro.hasFeature('devicemotion'))
 
 			//if(gyro.hasFeature('devicemotion'))
