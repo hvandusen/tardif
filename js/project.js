@@ -7,11 +7,16 @@
 	window.addEventListener('DOMMouseScroll', mouseWheelEvent);
 	window.booksScrolled = 0;
 	function mouseWheelEvent(e) {
+		console.log(e)
 		if(document.location.href.indexOf('book-')>0)
 			return;
+			if(window.innerWidth<480){
+				window.sessionStorage.books = e.pageY
+				return;
+			}
+
 	    var delta = e.wheelDelta ? e.wheelDelta : -e.detail;
 
-				console.log('k')
 				if(window.location.hash === '#books'){
 					//console.log(window.sessionStorage.books)
 					window.booksScrolled += e.deltaY

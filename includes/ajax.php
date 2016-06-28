@@ -145,6 +145,7 @@ $(function(){
     }
     if(window.sessionStorage.books && document.location.href.indexOf('book-')<0){
       console.log('there is a stored books position')
+      if(parseInt(window.sessionStorage.books)!==0)
       window.scrollTo(0,parseInt(window.sessionStorage.books));
     }
     if(window.location.pathname.indexOf('about')>-1)
