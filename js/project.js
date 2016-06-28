@@ -7,18 +7,23 @@
 	window.addEventListener('DOMMouseScroll', mouseWheelEvent);
 	window.booksScrolled = 0;
 	function mouseWheelEvent(e) {
+		if(document.location.href.indexOf('book-')>0)
+			return;
 	    var delta = e.wheelDelta ? e.wheelDelta : -e.detail;
 
 				console.log('k')
 				if(window.location.hash === '#books'){
 					//console.log(window.sessionStorage.books)
 					window.booksScrolled += e.deltaY
+					if(!is_safari){
 					window.sessionStorage.books = window.booksScrolled ;//window.scrollY;
-					if(is_safari){
-						window.sessionStorage.books = window.scrollY;
+					}
+					else{
+						 window.sessionStorage.books = window.scrollY;
+						 console.log('uhh');
+						console.log(window.sessionStorage.books)
 					}
 				}
-
 	}
 	var smallEnough = window.innerWidth < 1222;
 	var isMob =  window.innerWidth < 480;

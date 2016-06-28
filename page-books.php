@@ -43,13 +43,3 @@
   <script src="<?php echo get_bloginfo('template_directory'); ?>/js/gyro.min.js"></script>
   <script src="<?php echo get_bloginfo('template_directory'); ?>/js/jquery.visible.min.js"></script>
   <script src="<?php echo get_bloginfo('template_directory'); ?>/js/gyroScript.js"></script>
-  <!-- <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script> -->
-
-  <script>
-  if(false)
-  $('#demo').fullPage({
-    sectionSelector: '.book',
-    controlArrows: false
-    // more options here
-  });
-  </script>

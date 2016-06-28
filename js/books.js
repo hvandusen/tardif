@@ -2,6 +2,27 @@
 	var thirdW;
 	var thirdH;
 
+	var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+	var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+	if ((is_chrome)&&(is_safari)) {is_safari=false;}
+	window.scrollTo(0,window.sessionStorage.books)
+	var screenPos = window.scrollY
+	// if(is_safari){
+	// 	 setInterval(function(){
+	//
+	// 	 	var yPos = window.scrollY;
+	// 	 	if(yPos !==screenPos){
+	// 	 		screenPos = yPos;
+	// 	 		window.sessionStorage.books = screenPos;
+	// 	 	}
+	// 	},250)
+	// }
+
+	$('.books').hover(function(){
+		console.log('set it to '+window.scrollY)
+		//window.sessionStorage.books = window.scrollY;
+	})
+
 	function isScrolledIntoView(elem)
 	{
 	    var $elem = $(elem);
@@ -19,7 +40,7 @@
 
 
 	$(document).ready(function(){
-		
+
 	setBookSize();
 	$('.book').mousemove(function(e){
 		step = 1/7;

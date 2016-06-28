@@ -143,7 +143,7 @@ $(function(){
         //applySquiggle('.current-page');
         //applySquiggle('.current');
     }
-    if(window.sessionStorage.books){
+    if(window.sessionStorage.books && document.location.href.indexOf('book-')<0){
       console.log('there is a stored books position')
       window.scrollTo(0,parseInt(window.sessionStorage.books));
     }
