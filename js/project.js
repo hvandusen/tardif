@@ -1,26 +1,28 @@
 (function ($) {
 	window.addEventListener('mousewheel', mouseWheelEvent);
-
+	var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+	var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+	if ((is_chrome)&&(is_safari)) {is_safari=false;}
 	// For Firefox
 	window.addEventListener('DOMMouseScroll', mouseWheelEvent);
 	window.booksScrolled = 0;
 	function mouseWheelEvent(e) {
 	    var delta = e.wheelDelta ? e.wheelDelta : -e.detail;
 
-				//console.log('k')
+				console.log('k')
 				if(window.location.hash === '#books'){
 					//console.log(window.sessionStorage.books)
 					window.booksScrolled += e.deltaY
 					window.sessionStorage.books = window.booksScrolled ;//window.scrollY;
+					if(is_safari){
+						window.sessionStorage.books = window.scrollY;
+					}
 				}
 
 	}
 	var smallEnough = window.innerWidth < 1222;
 	var isMob =  window.innerWidth < 480;
 	window.isMob = isMob;
-	var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-	var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-	if ((is_chrome)&&(is_safari)) {is_safari=false;}
 var squigWidths;
 if(is_safari)
 	squigWidths = isMob ? [11,16,22,33,38,43,49,54,60,65,71,76,98,103,109,111] :[49,66,74,91,98,116,147,164,171,189,196,213,238,245];
